@@ -1,0 +1,3 @@
+[submodule "src/protocol-icons"]
+	path = src/protocol-icons
+	url = https://gitlab.americas.phoenixcontact.com/ima-ism/psf/protocol-icons.git

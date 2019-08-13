@@ -1,15 +1,21 @@
 .led_base {
-    fill: rgba(0,0,0,0.03);
+    background-color: #494D3E;
+    height: 2mm;
+    width: 1mm;
+    border-radius: 0.25mm;
 }
 
 .error {
-    fill: rgba(red,0, 0, 0.8);
+    background-color: #F02F42;
+    box-shadow: 0 0 0.1mm 0 #F02F42;
 }
 
 .active {
-    fill: rgba(green,0,0,0.8);
+    background-color: #5EF300;
+    box-shadow: 0 0 0.1mm 0 #5EF300;
 }
 
 .warning {
-    fill: rgba(yellow,0,0,0.8);
+    background-color: #FFFF04;
+    box-shadow: 0 0 0.1mm 0 #FFFF04;
 }

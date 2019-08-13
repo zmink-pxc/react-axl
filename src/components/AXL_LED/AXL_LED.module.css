@@ -1,0 +1,15 @@
+.led_base {
+    fill: rgba(0,0,0,0.03);
+}
+
+.error {
+    fill: rgba(red,0, 0, 0.8);
+}
+
+.active {
+    fill: rgba(green,0,0,0.8);
+}
+
+.warning {
+    fill: rgba(yellow,0,0,0.8);
+}

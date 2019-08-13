@@ -6,7 +6,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
 
-import {AXL_LED} from '../src/components/AXL_LED/AXL_LED.jsx';
+import AXL_LED from '../src/components/AXL_LED/AXL_LED.jsx';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 

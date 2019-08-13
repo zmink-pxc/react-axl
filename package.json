@@ -1,16 +1,20 @@
 {
   "name": "react-axl",
   "version": "1.0.0",
-  "description": "",
+  "description": "React components for rendering Phoenix Contact axioline products",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": "",
+  "author": "Zachary Mink",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "react-scripts": "^3.1.0",
+    "react-svg-loader": "^3.0.3",
+    "svg-inline-loader": "^0.8.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@storybook/addon-actions": "^5.1.10",

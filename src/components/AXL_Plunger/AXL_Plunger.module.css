@@ -1,0 +1,17 @@
+.plunger_base{
+    height: 2.2mm;
+    width:  3mm;
+    background-color: #CB7821;
+}
+
+.blue{
+    background-color: #395392;
+}
+
+.green{
+    background-color: #196327
+}
+
+.red {
+    background-color: #9A0717;
+}

@@ -8,6 +8,7 @@ import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
 import { Button, Welcome } from '@storybook/react/demo';
 
 import AXL_LED from '../src/components/AXL_LED/AXL_LED.jsx';
+import AXL_Plunger from '../src/components/AXL_Plunger/AXL_Plunger.jsx';
 
 //const stories = storiesOf('Storybook Knobs', module);
 
@@ -30,6 +31,14 @@ storiesOf('Button', module)
   .add('as dynamic variables', () => {
     
     return (<AXL_LED isError={boolean('isError', false)} isWarning={boolean('isWarning', false)} isActive={boolean('isActive', false)}/>);
+  });
+
+  storiesOf('AXL_Plunger', module)
+  .addDecorator(withKnobs)
+  .add('with text', () => <AXL_Plunger red={boolean('red', false)} green={boolean('green', false)} blue={boolean('blue', false)}/>)
+  .add('as dynamic variables', () => {
+    
+    return (<AXL_Plunger/>);
   })
   .add('with some emoji', () => (
     <Button onClick={action('clicked')}>

@@ -16,6 +16,15 @@
 }
 
 .warning {
-    background-color: #FFFF04;
-    box-shadow: 0 0 0.1mm 0 #FFFF04;
+    animation: warning-blink 1s infinite steps(2);
+}
+
+@keyframes warning-blink {
+    0%{
+        background-color: #494D3E;
+    }
+    100%{
+        box-shadow: 0 0 0.1mm 0 #FFFF04;
+        background-color: #FFFF04;
+    }
 }

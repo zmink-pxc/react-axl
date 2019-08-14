@@ -35,7 +35,7 @@ storiesOf('Button', module)
 
   storiesOf('AXL_Plunger', module)
   .addDecorator(withKnobs)
-  .add('with text', () => <AXL_Plunger red={boolean('red', false)} green={boolean('green', false)} blue={boolean('blue', false)}/>)
+  .add('with text', () => <AXL_Plunger pushIn={boolean('pushIn', false)} red={boolean('red', false)} green={boolean('green', false)} blue={boolean('blue', false)}/>)
   .add('as dynamic variables', () => {
     
     return (<AXL_Plunger/>);

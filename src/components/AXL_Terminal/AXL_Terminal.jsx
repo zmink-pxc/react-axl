@@ -10,23 +10,28 @@ export default class AXL_Terminal extends React.PureComponent {
     render(){
         if (this.props.isBlack === true){
             return (
-                <div className={styles.edge}>
-                    <div className={styles.blackCover}>
-                    </div>
+                <div className={styles.container}>
+                    <div className={styles.edge}>
                     <div className={styles.inset}>
                         <div className={styles.center_circle}>
                             <div className={styles.terminal_center}></div>
                         </div>
                     </div>
-            </div>)
+                    </div>
+                <div className={styles.blackCover}></div>
+                </div>         
+            )
         }else{
-            return (<div className={styles.edge}>
-                <div className={styles.inset}>
-                    <div className={styles.center_circle}>
-                        <div className={styles.terminal_center}></div>
+            return (<div className={styles.container}>
+                <div className={styles.edge}>
+                    <div className={styles.inset}>
+                        <div className={styles.center_circle}>
+                            <div className={styles.terminal_center}></div>
+                        </div>
                     </div>
                 </div>
-            </div>)
+            </div>
+           )
         }        
     }
 }

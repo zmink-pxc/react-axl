@@ -1,3 +1,9 @@
+.container{
+    position: relative;
+    width: 4mm;
+    height: 4mm;
+}
+
 .terminal_center {
     width: 2mm;
     height: 1mm;
@@ -28,6 +34,7 @@
 }
 
 .edge{
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,6 +47,7 @@
 
 .blackCover{
     position: absolute;
+    display: inline-block;
     top: 0px;
     left: 0px;
     z-index: 100;

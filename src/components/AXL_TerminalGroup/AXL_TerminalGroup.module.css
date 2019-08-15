@@ -1,4 +1,5 @@
 .rootContainer{
+    box-shadow: 0 -0.2mm 0.1mm -0.1mm grey;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;

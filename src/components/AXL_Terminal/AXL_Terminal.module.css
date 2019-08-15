@@ -37,3 +37,14 @@
     background-color: #c8c8c8ff;
     border-radius: 1mm 1mm 1mm 1mm;
 }
+
+.blackCover{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    height:4mm;
+    width:4mm;
+    background-color: rgba(0, 0, 0, 0.411);
+    border-radius: 1mm 1mm 1mm 1mm;
+}

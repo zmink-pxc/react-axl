@@ -1,0 +1,39 @@
+.terminal_center {
+    width: 2mm;
+    height: 1mm;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin: -0.5mm 0 0 -0.99mm;
+    background-color: #000000;
+}
+
+.center_circle {
+    width: 2.5mm;
+    height: 2.5mm;
+    border-radius: 1.2mm;
+    background-color: rgb(122, 122, 122);
+
+}
+
+.inset{
+    height: 3.5mm;
+    width: 3.5mm;
+    background-color: #adadadff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 1mm 1mm 1mm 1mm;
+}
+
+.edge{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height:4mm;
+    width: 4mm;
+    background-color: #c8c8c8ff;
+    border-radius: 1mm 1mm 1mm 1mm;
+}

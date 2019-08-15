@@ -10,6 +10,7 @@ import { Button, Welcome } from '@storybook/react/demo';
 import AXL_LED from '../src/components/AXL_LED/AXL_LED.jsx';
 import AXL_Plunger from '../src/components/AXL_Plunger/AXL_Plunger.jsx';
 import AXL_Terminal from '../src/components/AXL_Terminal/AXL_Terminal.jsx';
+import AXL_TerminalGroup from '../src/components/AXL_TerminalGroup/AXL_TerminalGroup.jsx';
 
 //const stories = storiesOf('Storybook Knobs', module);
 
@@ -52,3 +53,7 @@ storiesOf('Button', module)
   storiesOf('AXL_Terminal', module)
   .addDecorator(withKnobs)
   .add('Basic', () => <AXL_Terminal isBlack={boolean('isBlack',false)}/>)
+
+  storiesOf('AXL_TerminalGroup', module)
+  .addDecorator(withKnobs)
+  .add('Basic', () => <AXL_TerminalGroup label={text('label','00')}/>)

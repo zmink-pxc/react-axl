@@ -1,0 +1,53 @@
+.rootContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 5mm;
+}
+
+.label {
+    color: rgba(65, 1, 1, 0.637);
+    font-size: 2mm;
+}
+
+.labelContainer{
+    width: 50%;
+}
+
+.pinHole {
+    margin-left: 0.5mm;
+    width: 0.75mm;
+    height: 0.75mm;
+    border-radius: 0.5mm;
+    background-color: black;
+}
+.pinHoleContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.terminalContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 5mm;
+    width: 100%;
+}
+
+.plungerContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pinLabelContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}

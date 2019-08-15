@@ -7,7 +7,7 @@
 }
 
 .label {
-    color: rgba(65, 1, 1, 0.637);
+    color: #6d4444;
     font-size: 2mm;
 }
 
@@ -19,7 +19,7 @@
     margin-left: 0.5mm;
     width: 0.75mm;
     height: 0.75mm;
-    border-radius: 0.5mm;
+    border-radius: 100%;
     background-color: black;
 }
 .pinHoleContainer{

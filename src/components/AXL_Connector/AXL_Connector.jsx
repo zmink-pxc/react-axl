@@ -13,9 +13,9 @@ export default class AXL_Connector extends React.PureComponent {
     render() {
 
         const cols = Array.apply(null,Array(this.props.numCols));
-
+        const connectorStyle = classNames(styles.connector,{[styles.blackConnector]: this.props.isBlack})
         return (
-            <div className={styles.connector}>
+            <div className={connectorStyle}>
                 {
                     cols.map((col,index)=>{
                         var j = this.props.numRows * index;
@@ -33,6 +33,7 @@ export default class AXL_Connector extends React.PureComponent {
 }
 
 AXL_Connector.defaultProps = {
+    isBlack: true,
     numRows: 4,
     numCols: 1,
     terminals: [{label:'00'},{label:'10'},{label:'20'},{label:'30'}],

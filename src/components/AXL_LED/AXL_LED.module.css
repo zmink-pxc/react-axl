@@ -21,10 +21,10 @@
 
 @keyframes warning-blink {
     0%{
-        background-color: #494D3E;
+        background-color: rgba(73, 77, 62, 0.329);
     }
     100%{
-        box-shadow: 0 0 0.1mm 0 #FFFF04;
-        background-color: #FFFF04;
+        box-shadow: 0 0 0.1mm 0 rgb(255, 161, 84, 1.0);
+        background-color: rgb(255, 161, 84, 1.0);
     }
 }

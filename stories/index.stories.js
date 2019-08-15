@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
-import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean, number,object } from '@storybook/addon-knobs';
 
 import { Button, Welcome } from '@storybook/react/demo';
 
@@ -11,6 +11,7 @@ import AXL_LED from '../src/components/AXL_LED/AXL_LED.jsx';
 import AXL_Plunger from '../src/components/AXL_Plunger/AXL_Plunger.jsx';
 import AXL_Terminal from '../src/components/AXL_Terminal/AXL_Terminal.jsx';
 import AXL_TerminalGroup from '../src/components/AXL_TerminalGroup/AXL_TerminalGroup.jsx';
+import AXL_LED_Group from '../src/components/AXL_LED_Group/AXL_LED_Group.jsx';
 
 //const stories = storiesOf('Storybook Knobs', module);
 
@@ -57,3 +58,8 @@ storiesOf('Button', module)
   storiesOf('AXL_TerminalGroup', module)
   .addDecorator(withKnobs)
   .add('Basic', () => <AXL_TerminalGroup pushIn={boolean('pushIn',false)} isBlack={boolean('isBlack',false)} label={text('label','00')} redPlunger={boolean('redPlunger', false)} greenPlunger={boolean('greenPlunger',false)} bluePlunger={boolean('bluePlunger',false)}/>)
+
+
+  storiesOf('AXL_LED_Group',module)
+  .addDecorator(withKnobs)
+  .add('Basic',()=><AXL_LED_Group/>);

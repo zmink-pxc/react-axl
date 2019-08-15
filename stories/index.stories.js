@@ -56,4 +56,4 @@ storiesOf('Button', module)
 
   storiesOf('AXL_TerminalGroup', module)
   .addDecorator(withKnobs)
-  .add('Basic', () => <AXL_TerminalGroup label={text('label','00')}/>)
+  .add('Basic', () => <AXL_TerminalGroup isBlack={boolean('isBlack',false)} label={text('label','00')} redPlunger={boolean('redPlunger', false)} greenPlunger={boolean('greenPlunger',false)} bluePlunger={boolean('bluePlunger',false)}/>)

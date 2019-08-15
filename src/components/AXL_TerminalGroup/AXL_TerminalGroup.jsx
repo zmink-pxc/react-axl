@@ -10,6 +10,7 @@ export default class AXL_TerminalGroup extends React.PureComponent {
     }
 
     render(){
+
         return (<div className={styles.rootContainer}>
              <div className={styles.pinLabelContainer}>
                  <div className={styles.pinHoleContainer}>
@@ -20,10 +21,10 @@ export default class AXL_TerminalGroup extends React.PureComponent {
                  </div>
              </div>
              <div className={styles.plungerContainer}>
-                <AXL_Plunger/>
+                <AXL_Plunger pushIn={this.props.pushIn} red={this.props.redPlunger} blue={this.props.bluePlunger} green={this.props.greenPlunger}/>
              </div>
              <div className={styles.terminalContainer}>
-                <AXL_Terminal/>
+                <AXL_Terminal isBlack={this.props.isBlack}/>
              </div>
          </div>)
     }

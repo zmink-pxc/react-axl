@@ -16,6 +16,7 @@ import AXL_Connector from '../src/components/AXL_Connector/AXL_Connector.jsx';
 import AXL_Plug from '../src/components/AXL_Plug/AXL_Plug.jsx';
 import AXL_Latch from '../src/components/AXL_Latch/AXL_Latch.jsx';
 import AXL_LED_Socket from '../src/components/AXL_LED_Socket/AXL_LED_Socket.jsx';
+import AXL_ColorID from '../src/components/AXL_ColorID/AXL_ColorID.jsx';
 
 //const stories = storiesOf('Storybook Knobs', module);
 
@@ -83,3 +84,13 @@ storiesOf('Button', module)
   storiesOf('AXL_LED_Socket',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><AXL_LED_Socket numRows={number('numRows',2)} numCols={number('numCols',2)}/>)
+
+  storiesOf('AXL_ColorID',module)
+  .addDecorator(withKnobs)
+  .add('Basic',()=><AXL_ColorID isDigitalIn={boolean('isDigitalIn',false)}
+  isDigitalOut={boolean('isDigitalOut',true)}
+  isAnalogOut={boolean('isAnalogOut',false)}
+  isAnalogIn={boolean('isAnalogIn',false)}
+  isSpecialFn={boolean('isSpecialFn',false)}
+  isPwr={boolean('isPwr',false)}
+  />)

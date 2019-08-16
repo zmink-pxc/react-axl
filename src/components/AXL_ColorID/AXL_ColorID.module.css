@@ -1,0 +1,28 @@
+.digitalIn {
+    background-color: #00ADD9;
+}
+
+.digitalOut{
+    background-color: #B62824;
+}
+
+.analogIn{
+    background-color: #66B502;
+}
+
+.analogOut{
+    background-color: #EED602;
+}
+
+.specialFn{
+    background-color: #E67E00;
+}
+
+.pwr{
+    background-color: #D3D3D3;
+}
+
+.cardBase {
+    width: 5mm;
+    height: 10mm;
+}

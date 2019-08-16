@@ -13,6 +13,7 @@ import AXL_Terminal from '../src/components/AXL_Terminal/AXL_Terminal.jsx';
 import AXL_TerminalGroup from '../src/components/AXL_TerminalGroup/AXL_TerminalGroup.jsx';
 import AXL_LED_Group from '../src/components/AXL_LED_Group/AXL_LED_Group.jsx';
 import AXL_Connector from '../src/components/AXL_Connector/AXL_Connector.jsx';
+import AXL_Plug from '../src/components/AXL_Plug/AXL_Plug.jsx';
 
 //const stories = storiesOf('Storybook Knobs', module);
 
@@ -68,3 +69,7 @@ storiesOf('Button', module)
   storiesOf('AXL_Connector',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><AXL_Connector/>);
+
+  storiesOf('AXL_Plug',module)
+  .addDecorator(withKnobs)
+  .add('Basic',()=><AXL_Plug/>)

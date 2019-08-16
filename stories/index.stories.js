@@ -69,7 +69,7 @@ storiesOf('Button', module)
 
   storiesOf('AXL_Connector',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AXL_Connector/>);
+  .add('Basic',()=><AXL_Connector pushInLatch={boolean('pushInLatch',false)}/>);
 
   storiesOf('AXL_Plug',module)
   .addDecorator(withKnobs)

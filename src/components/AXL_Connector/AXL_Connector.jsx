@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import styles from './AXL_Connector.module.css';
 import AXL_LED_Group from '../AXL_LED_Group/AXL_LED_Group.jsx';
 import AXL_Terminal_Group from '../AXL_TerminalGroup/AXL_TerminalGroup.jsx';
+import AXL_Latch from '../AXL_Latch/AXL_Latch.jsx';
 
 
 export default class AXL_Connector extends React.PureComponent {
@@ -27,6 +28,7 @@ export default class AXL_Connector extends React.PureComponent {
                         </div>)
                     })
                 }
+            <AXL_Latch pushedIn={this.props.pushInLatch}/>
             </div>
         )
     }

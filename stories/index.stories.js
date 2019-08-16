@@ -15,6 +15,7 @@ import AXL_LED_Group from '../src/components/AXL_LED_Group/AXL_LED_Group.jsx';
 import AXL_Connector from '../src/components/AXL_Connector/AXL_Connector.jsx';
 import AXL_Plug from '../src/components/AXL_Plug/AXL_Plug.jsx';
 import AXL_Latch from '../src/components/AXL_Latch/AXL_Latch.jsx';
+import AXL_LED_Socket from '../src/components/AXL_LED_Socket/AXL_LED_Socket.jsx';
 
 //const stories = storiesOf('Storybook Knobs', module);
 
@@ -78,3 +79,7 @@ storiesOf('Button', module)
   storiesOf('AXL_Latch',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><AXL_Latch pushedIn={boolean('pushIn',false)}/>);
+
+  storiesOf('AXL_LED_Socket',module)
+  .addDecorator(withKnobs)
+  .add('Basic',()=><AXL_LED_Socket numRows={number('numRows',2)} numCols={number('numCols',2)}/>)

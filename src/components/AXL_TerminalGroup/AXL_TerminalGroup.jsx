@@ -16,7 +16,7 @@ export default class AXL_TerminalGroup extends React.PureComponent {
                  <div className={styles.pinHoleContainer}>
                      <div className={styles.pinHole}></div>
                  </div>
-                 <div classname={styles.labelContainer}>
+                 <div className={styles.labelContainer}>
                     <div className={styles.label}>{this.props.label}</div>
                  </div>
              </div>

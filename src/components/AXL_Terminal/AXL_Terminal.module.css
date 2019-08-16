@@ -10,6 +10,10 @@
       background-color: #c8c8c8;
       border-radius: 1mm 1mm 1mm 1mm;
   }
+
+  .edge_end{
+      border-radius: 1.0mm 1.0mm 0mm 0mm;
+  }
   
   .inset{
       position: relative;
@@ -20,6 +24,10 @@
       width: 3.5mm;
       background-color: #adadad;
       border-radius: 1.0mm 1.0mm 1.0mm 1.0mm;
+  }
+
+  .inset_end {
+    border-radius: 1.0mm 1.0mm 0mm 0mm;
   }
   
   .center_circle {
@@ -41,4 +49,16 @@
       width: 2mm;
       height: 1mm;
       background-color: #000000;
+  }
+
+  .blackCover{
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 1mm 1mm 1mm 1mm;
+  }
+
+  .blackCover_end{
+      border-radius: 1mm 1mm 0mm 0mm;
   }

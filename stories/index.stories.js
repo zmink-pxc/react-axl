@@ -54,7 +54,7 @@ storiesOf('Button', module)
 
   storiesOf('AXL_Terminal', module)
   .addDecorator(withKnobs)
-  .add('Basic', () => <AXL_Terminal isBlack={boolean('isBlack',false)}/>)
+  .add('Basic', () => <AXL_Terminal isBlack={boolean('isBlack',false)} isEnd={boolean('isEnd',false)}/>)
 
   storiesOf('AXL_TerminalGroup', module)
   .addDecorator(withKnobs)

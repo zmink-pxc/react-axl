@@ -13,6 +13,8 @@ export default class AXL_Module extends React.PureComponent {
         return Math.floor(this.props.width/10) * 10;
     }
 
+
+
     withMM = (num)=>{
         return num + "mm";
     }
@@ -20,11 +22,11 @@ export default class AXL_Module extends React.PureComponent {
     render(){
 
         return (<div className={styles.moduleBase} style={{width: this.props.width+"mm"}}>
-            <div className={styles.moduleTop}>
+            <div className={styles.moduleTop} style={{width: this.faceWidth()+"mm"}}>
                 {((this.props.raisedMidSection || this.props.hasTopRow)===false) ? 
-                (<div className={styles.raisedContainer}>
+                (<div className={styles.raisedContainer} style={{width: this.faceWidth()+"mm"}}>
                     <Vents width={this.props.width} upper={true}/>
-                    <Label width={this.props.width}/>
+                    <Label width={this.faceWidth()-4+1}/>
                     <LabelHolder>
                     </LabelHolder>
                     <div className={styles.brandArea}></div>
@@ -67,7 +69,7 @@ function Vents(props){
 
 //54/45mm
 function Label(props){
-    const labelWidth = (props.width - 2) + "mm";
+    const labelWidth = props.width + "mm";
     const lineWidth = (props.width - 3) + "mm";
     const numVerticalLines = props.numLabels + 1;
     var verticalLines = [];

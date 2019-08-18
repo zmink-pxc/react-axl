@@ -9,8 +9,12 @@ export default class AXL_Module extends React.PureComponent {
         super(props)
     }
 
-    numConnectorsPer = () => {
-        
+    faceWidth = () => {
+        return Math.floor(this.props.width/10) * 10;
+    }
+
+    withMM = (num)=>{
+        return num + "mm";
     }
 
     render(){
@@ -19,16 +23,17 @@ export default class AXL_Module extends React.PureComponent {
             <div className={styles.moduleTop}>
                 {((this.props.raisedMidSection || this.props.hasTopRow)===false) ? 
                 (<div className={styles.raisedContainer}>
-                    <LabelHolder>
                     <Vents width={this.props.width} upper={true}/>
                     <Label width={this.props.width}/>
-                    <Vents width={this.props.width} lower={true}/>
+                    <LabelHolder>
                     </LabelHolder>
+                    <div className={styles.brandArea}></div>
+                    <Vents width={this.props.width} lower={true}/>
                 </div>):(null)}
             </div>
             <div className={styles.moduleMiddle}>
                 <AXL_ColorID {...this.props.colorCard}/>
-                <Inset width={this.props.width}/>
+                <Inset width={this.faceWidth()-5}/>
             </div>
             <div className={styles.moduleBottom}>
 
@@ -77,12 +82,14 @@ function Label(props){
 }
 
 function Inset(props){
-    const insetWidth = (props.width - 10 - 4) + "mm";
+    const insetWidth = props.width + "mm";
     return (
         <div className={styles.inset} style={{width: insetWidth}}></div>
     )
 }
 
 function LabelHolder(props){
-    return (<div className={styles.labelHolder}></div>)
+    return (<div className={styles.labelHolder}>
+        {props.children}
+    </div>)
 }

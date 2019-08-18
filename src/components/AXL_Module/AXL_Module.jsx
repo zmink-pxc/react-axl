@@ -9,14 +9,21 @@ export default class AXL_Module extends React.PureComponent {
         super(props)
     }
 
+    numConnectorsPer = () => {
+        
+    }
+
     render(){
 
         return (<div className={styles.moduleBase} style={{width: this.props.width+"mm"}}>
             <div className={styles.moduleTop}>
                 {((this.props.raisedMidSection || this.props.hasTopRow)===false) ? 
                 (<div className={styles.raisedContainer}>
+                    <LabelHolder>
+                    <Vents width={this.props.width} upper={true}/>
                     <Label width={this.props.width}/>
-                    <Vents width={this.props.width}/>
+                    <Vents width={this.props.width} lower={true}/>
+                    </LabelHolder>
                 </div>):(null)}
             </div>
             <div className={styles.moduleMiddle}>
@@ -42,8 +49,9 @@ function Vents(props){
     var vents = [];
     const numvents = Math.floor(props.width/6);
     const ventContainerWidth = props.width-1 + "mm";
+    const ventClass = classNames({[styles.ventLower]:(props.lower===true)},{[styles.ventUpper]:(props.upper===true)})
     for (var i=0;i<numvents;i++){
-        vents.push(<div className={styles.vent}></div>) 
+        vents.push(<div className={ventClass}></div>) 
     }
 
     return (<div className={styles.ventContainer} style={{width:ventContainerWidth}}>
@@ -51,10 +59,20 @@ function Vents(props){
     </div>)
 }
 
+
+//54/45mm
 function Label(props){
     const labelWidth = (props.width - 2) + "mm";
+    const lineWidth = (props.width - 3) + "mm";
+    const numVerticalLines = props.numLabels + 1;
+    var verticalLines = [];
+    for (var j=0;j<numVerticalLines;j++){
+        verticalLines.push(<div className={styles.labelArea}></div>)
+    }
     return (
-        <div className={styles.labelBase} style={{width: labelWidth}}></div>
+        <div className={styles.labelBase} style={{width: labelWidth}}>
+            <div className={styles.labelHorizontalLine} style={{width:lineWidth}}></div>
+        </div>
     )
 }
 
@@ -63,4 +81,8 @@ function Inset(props){
     return (
         <div className={styles.inset} style={{width: insetWidth}}></div>
     )
+}
+
+function LabelHolder(props){
+    return (<div className={styles.labelHolder}></div>)
 }

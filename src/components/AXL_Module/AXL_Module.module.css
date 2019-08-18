@@ -1,0 +1,50 @@
+.vent{
+    width: 3mm;
+    height: 3mm;
+    background-color:  rgba(51,51,51,0.5);;
+    box-shadow: inset 0px 4px 5px black;
+}
+
+.ventContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.inset{
+    background-color: grey;
+    margin-left: 0.5mm;
+    box-shadow: inset 0 0 20px 3px black;
+}
+
+.labelBase{
+    background-color: white;
+    height: 40mm;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.raisedContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.moduleBase{
+    background-color: grey;
+    height: 122.4mm;
+    border: 0.1mm solid black;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.moduleMiddle{
+    margin-left: 2mm;
+    margin-top: 0.5mm;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}

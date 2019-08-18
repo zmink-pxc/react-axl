@@ -6,6 +6,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 0.5mm;
+    margin-right: 0.5mm;
+    margin-left: 0.5mm;
 }
 
 .pin{

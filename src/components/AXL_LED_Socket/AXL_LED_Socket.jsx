@@ -10,8 +10,8 @@ export default class AXL_LED_Socket extends React.PureComponent {
 
     render(){
         const width = this.props.numCols * 4 + "mm";
-        const height = this.props.numRows * 5 + "mm";
-        const s = {...baseStyle,width:width,height:height}
+        const height = this.props.numRows * 3 + "mm";
+        const s = {...baseStyle,width:width,height:height,marginLeft:'1mm',marginRight:'1mm',marginTop:'1mm'}
         return (<div style={s}>
                  
                </div>)

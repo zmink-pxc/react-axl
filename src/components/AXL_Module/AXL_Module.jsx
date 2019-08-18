@@ -26,7 +26,7 @@ export default class AXL_Module extends React.PureComponent {
                 {((this.props.raisedMidSection || this.props.hasTopRow)===false) ? 
                 (<div className={styles.raisedContainer} style={{width: this.faceWidth()+"mm"}}>
                     <Vents width={this.props.width} upper={true}/>
-                    <Label width={this.faceWidth()-4+1}/>
+                    <Label width={this.faceWidth()-4+1} labels={this.props.labels}/>
                     <LabelHolder>
                     </LabelHolder>
                     <div className={styles.brandArea}></div>
@@ -51,6 +51,10 @@ AXL_Module.propTypes = {
  colorCard: PropTypes.object            //properties to pass to colorID card
 }
 
+AXL_Module.defaultProps = {
+    labels: ['a','0','1','2','3','4','5','6','7']
+}
+
 //takes a width of the component in mm and calculates the number of vents should be rendered
 function Vents(props){
     var vents = [];
@@ -71,14 +75,31 @@ function Vents(props){
 function Label(props){
     const labelWidth = props.width + "mm";
     const lineWidth = (props.width - 3) + "mm";
-    const numVerticalLines = props.numLabels + 1;
-    var verticalLines = [];
-    for (var j=0;j<numVerticalLines;j++){
-        verticalLines.push(<div className={styles.labelArea}></div>)
-    }
+    const singleWidth = ( 10 * props.labels.length > props.width)
+    const numVerticalLines = props.labels.length - 1;
+    const labelVerticalClass = classNames([styles.labelVerticalLine],{[styles.singleWidthMargin]:singleWidth},{[styles.doubleWidthMargin]:!singleWidth})
+    var Columns = props.labels.map((label,index)=>{
+        if (index < props.labels.length){
+            var borderStyle,flex
+            if (index === 0){
+                borderStyle='none';
+                flex = '2';
+            }else if(index === (props.labels.length - 1)){
+                flex = '2';
+                borderStyle = '0.25mm solid black';
+            }else{
+                borderStyle = '0.25mm solid black';
+                flex = '1';
+            }
+            return (<div className={labelVerticalClass} style={{borderLeft: borderStyle,flexGrow:flex}}>
+                <span className={styles.labelText}>{label}</span>
+            </div>)
+        }
+    });
     return (
         <div className={styles.labelBase} style={{width: labelWidth}}>
             <div className={styles.labelHorizontalLine} style={{width:lineWidth}}></div>
+            {Columns}
         </div>
     )
 }

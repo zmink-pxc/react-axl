@@ -30,6 +30,8 @@
 }
 
 .labelBase{
+    position: absolute;
+    top: 7mm;
     background-color: white;
     height: 35mm;
     display: flex;
@@ -71,6 +73,7 @@
 }
 
 .labelHorizontalLine{
+    position: absolute;
     height: 0.1mm;
     border-top: 0.25mm solid black;
     margin-top: 6mm;
@@ -88,4 +91,21 @@
     border: solid grey 2mm;
     box-shadow: inset 0 0 13px 0px black, 0 1mm 1mm 0px black;;
     z-index: 2;
+}
+
+.labelText{
+    font: normal normal 700 3mm Arial;
+    margin-top: 2mm;
+}
+
+.labelVerticalLine{
+    text-align: center;
+}
+
+.singleWidthMargin{
+    width: 5mm;
+}
+
+.doubleWidthMargin{
+    width: 10mm;
 }

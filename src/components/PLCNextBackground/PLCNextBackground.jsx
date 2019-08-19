@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./PLCNextBackground.module.scss";
+import classNames from 'classnames';
 
 export default class PLCNextBackground extends React.PureComponent {
     constructor(props){
@@ -10,10 +11,12 @@ export default class PLCNextBackground extends React.PureComponent {
         const foregroundElements = [];
         const backgroundElements = [];
         for (var i=0;i<this.props.numForegroundElements;i++){
-            foregroundElements.push(<div className={styles["foreground-element-"+i]}></div>)
+            const feClass = classNames(styles["foreground-element-"+i],styles.foregroundMove)
+            foregroundElements.push(<div className={feClass}></div>)
         }
         for (var i=0;i<this.props.numBackgroundElements;i++){
-            backgroundElements.push(<div className={styles["background-element-"+i]}></div>)
+            const bgClass = classNames(styles["background-element-"+i],styles.backgroundMove)
+            backgroundElements.push(<div className={bgClass}></div>)
         }
 
         return (<div className={this.props.className} style={{backgroundColor: styles.backgroundDark,width:'100vw',height:'100vh',...this.props.style}}>

@@ -76,3 +76,29 @@ $color-background-light: $color-alto;
         box-shadow: 0 0 5px 10px rgba($color,0.2);
       }
   }
+
+.foregroundMove{
+    animation: angle-move 120s linear
+}
+
+.backgroundMove{
+    animation: angle-move-reverse 240s linear
+}
+
+@keyframes angle-move {
+    0%{
+
+    }
+    100%{
+        transform: translate(-100vw,-100vh);
+    }
+}
+
+@keyframes angle-move-reverse {
+    0%{
+
+    }
+    100%{
+        transform: translate(100vw,100vh);
+    }
+}

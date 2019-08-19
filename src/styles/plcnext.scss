@@ -1,0 +1,61 @@
+$color-pistachio:   #A0CA00;
+$color-downriver:   #092346;
+$color-neptune:     #7DADB9;
+$color-waterloo:    #83839D;
+$color-white:       #83839D;
+$color-alto:        #D8D8D8;
+
+$div-color-list: $color-pistachio,$color-downriver,$color-neptune,$color-waterloo,$color-white,$color-alto;
+
+$width-min: 2;
+$width-max: 40;
+
+$transparency-background: 0.8;
+
+$color-background-dark: $color-downriver;
+$color-background-light: $color-alto;
+
+///takes a color and applies background transparency
+@function applyBackgroundTransparency($color) {
+    @return rgba($color,$transparency-background);
+}
+
+
+@function randomNum($min, $max) {
+    $rand: random();
+    $randomNum: $min + floor($rand * (($max - $min) + 1));
+
+    @return $randomNum;
+}
+
+.background > div {
+    z-index: 1;
+}
+
+.foreground > div {
+    z-index: 10;
+}
+
+@for $i from 1 through 100 {
+    $size: randomNum($width-min,$width-max) + "px";
+    $backgroundSize: randomNum($width-min,$width-max) + "px";
+    $num: randomNum(0,length($div-color-list));
+    @warn "color index: `#{$num}`.";
+    $color: nth($div-color-list,randomNum(0,length($div-color-list)));
+    $backgroundColor: applyBackgroundTransparency($color);
+    .foreground:nth-child(#{$i}) {
+      top: randomNum(0.00,100.00) + "%";
+      left: randomNum(0.00,100.00) + "%";
+      height: $size;
+      width:  $size;
+      background-color: $color;
+    }
+    .background:nth-child(#{$i}) {
+        top: randomNum(0.00,100.00) + "%";
+        left: randomNum(0.00,100.00) + "%";
+        height: $backgroundSize;
+        width:  $backgroundSize;
+        background-color: $backgroundColor;
+        box-shadow: 0 0 5px 10px rgba(128, 128, 128, 0.192);
+      }
+  }

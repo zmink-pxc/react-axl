@@ -19,6 +19,7 @@ import AXL_LED_Socket from '../src/components/AXL_LED_Socket/AXL_LED_Socket.jsx'
 import AXL_ColorID from '../src/components/AXL_ColorID/AXL_ColorID.jsx';
 import AXL_Connector_Socket from '../src/components/AXL_Connector_Socket/AXL_Connector_Socket.jsx';
 import AXL_Module from '../src/components/AXL_Module/AXL_Module.jsx';
+import PLCNextBackground from '../src/components/PLCNextBackground/PLCNextBackground.jsx';
 
 //const stories = storiesOf('Storybook Knobs', module);
 
@@ -105,3 +106,7 @@ storiesOf('Button', module)
   storiesOf('AXL_Module',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><AXL_Module raisedMidsection={false} hasTopRow={false} colorCard={{isDigitalIn:true}} width={53.6}/>)
+
+  storiesOf('PLCNextBackground',module)
+  .addDecorator(withKnobs)
+  .add('Basic',()=><PLCNextBackground numForegroundElements={10} numBackgroundElements={30}/>)

@@ -45,10 +45,13 @@ export default class AXL_Module extends React.PureComponent {
 }
 
 AXL_Module.propTypes = {
- raisedMidsection: PropTypes.bool,   //does the card have a raised midsection
- hasTopRow: PropTypes.bool,          //do the connectors appear at the top of the module
- width: PropTypes.number,               //width in mm of the card
- colorCard: PropTypes.object            //properties to pass to colorID card
+ raisedMidsection: PropTypes.bool,      //does the card have a raised midsection
+ hasTopRow:     PropTypes.bool,         //do the connectors appear at the top of the module
+ width:         PropTypes.number,       //width in mm of the card
+ colorCard:     PropTypes.object,       //properties to pass to colorID card
+ partNumber:    PropTypes.number,       //part number of the module
+ fullWidthLogo: PropTypes.bool,         //should show full width phoenix contact logo
+ moduleName:    PropTypes.string,       //name of the module e.g. AI8,DO8, etc
 }
 
 AXL_Module.defaultProps = {

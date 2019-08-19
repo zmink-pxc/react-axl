@@ -111,4 +111,4 @@ storiesOf('Button', module)
 
   storiesOf('PLCNextBackground',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><PLCNextBackground numForegroundElements={10} numBackgroundElements={30}/>)
+  .add('Basic',()=><PLCNextBackground numForegroundElements={100} numBackgroundElements={100}/>)

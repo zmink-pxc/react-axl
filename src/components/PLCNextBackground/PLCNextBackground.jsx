@@ -16,11 +16,11 @@ export default class PLCNextBackground extends React.PureComponent {
             backgroundElements.push(<div className={styles["background-element-"+i]}></div>)
         }
 
-        return (<div className={this.props.className} style={{backgroundColor: styles.backgroundDark,width:'200px',height:'200px',...this.props.style}}>
-            <div className="foreground">
+        return (<div className={this.props.className} style={{backgroundColor: styles.backgroundDark,width:'100vw',height:'100vh',...this.props.style}}>
+            <div className={styles.foreground}>
                 {foregroundElements}
             </div>
-            <div className="background">
+            <div className={styles.background}>
                 {backgroundElements}
             </div>
         </div>)

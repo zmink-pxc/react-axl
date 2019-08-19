@@ -10,7 +10,9 @@ $div-color-list: $color-pistachio,$color-downriver,$color-neptune,$color-waterlo
 $width-min: 2;
 $width-max: 40;
 
-$transparency-background: 0.8;
+$frame-size: 400;
+
+$transparency-background: 0.5;
 
 $color-background-dark: $color-downriver;
 $color-background-light: $color-alto;
@@ -26,7 +28,7 @@ $color-background-light: $color-alto;
 
 @function randomNum($min, $max) {
     $rand: random();
-    $randomNum: $min + floor($rand * (($max - $min) + 1));
+    $randomNum: $min + ($rand * (($max - $min) + 1));
 
     @return $randomNum;
 }
@@ -39,7 +41,15 @@ $color-background-light: $color-alto;
     z-index: 10;
 }
 
-@for $i from 1 through 100 {
+.foreground{
+    position: relative;
+}
+
+.background{
+    overflow: hidden;
+}
+
+@for $i from 1 through 1000 {
     $size: randomNum($width-min,$width-max) + 0px;
     @warn "size: `#{$size}`.";
     $backgroundSize: randomNum($width-min,$width-max) + 0px;
@@ -48,20 +58,21 @@ $color-background-light: $color-alto;
     @warn "color: `#{$color}`.";
     $backgroundColor: applyBackgroundTransparency($color);
     .foreground-element-#{$i} {
-      position: relative;
-      top: randomNum(0.00,100.00) + 0%;
-      left: randomNum(0.00,100.00) + 0%;
+      position: absolute;
+      top: randomNum(-120,120) * 1vh;
+      left: randomNum(-120,120) * 1vw;
       height: $size;
       width:  $size;
       background-color: $color;
     }
     .background-element-#{$i} {
-        position: relative;
-        top: randomNum(0.00,100.00) + 0%;
-        left: randomNum(0.00,100.00) + 0%;
+        position: absolute;
+        top: randomNum(-120,120) * 1vh;
+        left: randomNum(-120,120) * 1vw;
+        filter: blur(5px);
         height: $backgroundSize;
         width:  $backgroundSize;
         background-color: $backgroundColor;
-        box-shadow: 0 0 5px 10px rgba(128, 128, 128, 0.192);
+        box-shadow: 0 0 5px 10px rgba($color,0.2);
       }
   }

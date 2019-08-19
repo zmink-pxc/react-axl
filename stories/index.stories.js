@@ -21,6 +21,8 @@ import AXL_Connector_Socket from '../src/components/AXL_Connector_Socket/AXL_Con
 import AXL_Module from '../src/components/AXL_Module/AXL_Module.jsx';
 import PLCNextBackground from '../src/components/PLCNextBackground/PLCNextBackground.jsx';
 
+import '../src/components/PLCNextBackground/PLCNextBackground.module.scss';
+
 //const stories = storiesOf('Storybook Knobs', module);
 
 

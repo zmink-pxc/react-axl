@@ -10,10 +10,10 @@ export default class PLCNextBackground extends React.PureComponent {
         const foregroundElements = [];
         const backgroundElements = [];
         for (var i=0;i<this.props.numForegroundElements;i++){
-            foregroundElements.push(<div></div>)
+            foregroundElements.push(<div className={styles["foreground-element-"+i]}></div>)
         }
         for (var i=0;i<this.props.numBackgroundElements;i++){
-            backgroundElements.push(<div></div>)
+            backgroundElements.push(<div className={styles["background-element-"+i]}></div>)
         }
 
         return (<div className={this.props.className} style={{backgroundColor: styles.backgroundDark,width:'200px',height:'200px',...this.props.style}}>

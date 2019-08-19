@@ -40,23 +40,25 @@ $color-background-light: $color-alto;
 }
 
 @for $i from 1 through 100 {
-    $size: randomNum($width-min,$width-max) + "px";
+    $size: randomNum($width-min,$width-max) + 0px;
     @warn "size: `#{$size}`.";
-    $backgroundSize: randomNum($width-min,$width-max) + "px";
+    $backgroundSize: randomNum($width-min,$width-max) + 0px;
     $num: randomNum(0,length($div-color-list));
     $color: nth($div-color-list,randomNum(1,length($div-color-list)));
     @warn "color: `#{$color}`.";
     $backgroundColor: applyBackgroundTransparency($color);
-    .foreground:nth-child(#{$i}) {
-      top: randomNum(0.00,100.00) + "%";
-      left: randomNum(0.00,100.00) + "%";
+    .foreground-element-#{$i} {
+      position: relative;
+      top: randomNum(0.00,100.00) + 0%;
+      left: randomNum(0.00,100.00) + 0%;
       height: $size;
       width:  $size;
       background-color: $color;
     }
-    .background:nth-child(#{$i}) {
-        top: randomNum(0.00,100.00) + "%";
-        left: randomNum(0.00,100.00) + "%";
+    .background-element-#{$i} {
+        position: relative;
+        top: randomNum(0.00,100.00) + 0%;
+        left: randomNum(0.00,100.00) + 0%;
         height: $backgroundSize;
         width:  $backgroundSize;
         background-color: $backgroundColor;

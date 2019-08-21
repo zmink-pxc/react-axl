@@ -51,11 +51,9 @@ $color-background-light: $color-alto;
 
 @for $i from 1 through 1000 {
     $size: randomNum($width-min,$width-max) + 0px;
-    @warn "size: `#{$size}`.";
     $backgroundSize: randomNum($width-min,$width-max) + 0px;
     $num: randomNum(0,length($div-color-list));
     $color: nth($div-color-list,randomNum(1,length($div-color-list)));
-    @warn "color: `#{$color}`.";
     $backgroundColor: applyBackgroundTransparency($color);
     .foreground-element-#{$i} {
       position: absolute;

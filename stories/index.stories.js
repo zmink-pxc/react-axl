@@ -20,6 +20,7 @@ import AXL_ColorID from '../src/components/AXL_ColorID/AXL_ColorID.jsx';
 import AXL_Connector_Socket from '../src/components/AXL_Connector_Socket/AXL_Connector_Socket.jsx';
 import AXL_Module from '../src/components/AXL_Module/AXL_Module.jsx';
 import PLCNextBackground from '../src/components/PLCNextBackground/PLCNextBackground.jsx';
+import AXL_24VPower from '../src/components/AXL_24VPower/AXL_24VPower.jsx';
 
 import '../src/components/PLCNextBackground/PLCNextBackground.module.scss';
 
@@ -77,6 +78,10 @@ storiesOf('Button', module)
   storiesOf('AXL_Connector',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><AXL_Connector pushInLatch={boolean('pushInLatch',false)}/>);
+
+  storiesOf('AXL_24VPower',module)
+  .addDecorator(withKnobs)
+  .add('Basic',()=><AXL_24VPower/>)
 
   storiesOf('AXL_Plug',module)
   .addDecorator(withKnobs)

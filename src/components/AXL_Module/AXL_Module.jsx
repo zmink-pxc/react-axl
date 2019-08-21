@@ -13,7 +13,9 @@ export default class AXL_Module extends React.PureComponent {
         return Math.floor(this.props.width/10) * 10;
     }
 
-
+    mapPropsToConnector = () => {
+        return {}
+    }
 
     withMM = (num)=>{
         return num + "mm";
@@ -38,8 +40,8 @@ export default class AXL_Module extends React.PureComponent {
                 <Inset width={this.faceWidth()-5}/>
             </div>
             <div className={styles.moduleBottom}>
-                {React.Children.map(this.props.children, child => {
-                    return React.cloneElement(child,{})
+                {React.Children.map(this.props.children, (child,index) => {
+                    return React.cloneElement(child,this.mapPropsToConnector(index))
                 })}
             </div>
         </div>)

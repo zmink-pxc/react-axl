@@ -21,6 +21,7 @@ import AXL_Connector_Socket from '../src/components/AXL_Connector_Socket/AXL_Con
 import AXL_Module from '../src/components/AXL_Module/AXL_Module.jsx';
 import PLCNextBackground from '../src/components/PLCNextBackground/PLCNextBackground.jsx';
 import AXL_24VPower from '../src/components/AXL_24VPower/AXL_24VPower.jsx';
+import AXL_DI81_DO81_1H from '../src/components/AXL_DI81_DO81_1H/AXL_DI81_DO81_1H.jsx';
 
 import '../src/components/PLCNextBackground/PLCNextBackground.module.scss';
 
@@ -99,6 +100,7 @@ storiesOf('Button', module)
   .addDecorator(withKnobs)
   .add('Basic',()=><AXL_ColorID isDigitalIn={boolean('isDigitalIn',false)}
   isDigitalOut={boolean('isDigitalOut',true)}
+  isComboDigital={boolean('isComboDigital',false)}
   isAnalogOut={boolean('isAnalogOut',false)}
   isAnalogIn={boolean('isAnalogIn',false)}
   isSpecialFn={boolean('isSpecialFn',false)}
@@ -113,6 +115,10 @@ storiesOf('Button', module)
   storiesOf('AXL_Module',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><AXL_Module raisedMidsection={false} hasTopRow={false} colorCard={{isDigitalIn:true}} width={53.6}/>)
+
+  storiesOf('AXL_DI81_DO81_1H',module)
+  .addDecorator(withKnobs)
+  .add('Basic',()=><AXL_DI81_DO81_1H/>)
 
   storiesOf('PLCNextBackground',module)
   .addDecorator(withKnobs)

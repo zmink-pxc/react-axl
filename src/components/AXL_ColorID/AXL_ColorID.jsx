@@ -8,12 +8,8 @@ export default class AXL_ColorID extends React.PureComponent {
     }
 
     render(){
-        const colorClass = classNames([styles.cardBase],{[styles.digitalIn]:this.props.isDigitalIn},{[styles.digitalOut]:this.props.isDigitalOut},
+        const colorClass = classNames([styles.cardBase],{[styles.comboDigital]:this.props.isComboDigital},{[styles.digitalIn]:this.props.isDigitalIn},{[styles.digitalOut]:this.props.isDigitalOut},
         {[styles.analogIn]:this.props.isAnalogIn},{[styles.analogOut]:this.props.isAnalogOut},{[styles.specialFn]:this.props.isSpecialFn},{[styles.pwr]:this.props.isPwr});
         return <div className={colorClass}></div>
     }
-}
-
-AXL_ColorID.defaultProps = {
-    isDigitalOut: true
 }

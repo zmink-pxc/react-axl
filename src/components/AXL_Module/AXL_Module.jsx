@@ -38,20 +38,22 @@ export default class AXL_Module extends React.PureComponent {
                 <Inset width={this.faceWidth()-5}/>
             </div>
             <div className={styles.moduleBottom}>
-
+                {React.Children.map(this.props.children, child => {
+                    return React.cloneElement(child,{})
+                })}
             </div>
         </div>)
     }
 }
 
 AXL_Module.propTypes = {
- raisedMidsection: PropTypes.bool.isRequired,       //does the card have a raised midsection
- hasTopRow:     PropTypes.bool.isRequired,          //do the connectors appear at the top of the module
- width:         PropTypes.number.isRequired,        //width in mm of the card
- colorCard:     PropTypes.object.isRequired,        //properties to pass to colorID card
- partNumber:    PropTypes.number,                   //part number of the module
- fullWidthLogo: PropTypes.bool,                     //should show full width phoenix contact logo
- moduleName:    PropTypes.string,                   //name of the module e.g. AI8,DO8, etc
+ raisedMidsection:  PropTypes.bool.isRequired,       //does the card have a raised midsection
+ hasTopRow:         PropTypes.bool.isRequired,          //do the connectors appear at the top of the module
+ width:             PropTypes.number.isRequired,        //width in mm of the card
+ colorCard:         PropTypes.object.isRequired,        //properties to pass to colorID card
+ partNumber:        PropTypes.number,                   //part number of the module
+ fullWidthLogo:     PropTypes.bool,                     //should show full width phoenix contact logo
+ moduleName:        PropTypes.string,                   //name of the module e.g. AI8,DO8, etc
 }
 
 AXL_Module.defaultProps = {

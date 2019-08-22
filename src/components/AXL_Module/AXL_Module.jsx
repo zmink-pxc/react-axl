@@ -3,17 +3,31 @@ import classNames from 'classnames';
 import styles from './AXL_Module.module.css'
 import PropTypes from 'prop-types';
 import AXL_ColorID from '../AXL_ColorID/AXL_ColorID.jsx';
+import { switchCase } from '@babel/types';
 
 export default class AXL_Module extends React.PureComponent {
     constructor(props){
         super(props)
+
+        this.numConnectors = (props.children) ? (props.children.length):0;
     }
 
     faceWidth = () => {
         return Math.floor(this.props.width/10) * 10;
     }
 
-    mapPropsToConnector = () => {
+    mapPropsToConnector = (connector,connectorIndex) => {
+        switch (connector.props.type) {
+            case 'POWER':
+                
+                break;
+            case 'IO':
+
+                break;
+            default:
+                break;
+        }
+        //console.log('Connector Props: ' + JSON.stringify(connector));
         return {}
     }
 
@@ -41,7 +55,7 @@ export default class AXL_Module extends React.PureComponent {
             </div>
             <div className={styles.moduleBottom}>
                 {React.Children.map(this.props.children, (child,index) => {
-                    return React.cloneElement(child,this.mapPropsToConnector(index))
+                    return React.cloneElement(child,this.mapPropsToConnector(child,index))
                 })}
             </div>
         </div>)
@@ -69,7 +83,7 @@ function Vents(props){
     const ventContainerWidth = props.width-1 + "mm";
     const ventClass = classNames({[styles.ventLower]:(props.lower===true)},{[styles.ventUpper]:(props.upper===true)})
     for (var i=0;i<numvents;i++){
-        vents.push(<div className={ventClass}></div>) 
+        vents.push(<div key={'v'+i} className={ventClass}></div>) 
     }
 
     return (<div className={styles.ventContainer} style={{width:ventContainerWidth}}>
@@ -98,7 +112,7 @@ function Label(props){
                 borderStyle = '0.25mm solid black';
                 flex = '1';
             }
-            return (<div className={labelVerticalClass} style={{borderLeft: borderStyle,flexGrow:flex}}>
+            return (<div className={labelVerticalClass} key={'lbl'+index} style={{borderLeft: borderStyle,flexGrow:flex}}>
                 <span className={styles.labelText}>{label}</span>
             </div>)
         }
@@ -122,4 +136,21 @@ function LabelHolder(props){
     return (<div className={styles.labelHolder}>
         {props.children}
     </div>)
+}
+
+export function defaultTerminals(numTerminals){
+    var vals = [];
+    for (var k=0;k<numTerminals;k++){
+        vals.push({});
+    }
+    return vals
+    //[{label:'00'},{label:'10'},{label:'20'},{label:'30'}]
+}
+
+export function defaultLeds(numLeds){
+    var vals = [];
+    for (var i=0;i<numLeds;i++){
+        vals.push({})
+    }
+    return vals
 }

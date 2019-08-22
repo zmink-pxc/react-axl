@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import styles from './AXL_Terminal.module.css'
 
 export default class AXL_Terminal extends React.PureComponent {
@@ -37,4 +38,9 @@ export default class AXL_Terminal extends React.PureComponent {
            )
         }        
     }
+}
+
+AXL_Terminal.propTypes = {
+    isEnd: PropTypes.bool.isRequired,   //is the terminal at the end of the connector - will show a carved out edge
+    isBlack: PropTypes.bool             //should the connector be rendered as black    
 }

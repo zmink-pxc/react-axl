@@ -12,9 +12,9 @@ export default class AXL_LED_Group extends React.PureComponent {
 
         return (<div className={styles.rootContainer}>
                 {
-                 this.props.leds.map((led)=>{
+                 this.props.leds.map((led,index)=>{
                      var {label,...rest} = {...led};
-                     return (<div className={styles.row}>
+                     return (<div className={styles.row} key={'lr'+index}>
                          <div className={styles.ledContainer}>
                             <AXL_LED {...rest}/> 
                          </div>

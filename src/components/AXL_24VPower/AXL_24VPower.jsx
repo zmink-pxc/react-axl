@@ -2,6 +2,7 @@ import AXL_Connector from '../AXL_Connector/AXL_Connector.jsx';
 import React from 'react';
 
 export default function AXL_24VPower(props){
+
     var terminalArr,ledArr
     if (typeof props.terminals === "undefined"){
         terminalArr = [{},{},{},{}];

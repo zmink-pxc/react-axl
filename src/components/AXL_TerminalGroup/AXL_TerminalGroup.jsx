@@ -24,7 +24,7 @@ export default class AXL_TerminalGroup extends React.PureComponent {
                 <AXL_Plunger pushIn={this.props.pushIn} red={this.props.redPlunger} blue={this.props.bluePlunger} green={this.props.greenPlunger}/>
              </div>
              <div className={styles.terminalContainer}>
-                <AXL_Terminal isBlack={this.props.isBlack}/>
+                <AXL_Terminal isBlack={this.props.isBlack} isEnd={this.props.isEnd}/>
              </div>
          </div>)
     }

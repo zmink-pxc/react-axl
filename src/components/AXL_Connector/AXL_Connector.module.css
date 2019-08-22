@@ -1,4 +1,5 @@
 .col{
+    flex: initial;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -7,6 +8,8 @@
 
 .connector {
     display: inline-block;
+    /* flex-direction: row;
+    align-content: center; */
     background-color: gray;
 }
 

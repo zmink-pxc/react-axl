@@ -15,16 +15,21 @@ export default class AXL_Connector extends React.PureComponent {
     render() {
 
         const cols = Array.apply(null,Array(this.props.numCols));
+        const rows = Array.apply(null,Array(this.props.numRows));
         const connectorStyle = classNames(styles.connector,{[styles.blackConnector]: this.props.isBlack})
+        var terminals = (this.props.terminals)?(this.props.terminals):(Array.apply(placeholderTerminal,Array(this.props.numRows*this.props.numCols)))
         return (
             <div className={connectorStyle}>
                 {
-                    cols.map((col,index)=>{
-                        var j = this.props.numRows * index;
+                    cols.map((col,coli)=>{
+                        var j = this.props.numRows * coli;
+                        var leds = (this.props.leds)?(this.props.leds.slice(j,j+this.props.numRows)):(Array.apply(placeholderLED,Array(this.props.numRows)))
+                        // if (this.props.leds !== (this.props.numRows*this.props.numCols)){leds = }
+                        
                         return (<div className={styles.col}>
-                        <AXL_LED_Group leds={this.props.leds.slice(j,j+this.props.numRows)}/>
-                        {this.props.terminals.slice(j,j+this.props.numRows).map((terminal,row)=>{
-                            return <AXL_Terminal_Group key={'ter-'+row+'-'+index} {...terminal} isBlack={(this.props.isBlack===true)} isEnd={(row === (this.props.numRows-1))}/>
+                        <AXL_LED_Group leds={leds}/>
+                        {rows.map((row,rowi)=>{
+                            return <AXL_Terminal_Group key={'ter-'+rowi+'-'+coli} {...terminals[(coli*this.props.numRows+rowi)]} isBlack={(this.props.isBlack===true)} isEnd={(row === (this.props.numRows-1))}/>
                         })}
                         </div>)
                     })
@@ -44,11 +49,14 @@ AXL_Connector.propTypes = {
     leds:        PropTypes.array                //hooks into led props for animating and labeling purposes
 }
 
-AXL_Connector.defaultProps = {
-    isBlack: true,
-    numRows: 4,
-    numCols: 1,
-    terminals: [{label:'00'},{label:'10'},{label:'20'},{label:'30'}],
-    leds: [{isWarning: true,label:'00'},{isError: true,label:'10'},{isActive: true,label:'20'},{isWarning: true,label:'30'}]
-}
+// AXL_Connector.defaultProps = {
+//     isBlack: true,
+//     numRows: 4,
+//     numCols: 1,
+//     terminals: [{label:'00'},{label:'10'},{label:'20'},{label:'30'}],
+//     leds: [{isWarning: true,label:'00'},{isError: true,label:'10'},{isActive: true,label:'20'},{isWarning: true,label:'30'}]
+// }
+
+const placeholderLED = {isError:true,label:'00'};
+const placeholderTerminal = {label: '00'};
 

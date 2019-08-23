@@ -17,7 +17,7 @@
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2702008&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
 
 * AXL F AI8 1F - 2688064
-  * [ ] Implemented
+  * [x] Implemented
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2688064&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
 
 * AXL F AI8 W 1F - 2702525

@@ -4,6 +4,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     width: 5mm;
+    height: 10mm;
 }
 
 .label {

@@ -32,6 +32,7 @@
 
 .rootContainer{
     width: 5mm;
+    height: 12mm;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

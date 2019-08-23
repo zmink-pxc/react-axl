@@ -12,6 +12,7 @@ export default class AXL_Module extends React.PureComponent {
         super(props)
 
         this.numConnectors = (props.children) ? (props.children.length):0;
+        this.connSectionWidth = 0;
     }
 
     faceWidth = () => {
@@ -19,6 +20,7 @@ export default class AXL_Module extends React.PureComponent {
     }
 
     mapPropsToConnector = (connector,connectorIndex) => {
+        this.connSectionWidth = this.connSectionWidth + (connector.props.numCols * 5)
         switch (connector.props.type) {
             case 'POWER':
                 
@@ -38,8 +40,11 @@ export default class AXL_Module extends React.PureComponent {
     }
 
     render(){
-
+        let middleWidth = (this.props.numCols * 5)+"mm";
         let logo = (this.props.fullWidthLogo === true) ? (phoenixBrand):(phoenixP);
+        let children = React.Children.map(this.props.children, (child,index) => {
+            return React.cloneElement(child,this.mapPropsToConnector(child,index))
+        })
 
         return (<div className={styles.moduleBase} style={{width: this.props.width+"mm"}}>
             <div className={styles.moduleTop} style={{width: this.faceWidth()+"mm"}}>
@@ -59,14 +64,12 @@ export default class AXL_Module extends React.PureComponent {
                     <Vents width={this.props.width} lower={true}/>
                 </div>):(null)}
             </div>
-            <div className={styles.moduleMiddle}>
+            <div className={styles.moduleMiddle} style={{width:this.connSectionWidth + 'mm'}}>
                 <AXL_ColorID {...this.props.colorCard}/>
-                <Inset width={this.faceWidth()-5}/>
+                <Inset />
             </div>
             <div className={styles.moduleBottom}>
-                {React.Children.map(this.props.children, (child,index) => {
-                    return React.cloneElement(child,this.mapPropsToConnector(child,index))
-                })}
+                {children}
             </div>
         </div>)
     }
@@ -137,9 +140,9 @@ function Label(props){
 }
 
 function Inset(props){
-    const insetWidth = props.width + "mm";
+    //const insetWidth = props.width + "mm";
     return (
-        <div className={styles.inset} style={{width: insetWidth}}></div>
+        <div className={styles.inset}></div>
     )
 }
 

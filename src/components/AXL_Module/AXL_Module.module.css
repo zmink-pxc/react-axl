@@ -29,6 +29,7 @@
 }
 
 .inset{
+    width: 100%;
     background-color: grey;
     margin-left: 0.5mm;
     box-shadow: inset 0 0 20px 3px black;

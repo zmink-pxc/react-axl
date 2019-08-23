@@ -21,6 +21,7 @@ export default class AXL_Connector extends React.PureComponent {
         var terminals = (this.props.hasOwnProperty('terminals'))?(this.props.terminals):(initArray(placeholderTerminal,this.props.numRows*this.props.numCols))
         return (
             <div className={connectorStyle}>
+                <div className={styles.connectorFoot}></div>
                 <div className={connectorMiddleStyle}>
                 {
                     cols.map((col,coli)=>{

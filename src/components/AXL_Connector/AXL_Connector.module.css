@@ -11,6 +11,7 @@
     flex-direction: row;
     align-items: flex-start;
     background-color: gray;
+    border: 0.01mm solid black;
 }
 .connector{
     display: flex;

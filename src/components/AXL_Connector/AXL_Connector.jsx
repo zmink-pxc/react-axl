@@ -18,14 +18,14 @@ export default class AXL_Connector extends React.PureComponent {
         const rows = Array.apply(null,Array(this.props.numRows));
         const connectorStyle = classNames(styles.connector)
         const connectorMiddleStyle = classNames(styles['connector-middle'],{[styles.blackConnector]: this.props.isBlack})
-        var terminals = (this.props.terminals)?(this.props.terminals):(Array.apply(placeholderTerminal,Array(this.props.numRows*this.props.numCols)))
+        var terminals = (this.props.hasOwnProperty('terminals'))?(this.props.terminals):(initArray(placeholderTerminal,this.props.numRows*this.props.numCols))
         return (
             <div className={connectorStyle}>
                 <div className={connectorMiddleStyle}>
                 {
                     cols.map((col,coli)=>{
                         var j = this.props.numRows * coli;
-                        var leds = (this.props.leds)?(this.props.leds.slice(j,j+this.props.numRows)):(Array.apply(placeholderLED,Array(this.props.numRows)))
+                        var leds = (this.props.hasOwnProperty('leds'))?(this.props.leds.slice(j,j+this.props.numRows)):(initArray(placeholderLED,this.props.numRows))
                         // if (this.props.leds !== (this.props.numRows*this.props.numCols)){leds = }
                         
                         return (<div className={styles.col}>
@@ -63,3 +63,10 @@ AXL_Connector.propTypes = {
 const placeholderLED = {isError:true,label:'00'};
 const placeholderTerminal = {label: '00'};
 
+
+function initArray(initElement,length){
+    var arr = Array.apply(null,Array(length));
+    return arr.map((element)=>{
+        return initElement
+    })
+}

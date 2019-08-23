@@ -1,0 +1,49 @@
+@import '../../../styles/axioline';
+
+.base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 122mm;
+    width: 45mm;
+    background-color: $axioline-grey;
+}
+
+.top{
+    height: 40mm;
+    width:  39mm;
+    border: 0.01mm solid black;
+}
+
+.mid{
+    height: 38mm;
+    width: 39mm;
+    border: 0.01mm solid black;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 39mm;
+    height: 42mm;
+}
+
+.bottomRight{
+    height:40mm;
+    width:28mm;
+    border: 0.01mm solid black;
+}
+
+.ventUpper{
+    width: 4mm;
+    height: 1.5mm;
+    background-color:  rgba(51,51,51,0.5);;
+    box-shadow: inset 0px 4px 5px black;
+}
+
+.ventContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

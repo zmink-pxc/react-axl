@@ -31,7 +31,7 @@ export default class AXL_Connector extends React.PureComponent {
                         return (<div className={styles.col}>
                         <AXL_LED_Group leds={leds}/>
                         {rows.map((row,rowi)=>{
-                            return <AXL_Terminal_Group key={'ter-'+rowi+'-'+coli} {...terminals[(coli*this.props.numRows+rowi)]} isBlack={(this.props.isBlack===true)} isEnd={(row === (this.props.numRows-1))}/>
+                            return <AXL_Terminal_Group key={'ter-'+rowi+'-'+coli} {...terminals[(coli*this.props.numRows+rowi)]} isBlack={(this.props.isBlack===true)} isEnd={(rowi === (this.props.numRows-1))}/>
                         })}
                         </div>)
                     })

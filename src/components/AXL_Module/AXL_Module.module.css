@@ -12,6 +12,11 @@
 }
 
 .brandArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 2mm;
+    align-items: center;
     height: 10mm;
     border-bottom: 0.5mm solid black;
     width: 100%;
@@ -115,4 +120,8 @@
 
 .doubleWidthMargin{
     width: 10mm;
+}
+
+.logo{
+    height: 6mm;
 }

@@ -4,6 +4,8 @@ import styles from './AXL_Module.module.css'
 import PropTypes from 'prop-types';
 import AXL_ColorID from '../AXL_ColorID/AXL_ColorID.jsx';
 import { switchCase } from '@babel/types';
+import phoenixP from './phoenix-p.png';
+import phoenixBrand from './phoenix-brand.png';
 
 export default class AXL_Module extends React.PureComponent {
     constructor(props){
@@ -37,6 +39,8 @@ export default class AXL_Module extends React.PureComponent {
 
     render(){
 
+        let logo = (this.props.fullWidthLogo === true) ? (phoenixBrand):(phoenixP);
+
         return (<div className={styles.moduleBase} style={{width: this.props.width+"mm"}}>
             <div className={styles.moduleTop} style={{width: this.faceWidth()+"mm"}}>
                 {((this.props.raisedMidSection || this.props.hasTopRow)===false) ? 
@@ -45,7 +49,9 @@ export default class AXL_Module extends React.PureComponent {
                     <Label width={this.faceWidth()-4+1} labels={this.props.labels}/>
                     <LabelHolder>
                     </LabelHolder>
-                    <div className={styles.brandArea}></div>
+                    <div className={styles.brandArea}>
+                        {<img className={styles.logo} src={logo} alt="Phoenix Contact"/>}
+                    </div>
                     <Vents width={this.props.width} lower={true}/>
                 </div>):(null)}
             </div>

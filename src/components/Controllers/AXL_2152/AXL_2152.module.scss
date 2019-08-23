@@ -30,9 +30,12 @@
 }
 
 .bottomRight{
-    height:40mm;
+    height:42mm;
     width:28mm;
-    border: 0.01mm solid black;
+    border-top: 0.5mm solid lighten($axioline-grey,10%);
+    border-left: 0.01mm solid black;
+    border-right: 0.01mm solid black;
+    border-bottom: 0.01mm solid black;
 }
 
 .ventUpper{

@@ -6,11 +6,17 @@
     width: 5mm;
 }
 
-.connector {
-    display: inline-block;
-    /* flex-direction: row;
-    align-content: center; */
+.connector-middle {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     background-color: gray;
+}
+.connector{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: center;
 }
 
 .blackConnector{

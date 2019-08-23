@@ -72,6 +72,12 @@
     justify-content: center;
 }
 
+.moduleBottom{
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
+
 .labelHorizontalLine{
     position: absolute;
     height: 0.1mm;

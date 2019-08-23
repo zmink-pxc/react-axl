@@ -16,10 +16,12 @@ export default class AXL_Connector extends React.PureComponent {
 
         const cols = Array.apply(null,Array(this.props.numCols));
         const rows = Array.apply(null,Array(this.props.numRows));
-        const connectorStyle = classNames(styles.connector,{[styles.blackConnector]: this.props.isBlack})
+        const connectorStyle = classNames(styles.connector)
+        const connectorMiddleStyle = classNames(styles['connector-middle'],{[styles.blackConnector]: this.props.isBlack})
         var terminals = (this.props.terminals)?(this.props.terminals):(Array.apply(placeholderTerminal,Array(this.props.numRows*this.props.numCols)))
         return (
             <div className={connectorStyle}>
+                <div className={connectorMiddleStyle}>
                 {
                     cols.map((col,coli)=>{
                         var j = this.props.numRows * coli;
@@ -34,6 +36,7 @@ export default class AXL_Connector extends React.PureComponent {
                         </div>)
                     })
                 }
+                </div>
             <AXL_Latch pushedIn={this.props.pushInLatch}/>
             </div>
         )

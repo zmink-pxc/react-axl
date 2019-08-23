@@ -12,7 +12,7 @@ export default class AXL_DI81_DO81_1H extends React.PureComponent {
 
     render(){
         return (
-            <AXL_Module width={35} terminals={this.props.terminals} leds={this.props.leds} raisedMidsection={false} hasTopRow={false} partNumber="2701916" labels={['a','0','1','2','3']} colorCard={{isComboDigital:true}}>
+            <AXL_Module partName="DI8/1 DO8/1" width={35} terminals={this.props.terminals} leds={this.props.leds} raisedMidsection={false} hasTopRow={false} partNumber="2701916" labels={['a','0','1','2','3']} colorCard={{isComboDigital:true}}>
                 <AXL_Connector type="POWER" isBlack={true} numRows={4} numCols={1}/>
                 <AXL_Connector type="IO" isBlack={false} numRows={4} numCols={2}/>
                 <AXL_Connector type="IO" isBlack={false} numRows={4} numCols={2}/>

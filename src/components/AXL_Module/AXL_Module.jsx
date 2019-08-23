@@ -50,7 +50,11 @@ export default class AXL_Module extends React.PureComponent {
                     <LabelHolder>
                     </LabelHolder>
                     <div className={styles.brandArea}>
-                        {<img className={styles.logo} src={logo} alt="Phoenix Contact"/>}
+                        <img className={styles.logo} src={logo} alt="Phoenix Contact"/>
+                        <div className={styles.printArea}>
+                            <div className={styles.print}>{this.props.partName}</div>
+                            <div className={styles.print}>{this.props.partNumber}</div>
+                        </div>
                     </div>
                     <Vents width={this.props.width} lower={true}/>
                 </div>):(null)}
@@ -69,11 +73,12 @@ export default class AXL_Module extends React.PureComponent {
 }
 
 AXL_Module.propTypes = {
- raisedMidsection:  PropTypes.bool.isRequired,       //does the card have a raised midsection
+ raisedMidsection:  PropTypes.bool.isRequired,          //does the card have a raised midsection
  hasTopRow:         PropTypes.bool.isRequired,          //do the connectors appear at the top of the module
  width:             PropTypes.number.isRequired,        //width in mm of the card
  colorCard:         PropTypes.object.isRequired,        //properties to pass to colorID card
- partNumber:        PropTypes.number,                   //part number of the module
+ partNumber:        PropTypes.number.isRequired,        //part number of the module
+ partName:           PropTypes.string.isRequired,        //name of the product as displayed on the physical unit
  fullWidthLogo:     PropTypes.bool,                     //should show full width phoenix contact logo
  moduleName:        PropTypes.string,                   //name of the module e.g. AI8,DO8, etc
 }

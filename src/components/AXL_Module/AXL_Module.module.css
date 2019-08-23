@@ -105,6 +105,17 @@
     z-index: 2;
 }
 
+.printArea{
+    margin-left: 2mm;
+    display:flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.print{
+    font-size: 2mm;
+}
+
 .labelText{
     font: normal normal 700 3mm Arial;
     margin-top: 2mm;

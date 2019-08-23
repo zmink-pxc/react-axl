@@ -22,6 +22,7 @@ import AXL_Module from '../src/components/AXL_Module/AXL_Module.jsx';
 import PLCNextBackground from '../src/components/PLCNextBackground/PLCNextBackground.jsx';
 import AXL_24VPower from '../src/components/AXL_24VPower/AXL_24VPower.jsx';
 import AXL_DI81_DO81_1H from '../src/components/AXL_DI81_DO81_1H/AXL_DI81_DO81_1H.jsx';
+import AXL_DI161_1H from '../src/components/AXL_DI161_1H/AXL_DI161_1H.jsx';
 
 import '../src/components/PLCNextBackground/PLCNextBackground.module.scss';
 
@@ -120,6 +121,12 @@ storiesOf('Button', module)
   .addDecorator(withKnobs)
   .add('Basic',()=><AXL_DI81_DO81_1H/>)
 
+  storiesOf('AXL_DI161_1H',module)
+  .addDecorator(withKnobs)
+  .add('Basic',()=><AXL_DI161_1H/>)
+
   storiesOf('PLCNextBackground',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><PLCNextBackground numForegroundElements={100} numBackgroundElements={100}/>)
+
+  

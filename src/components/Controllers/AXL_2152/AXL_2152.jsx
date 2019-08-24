@@ -6,6 +6,7 @@ import Connector from '../../AXL_Connector/AXL_Connector';
 import phoenixP from './phoenix-p.png';
 import bottomCard from './bottomCard.png';
 import topCard from './topCard.png';
+import AXL_LED_Horizontal from '../../AXL_LED_Horizontal/AXL_LED_Horizontal.jsx';
 
 
 export default class AXL_2152 extends React.PureComponent {
@@ -31,6 +32,7 @@ export default class AXL_2152 extends React.PureComponent {
                 {/*<div className={styles.verticalText}>www.plcnext-community.net</div>*/}
             </div>
             <div className={styles.mid}>
+                <DiagLeds />
                 <img className={styles.logo} src={phoenixP}/>
             </div>
             <div className={styles.bottom}>
@@ -74,5 +76,24 @@ function CardHolder(props){
         <div className={leftFlangeClass}></div>
             {props.children}
         <div className={rightFlangeClass}></div>
+    </div>
+}
+
+function DiagLeds(props){
+    return <div className={styles.ledContainer}>
+        <div className={styles.ledGroup}>
+            <AXL_LED_Horizontal />
+            <AXL_LED_Horizontal />
+            <AXL_LED_Horizontal />
+            <AXL_LED_Horizontal />
+            <AXL_LED_Horizontal />
+        </div>
+        <div className={styles.ledGroup}>
+            <AXL_LED_Horizontal />
+            <AXL_LED_Horizontal />
+            <AXL_LED_Horizontal />
+            <AXL_LED_Horizontal />
+            <AXL_LED_Horizontal />
+        </div>
     </div>
 }

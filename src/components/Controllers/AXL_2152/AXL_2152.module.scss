@@ -138,3 +138,21 @@
     height: 5mm;
     background-color: white;
 }
+
+.ledContainer{
+    position: absolute;
+    top: 5mm;
+    left: 23.5mm;
+    width: 8.5mm;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ledGroup{
+    height: 14mm;
+    width: 3mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

@@ -8,6 +8,7 @@ import { withKnobs, text, boolean, number,object } from '@storybook/addon-knobs'
 import { Button, Welcome } from '@storybook/react/demo';
 
 import AXL_LED from '../src/components/AXL_LED/AXL_LED.jsx';
+import AXL_LED_Horizontal from '../src/components/AXL_LED_Horizontal/AXL_LED_Horizontal.jsx';
 import AXL_Plunger from '../src/components/AXL_Plunger/AXL_Plunger.jsx';
 import AXL_Terminal from '../src/components/AXL_Terminal/AXL_Terminal.jsx';
 import AXL_TerminalGroup from '../src/components/AXL_TerminalGroup/AXL_TerminalGroup.jsx';
@@ -52,6 +53,14 @@ storiesOf('Button', module)
     
     return (<AXL_LED isError={boolean('isError', false)} isWarning={boolean('isWarning', false)} isActive={boolean('isActive', false)}/>);
   });
+
+  storiesOf('AXL_LED_Horizontal',module)
+  .addDecorator(withKnobs)
+  .add('as dynamic variables', () => {
+    
+    return (<AXL_LED_Horizontal isError={boolean('isError', false)} isErrorWarning={boolean('isErrorWarning', false)} isWarning={boolean('isWarning', false)} isActive={boolean('isActive', false)}/>);
+  });
+
 
   storiesOf('AXL_Plunger', module)
   .addDecorator(withKnobs)

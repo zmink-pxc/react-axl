@@ -3,6 +3,9 @@ import classNames from 'classnames';
 import styles from './AXL_2152.module.scss';
 import PropTypes from 'prop-types';
 import Connector from '../../AXL_Connector/AXL_Connector';
+import phoenixP from './phoenix-p.png';
+import bottomCard from './bottomCard.png';
+import topCard from './topCard.png';
 
 
 export default class AXL_2152 extends React.PureComponent {
@@ -15,14 +18,16 @@ export default class AXL_2152 extends React.PureComponent {
 
         return (<div className={styles.base}>
              <Vents width={39} upper={true}/>
-            <div className={styles.top}></div>
+            <div className={styles.top}>
+                <img className={styles.bottomCard} src={topCard}></img>
+            </div>
             <div className={styles.mid}></div>
             <div className={styles.bottom}>
                 <div className={styles.bottomLeft}>
                     <Connector type="POWER" isBlack={true} numRows={2} numCols={2}/>
                 </div>
                 <div className={styles.bottomRight}>
-
+                    <img className={styles.bottomCard} src={bottomCard}></img>
                 </div>
             </div>
         </div>)

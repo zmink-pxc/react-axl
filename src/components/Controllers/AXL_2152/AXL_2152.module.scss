@@ -1,5 +1,11 @@
 @import '../../../styles/axioline';
 
+.connectorPosition{
+    width: 10mm;
+    position: relative;
+    left: 2mm;
+}
+
 .base {
     display: flex;
     flex-direction: column;

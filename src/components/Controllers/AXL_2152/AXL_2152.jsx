@@ -19,7 +19,9 @@ export default class AXL_2152 extends React.PureComponent {
         return (<div className={styles.base}>
              <Vents width={39} upper={true}/>
             <div className={styles.top}>
-                <img className={styles.bottomCard} src={topCard}></img>
+                <CardHolder up={true}>
+                    <img className={styles.card} src={topCard}></img>
+                </CardHolder>
             </div>
             <div className={styles.mid}></div>
             <div className={styles.bottom}>
@@ -27,7 +29,9 @@ export default class AXL_2152 extends React.PureComponent {
                     <Connector type="POWER" isBlack={true} numRows={2} numCols={2}/>
                 </div>
                 <div className={styles.bottomRight}>
-                    <img className={styles.bottomCard} src={bottomCard}></img>
+                    <CardHolder down={true}>
+                        <img className={styles.card} src={bottomCard}></img>
+                    </CardHolder>
                 </div>
             </div>
         </div>)
@@ -47,4 +51,14 @@ function Vents(props){
     return (<div className={styles.ventContainer} style={{width:ventContainerWidth}}>
         {vents}
     </div>)
+}
+
+function CardHolder(props){
+    const cardholder = classNames(styles.cardHolder,{[styles.cardHolderUp]:props.up},{[styles.cardHolderDown]:props.down})
+
+    return <div className={cardholder}>
+        <div className={styles.cardHolderFlange}></div>
+            {props.children}
+        <div className={styles.cardHolderFlange}></div>
+    </div>
 }

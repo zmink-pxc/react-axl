@@ -21,9 +21,9 @@ import AXL_Connector_Socket from '../src/components/AXL_Connector_Socket/AXL_Con
 import AXL_Module from '../src/components/AXL_Module/AXL_Module.jsx';
 import PLCNextBackground from '../src/components/PLCNextBackground/PLCNextBackground.jsx';
 import AXL_24VPower from '../src/components/AXL_24VPower/AXL_24VPower.jsx';
-import AXL_DI81_DO81_1H from '../src/components/AXL_DI81_DO81_1H/AXL_DI81_DO81_1H.jsx';
-import AXL_DI161_1H from '../src/components/AXL_DI161_1H/AXL_DI161_1H.jsx';
-import AXL_AI41_I_1H from '../src/components/AXL_AI41_I_1H/AXL_AI41_I_1H.jsx';
+import AXL_DI81_DO81_1H from '../src/components/Modules/Digital/Combo/AXL_DI81_DO81_1H/AXL_DI81_DO81_1H.jsx';
+import AXL_DI161_1H from '../src/components/Modules/Digital/Input/AXL_DI161_1H/AXL_DI161_1H.jsx';
+import AXL_AI41_I_1H from '../src/components/Modules/Analog/Input/AXL_AI41_I_1H/AXL_AI41_I_1H.jsx';
 import AXL_AI8 from '../src/components/Modules/Analog/Input/AXL_AI8/AXL_AI8.jsx';
 import AXL_2152 from '../src/components/Controllers/AXL_2152/AXL_2152.jsx';
 

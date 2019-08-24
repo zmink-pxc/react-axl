@@ -51,12 +51,32 @@
     justify-content: space-evenly;
 }
 
-.bottomCard{
+.card {
+    width: 19mm;
+    height: 35mm;
+    z-index: 0;
+    position: absolute;
+}
+
+.cardHolderFlange{
+    width: 1mm;
+    height: 33mm;
+    background-color: $axioline-grey;
+    z-index: 2;
+}
+
+.cardHolder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 19mm;
     height: 35mm;
 }
 
-.topCard{
-    width: 19mm;
-    height: 35mm;
+.cardHolderDown{
+    align-items: flex-start;
+}
+
+.cardHolderUp{
+    align-items: flex-end;
 }

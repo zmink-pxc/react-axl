@@ -1,8 +1,6 @@
 import React from 'react';
-import AXL_Module,{defaultTerminals,defaultLeds} from '../AXL_Module/AXL_Module.jsx';
-import AXL_Connector from '../AXL_Connector/AXL_Connector.jsx';
-import AXL_24VPower from '../AXL_24VPower/AXL_24VPower.jsx';
-import AXL_Connector4x2 from '../AXL_Connector4x2/AXL_Connector4x2.jsx';
+import AXL_Module,{defaultTerminals,defaultLeds} from '../../../../AXL_Module/AXL_Module.jsx';
+import AXL_Connector from '../../../../AXL_Connector/AXL_Connector.jsx';
 
 
 export default class AXL_AI41_I_1H extends React.PureComponent {

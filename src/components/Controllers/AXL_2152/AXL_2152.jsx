@@ -35,7 +35,7 @@ export default class AXL_2152 extends React.PureComponent {
                 <div className={styles.bottomLeft}>
                     <div className={styles.powerMarker}></div>
                     <div className={styles.connectorPosition}>
-                        <Connector type="POWER" isBlack={true} numRows={2} numCols={2}/>
+                        <Connector type="POWER" isBlack={true} numRows={2} numCols={2} terminals={[{redPlunger: true,label:'a1'},{redPlunger: true,label:'a2'},{bluePlunger:true,label:'b1'},{bluePlunger:true,label:'b2'}]}/>
                     </div>
                 </div>
                 <div className={styles.bottomRight}>

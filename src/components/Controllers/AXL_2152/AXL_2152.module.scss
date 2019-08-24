@@ -150,9 +150,11 @@
 }
 
 .ledGroup{
+    border: 0.5mm solid black;
     height: 14mm;
     width: 3mm;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }

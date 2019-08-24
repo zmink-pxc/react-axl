@@ -54,11 +54,13 @@ function Vents(props){
 }
 
 function CardHolder(props){
-    const cardholder = classNames(styles.cardHolder,{[styles.cardHolderUp]:props.up},{[styles.cardHolderDown]:props.down})
+    const cardholderClass = classNames(styles.cardHolder,{[styles.cardHolderUp]:props.up},{[styles.cardHolderDown]:props.down})
+    const leftFlangeClass = classNames(styles.cardHolderFlange,styles.cardHolderFlangeLeft);
+    const rightFlangeClass = classNames(styles.cardHolderFlange,styles.cardHolderFlangeRight);
 
-    return <div className={cardholder}>
-        <div className={styles.cardHolderFlange}></div>
+    return <div className={cardholderClass}>
+        <div className={leftFlangeClass}></div>
             {props.children}
-        <div className={styles.cardHolderFlange}></div>
+        <div className={rightFlangeClass}></div>
     </div>
 }

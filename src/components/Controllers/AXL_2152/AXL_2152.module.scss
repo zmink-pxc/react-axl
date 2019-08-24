@@ -65,6 +65,14 @@
     z-index: 2;
 }
 
+.cardHolderFlangeLeft{
+    box-shadow: 1px 1px 1px darken($axioline-grey,20%);
+}
+
+.cardHolderFlangeRight{
+    box-shadow: -1px 1px 1px darken($axioline-grey,20%);
+}
+
 .cardHolder{
     display: flex;
     flex-direction: row;
@@ -74,9 +82,15 @@
 }
 
 .cardHolderDown{
+    position: relative;
+    top: 2mm;
+    left: 1mm;
     align-items: flex-start;
 }
 
 .cardHolderUp{
+    position: relative;
+    top: 2mm;
+    left: 17mm;
     align-items: flex-end;
 }

@@ -18,14 +18,22 @@ export default class AXL_2152 extends React.PureComponent {
 
         return (<div className={styles.base}>
              <Vents width={39} upper={true}/>
-            <div className={styles.top}>
+            <div className={styles.top}>{/*
+            <div className={styles.verticalTextContainer}>
+                    <div className={styles.verticalText}>Ord.No. 2404267  AXC F 2152</div>
+                    <div className={styles.barcodeContainer}>BARCODE</div>
+                    <div className={styles.verticalText}>MAC Addr.: 00.A0.45.A0.82.BF</div>
+                </div>
+            */}                
                 <CardHolder up={true}>
                     <img className={styles.card} src={topCard}></img>
                 </CardHolder>
+                {/*<div className={styles.verticalText}>www.plcnext-community.net</div>*/}
             </div>
             <div className={styles.mid}></div>
             <div className={styles.bottom}>
                 <div className={styles.bottomLeft}>
+                    <div className={styles.powerMarker}></div>
                     <Connector type="POWER" isBlack={true} numRows={2} numCols={2}/>
                 </div>
                 <div className={styles.bottomRight}>

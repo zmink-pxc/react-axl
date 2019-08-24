@@ -30,7 +30,9 @@ export default class AXL_2152 extends React.PureComponent {
                 </CardHolder>
                 {/*<div className={styles.verticalText}>www.plcnext-community.net</div>*/}
             </div>
-            <div className={styles.mid}></div>
+            <div className={styles.mid}>
+                <img className={styles.logo} src={phoenixP}/>
+            </div>
             <div className={styles.bottom}>
                 <div className={styles.bottomLeft}>
                     <div className={styles.powerMarker}></div>

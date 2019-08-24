@@ -15,6 +15,14 @@
     background-color: $axioline-grey;
 }
 
+.logo{
+    width: 10mm;
+    height: 10mm;
+    position: absolute;
+    top: 23mm;
+    left: 26mm;
+}
+
 .top{
     height: 40mm;
     width:  39mm;
@@ -22,6 +30,7 @@
 }
 
 .mid{
+    position: relative;
     height: 38mm;
     width: 39mm;
     border: 0.01mm solid black;

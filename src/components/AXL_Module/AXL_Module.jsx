@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './AXL_Module.module.css'
+import styles from './AXL_Module.module.scss'
 import PropTypes from 'prop-types';
 import AXL_ColorID from '../AXL_ColorID/AXL_ColorID.jsx';
 import { switchCase } from '@babel/types';

@@ -1,3 +1,5 @@
+@import '../../styles/_axioline';
+
 .ventLower{
     width: 3mm;
     height: 3mm;
@@ -30,7 +32,7 @@
 
 .inset{
     width: 100%;
-    background-color: grey;
+    background-color: $axioline-grey;
     margin-left: 0.5mm;
     box-shadow: inset 0 0 20px 3px black;
 }
@@ -53,7 +55,7 @@
 }
 
 .moduleBase{
-    background-color: grey;
+    background-color: $axioline-grey;
     height: 122.4mm;
     border: 0.1mm solid black;
     display: flex;
@@ -101,7 +103,7 @@
     box-sizing: border-box;
     width: 100%;
     height: 40mm;
-    border: solid grey 2mm;
+    border: solid $axioline-grey 2mm;
     box-shadow: inset 0 0 13px 0px black, 0 1mm 1mm 0px black;;
     z-index: 2;
 }

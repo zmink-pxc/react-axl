@@ -1,4 +1,4 @@
-@import '../../../styles/axioline';
+@import '../../../styles/_axioline';
 
 .connectorPosition{
     width: 10mm;
@@ -136,7 +136,7 @@
     margin-bottom: 1mm;
     width: 12mm;
     height: 5mm;
-    background-color: white;
+    background-color: $axioline-module-function-control-com-power;
 }
 
 .ledContainer{

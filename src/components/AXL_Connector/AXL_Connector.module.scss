@@ -1,4 +1,4 @@
-@import '../../styles/axioline';
+@import '../../styles/_axioline';
 
 :export {axiolineGrey: $axioline-grey}
 
@@ -12,19 +12,19 @@
 .connectorFoot{
     width: 100%;
     height: 4mm;
-    border: 0.01mm solid black;
+    border: 0.01mm solid $axioline-black;
 }
 
 .footTop{
     height: 1mm;
-    border-bottom: 0.5mm solid black;
+    border-bottom: 0.5mm solid $axioline-black;
 }
 
 .connector-middle {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    background-color: gray;
+    background-color: $axioline-grey;
     border: 0.01mm solid black;
 }
 .connector{
@@ -36,5 +36,5 @@
 }
 
 .blackConnector{
-    background-color: black;
+    background-color: $axioline-black;
 }

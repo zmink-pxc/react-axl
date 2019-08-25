@@ -30,7 +30,8 @@ export default class AxioBus extends React.Component {
 
     render(){
         let bus = this.props.busConfiguration.map((key)=>{
-            return Devices[key]
+            const Device = Devices[key];
+            return <Device/>
         });
 
         return <div className={styles.base}>

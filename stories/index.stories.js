@@ -158,6 +158,6 @@ storiesOf('Button', module)
 
   storiesOf('AxioBus',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AxioBus busConfiguration={['2404267','2701916']}/>)
+  .add('Basic',()=><AxioBus busConfiguration={['2404267','2701916','2688310','2702525']}/>)
 
   

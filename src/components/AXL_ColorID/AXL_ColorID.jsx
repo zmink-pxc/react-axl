@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './AXL_ColorID.module.css'
+import styles from './AXL_ColorID.module.scss'
 
 export default class AXL_ColorID extends React.PureComponent {
     constructor(props){

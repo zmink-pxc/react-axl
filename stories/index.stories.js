@@ -27,6 +27,7 @@ import AXL_DI161_1H from '../src/components/Modules/Digital/Input/AXL_DI161_1H/A
 import AXL_AI41_I_1H from '../src/components/Modules/Analog/Input/AXL_AI41_I_1H/AXL_AI41_I_1H.jsx';
 import AXL_AI8 from '../src/components/Modules/Analog/Input/AXL_AI8/AXL_AI8.jsx';
 import AXL_2152 from '../src/components/Controllers/AXL_2152/AXL_2152.jsx';
+import AxioBus from '../src/components/AxioBus/AxioBus.jsx';
 
 
 import '../src/components/PLCNextBackground/PLCNextBackground.module.scss';
@@ -154,5 +155,9 @@ storiesOf('Button', module)
   storiesOf('AXL 2152',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><AXL_2152 />)
+
+  storiesOf('AxioBus',module)
+  .addDecorator(withKnobs)
+  .add('Basic',()=><AxioBus/>)
 
   

@@ -97,3 +97,8 @@ function DiagLeds(props){
         </div>
     </div>
 }
+
+AXL_2152.defaultProps = {
+    partNumber: '2404267',
+    partName: 'AXC F 2152'
+}

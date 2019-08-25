@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import styles from './AXL_Connector.module.css';
+import styles from './AXL_Connector.module.scss';
 import AXL_LED_Group from '../AXL_LED_Group/AXL_LED_Group.jsx';
 import AXL_Terminal_Group from '../AXL_TerminalGroup/AXL_TerminalGroup.jsx';
 import AXL_Latch from '../AXL_Latch/AXL_Latch.jsx';
@@ -20,8 +20,8 @@ export default class AXL_Connector extends React.PureComponent {
         const connectorMiddleStyle = classNames(styles['connector-middle'],{[styles.blackConnector]: this.props.isBlack})
         var terminals = (this.props.hasOwnProperty('terminals'))?(this.props.terminals):(initArray(placeholderTerminal,this.props.numRows*this.props.numCols))
         return (
-            <div className={connectorStyle}>
-                <div className={styles.connectorFoot}></div>
+            <div className={connectorStyle} style={{width:(this.props.numCols * 5)+'mm'}}>
+                <Foot isBlack={this.props.isBlack}/>
                 <div className={connectorMiddleStyle}>
                 {
                     cols.map((col,coli)=>{
@@ -70,4 +70,10 @@ function initArray(initElement,length){
     return arr.map((element)=>{
         return initElement
     })
+}
+
+function Foot(props){
+    return <div className={styles.connectorFoot} style={{backgroundColor: (props.isBlack===true)?('black'):(styles.axiolineGrey)}}>
+        <div className={styles.footTop}></div>
+    </div>
 }

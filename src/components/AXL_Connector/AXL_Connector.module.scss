@@ -1,3 +1,7 @@
+@import '../../styles/axioline';
+
+:export {axiolineGrey: $axioline-grey}
+
 .col{
     flex: initial;
     display: flex;
@@ -9,6 +13,11 @@
     width: 100%;
     height: 4mm;
     border: 0.01mm solid black;
+}
+
+.footTop{
+    height: 1mm;
+    border-bottom: 0.5mm solid black;
 }
 
 .connector-middle {

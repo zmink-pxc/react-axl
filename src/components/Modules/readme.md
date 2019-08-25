@@ -9,7 +9,7 @@
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2688491&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
 
 * AXL F AI4 I XC 1H - 2702007
-  * [ ] Implemented
+  * [x] Implemented
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2702007&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
 
 * AXL F AI4 U XC 1H - 2702008

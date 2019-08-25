@@ -1,8 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Modules from '../Modules/load-modules.js';
-import Controllers from '../Controllers/load-controllers.js';
+import styles from './AxioBus.module.scss';
+const Modules = require('../Modules/load-modules.js').default;
+const Controllers = require('../Controllers/load-controllers.js').default;
 
 const Devices = Object.assign({},Modules,Controllers);
 
@@ -25,17 +26,22 @@ export default class AxioBus extends React.Component {
         //this._context = context;
     }
 
-    render(){
-        console.log(Devices);
+    
 
-        return <div></div>
+    render(){
+        let bus = this.props.busConfiguration.map((key)=>{
+            return Devices[key]
+        });
+
+        return <div className={styles.base}>
+            {bus}
+        </div>
     }
 }
 
 
 AxioBus.propTypes = {
-    busConfigPartNumbers: PropTypes.arrayOf(PropTypes.string),
-    busConfigPartNames:   PropTypes.arrayOf(PropTypes.string),
+    busConfiguration:     PropTypes.arrayOf(PropTypes.string),
     height:               PropTypes.any,
     width:                PropTypes.any,
     partHeight:           PropTypes.any

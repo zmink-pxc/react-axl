@@ -1,4 +1,28 @@
-$axioline-grey: #878588;
+//housing colors
+$color-traffic-grey-a:  rgb(142, 146, 145);     //standard
+$color-zinc-yellow:     rgb(250, 202, 48);      //safety
+
+//module function colors
+$color-light-blue:       rgb(0, 137, 182);       //digital input
+$color-flame-red:        rgb(167, 41, 32);       //digital output
+$color-signal-violet:    rgb(132, 76, 130);      //digital input and output
+$color-pale-green:       rgb(138, 153, 119);     //analog input and temperature
+$color-pastel-orange:    rgb(246, 120, 40);      //special function
+$color-pure-white:       rgb(241, 236, 225);    //controller,bus coupler,power
+
+$color-black:              rgb(14, 14, 16);     //anything black
+
+//functional names
+$axioline-grey:     $color-traffic-grey-a;
+$axioline-yellow:   $color-zinc-yellow;
+$axioline-black:    $color-black;
+
+$axioline-module-function-digital-input:    $color-light-blue;
+$axioline-module-function-digital-output:   $color-flame-red;
+$axioline-module-function-digital-combo:    $color-signal-violet;
+$axioline-module-function-analog-input:     $color-pale-green;
+$axioline-module-function-analog-output:    $color-zinc-yellow;
+$axioline-module-function-special-function: $color-pastel-orange;
 
 
 //LED colors

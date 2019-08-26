@@ -109,7 +109,7 @@
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2688022&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
 
 * AXL F DI16/1 1H - 2688310
-  * [ ] Implemented
+  * [x] Implemented
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2688310&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
 
 * AXL F DI64/1 2F - 2701450
@@ -117,7 +117,7 @@
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2701450&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
 
 * AXL F DI16/1 HS 1H - 2701722
-  * [ ] Implemented
+  * [x] Implemented
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2701722&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
 
 * AXL F DI8/2 110/220DC 1F - 2700684

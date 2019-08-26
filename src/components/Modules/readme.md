@@ -96,6 +96,10 @@
 
 ### Digtial Output
 
+* AXL F DO8/2 2A 1H - 2688381
+ * [ ] Implemented
+ * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2688381&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
+
 * AXL F DOR4/2 AC/220DC 1F - 2700608
   * [ ] Implemented
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2700608&library=usen&pcck=P-21-11-01-01&tab=1&selectedCategory=ALL)

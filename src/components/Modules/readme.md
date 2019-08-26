@@ -94,7 +94,61 @@
 
 ## Digital
 
-### Digtial Output
+### Digital Input
+
+* AXL F DI32/1 1F - 2688035
+  * [x] Implemented
+  * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2688035&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
+
+* AXL F DI32/1 2H - 2702052
+  * [ ] Implemented
+  * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2702052&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
+
+* AXL F DI16/4 2F - 2688022
+  * [ ] Implemented
+  * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2688022&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
+
+* AXL F DI16/1 1H - 2688310
+  * [ ] Implemented
+  * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2688310&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
+
+* AXL F DI64/1 2F - 2701450
+  * [ ] Implemented
+  * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2701450&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
+
+* AXL F DI16/1 HS 1H - 2701722
+  * [ ] Implemented
+  * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2701722&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
+
+* AXL F DI8/2 110/220DC 1F - 2700684
+  * [ ] Implemented
+  * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2700684&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
+
+* AXL F DI16/1 DO16/1 2H - 2702106
+  * [ ] Implemented
+  * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2702106&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
+
+* AXL F DI8/2 48/60DC 1F - 2702654
+  * [ ] Implemented
+  * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2702654&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
+
+* AXL F DI16/4 XC 2F - 2701224
+  * [ ] Implemented
+  * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2701224&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
+
+* AXL F DI8/1 DO8/1 1H - 2701916
+  * [ ] Implemented
+  * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2701916&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
+
+* AXL F DI32/1 XC 1F - 2701226
+  * [ ] Implemented
+  * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2701226&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
+
+* AXL F DI8/2 24DC 1F - 2702783
+  * [ ] Implemented
+  * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2702783&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
+
+### Digital Output
 
 * AXL F DO8/2 2A 1H - 2688381
  * [ ] Implemented

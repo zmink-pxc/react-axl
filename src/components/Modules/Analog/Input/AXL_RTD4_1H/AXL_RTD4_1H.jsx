@@ -19,7 +19,7 @@ export default class AXL_RTD4_1H extends React.PureComponent {
     }
 }
 
-AXL_UTH4_1H.defaultProps = {
+AXL_RTD4_1H.defaultProps = {
     partName:"RTD4",
     partNumber: "2688556",
     terminals: defaultTerminals(12),

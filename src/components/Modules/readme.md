@@ -33,7 +33,7 @@
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2688598&library=usen&pcck=P-21-11-01-01&tab=1&selectedCategory=ALL)
 
 * AXL F UTH8 1F - 2688417
-  * [ ] Implemented
+  * [x] Implemented
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2688417&library=usen&pcck=P-21-11-01-01&tab=1&selectedCategory=ALL)
 
 * AXL F RTD4 1H - 2688556

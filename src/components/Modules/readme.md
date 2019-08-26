@@ -41,7 +41,7 @@
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2688556&library=usen&pcck=P-21-11-01-01&tab=1&selectedCategory=ALL)
 
 * AXL F RTD8 1F - 2688077
-  * [ ] Implemented
+  * [x] Implemented
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2688077&library=usen&pcck=P-21-11-01-01&tab=1&selectedCategory=ALL)
 
 * AXL F RTD8 S 1F - 2702120

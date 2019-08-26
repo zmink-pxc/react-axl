@@ -25,7 +25,7 @@
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2702525&library=usen&pcck=P&tab=1&selectedCategory=ALL)
 
 * AXL F AI8 XC 1F - 2701232
-  * [ ] Implemented
+  * [x] Implemented
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2701232&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
 
 * AXL F UTH4 1H - 2688598

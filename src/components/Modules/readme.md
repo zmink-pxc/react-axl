@@ -121,7 +121,7 @@
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2701722&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
 
 * AXL F DI8/2 110/220DC 1F - 2700684
-  * [ ] Implemented
+  * [x] Implemented
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2700684&library=usen&pcck=P-21-13&tab=1&selectedCategory=ALL)
 
 * AXL F DI16/1 DO16/1 2H - 2702106

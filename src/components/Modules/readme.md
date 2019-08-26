@@ -85,7 +85,7 @@
 ### Analog Combo
 
 * AXL F AI2 AO2 1H - 2702072
-  * [ ] Implemented
+  * [x] Implemented
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2702072&library=usen&pcck=P-21-11-01-01&tab=1&selectedCategory=ALL)
 
 * AXL F AI2 AO2 XC 1H - 1035429

@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './AXL_Plunger.module.css'
+import styles from './AXL_Plunger.module.scss'
 
 export default class AXL_Plunger extends React.PureComponent {
     constructor(props){

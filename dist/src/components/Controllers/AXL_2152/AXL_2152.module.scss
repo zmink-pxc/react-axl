@@ -1,0 +1,319 @@
+@import '../../../styles/_axioline';
+
+
+
+.connectorPosition{
+
+    width: 10mm;
+
+    position: relative;
+
+    left: 2mm;
+
+}
+
+
+
+.base {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    height: 122mm;
+
+    width: 45mm;
+
+    background-color: $axioline-grey;
+
+}
+
+
+
+.logo{
+
+    width: 10mm;
+
+    height: 10mm;
+
+    position: absolute;
+
+    top: 23mm;
+
+    left: 26mm;
+
+}
+
+
+
+.top{
+
+    height: 40mm;
+
+    width:  39mm;
+
+    border: 0.01mm solid black;
+
+}
+
+
+
+.mid{
+
+    position: relative;
+
+    height: 38mm;
+
+    width: 39mm;
+
+    border: 0.01mm solid black;
+
+}
+
+
+
+.bottom{
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: flex-end;
+
+    width: 39mm;
+
+    height: 42mm;
+
+}
+
+
+
+.bottomRight{
+
+    height:42mm;
+
+    width:28mm;
+
+    border-top: 0.5mm solid lighten($axioline-grey,10%);
+
+    border-left: 0.01mm solid black;
+
+    border-right: 0.01mm solid black;
+
+    border-bottom: 0.01mm solid black;
+
+}
+
+
+
+.ventUpper{
+
+    width: 4mm;
+
+    height: 1.5mm;
+
+    background-color:  rgba(51,51,51,0.5);;
+
+    box-shadow: inset 0px 4px 5px black;
+
+}
+
+
+
+.ventContainer {
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-evenly;
+
+}
+
+
+
+.card {
+
+    width: 19mm;
+
+    height: 35mm;
+
+    z-index: 0;
+
+    position: absolute;
+
+}
+
+
+
+.cardHolderFlange{
+
+    width: 1mm;
+
+    height: 33mm;
+
+    background-color: $axioline-grey;
+
+    z-index: 2;
+
+}
+
+
+
+.cardHolderFlangeLeft{
+
+    box-shadow: 1px 1px 1px darken($axioline-grey,20%);
+
+}
+
+
+
+.cardHolderFlangeRight{
+
+    box-shadow: -1px 1px 1px darken($axioline-grey,20%);
+
+}
+
+
+
+.cardHolder{
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    width: 19mm;
+
+    height: 35mm;
+
+}
+
+
+
+.cardHolderDown{
+
+    position: relative;
+
+    top: 2mm;
+
+    left: 1mm;
+
+    align-items: flex-start;
+
+}
+
+
+
+.cardHolderUp{
+
+    position: relative;
+
+    top: 2mm;
+
+    left: 17mm;
+
+    align-items: flex-end;
+
+}
+
+
+
+.verticalText{
+
+    font-size: 2mm;
+
+    transform: rotate(270deg);
+
+}
+
+
+
+.verticalTextContainer{
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    width: 10mm;
+
+    height: 40mm;
+
+}
+
+
+
+.barcodeContainer{
+
+    height: 2mm;
+
+    transform: rotate(270deg);
+
+}
+
+
+
+.powerMarker{
+
+    border: 0.25mm solid black;
+
+    margin-top: 2mm;
+
+    margin-right: 0.5mm;
+
+    margin-bottom: 1mm;
+
+    width: 12mm;
+
+    height: 5mm;
+
+    background-color: $axioline-module-function-control-com-power;
+
+}
+
+
+
+.ledContainer{
+
+    position: absolute;
+
+    top: 5mm;
+
+    left: 23.5mm;
+
+    width: 8.5mm;
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+}
+
+
+
+.ledGroup{
+
+    border: 0.5mm solid black;
+
+    height: 14mm;
+
+    width: 3mm;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}

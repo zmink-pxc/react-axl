@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import styles from './AXL_Terminal.module.css'
+import styles from './AXL_Terminal.module.scss'
 
 export default class AXL_Terminal extends React.PureComponent {
     constructor(props){

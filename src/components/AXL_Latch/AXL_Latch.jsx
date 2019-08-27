@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './AXL_Latch.module.css'
+import styles from './AXL_Latch.module.scss'
 
 export default class AXL_Latch extends React.PureComponent {
     constructor(props){

@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './AXL_TerminalGroup.module.css'
+import styles from './AXL_TerminalGroup.module.scss'
 import AXL_Plunger from '../AXL_Plunger/AXL_Plunger.jsx';
 import AXL_Terminal from '../AXL_Terminal/AXL_Terminal.jsx';
 

@@ -1,0 +1,35 @@
+.receptacle{
+
+    width:  4mm;
+
+    height: 5mm;
+
+    background-color: black;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 0.5mm;
+
+    margin-right: 0.5mm;
+
+    margin-left: 0.5mm;
+
+}
+
+
+
+.pin{
+
+    width: 1mm;
+
+    height: 0.25mm;
+
+    background-color: gold;
+
+}

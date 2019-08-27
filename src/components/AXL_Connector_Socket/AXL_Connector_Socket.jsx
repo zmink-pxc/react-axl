@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './AXL_Connector_Socket.module.css'
+import styles from './AXL_Connector_Socket.module.scss'
 import AXL_LED_Socket from '../AXL_LED_Socket/AXL_LED_Socket.jsx';
 import AXL_Plug from '../AXL_Plug/AXL_Plug.jsx';
 

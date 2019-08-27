@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './AXL_LED.module.css'
+import styles from './AXL_LED.module.scss'
 
 export default class AXL_LED extends React.PureComponent {
     constructor(props){

@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './AXL_Plug.module.css'
+import styles from './AXL_Plug.module.scss'
 
 export default class AXL_Plug extends React.PureComponent {
     constructor(props){

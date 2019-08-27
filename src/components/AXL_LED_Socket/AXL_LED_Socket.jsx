@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './AXL_LED_Socket.module.css'
+import styles from './AXL_LED_Socket.module.scss'
 import { getStorybook } from '@storybook/react';
 
 export default class AXL_LED_Socket extends React.PureComponent {

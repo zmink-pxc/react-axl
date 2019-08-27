@@ -1,6 +1,6 @@
 {
   "name": "react-axl",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "React components for rendering Phoenix Contact axioline products",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "build-storybook": "build-storybook"
   },
   "author": "Zachary Mink",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",

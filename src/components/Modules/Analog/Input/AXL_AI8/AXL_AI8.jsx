@@ -1,5 +1,5 @@
 import React from 'react';
-import AXL_Module,{defaultTerminals,defaultLeds} from '../../../../AXL_Module/AXL_Module';
+import AXL_Module,{defaultTerminals,defaultLeds} from '../../../../AXL_Module/AXL_Module.jsx';
 import AXL_Connector from '../../../../AXL_Connector/AXL_Connector.jsx';
 
 

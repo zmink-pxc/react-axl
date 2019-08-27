@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './AXL_2152.module.scss';
 import PropTypes from 'prop-types';
-import Connector from '../../AXL_Connector/AXL_Connector';
+import Connector from '../../AXL_Connector/AXL_Connector.jsx';
 import phoenixP from './phoenix-p.png';
 import bottomCard from './bottomCard.png';
 import topCard from './topCard.png';

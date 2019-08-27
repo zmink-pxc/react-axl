@@ -1,4 +1,3 @@
-import {ReactComponent as LED} from  '../../protocol-icons/icons/devices/svg/axlLED.svg';
 import React from 'react';
 import classNames from 'classnames';
 import styles from './AXL_LED.module.css'

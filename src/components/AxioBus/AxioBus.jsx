@@ -47,7 +47,7 @@ export default class AxioBus extends React.Component {
               })}
             >
             {interpolatingStyles =>
-            <div>
+            <div className={styles.base}>
             {interpolatingStyles.map((style, i) => {
                 const Device = Devices[this.props.busConfiguration[i]];
                 return <Device key={i} style={{top: style.y}} />})

@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import styles from './AxioBus.module.scss';
+import {StaggeredMotion,spring} from 'react-motion';
 const Modules = require('../Modules/load-modules.js').default;
 const Controllers = require('../Controllers/load-controllers.js').default;
 
@@ -23,19 +24,38 @@ export default class AxioBus extends React.Component {
 
         //this.deviceDictionary = deviceDictionary;
 
-        //this._context = context;
+        this.defaultStyles = this.props.busConfiguration.map((key)=>{
+            return {y:1000}
+        })
     }
 
     
 
     render(){
-        let bus = this.props.busConfiguration.map((key)=>{
-            const Device = Devices[key];
-            return <Device/>
-        });
+        // let bus = this.props.busConfiguration.map((key)=>{
+        //     const Device = Devices[key];
+        //     return <Device/>
+        // });
 
         return <div className={styles.base}>
-            {bus}
+            <StaggeredMotion
+            defaultStyles={this.defaultStyles}
+            styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) => {
+                return i === 0
+                  ? {y: spring(0)}
+                  : {y: spring(prevInterpolatedStyles[i - 1].y)}
+              })}
+            >
+            {interpolatingStyles =>
+            <div>
+            {interpolatingStyles.map((style, i) => {
+                const Device = Devices[this.props.busConfiguration[i]];
+                return <Device key={i} style={{top: style.y}} />})
+            }
+            </div>
+            }
+            </StaggeredMotion>
+            {/* {bus} */}
         </div>
     }
 }

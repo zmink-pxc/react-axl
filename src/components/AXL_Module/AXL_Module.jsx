@@ -40,6 +40,7 @@ export default class AXL_Module extends React.PureComponent {
     }
 
     render(){
+        this.connSectionWidth = 0;
         let middleWidth = (this.props.numCols * 5)+"mm";
         let logo = (this.props.fullWidthLogo === true) ? (phoenixBrand):(phoenixP);
         let children = React.Children.map(this.props.children, (child,index) => {

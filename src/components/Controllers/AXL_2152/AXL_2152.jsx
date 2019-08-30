@@ -17,7 +17,7 @@ export default class AXL_2152 extends React.PureComponent {
 
     render(){
 
-        return (<div className={styles.base}>
+        return (<div className={styles.base} {...this.props}>
              <Vents width={39} upper={true}/>
             <div className={styles.top}>{/*
             <div className={styles.verticalTextContainer}>

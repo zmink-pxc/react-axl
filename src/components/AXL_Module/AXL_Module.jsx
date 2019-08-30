@@ -47,7 +47,7 @@ export default class AXL_Module extends React.PureComponent {
             return React.cloneElement(child,this.mapPropsToConnector(child,index))
         })
 
-        return (<div className={styles.moduleBase} style={{width: this.props.width+"mm"}}>
+        return (<div className={styles.moduleBase} style={{width: this.props.width+"mm"}} {...this.props}>
             <div className={styles.moduleTop} style={{width: this.faceWidth()+"mm"}}>
                 {((this.props.raisedMidSection || this.props.hasTopRow)===false) ? 
                 (<div className={styles.raisedContainer} style={{width: this.faceWidth()+"mm"}}>

@@ -10,7 +10,7 @@ export default class AXL_UTH8_1F extends React.PureComponent {
 
     render(){
         return (
-            <AXL_Module partName={this.props.partName} width={54} terminals={this.props.terminals} leds={this.props.leds} raisedMidsection={false} hasTopRow={false} partNumber={this.props.partNumber} labels={['a','0','1','2','3','4','5','6','7']} colorCard={{isAnalogIn:true}}>
+            <AXL_Module  {...this.props} partName={this.props.partName} width={54} terminals={this.props.terminals} leds={this.props.leds} raisedMidsection={false} hasTopRow={false} partNumber={this.props.partNumber} labels={['a','0','1','2','3','4','5','6','7']} colorCard={{isAnalogIn:true}}>
                 <AXL_Connector type="POWER" isBlack={true} numRows={4} numCols={1}/>
                 <AXL_Connector type="IO" isBlack={false} numRows={4} numCols={2}/>
                 <AXL_Connector type="IO" isBlack={false} numRows={4} numCols={2}/>

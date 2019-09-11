@@ -80,22 +80,44 @@ function CardHolder(props){
 }
 
 function DiagLeds(props){
-    return <div className={styles.ledContainer}>
-        <div className={styles.ledGroup}>
-            <AXL_LED_Horizontal />
-            <AXL_LED_Horizontal />
-            <AXL_LED_Horizontal />
-            <AXL_LED_Horizontal />
-            <AXL_LED_Horizontal />
+
+    
+
+    return (
+    <div className={styles.ledArea}>
+        <div className={styles.ledTextGroup} style={{textAlign:'right'}}>
+            <div>BF-C</div>
+            <div>BF-D</div>
+            <div>SF</div>
+            <div>BOOT</div>
+            <div>EXT</div>
         </div>
-        <div className={styles.ledGroup}>
-            <AXL_LED_Horizontal />
-            <AXL_LED_Horizontal />
-            <AXL_LED_Horizontal />
-            <AXL_LED_Horizontal />
-            <AXL_LED_Horizontal />
+        <div className={styles.ledContainer}>
+            <div className={styles.ledGroup}>
+                <AXL_LED_Horizontal />
+                <AXL_LED_Horizontal />
+                <AXL_LED_Horizontal />
+                <AXL_LED_Horizontal />
+                <AXL_LED_Horizontal />
+            </div>
+            <div className={styles.ledGroup}>
+                <AXL_LED_Horizontal />
+                <AXL_LED_Horizontal />
+                <AXL_LED_Horizontal />
+                <AXL_LED_Horizontal />
+                <AXL_LED_Horizontal />
+            </div>
+        </div>
+        <div className={styles.ledTextGroup} style={{textAlign:'left'}}>
+            <div>RUN</div>
+            <div>FAIL</div>
+            <div>DBG</div>
+            <div>D</div>
+            <div>E</div>
         </div>
     </div>
+    
+    )
 }
 
 AXL_2152.defaultProps = {

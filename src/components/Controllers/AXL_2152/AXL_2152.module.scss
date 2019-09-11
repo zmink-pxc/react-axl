@@ -141,9 +141,6 @@
 }
 
 .ledContainer{
-    position: absolute;
-    top: 5mm;
-    left: 23.5mm;
     width: 8.5mm;
     display: flex;
     flex-direction: row;
@@ -157,5 +154,25 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+}
+
+.ledTextGroup{
+    font-size: 2mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 14mm;
+    margin-left: 1mm;
+    margin-right: 1mm;
+}
+
+.ledArea{
+    position: absolute;
+    top: 5mm;
+    left: 16.5mm;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
 }

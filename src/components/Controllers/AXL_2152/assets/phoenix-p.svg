@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 60 58.666668"
+   height="58.666668"
+   width="60"
+   id="svg815"
+   version="1.1">
+  <metadata
+     id="metadata821">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs819" />
+  <g
+     transform="translate(0.06366432,2.419244)"
+     id="g889">
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:0.99126635;stroke:#ffffff;stroke-width:0.07559055;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect825"
+       width="60"
+       height="58.666668"
+       x="5.0488279e-07"
+       y="-2.3859258"
+       ry="4.5838308" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.08416106;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect863"
+       width="24.701756"
+       height="46.920601"
+       x="7.7670474"
+       y="4.0760031"
+       ry="5.7297883"
+       rx="0" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.07803057;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect867"
+       width="43.904655"
+       height="37.859749"
+       x="9.6961718"
+       y="4.0528312"
+       ry="16.715761" />
+    <ellipse
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.073285;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path859"
+       cx="30.176888"
+       cy="23.238962"
+       rx="8.4673538"
+       ry="8.2763615" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.07555969;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect861"
+       width="5.0986967"
+       height="58.396091"
+       x="27.691202"
+       y="-2.2267652"
+       ry="0" />
+    <ellipse
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.08327433;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path827"
+       cx="30.208715"
+       cy="23.238962"
+       rx="3.9751778"
+       ry="4.1980028" />
+  </g>
+</svg>

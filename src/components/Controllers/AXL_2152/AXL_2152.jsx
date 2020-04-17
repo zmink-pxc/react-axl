@@ -3,9 +3,9 @@ import classNames from 'classnames';
 import styles from './AXL_2152.module.scss';
 import PropTypes from 'prop-types';
 import Connector from '../../AXL_Connector/AXL_Connector.jsx';
-import phoenixP from './phoenix-p.png';
-import bottomCard from './bottomCard.png';
-import topCard from './topCard.png';
+import phoenixP from './assets/phoenix-p.svg';
+import bottomCard from './assets/bottomCard.svg';
+import topCard from './assets/topCard.svg';
 import AXL_LED_Horizontal from '../../AXL_LED_Horizontal/AXL_LED_Horizontal.jsx';
 
 

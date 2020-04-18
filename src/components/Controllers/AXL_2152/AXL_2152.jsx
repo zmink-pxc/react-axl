@@ -122,5 +122,7 @@ function DiagLeds(props){
 
 AXL_2152.defaultProps = {
     partNumber: '2404267',
-    partName: 'AXC F 2152'
+    partName:   'AXC F 2152',
+    mmWidth:    45,             //width of component in mm which can be converted to px size
+    mmHeight:   122          
 }

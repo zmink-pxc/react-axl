@@ -159,6 +159,7 @@ storiesOf('Button', module)
   storiesOf('AxioBus',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><AxioBus busConfiguration={['2404267','2701916','2688310','2702525']}/>)
-  .add('Scaling',()=><div style={{width: "100px",height: "500px"}}><AxioBus busConfiguration={['2404267']}/></div>)
+  .add('Scaling',()=><div style={{width: "400px",height: "500px",backgroundColor: 'orange',position: 'absolute',left:'50px',top: '100px'}}><AxioBus busConfiguration={['2404267']}/></div>)
+  .add('Scaling2',()=><div style={{width: "400px",height: "500px",backgroundColor: 'orange',position: 'absolute',left:'50px',top: '100px'}}><AxioBus busConfiguration={['2404267','2701916','2688310','2702525']}/></div>)
 
   

@@ -38,32 +38,32 @@ export default class AxioBus extends React.Component {
             return <Device key={key}/>
         });
 
-        const containerClass = classNames([styles.base],{[styles.wrap]:this.props.wrap})
+        const containerClass = classNames([styles.base],{[styles.wrap]:this.props.wrap},{[styles.flexLeft]:this.props.left===true})
 
         return (
-                <div className={containerClass}>
-                {/* <StaggeredMotion
-                defaultStyles={this.defaultStyles}
-                styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) => {
-                    return i === 0
-                    ? {y: spring(0)}
-                    : {y: spring(prevInterpolatedStyles[i - 1].y)}
-                })}
-                >
-                {interpolatingStyles =>
-                <div className={styles.base}>
-                {interpolatingStyles.map((style, i) => {
-                    const Device = Devices[this.props.busConfiguration[i]];
-                    return <Device key={i} style={{top: style.y}} />})
-                }
-                </div>
-                }
-                </StaggeredMotion> */}
-                <AxioBusScale>
-                {bus} 
-                </AxioBusScale>
-                 
-                </div>            
+                <AxioBusScale className={containerClass}>
+                    {/* <div className={}> */}
+                    {/* <StaggeredMotion
+                    defaultStyles={this.defaultStyles}
+                    styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) => {
+                        return i === 0
+                        ? {y: spring(0)}
+                        : {y: spring(prevInterpolatedStyles[i - 1].y)}
+                    })}
+                    >
+                    {interpolatingStyles =>
+                    <div className={styles.base}>
+                    {interpolatingStyles.map((style, i) => {
+                        const Device = Devices[this.props.busConfiguration[i]];
+                        return <Device key={i} style={{top: style.y}} />})
+                    }
+                    </div>
+                    }
+                    </StaggeredMotion> */}
+                    
+                        {bus}                  
+                    {/* </div> */}
+                </AxioBusScale>            
         )
     }
 }
@@ -74,9 +74,11 @@ AxioBus.propTypes = {
     height:               PropTypes.any,
     width:                PropTypes.any,
     partHeight:           PropTypes.any,
-    wrap:                 PropTypes.bool
+    wrap:                 PropTypes.bool,
+    left:                 PropTypes.bool
 }
 
 AxioBus.defaultProps = {
-    wrap: false
+    wrap: false,
+    left: false
 }

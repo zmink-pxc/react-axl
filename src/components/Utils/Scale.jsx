@@ -101,9 +101,10 @@ export function AxioBusScale(props){
 
     if (t && t < 1){
         style.transform = `scale(${t})`;
+        //style.transformOrigin = 'left';
     }
 
-    return <div ref={ref} style={style}>{((rendered === true)&&(parentSize)) ? props.children:false}</div>
+    return <div ref={ref} className={props.className} style={style}>{((rendered === true)&&(parentSize)) ? props.children:false}</div>
 }
 
 function calcTransform(childSize,parentSize){

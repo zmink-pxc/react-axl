@@ -7,21 +7,21 @@ import { withKnobs, text, boolean, number,object } from '@storybook/addon-knobs'
 
 import { Button, Welcome } from '@storybook/react/demo';
 
-import AXL_LED from '../src/components/AXL_LED/AXL_LED.jsx';
-import AXL_LED_Horizontal from '../src/components/AXL_LED_Horizontal/AXL_LED_Horizontal.jsx';
-import AXL_Plunger from '../src/components/AXL_Plunger/AXL_Plunger.jsx';
-import AXL_Terminal from '../src/components/AXL_Terminal/AXL_Terminal.jsx';
-import AXL_TerminalGroup from '../src/components/AXL_TerminalGroup/AXL_TerminalGroup.jsx';
-import AXL_LED_Group from '../src/components/AXL_LED_Group/AXL_LED_Group.jsx';
-import AXL_Connector from '../src/components/AXL_Connector/AXL_Connector.jsx';
-import AXL_Plug from '../src/components/AXL_Plug/AXL_Plug.jsx';
-import AXL_Latch from '../src/components/AXL_Latch/AXL_Latch.jsx';
-import AXL_LED_Socket from '../src/components/AXL_LED_Socket/AXL_LED_Socket.jsx';
-import AXL_ColorID from '../src/components/AXL_ColorID/AXL_ColorID.jsx';
-import AXL_Connector_Socket from '../src/components/AXL_Connector_Socket/AXL_Connector_Socket.jsx';
-import AXL_Module from '../src/components/AXL_Module/AXL_Module.jsx';
+import AXL_LED from '../src/components/Core/AXL_LED/AXL_LED.jsx';
+import AXL_LED_Horizontal from '../src/components/Core/AXL_LED_Horizontal/AXL_LED_Horizontal.jsx';
+import AXL_Plunger from '../src/components/Core/AXL_Plunger/AXL_Plunger.jsx';
+import AXL_Terminal from '../src/components/Core/AXL_Terminal/AXL_Terminal.jsx';
+import AXL_TerminalGroup from '../src/components/Core/AXL_TerminalGroup/AXL_TerminalGroup.jsx';
+import AXL_LED_Group from '../src/components/Core/AXL_LED_Group/AXL_LED_Group.jsx';
+import AXL_Connector from '../src/components/Core/AXL_Connector/AXL_Connector.jsx';
+import AXL_Plug from '../src/components/Core/AXL_Plug/AXL_Plug.jsx';
+import AXL_Latch from '../src/components/Core/AXL_Latch/AXL_Latch.jsx';
+import AXL_LED_Socket from '../src/components/Core/AXL_LED_Socket/AXL_LED_Socket.jsx';
+import AXL_ColorID from '../src/components/Core/AXL_ColorID/AXL_ColorID.jsx';
+import AXL_Connector_Socket from '../src/components/Core/AXL_Connector_Socket/AXL_Connector_Socket.jsx';
+import AXL_Module from '../src/components/Core/AXL_Module/AXL_Module.jsx';
 import PLCNextBackground from '../src/components/PLCNextBackground/PLCNextBackground.jsx';
-import AXL_24VPower from '../src/components/AXL_24VPower/AXL_24VPower.jsx';
+import AXL_24VPower from '../src/components/Core/AXL_24VPower/AXL_24VPower.jsx';
 import AXL_DI81_DO81_1H from '../src/components/Modules/Digital/Combo/AXL_DI81_DO81_1H/AXL_DI81_DO81_1H.jsx';
 import AXL_DI161_1H from '../src/components/Modules/Digital/Input/AXL_DI161_1H/AXL_DI161_1H.jsx';
 import AXL_AI41_I_1H from '../src/components/Modules/Analog/Input/AXL_AI41_I_1H/AXL_AI41_I_1H.jsx';

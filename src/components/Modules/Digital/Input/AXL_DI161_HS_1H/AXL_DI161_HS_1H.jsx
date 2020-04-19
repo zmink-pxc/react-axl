@@ -10,7 +10,7 @@ export default class AXL_DI161_HS_1H extends React.PureComponent {
 
     render(){
         return (
-            <AXL_Module {...this.props} partName={this.props.partName} width={35} terminals={this.props.terminals} leds={this.props.leds} raisedMidsection={false} hasTopRow={false} partNumber={this.props.partNumber} labels={['a','0','1','2','3']} colorCard={{isDigitalIn:true}}>
+            <AXL_Module {...this.props} partName={this.props.partName} width={this.props.mmWidth} terminals={this.props.terminals} leds={this.props.leds} raisedMidsection={false} hasTopRow={false} partNumber={this.props.partNumber} labels={['a','0','1','2','3']} colorCard={{isDigitalIn:true}}>
                 <AXL_Connector type="POWER" isBlack={true} numRows={4} numCols={1}/>
                 <AXL_Connector type="IO" isBlack={false} numRows={4} numCols={2}/>
                 <AXL_Connector type="IO" isBlack={false} numRows={4} numCols={2}/>
@@ -22,6 +22,8 @@ export default class AXL_DI161_HS_1H extends React.PureComponent {
 AXL_DI161_HS_1H.defaultProps = {
     partNumber: "2701722",
     partName: "DI16/1 HS",
+    mmWidth:    35,             //width of component in mm which can be converted to px size
+    mmHeight:   122,
     terminals: defaultTerminals(12),
     leds: defaultLeds(12)
 }

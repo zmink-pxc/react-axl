@@ -16,7 +16,8 @@
     "react-motion": "^0.5.2",
     "react-scripts": "^3.1.0",
     "react-svg-loader": "^3.0.3",
-    "svg-inline-loader": "^0.8.0"
+    "svg-inline-loader": "^0.8.0",
+    "unit-to-px": "^1.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

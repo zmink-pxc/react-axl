@@ -2,11 +2,11 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './AXL_2152.module.scss';
 import PropTypes from 'prop-types';
-import Connector from '../../AXL_Connector/AXL_Connector.jsx';
+import Connector from '../../Core/AXL_Connector/AXL_Connector.jsx';
 import phoenixP from './assets/phoenix-p.svg';
 import bottomCard from './assets/bottomCard.svg';
 import topCard from './assets/topCard.svg';
-import AXL_LED_Horizontal from '../../AXL_LED_Horizontal/AXL_LED_Horizontal.jsx';
+import AXL_LED_Horizontal from '../../Core/AXL_LED_Horizontal/AXL_LED_Horizontal.jsx';
 
 
 export default class AXL_2152 extends React.PureComponent {
@@ -122,5 +122,7 @@ function DiagLeds(props){
 
 AXL_2152.defaultProps = {
     partNumber: '2404267',
-    partName: 'AXC F 2152'
+    partName:   'AXC F 2152',
+    mmWidth:    45,             //width of component in mm which can be converted to px size
+    mmHeight:   122          
 }

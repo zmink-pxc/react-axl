@@ -1,6 +1,6 @@
 import React from 'react';
-import AXL_Module,{defaultTerminals,defaultLeds} from '../../../../AXL_Module/AXL_Module.jsx';
-import AXL_Connector from '../../../../AXL_Connector/AXL_Connector.jsx';
+import AXL_Module,{defaultTerminals,defaultLeds} from '../../../../Core/AXL_Module/AXL_Module.jsx';
+import AXL_Connector from '../../../../Core/AXL_Connector/AXL_Connector.jsx';
 
 
 export default class AXL_RTD4_1H extends React.PureComponent {

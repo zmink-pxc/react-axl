@@ -22,9 +22,9 @@ import AxlConnectorSocket from '../src/components/Core/AxlConnectorSocket/AxlCon
 import AxlModule from '../src/components/Core/AxlModule/AxlModule.jsx';
 import PLCNextBackground from '../src/components/PLCNextBackground/PLCNextBackground.jsx';
 import Axl24VPower from '../src/components/Core/Axl24VPower/Axl24VPower.jsx';
-import AxlDI81_DO81_1H from '../src/components/Modules/Digital/Combo/AxlDI81_DO81_1H/AxlDI81_DO81_1H.jsx';
-import AxlDI161_1H from '../src/components/Modules/Digital/Input/AxlDI161_1H/AxlDI161_1H.jsx';
-import AxlAI41_I_1H from '../src/components/Modules/Analog/Input/AxlAI41_I_1H/AxlAI41_I_1H.jsx';
+import AxlDI81DO811H from '../src/components/Modules/Digital/Combo/AxlDI81DO811H/AxlDI81DO811H.jsx';
+import AxlDI1611H from '../src/components/Modules/Digital/Input/AxlDI1611H/AxlDI1611H.jsx';
+import AxlAI41I1H from '../src/components/Modules/Analog/Input/AxlAI41I1H/AxlAI41I1H.jsx';
 import AxlAI8 from '../src/components/Modules/Analog/Input/AxlAI8/AxlAI8.jsx';
 import Axc2152 from '../src/components/Controllers/Axc2152/Axc2152.jsx';
 import AxioBus from '../src/components/AxioBus/AxioBus.jsx';
@@ -77,7 +77,7 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   .add('Basic', () => <AxlTerminalGroup pushIn={boolean('pushIn',false)} isBlack={boolean('isBlack',false)} label={text('label','00')} redPlunger={boolean('redPlunger', false)} greenPlunger={boolean('greenPlunger',false)} bluePlunger={boolean('bluePlunger',false)}/>)
 
 
-  storiesOf('AxlLED_Group',module)
+  storiesOf('AxlLEDGroup',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><AxlLedGroup/>);
 
@@ -97,9 +97,9 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   .addDecorator(withKnobs)
   .add('Basic',()=><AxlLatch pushedIn={boolean('pushIn',false)}/>);
 
-  storiesOf('AxlLED_Socket',module)
+  storiesOf('AxlLEDSocket',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AxlLED_Socket numRows={number('numRows',2)} numCols={number('numCols',2)}/>)
+  .add('Basic',()=><AxlLEDSocket numRows={number('numRows',2)} numCols={number('numCols',2)}/>)
 
   storiesOf('AxlColorID',module)
   .addDecorator(withKnobs)
@@ -112,26 +112,26 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   isPwr={boolean('isPwr',false)}
   />)
 
-  storiesOf('AxlConnector_Socket',module)
+  storiesOf('AxlConnectorSocket',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AxlConnector_Socket numRows={number('numRows',2)} numCols={number('numCols',2)}/>)
+  .add('Basic',()=><AxlConnectorSocket numRows={number('numRows',2)} numCols={number('numCols',2)}/>)
 
 
   storiesOf('AxlModule',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><AxlModule raisedMidsection={false} hasTopRow={false} colorCard={{isDigitalIn:true}} width={53.6}/>)
 
-  storiesOf('AxlDI81_DO81_1H',module)
+  storiesOf('AxlDI81DO811H',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AxlDI81_DO81_1H/>)
+  .add('Basic',()=><AxlDI81DO811H/>)
 
-  storiesOf('AxlDI161_1H',module)
+  storiesOf('AxlDI1611H',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AxlDI161_1H/>)
+  .add('Basic',()=><AxlDI1611H/>)
 
-  storiesOf('AxlAI41_I_1H',module)
+  storiesOf('AxlAI41I1H',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AxlAI41_I_1H/>)
+  .add('Basic',()=><AxlAI41I1H/>)
   
   storiesOf('AxlAI8',module)
   .addDecorator(withKnobs)
@@ -142,7 +142,7 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   .addDecorator(withKnobs)
   .add('Basic',()=><PLCNextBackground numForegroundElements={100} numBackgroundElements={100}/>)
 
-  storiesOf('AXL 2152',module)
+  storiesOf('Axl2152',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><Axc2152 />)
 

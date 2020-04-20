@@ -4,8 +4,8 @@ import styles from './AxlModule.module.scss'
 import PropTypes from 'prop-types';
 import AxlColorID from '../AxlColorID/AxlColorID.jsx';
 import { switchCase } from '@babel/types';
-import phoenixP from './phoenix-p.png';
-import phoenixBrand from './phoenix-brand.png';
+import phoenixP from './phoenix-p.svg';
+import phoenixBrand from './phoenix-brand.svg';
 
 export default class AxlModule extends React.PureComponent {
     constructor(props){

@@ -1,0 +1,40 @@
+@import '../../../styles/_axioline';
+
+:export {axiolineGrey: $axioline-grey}
+
+.col{
+    flex: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 5mm;
+}
+.connectorFoot{
+    width: 100%;
+    height: 4mm;
+    border: 0.01mm solid $axioline-black;
+}
+
+.footTop{
+    height: 1mm;
+    border-bottom: 0.5mm solid $axioline-black;
+}
+
+.connector-middle {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: $axioline-grey;
+    border: 0.01mm solid black;
+}
+.connector{
+    margin-top: 0.05mm;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: center;
+}
+
+.blackConnector{
+    background-color: $axioline-black;
+}

@@ -1,0 +1,30 @@
+.led_base {
+    background-color: #494D3E;
+    height: 2mm;
+    width: 1mm;
+    border-radius: 0.25mm;
+}
+
+.error {
+    background-color: #F02F42;
+    box-shadow: 0 0 0.1mm 0 #F02F42;
+}
+
+.active {
+    background-color: #5EF300;
+    box-shadow: 0 0 0.1mm 0 #5EF300;
+}
+
+.warning {
+    animation: warning-blink 1s infinite steps(2);
+}
+
+@keyframes warning-blink {
+    0%{
+        background-color: rgba(73, 77, 62, 0.329);
+    }
+    100%{
+        box-shadow: 0 0 0.1mm 0 rgba(255, 161, 84, 1.0);
+        background-color: rgba(255, 161, 84, 1.0);
+    }
+}

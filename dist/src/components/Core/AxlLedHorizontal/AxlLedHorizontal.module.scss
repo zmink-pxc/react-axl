@@ -1,0 +1,46 @@
+@import '../../../styles/axioline';
+
+.led_base {
+    background-color: $color-led-base;
+    height: 1.5mm;
+    width: 2.5mm;
+    border-radius: 0.25mm;
+}
+
+.error {
+    background-color: $color-led-error;
+    box-shadow: 0 0 0.1mm 0 $color-led-error;
+}
+
+.active {
+    background-color: $color-led-active;
+    box-shadow: 0 0 0.1mm 0 $color-led-active;
+}
+
+.error-warning {
+    animation: warning-error 2s infinite steps(2);
+}
+
+.warning {
+    animation: warning-blink 1s infinite steps(2);
+}
+
+@keyframes warning-blink {
+    0%{
+        background-color: $color-led-base;
+    }
+    100%{
+        box-shadow: 0 0 0.1mm 0 $color-led-warning;
+        background-color: $color-led-warning;
+    }
+}
+
+@keyframes warning-error {
+    0%{
+        background-color: $color-led-base;
+    }
+    100%{
+        box-shadow: 0 0 0.1mm 0 $color-led-error;
+        background-color: $color-led-error;
+    }
+}

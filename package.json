@@ -34,7 +34,7 @@
   },
   "bit": {
     "env": {
-      "compiler": "bit.envs/bundlers/webpack@4.0.1"
+      "compiler": "zmink.axioline/bundlers/webpack-css-modules@4.1.1"
     },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm"

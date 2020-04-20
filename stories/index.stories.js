@@ -7,26 +7,26 @@ import { withKnobs, text, boolean, number,object } from '@storybook/addon-knobs'
 
 import { Button, Welcome } from '@storybook/react/demo';
 
-import AXL_LED from '../src/components/Core/AXL_LED/AXL_LED.jsx';
-import AXL_LED_Horizontal from '../src/components/Core/AXL_LED_Horizontal/AXL_LED_Horizontal.jsx';
-import AXL_Plunger from '../src/components/Core/AXL_Plunger/AXL_Plunger.jsx';
-import AXL_Terminal from '../src/components/Core/AXL_Terminal/AXL_Terminal.jsx';
-import AXL_TerminalGroup from '../src/components/Core/AXL_TerminalGroup/AXL_TerminalGroup.jsx';
-import AXL_LED_Group from '../src/components/Core/AXL_LED_Group/AXL_LED_Group.jsx';
-import AXL_Connector from '../src/components/Core/AXL_Connector/AXL_Connector.jsx';
-import AXL_Plug from '../src/components/Core/AXL_Plug/AXL_Plug.jsx';
-import AXL_Latch from '../src/components/Core/AXL_Latch/AXL_Latch.jsx';
-import AXL_LED_Socket from '../src/components/Core/AXL_LED_Socket/AXL_LED_Socket.jsx';
-import AXL_ColorID from '../src/components/Core/AXL_ColorID/AXL_ColorID.jsx';
-import AXL_Connector_Socket from '../src/components/Core/AXL_Connector_Socket/AXL_Connector_Socket.jsx';
-import AXL_Module from '../src/components/Core/AXL_Module/AXL_Module.jsx';
+import AxlLed from '../src/components/Core/AxlLed/AxlLed.jsx';
+import AxlLedHorizontal from '../src/components/Core/AxlLedHorizontal/AxlLedHorizontal.jsx';
+import AxlPlunger from '../src/components/Core/AxlPlunger/AxlPlunger.jsx';
+import AxlTerminal from '../src/components/Core/AxlTerminal/AxlTerminal.jsx';
+import AxlTerminalGroup from '../src/components/Core/AxlTerminalGroup/AxlTerminalGroup.jsx';
+import AxlLedGroup from '../src/components/Core/AxlLedGroup/AxlLedGroup.jsx';
+import AxlConnector from '../src/components/Core/AxlConnector/AxlConnector.jsx';
+import AxlPlug from '../src/components/Core/AxlPlug/AxlPlug.jsx';
+import AxlLatch from '../src/components/Core/AxlLatch/AxlLatch.jsx';
+import AxlLedSocket from '../src/components/Core/AxlLedSocket/AxlLedSocket.jsx';
+import AxlColorID from '../src/components/Core/AxlColorID/AxlColorID.jsx';
+import AxlConnectorSocket from '../src/components/Core/AxlConnectorSocket/AxlConnectorSocket.jsx';
+import AxlModule from '../src/components/Core/AxlModule/AxlModule.jsx';
 import PLCNextBackground from '../src/components/PLCNextBackground/PLCNextBackground.jsx';
-import AXL_24VPower from '../src/components/Core/AXL_24VPower/AXL_24VPower.jsx';
-import AXL_DI81_DO81_1H from '../src/components/Modules/Digital/Combo/AXL_DI81_DO81_1H/AXL_DI81_DO81_1H.jsx';
-import AXL_DI161_1H from '../src/components/Modules/Digital/Input/AXL_DI161_1H/AXL_DI161_1H.jsx';
-import AXL_AI41_I_1H from '../src/components/Modules/Analog/Input/AXL_AI41_I_1H/AXL_AI41_I_1H.jsx';
-import AXL_AI8 from '../src/components/Modules/Analog/Input/AXL_AI8/AXL_AI8.jsx';
-import AXL_2152 from '../src/components/Controllers/AXL_2152/AXL_2152.jsx';
+import Axl24VPower from '../src/components/Core/Axl24VPower/Axl24VPower.jsx';
+import AxlDI81_DO81_1H from '../src/components/Modules/Digital/Combo/AxlDI81_DO81_1H/AxlDI81_DO81_1H.jsx';
+import AxlDI161_1H from '../src/components/Modules/Digital/Input/AxlDI161_1H/AxlDI161_1H.jsx';
+import AxlAI41_I_1H from '../src/components/Modules/Analog/Input/AxlAI41_I_1H/AxlAI41_I_1H.jsx';
+import AxlAI8 from '../src/components/Modules/Analog/Input/AxlAI8/AxlAI8.jsx';
+import Axc2152 from '../src/components/Controllers/Axc2152/Axc2152.jsx';
 import AxioBus from '../src/components/AxioBus/AxioBus.jsx';
 
 
@@ -37,38 +37,28 @@ import '../src/components/PLCNextBackground/PLCNextBackground.module.scss';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
-storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
-  ));
-
-  storiesOf('AXL_LED', module)
+  storiesOf('AxlLed', module)
   .addDecorator(withKnobs)
-  .add('with text', () => <AXL_LED/>)
+  .add('with text', () => <AxlLED/>)
   .add('as dynamic variables', () => {
     
-    return (<AXL_LED isError={boolean('isError', false)} isWarning={boolean('isWarning', false)} isActive={boolean('isActive', false)}/>);
+    return (<AxlLed isError={boolean('isError', false)} isWarning={boolean('isWarning', false)} isActive={boolean('isActive', false)}/>);
   });
 
-  storiesOf('AXL_LED_Horizontal',module)
+  storiesOf('AxlLedHorizontal',module)
   .addDecorator(withKnobs)
   .add('as dynamic variables', () => {
     
-    return (<AXL_LED_Horizontal isError={boolean('isError', false)} isErrorWarning={boolean('isErrorWarning', false)} isWarning={boolean('isWarning', false)} isActive={boolean('isActive', false)}/>);
+    return (<AxlLedHorizontal isError={boolean('isError', false)} isErrorWarning={boolean('isErrorWarning', false)} isWarning={boolean('isWarning', false)} isActive={boolean('isActive', false)}/>);
   });
 
 
-  storiesOf('AXL_Plunger', module)
+  storiesOf('AxlPlunger', module)
   .addDecorator(withKnobs)
-  .add('with text', () => <AXL_Plunger pushIn={boolean('pushIn', false)} red={boolean('red', false)} green={boolean('green', false)} blue={boolean('blue', false)}/>)
+  .add('with text', () => <AxlPlunger pushIn={boolean('pushIn', false)} red={boolean('red', false)} green={boolean('green', false)} blue={boolean('blue', false)}/>)
   .add('as dynamic variables', () => {
     
-    return (<AXL_Plunger/>);
+    return (<AxlPlunger/>);
   })
   .add('with some emoji', () => (
     <Button onClick={action('clicked')}>
@@ -78,42 +68,42 @@ storiesOf('Button', module)
     </Button>
   ));
 
-  storiesOf('AXL_Terminal', module)
+  storiesOf('AxlTerminal', module)
   .addDecorator(withKnobs)
-  .add('Basic', () => <AXL_Terminal isBlack={boolean('isBlack',false)} isEnd={boolean('isEnd',false)}/>)
+  .add('Basic', () => <AxlTerminal isBlack={boolean('isBlack',false)} isEnd={boolean('isEnd',false)}/>)
 
-  storiesOf('AXL_TerminalGroup', module)
+  storiesOf('AxlTerminalGroup', module)
   .addDecorator(withKnobs)
-  .add('Basic', () => <AXL_TerminalGroup pushIn={boolean('pushIn',false)} isBlack={boolean('isBlack',false)} label={text('label','00')} redPlunger={boolean('redPlunger', false)} greenPlunger={boolean('greenPlunger',false)} bluePlunger={boolean('bluePlunger',false)}/>)
+  .add('Basic', () => <AxlTerminalGroup pushIn={boolean('pushIn',false)} isBlack={boolean('isBlack',false)} label={text('label','00')} redPlunger={boolean('redPlunger', false)} greenPlunger={boolean('greenPlunger',false)} bluePlunger={boolean('bluePlunger',false)}/>)
 
 
-  storiesOf('AXL_LED_Group',module)
+  storiesOf('AxlLED_Group',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AXL_LED_Group/>);
+  .add('Basic',()=><AxlLedGroup/>);
 
-  storiesOf('AXL_Connector',module)
+  storiesOf('AxlConnector',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AXL_Connector pushInLatch={boolean('pushInLatch',false)}/>);
+  .add('Basic',()=><AxlConnector pushInLatch={boolean('pushInLatch',false)}/>);
 
-  storiesOf('AXL_24VPower',module)
+  storiesOf('Axl24VPower',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AXL_24VPower/>)
+  .add('Basic',()=><Axl24VPower/>)
 
-  storiesOf('AXL_Plug',module)
+  storiesOf('AxlPlug',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AXL_Plug/>)
+  .add('Basic',()=><AxlPlug/>)
 
-  storiesOf('AXL_Latch',module)
+  storiesOf('AxlLatch',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AXL_Latch pushedIn={boolean('pushIn',false)}/>);
+  .add('Basic',()=><AxlLatch pushedIn={boolean('pushIn',false)}/>);
 
-  storiesOf('AXL_LED_Socket',module)
+  storiesOf('AxlLED_Socket',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AXL_LED_Socket numRows={number('numRows',2)} numCols={number('numCols',2)}/>)
+  .add('Basic',()=><AxlLED_Socket numRows={number('numRows',2)} numCols={number('numCols',2)}/>)
 
-  storiesOf('AXL_ColorID',module)
+  storiesOf('AxlColorID',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AXL_ColorID isDigitalIn={boolean('isDigitalIn',false)}
+  .add('Basic',()=><AxlColorID isDigitalIn={boolean('isDigitalIn',false)}
   isDigitalOut={boolean('isDigitalOut',true)}
   isComboDigital={boolean('isComboDigital',false)}
   isAnalogOut={boolean('isAnalogOut',false)}
@@ -122,30 +112,30 @@ storiesOf('Button', module)
   isPwr={boolean('isPwr',false)}
   />)
 
-  storiesOf('AXL_Connector_Socket',module)
+  storiesOf('AxlConnector_Socket',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AXL_Connector_Socket numRows={number('numRows',2)} numCols={number('numCols',2)}/>)
+  .add('Basic',()=><AxlConnector_Socket numRows={number('numRows',2)} numCols={number('numCols',2)}/>)
 
 
-  storiesOf('AXL_Module',module)
+  storiesOf('AxlModule',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AXL_Module raisedMidsection={false} hasTopRow={false} colorCard={{isDigitalIn:true}} width={53.6}/>)
+  .add('Basic',()=><AxlModule raisedMidsection={false} hasTopRow={false} colorCard={{isDigitalIn:true}} width={53.6}/>)
 
-  storiesOf('AXL_DI81_DO81_1H',module)
+  storiesOf('AxlDI81_DO81_1H',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AXL_DI81_DO81_1H/>)
+  .add('Basic',()=><AxlDI81_DO81_1H/>)
 
-  storiesOf('AXL_DI161_1H',module)
+  storiesOf('AxlDI161_1H',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AXL_DI161_1H/>)
+  .add('Basic',()=><AxlDI161_1H/>)
 
-  storiesOf('AXL_AI41_I_1H',module)
+  storiesOf('AxlAI41_I_1H',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AXL_AI41_I_1H/>)
+  .add('Basic',()=><AxlAI41_I_1H/>)
   
-  storiesOf('AXL_AI8',module)
+  storiesOf('AxlAI8',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AXL_AI8/>)
+  .add('Basic',()=><AxlAI8/>)
   
 
   storiesOf('PLCNextBackground',module)
@@ -154,7 +144,7 @@ storiesOf('Button', module)
 
   storiesOf('AXL 2152',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AXL_2152 />)
+  .add('Basic',()=><Axc2152 />)
 
   storiesOf('AxioBus',module)
   .addDecorator(withKnobs)

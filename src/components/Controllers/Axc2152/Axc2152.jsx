@@ -3,10 +3,13 @@ import classNames from 'classnames';
 import styles from './Axc2152.module.scss';
 import PropTypes from 'prop-types';
 import Connector from '../../Core/AxlConnector/AxlConnector.jsx';
-import phoenixP from './assets/phoenix-p.svg';
-import bottomCard from './assets/bottomCard.svg';
-import topCard from './assets/topCard.svg';
+//import phoenixP from '../../../assets/phoenix-p.svg'
+// import bottomCard from './assets/bottomCard.svg';
+// import topCard from './assets/topCard.svg';
 import AxlLedHorizontal from '../../Core/AxlLedHorizontal/AxlLedHorizontal.jsx';
+import PhoenixP from '../../Core/PhoenixP/PhoenixP.jsx';
+import TopCard from '../../Core/TopCard/TopCard.jsx';
+import BottomCard from '../../Core/BottomCard/BottomCard.jsx';
 
 
 export default class Axc2152 extends React.PureComponent {
@@ -27,13 +30,19 @@ export default class Axc2152 extends React.PureComponent {
                 </div>
             */}                
                 <CardHolder up={true}>
-                    <img className={styles.card} src={topCard}></img>
+                    <div className={styles.card}>
+                        <TopCard/>
+                    </div>
+                    {/* <img className={styles.card} src={topCard}></img> */}
                 </CardHolder>
                 {/*<div className={styles.verticalText}>www.plcnext-community.net</div>*/}
             </div>
             <div className={styles.mid}>
                 <DiagLeds />
-                <img className={styles.logo} src={phoenixP}/>
+                {/* <img className={styles.logo} src={phoenixP}/> */}
+                <div className={styles.logo}>
+                    <PhoenixP/>
+                </div>
             </div>
             <div className={styles.bottom}>
                 <div className={styles.bottomLeft}>
@@ -44,7 +53,10 @@ export default class Axc2152 extends React.PureComponent {
                 </div>
                 <div className={styles.bottomRight}>
                     <CardHolder down={true}>
-                        <img className={styles.card} src={bottomCard}></img>
+                        <div className={styles.card}>
+                            <BottomCard/>
+                        </div>
+                        {/* <img className={styles.card} src={bottomCard}></img> */}
                     </CardHolder>
                 </div>
             </div>

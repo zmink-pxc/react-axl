@@ -4,8 +4,8 @@ import styles from './AxlModule.module.scss'
 import PropTypes from 'prop-types';
 import AxlColorID from '../AxlColorID/AxlColorID.jsx';
 import { switchCase } from '@babel/types';
-import phoenixP from './phoenix-p.svg';
-import phoenixBrand from './phoenix-brand.svg';
+import PhoenixP from '../PhoenixP/PhoenixP.jsx';
+import PhoenixBrand from '../PhoenixBrand/PhoenixBrand.jsx';
 
 export default class AxlModule extends React.PureComponent {
     constructor(props){
@@ -42,7 +42,7 @@ export default class AxlModule extends React.PureComponent {
     render(){
         this.connSectionWidth = 0;
         let middleWidth = (this.props.numCols * 5)+"mm";
-        let logo = (this.props.fullWidthLogo === true) ? (phoenixBrand):(phoenixP);
+        let Logo = (this.props.fullWidthLogo === true) ? PhoenixBrand:PhoenixP;
         let children = React.Children.map(this.props.children, (child,index) => {
             return React.cloneElement(child,this.mapPropsToConnector(child,index))
         })
@@ -56,7 +56,10 @@ export default class AxlModule extends React.PureComponent {
                     <LabelHolder>
                     </LabelHolder>
                     <div className={styles.brandArea}>
-                        <img className={styles.logo} src={logo} alt="Phoenix Contact"/>
+                        <div className={styles.logo}>
+                            <Logo/>
+                        </div>
+                        {/* <img className={styles.logo} src={logo} alt="Phoenix Contact"/> */}
                         <div className={styles.printArea}>
                             <div className={styles.print}>{this.props.partName}</div>
                             <div className={styles.print}>{this.props.partNumber}</div>

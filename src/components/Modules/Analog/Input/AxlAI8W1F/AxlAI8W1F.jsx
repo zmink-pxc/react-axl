@@ -24,7 +24,7 @@ export default class AxlAI8W1F extends React.PureComponent {
 AxlAI8W1F.defaultProps = {
     partName:"AI8 W",
     partNumber: "2702525",
-    mmWidth:    54,             //width of component in mm which can be converted to px size
+    mmWidth:    53.6,             //width of component in mm which can be converted to px size
     mmHeight:   122,  
     terminals: defaultTerminals(12),
     leds: defaultLeds(12)

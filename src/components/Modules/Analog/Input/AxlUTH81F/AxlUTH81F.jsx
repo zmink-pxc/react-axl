@@ -24,7 +24,7 @@ export default class AxlUTH81F extends React.PureComponent {
 AxlUTH81F.defaultProps = {
     partName:"UTH8",
     partNumber: "2688417",
-    mmWidth:    54,             //width of component in mm which can be converted to px size
+    mmWidth:    53.6,             //width of component in mm which can be converted to px size
     mmHeight:   122,
     terminals: defaultTerminals(12),
     leds: defaultLeds(12)

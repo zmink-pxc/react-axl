@@ -1,0 +1,18 @@
+.base {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.flexLeft {
+    justify-content: flex-start;
+}

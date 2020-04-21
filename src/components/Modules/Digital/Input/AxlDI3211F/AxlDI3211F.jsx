@@ -24,7 +24,7 @@ export default class AxlDI3211F extends React.PureComponent {
 AxlDI3211F.defaultProps = {
     partName:"DI32/1",
     partNumber: "2702052",
-    mmWidth:    54,             //width of component in mm which can be converted to px size
+    mmWidth:    53.6,             //width of component in mm which can be converted to px size
     mmHeight:   122,
     terminals: defaultTerminals(12),
     leds: defaultLeds(12)

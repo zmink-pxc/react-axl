@@ -24,7 +24,7 @@ export default class AxlRTD8XC1F extends React.PureComponent {
 AxlRTD8XC1F.defaultProps = {
     partName:"RTD8 XC",
     partNumber: "2701235",
-    mmWidth:    54,             //width of component in mm which can be converted to px size
+    mmWidth:    53.6,             //width of component in mm which can be converted to px size
     mmHeight:   122,
     terminals: defaultTerminals(12),
     leds: defaultLeds(12)

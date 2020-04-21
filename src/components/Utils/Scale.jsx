@@ -89,7 +89,15 @@ export function AxioBusScale(props){
 
     useEffect(()=>{
         setRendered(true);
-        setChildSize(getBusSize(props.children));
+        var elements = null
+        if (props.children[0].type.toString() === "Symbol(react.suspense)"){
+            elements = props.children.map((child)=>{
+                return child.props.fallback
+            })
+        }else{
+            elements = props.children;
+        }
+        setChildSize(getBusSize(elements));
     },[])
 
     var t = null;
@@ -115,10 +123,12 @@ function calcTransform(childSize,parentSize){
 }
 
 function getAxioSize(component){
-    if (!component.props.mmHeight){throw Error('Component doesnt have mmHeight value in default props')}
-    if (!component.props.mmWidth){throw Error('Component doesnt have mmWidth default prop')}
-    const h = component.props.mmHeight * mmToPx;
-    const w = component.props.mmWidth * mmToPx;
+    const oH = component.props.mmHeight || 122;
+    const oW = component.props.mmWidth;
+    // if (!component.props.mmHeight){throw Error('Component doesnt have mmHeight value in default props')}
+    // if (!component.props.mmWidth){throw Error('Component doesnt have mmWidth default prop')}
+    const h = oH * mmToPx;
+    const w = oW * mmToPx;
 
     return {width: w,height: h}
 }

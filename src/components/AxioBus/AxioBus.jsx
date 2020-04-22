@@ -24,9 +24,6 @@ const Devices = Object.assign({},Controllers,Modules);
  * Renders axiobus components configured via part numbers
  * 
  * @param {Array} busConfiguration Array of part numbers of devices to render
- * @example
- * const components = ['2404267','2701916','2688310','2702525']
- * return <AxioBus busConfiguration={components}/>
  */
 export default class AxioBus extends React.Component {
     constructor(props){

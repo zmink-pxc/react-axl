@@ -1,0 +1,42 @@
+.base {
+    height: 122.4mm;
+    background: linear-gradient(-90deg, #F0F0F0 0%, #F8F8F8 50%, #F0F0F0 100%);
+    background-size: 400% 400%;
+    animation: pulse 1.2s ease-in-out infinite;
+    @keyframes pulse {
+        0% {
+        background-position: 0% 0%;
+        }
+        100% {
+        background-position: -135% 0%;
+        }
+    }
+}
+
+.oneh {
+    width: 35mm;
+}
+
+.twoh {
+    width: 53.6mm;
+}
+
+.onef {
+    width: 53.6mm;
+}
+
+.twof {
+    width: 53.6mm; 
+}
+
+.axc2{
+    width: 45mm;
+}
+
+.axc1{
+    width: 45mm;
+}
+
+.axc3{
+    width: 100mm;
+}

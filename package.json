@@ -28,16 +28,29 @@
     "@storybook/react": "^5.3.18",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.2",
+    "eslint-plugin-react-hooks": "^3.0.0",
     "node-sass": "^4.13.1",
     "sass-loader": "^7.3.1",
     "style-loader": "^1.1.4"
   },
+  "peerDependencies": {
+    "react": "16.x"
+  },
   "bit": {
     "env": {
-      "compiler": "zmink.axioline/bundlers/webpack-css-modules@4.2.2"
+      "compiler": "zmink.axioline/bundlers/webpack-css-modules@4.2.3"
     },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm",
+    "resolveModules": {
+      "aliases": {
+          "@assets": "src/assets",
+          "@controllers": "src/Controllers",
+          "@core": "src/Core",
+          "@modules": "src/Modules",
+          "@": "src"
+      }
+    },
     "overrides": {
       "assets/*": {
         "env": {

@@ -5,8 +5,8 @@ import styles from './AxioBus.module.scss';
 import {StaggeredMotion,spring} from 'react-motion';
 import { AxioBusScale } from '../Utils/Scale.jsx';
 import AxioLoader from '../Utils/AxioLoader/AxioLoader.jsx';
-const Modules = require('../Modules/load-modules.js').default;
-const Controllers = require('../Controllers/load-controllers.js').default;
+import Modules from '../Modules/load-modules.js';
+import Controllers from '../Controllers/load-controllers.js';
 
 const Devices = Object.assign({},Controllers,Modules);
 
@@ -41,7 +41,7 @@ export default class AxioBus extends React.Component {
     render(){
         let bus = this.props.busConfiguration.map((key)=>{
             const Device = Devices[key].component;
-            return (<Suspense fallback={<AxioLoader mmWidth={Devices[key].width}/>}><Device key={key}/></Suspense>)
+            return (<Suspense key={`s${key}`}fallback={<AxioLoader key={`l${key}`} mmWidth={Devices[key].width}/>}><Device key={`c${key}`}/></Suspense>)
         });
 
         const containerClass = classNames([styles.base],{[styles.wrap]:this.props.wrap},{[styles.flexLeft]:this.props.left===true})

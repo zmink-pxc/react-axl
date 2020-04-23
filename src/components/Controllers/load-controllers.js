@@ -10,7 +10,7 @@ import React from 'react';
 // }, {});
 
 const Controllers = {
-    "2404267": {width: 45,component: React.lazy(() => import(/* webpackChunkName: "Axc2152" */ './Axc2152/Axc2152.jsx'))} 
+    "2404267": {width: 45,component: React.lazy(() => import(/* webpackChunkName: "Axc2152" */ '@controllers/Axc2152/Axc2152.jsx'))} 
 }
 
 export default Controllers

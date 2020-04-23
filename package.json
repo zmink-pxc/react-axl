@@ -11,6 +11,7 @@
   "author": "Zachary Mink",
   "license": "MIT",
   "dependencies": {
+    "@bit/zmink.axioline.bundlers.webpack-css-modules": "^4.2.4",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react-motion": "^0.5.2",
@@ -38,17 +39,19 @@
   },
   "bit": {
     "env": {
-      "compiler": "zmink.axioline/bundlers/webpack-css-modules@4.2.3"
+      "compiler": "bit.envs/compilers/react@1.0.16"
     },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm",
     "resolveModules": {
       "aliases": {
-          "@assets": "src/assets",
-          "@controllers": "src/Controllers",
-          "@core": "src/Core",
-          "@modules": "src/Modules",
-          "@": "src"
+        "@assets": "src/assets",
+        "@controllers": "src/components/Controllers",
+        "@core": "src/components/Core",
+        "@modules": "src/components/Modules",
+        "@utils": "src/components/Utils",
+        "@": "src/components",
+        "@styles": "src/styles"
       }
     },
     "overrides": {

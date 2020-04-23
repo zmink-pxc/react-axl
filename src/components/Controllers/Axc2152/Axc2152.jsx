@@ -2,14 +2,11 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './Axc2152.module.scss';
 import PropTypes from 'prop-types';
-import Connector from '../../Core/AxlConnector/AxlConnector.jsx';
-//import phoenixP from '../../../assets/phoenix-p.svg'
-// import bottomCard from './assets/bottomCard.svg';
-// import topCard from './assets/topCard.svg';
-import AxlLedHorizontal from '../../Core/AxlLedHorizontal/AxlLedHorizontal.jsx';
-import PhoenixP from '../../Core/PhoenixP/PhoenixP.jsx';
-import TopCard from '../../Core/TopCard/TopCard.jsx';
-import BottomCard from '../../Core/BottomCard/BottomCard.jsx';
+import Connector from '@core/AxlConnector/AxlConnector.jsx';
+import AxlLedHorizontal from '@core/AxlLedHorizontal/AxlLedHorizontal.jsx';
+import PhoenixP from '@core/PhoenixP/PhoenixP.jsx';
+import TopCard from '@core/TopCard/TopCard.jsx';
+import BottomCard from '@core/BottomCard/BottomCard.jsx';
 
 
 export default class Axc2152 extends React.PureComponent {

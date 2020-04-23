@@ -1,6 +1,6 @@
 import React from 'react';
-import AxlModule,{defaultTerminals,defaultLeds} from '../../../../Core/AxlModule/AxlModule.jsx';
-import AxlConnector from '../../../../Core/AxlConnector/AxlConnector.jsx';
+import AxlModule,{defaultTerminals,defaultLeds} from '@core/AxlModule/AxlModule.jsx';
+import AxlConnector from '@core/AxlConnector/AxlConnector.jsx';
 
 
 export default class AxlAI4UXC1H extends React.PureComponent {

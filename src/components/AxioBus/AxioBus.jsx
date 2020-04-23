@@ -3,22 +3,12 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import styles from './AxioBus.module.scss';
 import {StaggeredMotion,spring} from 'react-motion';
-import { AxioBusScale } from '../Utils/Scale.jsx';
-import AxioLoader from '../Utils/AxioLoader/AxioLoader.jsx';
-import Modules from '../Modules/load-modules.js';
-import Controllers from '../Controllers/load-controllers.js';
+import { AxioBusScale } from '@utils/Scale.jsx';
+import AxioLoader from '@utils/AxioLoader/AxioLoader.jsx';
+import Modules from '@modules/load-modules.js';
+import Controllers from '@controllers/load-controllers.js';
 
 const Devices = Object.assign({},Controllers,Modules);
-
-// function requireAll(r) {
-//      r.keys().forEach((key)=>{console.log('New key: ' + key)})
-// }
-
-// const context = requireAll(require.context('../Modules/', true, /\.js$/));
-
-//console.log('modules: ' + JSON.stringify(modules));
-
-//const deviceDictionary = Object.assign({},modules,controllers);
 
 /**
  * Renders axiobus components configured via part numbers

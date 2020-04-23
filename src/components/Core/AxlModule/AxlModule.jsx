@@ -2,10 +2,10 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './AxlModule.module.scss'
 import PropTypes from 'prop-types';
-import AxlColorID from '../AxlColorID/AxlColorID.jsx';
+import AxlColorID from '@core/AxlColorID/AxlColorID.jsx';
 import { switchCase } from '@babel/types';
-import PhoenixP from '../PhoenixP/PhoenixP.jsx';
-import PhoenixBrand from '../PhoenixBrand/PhoenixBrand.jsx';
+import PhoenixP from '@core/PhoenixP/PhoenixP.jsx';
+import PhoenixBrand from '@core/PhoenixBrand/PhoenixBrand.jsx';
 
 export default class AxlModule extends React.PureComponent {
     constructor(props){

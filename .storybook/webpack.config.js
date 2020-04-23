@@ -13,6 +13,20 @@ module.exports = async ({ config, mode }) => {
   //   include: path.resolve(__dirname, '../'),
   // });
 
+  config.resolve = {
+    ...config.resolve,
+    alias: {
+      ...config.resolve.alias,
+      "@assets":      path.resolve(__dirname,"../src/assets"),
+      "@controllers": path.resolve(__dirname,"../src/components/Controllers"),
+      "@core":        path.resolve(__dirname,"../src/components/Core"),
+      "@modules":     path.resolve(__dirname,"../src/components/Modules"),
+      "@utils":       path.resolve(__dirname,"../src/components/Utils"),
+      "@":            path.resolve(__dirname,"../src/components"),
+      "@styles":      path.resolve(__dirname,"../src/styles")
+    }
+  }
+
   // Return the altered config
   return config;
 };

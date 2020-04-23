@@ -1,1 +1,282 @@
-!function(e,t){if("object"==typeof exports&&"object"==typeof module)module.exports=t(require("react"),require("classnames"),require("prop-types"),require("@babel/types"));else if("function"==typeof define&&define.amd)define(["react","classnames","prop-types","@babel/types"],t);else{var n="object"==typeof exports?t(require("react"),require("classnames"),require("prop-types"),require("@babel/types")):t(e.react,e.classnames,e["prop-types"],e["@babel/types"]);for(var r in n)("object"==typeof exports?exports:e)[r]=n[r]}}(window,(function(e,t,n,r){return function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}return n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=4)}([function(t,n){t.exports=e},function(e,n){e.exports=t},function(e,t,n){"use strict";e.exports=function(e){var t=[];return t.toString=function(){return this.map((function(t){var n=function(e,t){var n=e[1]||"",r=e[3];if(!r)return n;if(t&&"function"==typeof btoa){var o=(a=r,"/*# sourceMappingURL=data:application/json;charset=utf-8;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(a))))+" */"),l=r.sources.map((function(e){return"/*# sourceURL="+r.sourceRoot+e+" */"}));return[n].concat(l).concat([o]).join("\n")}var a;return[n].join("\n")}(t,e);return t[2]?"@media "+t[2]+"{"+n+"}":n})).join("")},t.i=function(e,n){"string"==typeof e&&(e=[[null,e,""]]);for(var r={},o=0;o<this.length;o++){var l=this[o][0];"number"==typeof l&&(r[l]=!0)}for(o=0;o<e.length;o++){var a=e[o];"number"==typeof a[0]&&r[a[0]]||(n&&!a[2]?a[2]=n:n&&(a[2]="("+a[2]+") and ("+n+")"),t.push(a))}},t}},function(e,t,n){var r,o,l={},a=(r=function(){return window&&document&&document.all&&!window.atob},function(){return void 0===o&&(o=r.apply(this,arguments)),o}),i=function(e){return document.querySelector(e)},c=function(e){var t={};return function(e){if("function"==typeof e)return e();if(void 0===t[e]){var n=i.call(this,e);if(window.HTMLIFrameElement&&n instanceof window.HTMLIFrameElement)try{n=n.contentDocument.head}catch(e){n=null}t[e]=n}return t[e]}}(),s=null,u=0,f=[],d=n(7);function p(e,t){for(var n=0;n<e.length;n++){var r=e[n],o=l[r.id];if(o){o.refs++;for(var a=0;a<o.parts.length;a++)o.parts[a](r.parts[a]);for(;a<r.parts.length;a++)o.parts.push(g(r.parts[a],t))}else{var i=[];for(a=0;a<r.parts.length;a++)i.push(g(r.parts[a],t));l[r.id]={id:r.id,refs:1,parts:i}}}}function m(e,t){for(var n=[],r={},o=0;o<e.length;o++){var l=e[o],a=t.base?l[0]+t.base:l[0],i={css:l[1],media:l[2],sourceMap:l[3]};r[a]?r[a].parts.push(i):n.push(r[a]={id:a,parts:[i]})}return n}function h(e,t){var n=c(e.insertInto);if(!n)throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");var r=f[f.length-1];if("top"===e.insertAt)r?r.nextSibling?n.insertBefore(t,r.nextSibling):n.appendChild(t):n.insertBefore(t,n.firstChild),f.push(t);else if("bottom"===e.insertAt)n.appendChild(t);else{if("object"!=typeof e.insertAt||!e.insertAt.before)throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");var o=c(e.insertInto+" "+e.insertAt.before);n.insertBefore(t,o)}}function b(e){if(null===e.parentNode)return!1;e.parentNode.removeChild(e);var t=f.indexOf(e);t>=0&&f.splice(t,1)}function v(e){var t=document.createElement("style");return e.attrs.type="text/css",y(t,e.attrs),h(e,t),t}function y(e,t){Object.keys(t).forEach((function(n){e.setAttribute(n,t[n])}))}function g(e,t){var n,r,o,l;if(t.transform&&e.css){if(!(l=t.transform(e.css)))return function(){};e.css=l}if(t.singleton){var a=u++;n=s||(s=v(t)),r=x.bind(null,n,a,!1),o=x.bind(null,n,a,!0)}else e.sourceMap&&"function"==typeof URL&&"function"==typeof URL.createObjectURL&&"function"==typeof URL.revokeObjectURL&&"function"==typeof Blob&&"function"==typeof btoa?(n=function(e){var t=document.createElement("link");return e.attrs.type="text/css",e.attrs.rel="stylesheet",y(t,e.attrs),h(e,t),t}(t),r=O.bind(null,n,t),o=function(){b(n),n.href&&URL.revokeObjectURL(n.href)}):(n=v(t),r=j.bind(null,n),o=function(){b(n)});return r(e),function(t){if(t){if(t.css===e.css&&t.media===e.media&&t.sourceMap===e.sourceMap)return;r(e=t)}else o()}}e.exports=function(e,t){if("undefined"!=typeof DEBUG&&DEBUG&&"object"!=typeof document)throw new Error("The style-loader cannot be used in a non-browser environment");(t=t||{}).attrs="object"==typeof t.attrs?t.attrs:{},t.singleton||"boolean"==typeof t.singleton||(t.singleton=a()),t.insertInto||(t.insertInto="head"),t.insertAt||(t.insertAt="bottom");var n=m(e,t);return p(n,t),function(e){for(var r=[],o=0;o<n.length;o++){var a=n[o];(i=l[a.id]).refs--,r.push(i)}e&&p(m(e,t),t);for(o=0;o<r.length;o++){var i;if(0===(i=r[o]).refs){for(var c=0;c<i.parts.length;c++)i.parts[c]();delete l[i.id]}}}};var w,_=(w=[],function(e,t){return w[e]=t,w.filter(Boolean).join("\n")});function x(e,t,n,r){var o=n?"":r.css;if(e.styleSheet)e.styleSheet.cssText=_(t,o);else{var l=document.createTextNode(o),a=e.childNodes;a[t]&&e.removeChild(a[t]),a.length?e.insertBefore(l,a[t]):e.appendChild(l)}}function j(e,t){var n=t.css,r=t.media;if(r&&e.setAttribute("media",r),e.styleSheet)e.styleSheet.cssText=n;else{for(;e.firstChild;)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(n))}}function O(e,t,n){var r=n.css,o=n.sourceMap,l=void 0===t.convertToAbsoluteUrls&&o;(t.convertToAbsoluteUrls||l)&&(r=d(r)),o&&(r+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(o))))+" */");var a=new Blob([r],{type:"text/css"}),i=e.href;e.href=URL.createObjectURL(a),i&&URL.revokeObjectURL(i)}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},o=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}();t.defaultTerminals=function(e){for(var t=[],n=0;n<e;n++)t.push({});return t},t.defaultLeds=function(e){for(var t=[],n=0;n<e;n++)t.push({});return t};var l=d(n(0)),a=d(n(1)),i=d(n(5)),c=d(n(8)),s=d(n(9)),u=(n(12),d(n(13))),f=d(n(14));function d(e){return e&&e.__esModule?e:{default:e}}function p(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}var m=function(e){function t(e){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t);var n=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e));return n.faceWidth=function(){return 10*Math.floor(n.props.width/10)},n.mapPropsToConnector=function(e,t){return n.connSectionWidth=n.connSectionWidth+5*e.props.numCols,e.props.type,{}},n.withMM=function(e){return e+"mm"},n.numConnectors=e.children?e.children.length:0,n.connSectionWidth=0,n}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(t,e),o(t,[{key:"render",value:function(){var e=this;this.connSectionWidth=0;this.props.numCols;var t=!0===this.props.fullWidthLogo?f.default:u.default,n=l.default.Children.map(this.props.children,(function(t,n){return l.default.cloneElement(t,e.mapPropsToConnector(t,n))}));return l.default.createElement("div",r({className:i.default.moduleBase,style:{width:this.props.width+"mm"}},this.props),l.default.createElement("div",{className:i.default.moduleTop,style:{width:this.faceWidth()+"mm"}},!1===(this.props.raisedMidSection||this.props.hasTopRow)?l.default.createElement("div",{className:i.default.raisedContainer,style:{width:this.faceWidth()+"mm"}},l.default.createElement(h,{width:this.props.width,upper:!0}),l.default.createElement(b,{width:this.faceWidth()-4+1,labels:this.props.labels}),l.default.createElement(y,null),l.default.createElement("div",{className:i.default.brandArea},l.default.createElement("div",{className:i.default.logo},l.default.createElement(t,null)),l.default.createElement("div",{className:i.default.printArea},l.default.createElement("div",{className:i.default.print},this.props.partName),l.default.createElement("div",{className:i.default.print},this.props.partNumber))),l.default.createElement(h,{width:this.props.width,lower:!0})):null),l.default.createElement("div",{className:i.default.moduleMiddle,style:{width:this.connSectionWidth+"mm"}},l.default.createElement(s.default,this.props.colorCard),l.default.createElement(v,null)),l.default.createElement("div",{className:i.default.moduleBottom},n))}}]),t}(l.default.PureComponent);function h(e){for(var t=[],n=Math.floor(e.width/6),r=e.width-1+"mm",o=(0,a.default)(p({},i.default.ventLower,!0===e.lower),p({},i.default.ventUpper,!0===e.upper)),c=0;c<n;c++)t.push(l.default.createElement("div",{key:"v"+c,className:o}));return l.default.createElement("div",{className:i.default.ventContainer,style:{width:r}},t)}function b(e){var t=e.width+"mm",n=e.width-3+"mm",r=10*e.labels.length>e.width,o=(e.labels.length,(0,a.default)([i.default.labelVerticalLine],p({},i.default.singleWidthMargin,r),p({},i.default.doubleWidthMargin,!r))),c=e.labels.map((function(t,n){var r,a;if(n<e.labels.length)return 0===n?(r="none",a="2"):n===e.labels.length-1?(a="2",r="0.25mm solid black"):(r="0.25mm solid black",a="1"),l.default.createElement("div",{className:o,key:"lbl"+n,style:{borderLeft:r,flexGrow:a}},l.default.createElement("span",{className:i.default.labelText},t))}));return l.default.createElement("div",{className:i.default.labelBase,style:{width:t}},l.default.createElement("div",{className:i.default.labelHorizontalLine,style:{width:n}}),c)}function v(e){return l.default.createElement("div",{className:i.default.inset})}function y(e){return l.default.createElement("div",{className:i.default.labelHolder},e.children)}t.default=m,m.propTypes={raisedMidsection:c.default.bool.isRequired,hasTopRow:c.default.bool.isRequired,width:c.default.number.isRequired,colorCard:c.default.object.isRequired,partNumber:c.default.number.isRequired,partName:c.default.string.isRequired,fullWidthLogo:c.default.bool,moduleName:c.default.string},m.defaultProps={labels:["a","0","1","2","3","4","5","6","7"]}},function(e,t,n){var r=n(6);"string"==typeof r&&(r=[[e.i,r,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};n(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,t,n){(t=e.exports=n(2)(!1)).push([e.i,"._1nKrN6F-u07omSkZtfqS09 {\n  width: 3mm;\n  height: 3mm;\n  background-color: rgba(51, 51, 51, 0.5);\n  box-shadow: inset 0px 4px 5px black; }\n\n._3U6mhq2Sz5JapeemRAy1_R {\n  width: 3mm;\n  height: 1.5mm;\n  background-color: rgba(51, 51, 51, 0.5);\n  box-shadow: inset 0px 4px 5px black; }\n\n._3tuZdEJzknMsfQovyboL_O {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  padding-left: 2mm;\n  align-items: center;\n  height: 10mm;\n  border-bottom: 0.5mm solid black;\n  width: 100%; }\n\n.KHKTRBiC-Z6wOo2bIwAPb {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-evenly; }\n\n._2tgH1UjlZbpU9oAeXuCoRs {\n  width: 100%;\n  background-color: #8e9291;\n  margin-left: 0.5mm;\n  box-shadow: inset 0 0 20px 3px black; }\n\n._3WtfXauY3yNDubGENJoyke {\n  position: absolute;\n  top: 7mm;\n  background-color: white;\n  height: 35mm;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-evenly; }\n\n.otXuoUCCl7oM9QZIkxFOe {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center; }\n\n._3b_U0ncBd1iMcDI9oeWzJM {\n  position: relative;\n  background-color: #8e9291;\n  height: 122.4mm;\n  border: 0.1mm solid black;\n  display: flex;\n  flex-direction: column;\n  align-content: center;\n  align-items: center; }\n\n._2dAyvjkoLBiNOoHslW8KSf {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  margin: 0 auto 0 auto;\n  border: 1px solid black; }\n\n._1EYKvVGFr8kZscszRQqrsu {\n  margin-left: 2mm;\n  margin-top: 0.5mm;\n  margin-right: 2mm;\n  display: flex;\n  flex-direction: row;\n  justify-content: center; }\n\n._141KDdjzxwIpR7du2kfMa8 {\n  display: flex;\n  flex-direction: row;\n  align-content: flex-start; }\n\n._2H75JGpZ0Ie8J-gEPzUM4a {\n  position: absolute;\n  height: 0.1mm;\n  border-top: 0.25mm solid black;\n  margin-top: 6mm; }\n\n._3c62BuXCfPMAPYaqB7dhc6 {\n  margin-right: 10mm;\n  border-left: 0.25mm solid black; }\n\n._3VBjC9ddFA_iaGSvlY7Z8q {\n  box-sizing: border-box;\n  width: 100%;\n  height: 40mm;\n  border: solid #8e9291 2mm;\n  box-shadow: inset 0 0 13px 0px black, 0 1mm 1mm 0px black;\n  z-index: 2; }\n\n._1O1a7T_mkh02u_wdJ7mhw3 {\n  margin-left: 2mm;\n  display: flex;\n  flex-direction: column;\n  align-content: space-around; }\n\n._229a1AwgdkZUUBBRJl3Kn9 {\n  font-size: 2mm; }\n\n.jP6Tw_PPUcb7gntl9XRiW {\n  font: normal normal 700 3mm Arial;\n  margin-top: 2mm; }\n\n._25x5YekRt7xgJ--6yOS46o {\n  text-align: center; }\n\n._3x9RPNthZi_CaCaxQZbiPL {\n  width: 5mm; }\n\n._2zVbthXtb5o4L0fGxC0I94 {\n  width: 10mm; }\n\n._1YQRf3zMXsdq8izIX_CShd {\n  height: 6mm;\n  width: 6mm; }\n",""]),t.locals={ventLower:"_1nKrN6F-u07omSkZtfqS09",ventUpper:"_3U6mhq2Sz5JapeemRAy1_R",brandArea:"_3tuZdEJzknMsfQovyboL_O",ventContainer:"KHKTRBiC-Z6wOo2bIwAPb",inset:"_2tgH1UjlZbpU9oAeXuCoRs",labelBase:"_3WtfXauY3yNDubGENJoyke",raisedContainer:"otXuoUCCl7oM9QZIkxFOe",moduleBase:"_3b_U0ncBd1iMcDI9oeWzJM",moduleTop:"_2dAyvjkoLBiNOoHslW8KSf",moduleMiddle:"_1EYKvVGFr8kZscszRQqrsu",moduleBottom:"_141KDdjzxwIpR7du2kfMa8",labelHorizontalLine:"_2H75JGpZ0Ie8J-gEPzUM4a",labelArea:"_3c62BuXCfPMAPYaqB7dhc6",labelHolder:"_3VBjC9ddFA_iaGSvlY7Z8q",printArea:"_1O1a7T_mkh02u_wdJ7mhw3",print:"_229a1AwgdkZUUBBRJl3Kn9",labelText:"jP6Tw_PPUcb7gntl9XRiW",labelVerticalLine:"_25x5YekRt7xgJ--6yOS46o",singleWidthMargin:"_3x9RPNthZi_CaCaxQZbiPL",doubleWidthMargin:"_2zVbthXtb5o4L0fGxC0I94",logo:"_1YQRf3zMXsdq8izIX_CShd"}},function(e,t,n){"use strict";e.exports=function(e){var t="undefined"!=typeof window&&window.location;if(!t)throw new Error("fixUrls requires window.location");if(!e||"string"!=typeof e)return e;var n=t.protocol+"//"+t.host,r=n+t.pathname.replace(/\/[^\/]*$/,"/");return e.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi,(function(e,t){var o,l=t.trim().replace(/^"(.*)"$/,(function(e,t){return t})).replace(/^'(.*)'$/,(function(e,t){return t}));return/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(l)?e:(o=0===l.indexOf("//")?l:0===l.indexOf("/")?n+l:r+l.replace(/^\.\//,""),"url("+JSON.stringify(o)+")")}))}},function(e,t){e.exports=n},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),o=i(n(0)),l=i(n(1)),a=i(n(10));function i(e){return e&&e.__esModule?e:{default:e}}function c(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}var s=function(e){function t(e){return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e))}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(t,e),r(t,[{key:"render",value:function(){var e=(0,l.default)([a.default.cardBase],c({},a.default.comboDigital,this.props.isComboDigital),c({},a.default.digitalIn,this.props.isDigitalIn),c({},a.default.digitalOut,this.props.isDigitalOut),c({},a.default.analogIn,this.props.isAnalogIn),c({},a.default.analogOut,this.props.isAnalogOut),c({},a.default.specialFn,this.props.isSpecialFn),c({},a.default.pwr,this.props.isPwr));return o.default.createElement("div",{className:e})}}]),t}(o.default.PureComponent);t.default=s},function(e,t,n){var r=n(11);"string"==typeof r&&(r=[[e.i,r,""]]);var o={hmr:!0,transform:void 0,insertInto:void 0};n(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,t,n){(t=e.exports=n(2)(!1)).push([e.i,"._H4KQxKTHSb9ar6aETyfB {\n  background-color: #0089b6; }\n\n._3yW9cHbh_9Pe9WQL2aHxuM {\n  background-color: #844c82; }\n\n._2dmnabfS7hh0-CX8aNKUQf {\n  background-color: #a72920; }\n\n._3j_ZaA5K_6xQ8Skr9WqNgS {\n  background-color: #8a9977; }\n\n._3g1z6MhgTaXXAWjXhOyrU9 {\n  background-color: #faca30; }\n\n.dKXgc5B3JwdonuyqxTQsd {\n  background-color: #f67828; }\n\n.W_CZneq35Ljn2pJ14WCkN {\n  background-color: #f1ece1; }\n\n._38j06280rROTqr6AZXZ1aA {\n  width: 5mm;\n  height: 10mm; }\n",""]),t.locals={digitalIn:"_H4KQxKTHSb9ar6aETyfB",comboDigital:"_3yW9cHbh_9Pe9WQL2aHxuM",digitalOut:"_2dmnabfS7hh0-CX8aNKUQf",analogIn:"_3j_ZaA5K_6xQ8Skr9WqNgS",analogOut:"_3g1z6MhgTaXXAWjXhOyrU9",specialFn:"dKXgc5B3JwdonuyqxTQsd",pwr:"W_CZneq35Ljn2pJ14WCkN",cardBase:"_38j06280rROTqr6AZXZ1aA"}},function(e,t){e.exports=r},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(e){return l.default.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 60 58.667"},l.default.createElement("defs",null),l.default.createElement("path",{d:"M4.648.033A4.574 4.574 0 00.064 4.617v49.498A4.574 4.574 0 004.648 58.7H55.48a4.574 4.574 0 004.584-4.584V4.617A4.574 4.574 0 0055.48.033H4.648zm21.829 6.44h10.472c9.26 0 16.715 7.454 16.715 16.715v4.427A16.68 16.68 0 0136.95 44.332h-4.416v3.354a5.718 5.718 0 01-5.73 5.73H13.56a5.718 5.718 0 01-5.73-5.73V12.225a5.717 5.717 0 015.73-5.729H26.01c.156-.004.309-.023.467-.023z",fillOpacity:".991",stroke:"#fff",strokeWidth:".076"}),l.default.createElement("path",{d:"M30.24 17.383a8.467 8.276 0 00-8.467 8.275 8.467 8.276 0 008.467 8.276 8.467 8.276 0 008.467-8.276 8.467 8.276 0 00-8.467-8.275zm.031 4.078a3.975 4.198 0 013.977 4.197 3.975 4.198 0 01-3.977 4.197 3.975 4.198 0 01-3.974-4.197 3.975 4.198 0 013.974-4.197z"}),l.default.createElement("path",{d:"M27.754.193v22.23a3.975 4.198 0 012.564-.997 3.975 4.198 0 012.536.965V.193zm0 28.637v29.758h5.1V28.854a3.975 4.198 0 01-2.536.968 3.975 4.198 0 01-2.564-.992z"}))};var r,o=n(0),l=(r=o)&&r.__esModule?r:{default:r}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(e){return l.default.createElement("svg",{viewBox:"0 0 744.09 1052.4"},l.default.createElement("path",{d:"M608.37 530.08l-1.41 1.697-6.46.375-6.46.375.334 19.375c.184 10.656-.145 20.1-.73 20.988l-1.067 1.616-11.143-.366-11.145-.363-.305-18.125c-.167-9.969-.599-19.391-.96-20.938l-.659-2.813h-23.51l-3.846 3.237-3.845 3.234v11.844l3.217 3.024 3.218 3.023 5.844-.09c3.214-.049 7.896-.53 10.402-1.072l4.557-.984.531 6.705c.292 3.687.095 7.606-.44 8.709l-.972 2.004-7.137 1.433c-3.925.789-10.027 1.434-13.559 1.434h-6.422l-6.51-3.244-6.507-3.244-4.414-5.387c-6.835-8.34-8.742-19.078-4.942-27.822.974-2.24 3.286-6.06 5.139-8.49l3.371-4.418 6.998-3.385 7-3.385 33.113-.373c18.212-.205 34.31-.072 35.773.295l2.66.668.848 6.38.846 6.384zm-1.205-19.428l-2.813.068c-1.546.038-7.472.078-13.168.088l-10.355.018-5.699-6.338c-3.134-3.486-6.38-6.336-7.217-6.336s-3.174 2.22-5.197 4.934c-2.022 2.714-4.8 5.544-6.176 6.289l-2.5 1.355-24.643.444-24.643.445-1.959-1.432-1.957-1.433-.302-26.588c-.167-14.624.159-27.417.724-28.428l1.028-1.836h23.627l.168 22.188c.092 12.203.046 24.516-.102 27.363-.148 2.847.301 5.528.998 5.959l1.268.783 11.959-13.365c6.577-7.35 11.959-13.835 11.959-14.408 0-.573-4.641-6.153-10.312-12.402-5.672-6.249-10.875-12.167-11.562-13.15l-1.25-1.789 3.714-2.316 23.547.996 5.166 5.072c2.842 2.789 5.805 5.07 6.584 5.07s3.297-2.195 5.592-4.877l4.174-4.877 12.635-.611c6.949-.336 13.31-.192 14.137.318l1.502.928-11.338 13.188c-6.236 7.253-11.338 13.686-11.338 14.295s5.344 6.94 11.875 14.07 11.875 13.719 11.875 14.641zm-88.861 63.258l-1.53 1.844-21.456-.766-2.948-5.344-2.949-5.343-19.12.726-4.462 9.492-13.398-.004c-7.37 0-18.006.168-23.633.377-5.627.21-10.97-.073-11.875-.63l-1.642-1.014-.625-20.361-.625-20.36h-15l-.344 20.939-.342 20.938-1.533.125c-.843.069-6.313.028-12.156-.088l-10.625-.211-10.027-9.914c-5.515-5.453-10.436-9.912-10.938-9.912s-.91 4.148-.91 9.22v9.223l-3.508 2.91-10.434-.365-10.434-.363-1.25-21.25-2.725 4.375c-4.005 6.43-8.983 10.759-16.025 13.934l-6.25 2.816-9.375-.012-9.375-.013-6.572-2.895-6.572-2.896-3.897-4.44c-6.716-7.65-8.822-15.018-7.082-24.793l1.145-6.422 4.441-5.19c2.443-2.853 7.331-6.71 10.863-8.568l6.424-3.378 21.25.101 6.422 3.328c6.413 3.323 15.453 12.406 15.453 15.527 0 .908.54 1.65 1.199 1.65h1.2l.726-20.624 11.912-.356 11.912-.353 21.176 21.656.369-9.846c.204-5.414.92-10.392 1.59-11.062l1.22-1.219 36.535-.353c20.094-.194 37.827-.051 39.406.316l2.871.668-.37 7.773-.372 7.776-5.625.656c-3.093.362-6.328 1.099-7.187 1.637l-1.563.978v37.89l1.668-1.83c.918-1.007 5.218-9.706 9.557-19.33 13.31-29.529 16.256-35.352 18.279-36.128 1.072-.411 6.317-.748 11.654-.748h9.703l1.84 2.188c1.011 1.203 3.58 5.843 5.705 10.312 2.126 4.468 7.89 16.458 12.812 26.645l8.95 18.52zm-20.178-91.275l-.336 27.291-4.111.84c-2.262.462-7.833.54-12.381.176l-8.27-.662-9.396-9.815c-5.168-5.397-9.863-9.812-10.432-9.812s-1.036 4.198-1.036 9.33v9.332l-2.418 1.293c-2.607 1.395-17.365 1.778-20.605.535l-1.976-.758v-58.482h24.02l10.18 10.625c5.6 5.844 10.578 10.625 11.064 10.625.486 0 1.048-4.64 1.248-10.312l.363-10.312 10.746-.36 10.746-.357 1.467 1.766 1.465 1.765zm-16.01 61.676l-1.531-2.86-1.711 2.34c-2.218 3.033-2.158 4.268.25 5.192 1.077.413 2.535.174 3.24-.531l1.281-1.282zm-57.451-33.707l-2.969.746c-1.633.41-17.242.531-34.688.272l-31.719-.471-5-2.649c-6.078-3.217-12.43-9.658-14.518-14.725l-1.545-3.75-.992 9.9-.99 9.903-1.604 1.016c-1.867 1.184-17.345 1.411-20.25.297l-1.976-.758v-16.928l-1.77-1.467-1.77-1.469-7.292.377-7.293.38-1.25 20-22.811.714-.612-2.342c-.336-1.287-.726-7.905-.863-14.707-.137-6.801-.47-12.589-.742-12.86-.272-.273-2.04 1.339-3.926 3.581-4.493 5.34-10.329 7.734-21.047 8.631l-8.75.733-1.25 16.25-11.137.363c-6.125.2-11.563-.081-12.086-.625-.523-.544-1.304-13.156-1.736-28.027l-.785-27.04 3.964-3.964 41.78.543 4.665 2.9c2.567 1.596 6.077 4.69 7.8 6.875l3.132 3.975.014-5.894.013-5.893 2.418-1.295c1.33-.712 6.323-1.293 11.096-1.293h8.68l1.336 1.61c.735.885 1.508 5.245 1.717 9.687l.379 8.078h17.5l.154-8.125c.085-4.469.226-8.85.313-9.734l.158-1.61 23.125.719.683 9.643c.377 5.303 1.004 9.96 1.395 10.352.39.39 1.407-.973 2.26-3.032 1.96-4.732 12.929-15.088 15.982-15.088 1.267 0 2.847-.542 3.51-1.205l1.203-1.205 26.859-.09c14.772-.05 29.746-.072 33.277-.047l6.42.047.812 5.408c.446 2.975.457 6.328.025 7.454l-.785 2.046-11.314.36-11.314.357-1.338 2.127c-.736 1.17-1.032 2.433-.658 2.807.374.374 5.978 1 12.455 1.392 6.477.393 12.232 1.161 12.79 1.707.556.547.838 3.742.624 7.104l-.387 6.113-11.834.364-11.832.36-.863 1.401c-.475.77-.576 2.153-.223 3.074l.645 1.676h21.732l1.5 1.5c.825.825 1.5 4.19 1.5 7.477zm-50.566-36.645l-3.065-3.307h-3.015c-1.659 0-4.5 1.165-6.31 2.59l-3.294 2.592v10.6l3.668 3.516 3.668 3.513 3.172-.795c1.745-.437 4.313-2.02 5.707-3.517l2.535-2.72v-9.163zm-72.377 71.445c-.05-5.52-3.78-10.891-9.758-10.963l-3.328-.04-3.268 3.884-3.267 3.883.771 4.554.772 4.555 3.08 2.812c3.806 3.475 6.661 3.554 10.8.297 2.933-2.306 4.228-5.67 4.198-8.982zm-44.186 17.363c-.391 3.992-1.227 7.917-1.86 8.72-1.658 2.108-17.93 4.583-24.346 3.704-13.078-1.793-23.64-11.436-26.393-24.096l-1.046-4.819 1.142-5.625c2.222-10.929 11.533-20.57 22.984-23.803l5.23-1.476 5.083.763c2.795.42 7.474 1.11 10.396 1.532s6.015 1.333 6.875 2.027l1.562 1.262v14.428l-1.838.705c-1.01.387-3.4-.112-5.312-1.11-1.912-.997-5.629-1.816-8.26-1.82l-4.783-.008-3.655 3.652-3.652 3.655v10.975l3.719 3.562 3.717 3.563 4.351-.164c2.393-.09 6.455-1.043 9.028-2.118 2.572-1.074 5.372-1.687 6.222-1.36l1.547.593zm-18.363-91.408l-.797-3.17-3.035-.762c-1.67-.419-3.66-.374-4.424.098l-1.389.86.381 4.57.381 4.572 2.5.299c1.375.165 3.551-.509 4.838-1.498l2.34-1.799zm-42.025 42.383c-.01 29.581-.327 54.937-.705 56.346-.379 1.41-1.881 3.307-3.338 4.217l-2.648 1.654-53.133.526-53.135.523-3.57-1.479c-1.965-.813-4.337-2.96-5.272-4.77l-1.701-3.286.197-24.348c.108-13.391.478-38.317.822-55.39l.625-31.038 2.426-1.774c2.988-2.182-3.816-1.901 55.699-2.298l50.625-.338 4.64 1.094 4.643 1.091 1.92 2.743 1.922 2.744zm-19.221-23.547c-4.073-8.324-9.398-13.751-17.602-17.941l-6.213-3.174-6.22-.152-6.221-.15-1.61 3.124c-2.32 4.506-2.005 10.021.84 14.688 1.362 2.235 2.97 4.063 3.574 4.063s2.583 2.139 4.395 4.754l3.295 4.756v11.762l-6.74 7.33-6.739 7.33.652 6.098c.36 3.352 1.211 6.798 1.893 7.658 1.829 2.305 7.86 1.905 15.99-1.059l7.188-2.62 4.984-4.65c2.741-2.555 6.233-7.094 7.76-10.087l2.775-5.442.668-9.734.668-9.732zm-38.988 10.346l-2.162-2.389h-6.97l-1.983 2.813c-2.683 3.804-1.977 7.045 2.21 10.16l3.495 2.6 6.761-3.778.407-3.508.406-3.507zm-12.385 25.736c-.862-2.062-3.1-5.156-4.973-6.875-9.584-8.796-9.077-20.146 1.309-29.375l4.219-3.75.25-7.355.248-7.356-2.336-1.707-2.334-1.707H95.222l-2.78 1.945-2.777 1.946.016 40.242c.01 22.133.356 41.504.77 43.047l.751 2.804 4.543 1.309 4.545 1.307 13.125-.989 13.125-.986.791-14.375.79-14.375z"}))};var r,o=n(0),l=(r=o)&&r.__esModule?r:{default:r}}])}));
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.defaultTerminals = defaultTerminals;
+exports.defaultLeds = defaultLeds;
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _classnames = _interopRequireDefault(require("classnames"));
+
+var _AxlModuleModule = _interopRequireDefault(require("./AxlModule.module.scss"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _AxlColorID = _interopRequireDefault(require("@core/AxlColorID/AxlColorID.jsx"));
+
+var _types = require("@babel/types");
+
+var _PhoenixP = _interopRequireDefault(require("@core/PhoenixP/PhoenixP.jsx"));
+
+var _PhoenixBrand = _interopRequireDefault(require("@core/PhoenixBrand/PhoenixBrand.jsx"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var AxlModule = /*#__PURE__*/function (_React$PureComponent) {
+  _inherits(AxlModule, _React$PureComponent);
+
+  var _super = _createSuper(AxlModule);
+
+  function AxlModule(props) {
+    var _this;
+
+    _classCallCheck(this, AxlModule);
+
+    _this = _super.call(this, props);
+
+    _defineProperty(_assertThisInitialized(_this), "faceWidth", function () {
+      return Math.floor(_this.props.width / 10) * 10;
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "mapPropsToConnector", function (connector, connectorIndex) {
+      _this.connSectionWidth = _this.connSectionWidth + connector.props.numCols * 5;
+
+      switch (connector.props.type) {
+        case 'POWER':
+          break;
+
+        case 'IO':
+          break;
+
+        default:
+          break;
+      } //console.log('Connector Props: ' + JSON.stringify(connector));
+
+
+      return {};
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "withMM", function (num) {
+      return num + "mm";
+    });
+
+    _this.numConnectors = props.children ? props.children.length : 0;
+    _this.connSectionWidth = 0;
+    return _this;
+  }
+
+  _createClass(AxlModule, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      this.connSectionWidth = 0;
+      var middleWidth = this.props.numCols * 5 + "mm";
+      var Logo = this.props.fullWidthLogo === true ? _PhoenixBrand["default"] : _PhoenixP["default"];
+
+      var children = _react["default"].Children.map(this.props.children, function (child, index) {
+        return _react["default"].cloneElement(child, _this2.mapPropsToConnector(child, index));
+      });
+
+      return /*#__PURE__*/_react["default"].createElement("div", _extends({
+        className: _AxlModuleModule["default"].moduleBase,
+        style: {
+          width: this.props.width + "mm"
+        }
+      }, this.props), /*#__PURE__*/_react["default"].createElement("div", {
+        className: _AxlModuleModule["default"].moduleTop,
+        style: {
+          width: this.faceWidth() + "mm"
+        }
+      }, (this.props.raisedMidSection || this.props.hasTopRow) === false ? /*#__PURE__*/_react["default"].createElement("div", {
+        className: _AxlModuleModule["default"].raisedContainer,
+        style: {
+          width: this.faceWidth() + "mm"
+        }
+      }, /*#__PURE__*/_react["default"].createElement(Vents, {
+        width: this.props.width,
+        upper: true
+      }), /*#__PURE__*/_react["default"].createElement(Label, {
+        width: this.faceWidth() - 4 + 1,
+        labels: this.props.labels
+      }), /*#__PURE__*/_react["default"].createElement(LabelHolder, null), /*#__PURE__*/_react["default"].createElement("div", {
+        className: _AxlModuleModule["default"].brandArea
+      }, /*#__PURE__*/_react["default"].createElement("div", {
+        className: _AxlModuleModule["default"].logo
+      }, /*#__PURE__*/_react["default"].createElement(Logo, null)), /*#__PURE__*/_react["default"].createElement("div", {
+        className: _AxlModuleModule["default"].printArea
+      }, /*#__PURE__*/_react["default"].createElement("div", {
+        className: _AxlModuleModule["default"].print
+      }, this.props.partName), /*#__PURE__*/_react["default"].createElement("div", {
+        className: _AxlModuleModule["default"].print
+      }, this.props.partNumber))), /*#__PURE__*/_react["default"].createElement(Vents, {
+        width: this.props.width,
+        lower: true
+      })) : null), /*#__PURE__*/_react["default"].createElement("div", {
+        className: _AxlModuleModule["default"].moduleMiddle,
+        style: {
+          width: this.connSectionWidth + 'mm'
+        }
+      }, /*#__PURE__*/_react["default"].createElement(_AxlColorID["default"], this.props.colorCard), /*#__PURE__*/_react["default"].createElement(Inset, null)), /*#__PURE__*/_react["default"].createElement("div", {
+        className: _AxlModuleModule["default"].moduleBottom
+      }, children));
+    }
+  }]);
+
+  return AxlModule;
+}(_react["default"].PureComponent);
+
+exports["default"] = AxlModule;
+AxlModule.propTypes = {
+  raisedMidsection: _propTypes["default"].bool.isRequired,
+  //does the card have a raised midsection
+  hasTopRow: _propTypes["default"].bool.isRequired,
+  //do the connectors appear at the top of the module
+  width: _propTypes["default"].number.isRequired,
+  //width in mm of the card
+  colorCard: _propTypes["default"].object.isRequired,
+  //properties to pass to colorID card
+  partNumber: _propTypes["default"].number.isRequired,
+  //part number of the module
+  partName: _propTypes["default"].string.isRequired,
+  //name of the product as displayed on the physical unit
+  fullWidthLogo: _propTypes["default"].bool,
+  //should show full width phoenix contact logo
+  moduleName: _propTypes["default"].string //name of the module e.g. AI8,DO8, etc
+
+};
+AxlModule.defaultProps = {
+  labels: ['a', '0', '1', '2', '3', '4', '5', '6', '7']
+}; //takes a width of the component in mm and calculates the number of vents should be rendered
+
+function Vents(props) {
+  var vents = [];
+  var numvents = Math.floor(props.width / 6);
+  var ventContainerWidth = props.width - 1 + "mm";
+  var ventClass = (0, _classnames["default"])(_defineProperty({}, _AxlModuleModule["default"].ventLower, props.lower === true), _defineProperty({}, _AxlModuleModule["default"].ventUpper, props.upper === true));
+
+  for (var i = 0; i < numvents; i++) {
+    vents.push( /*#__PURE__*/_react["default"].createElement("div", {
+      key: 'v' + i,
+      className: ventClass
+    }));
+  }
+
+  return /*#__PURE__*/_react["default"].createElement("div", {
+    className: _AxlModuleModule["default"].ventContainer,
+    style: {
+      width: ventContainerWidth
+    }
+  }, vents);
+} //54/45mm
+
+
+function Label(props) {
+  var labelWidth = props.width + "mm";
+  var lineWidth = props.width - 3 + "mm";
+  var singleWidth = 10 * props.labels.length > props.width;
+  var numVerticalLines = props.labels.length - 1;
+  var labelVerticalClass = (0, _classnames["default"])([_AxlModuleModule["default"].labelVerticalLine], _defineProperty({}, _AxlModuleModule["default"].singleWidthMargin, singleWidth), _defineProperty({}, _AxlModuleModule["default"].doubleWidthMargin, !singleWidth));
+  var Columns = props.labels.map(function (label, index) {
+    if (index < props.labels.length) {
+      var borderStyle, flex;
+
+      if (index === 0) {
+        borderStyle = 'none';
+        flex = '2';
+      } else if (index === props.labels.length - 1) {
+        flex = '2';
+        borderStyle = '0.25mm solid black';
+      } else {
+        borderStyle = '0.25mm solid black';
+        flex = '1';
+      }
+
+      return /*#__PURE__*/_react["default"].createElement("div", {
+        className: labelVerticalClass,
+        key: 'lbl' + index,
+        style: {
+          borderLeft: borderStyle,
+          flexGrow: flex
+        }
+      }, /*#__PURE__*/_react["default"].createElement("span", {
+        className: _AxlModuleModule["default"].labelText
+      }, label));
+    }
+  });
+  return /*#__PURE__*/_react["default"].createElement("div", {
+    className: _AxlModuleModule["default"].labelBase,
+    style: {
+      width: labelWidth
+    }
+  }, /*#__PURE__*/_react["default"].createElement("div", {
+    className: _AxlModuleModule["default"].labelHorizontalLine,
+    style: {
+      width: lineWidth
+    }
+  }), Columns);
+}
+
+function Inset(props) {
+  //const insetWidth = props.width + "mm";
+  return /*#__PURE__*/_react["default"].createElement("div", {
+    className: _AxlModuleModule["default"].inset
+  });
+}
+
+function LabelHolder(props) {
+  return /*#__PURE__*/_react["default"].createElement("div", {
+    className: _AxlModuleModule["default"].labelHolder
+  }, props.children);
+}
+
+function defaultTerminals(numTerminals) {
+  var vals = [];
+
+  for (var k = 0; k < numTerminals; k++) {
+    vals.push({});
+  }
+
+  return vals; //[{label:'00'},{label:'10'},{label:'20'},{label:'30'}]
+}
+
+function defaultLeds(numLeds) {
+  var vals = [];
+
+  for (var i = 0; i < numLeds; i++) {
+    vals.push({});
+  }
+
+  return vals;
+}
+
+//# sourceMappingURL=AxlModule.jsx.map

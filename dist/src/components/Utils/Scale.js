@@ -1,1 +1,225 @@
-!function(e,t){if("object"==typeof exports&&"object"==typeof module)module.exports=t(require("react"),require("unit-to-px"));else if("function"==typeof define&&define.amd)define(["react","unit-to-px"],t);else{var r="object"==typeof exports?t(require("react"),require("unit-to-px")):t(e.react,e["unit-to-px"]);for(var n in r)("object"==typeof exports?exports:e)[n]=r[n]}}(window,(function(e,t){return function(e){var t={};function r(n){if(t[n])return t[n].exports;var i=t[n]={i:n,l:!1,exports:{}};return e[n].call(i.exports,i,i.exports,r),i.l=!0,i.exports}return r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},r.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var i in e)r.d(n,i,function(t){return e[t]}.bind(null,i));return n},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="",r(r.s=0)}([function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var r=[],n=!0,i=!1,u=void 0;try{for(var o,c=e[Symbol.iterator]();!(n=(o=c.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){i=!0,u=e}finally{try{!n&&c.return&&c.return()}finally{if(i)throw u}}return r}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")};t.useRenderedSizes=a,t.useParentSize=l,t.ScaleRendered=function(e){var t=a(),r=n(t,3),o=r[0],c=r[1],l=r[2],d=(0,i.useState)(!1),s=n(d,2),h=s[0],p=s[1];(0,i.useEffect)((function(){p(!0)}),[]);var v=null,y={display:"none"};c&&l&&(v=f(l,c));v&&v<1&&(y.transform="scale("+v+")");!0===h&&(y.display="block");return u.default.createElement("div",{ref:o,style:y},e.children)},t.AxioBusScale=function(e){var t=(0,i.useState)(!1),r=n(t,2),o=r[0],a=r[1],d=l(),s=n(d,2),h=s[0],p=s[1],v=(0,i.useState)(null),y=n(v,2),g=y[0],m=y[1],b={};(0,i.useEffect)((function(){a(!0);var t,r,n=null;n="Symbol(react.suspense)"===e.children[0].type.toString()?e.children.map((function(e){return e.props.fallback})):e.children,m((t=0,r=0,n.forEach((function(e){var n=function(e){var t=e.props.mmHeight||122;return{width:e.props.mmWidth*c,height:t*c}}(e);t+=n.width,r=n.height})),{width:t,height:r}))}),[]);var S=null;p&&g&&(S=f(g,p));S&&S<1&&(b.transform="scale("+S+")");return u.default.createElement("div",{ref:h,className:e.className,style:b},!(!0!==o||!p)&&e.children)};var i=r(1),u=o(i);function o(e){return e&&e.__esModule?e:{default:e}}var c=(0,o(r(2)).default)("mm");function a(e){var t=(0,i.useRef)(),r=(0,i.useState)(null),u=n(r,2),o=u[0],c=u[1],a=(0,i.useState)(null),l=n(a,2),f=l[0],d=l[1];return(0,i.useEffect)((function(){if(t.current){var e=0,r=0,n=t.current.parentElement.getBoundingClientRect();d({width:n.width,height:n.height}),t.current.children[0].children.forEach((function(t){var n=t.getBoundingClientRect();e+=n.width,r=n.height})),c({width:e,height:r}),console.log("Children height "+r+", width "+e)}}),[t]),[t,f,o]}function l(e){var t=(0,i.useRef)(),r=(0,i.useState)(null),u=n(r,2),o=u[0],c=u[1];return(0,i.useEffect)((function(){if(t.current){var e=t.current.parentElement.getBoundingClientRect();c({width:e.width,height:e.height})}}),[t]),[t,o]}function f(e,t){var r=t.height/e.height,n=t.width/e.width;return r<n?r:n}},function(t,r){t.exports=e},function(e,r){e.exports=t}])}));
+"use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.useRenderedSizes = useRenderedSizes;
+exports.useParentSize = useParentSize;
+exports.ScaleRendered = ScaleRendered;
+exports.AxioBusScale = AxioBusScale;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _unitToPx = _interopRequireDefault(require("unit-to-px"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var mmToPx = (0, _unitToPx["default"])('mm');
+
+function useRenderedSizes(props) {
+  var ref = (0, _react.useRef)(); //const parentRef = useRef(null);
+
+  var _useState = (0, _react.useState)(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      childSize = _useState2[0],
+      setChildSize = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(null),
+      _useState4 = _slicedToArray(_useState3, 2),
+      parentSize = _useState4[0],
+      setParentSize = _useState4[1];
+
+  (0, _react.useEffect)(function () {
+    if (ref.current) {
+      var width = 0;
+      var height = 0;
+      var parentRect = ref.current.parentElement.getBoundingClientRect();
+      setParentSize({
+        width: parentRect.width,
+        height: parentRect.height
+      });
+      ref.current.children[0].children.forEach(function (childEl) {
+        //console.log(childEl);
+        var rect = childEl.getBoundingClientRect();
+        width += rect.width;
+        height = rect.height;
+      });
+      setChildSize({
+        width: width,
+        height: height
+      });
+      console.log("Children height ".concat(height, ", width ").concat(width));
+    }
+  }, [ref]);
+  return [ref, parentSize, childSize];
+} //get the size in px of the parent component
+
+
+function useParentSize(props) {
+  var ref = (0, _react.useRef)();
+
+  var _useState5 = (0, _react.useState)(null),
+      _useState6 = _slicedToArray(_useState5, 2),
+      parentSize = _useState6[0],
+      setParentSize = _useState6[1];
+
+  (0, _react.useEffect)(function () {
+    if (ref.current) {
+      var parentRect = ref.current.parentElement.getBoundingClientRect();
+      setParentSize({
+        width: parentRect.width,
+        height: parentRect.height
+      });
+    }
+  }, [ref]);
+  return [ref, parentSize];
+}
+
+function ScaleRendered(props) {
+  var _useRenderedSizes = useRenderedSizes(),
+      _useRenderedSizes2 = _slicedToArray(_useRenderedSizes, 3),
+      ref = _useRenderedSizes2[0],
+      parentSize = _useRenderedSizes2[1],
+      childSize = _useRenderedSizes2[2];
+
+  var _useState7 = (0, _react.useState)(false),
+      _useState8 = _slicedToArray(_useState7, 2),
+      rendered = _useState8[0],
+      setRendered = _useState8[1];
+
+  (0, _react.useEffect)(function () {
+    setRendered(true);
+  }, []);
+  var t = null;
+  var style = {
+    display: 'none'
+  };
+
+  if (parentSize && childSize) {
+    t = calcTransform(childSize, parentSize);
+  }
+
+  if (t && t < 1) {
+    style.transform = "scale(".concat(t, ")");
+  }
+
+  if (rendered === true) {
+    style.display = 'block';
+  }
+
+  return /*#__PURE__*/_react["default"].createElement("div", {
+    ref: ref,
+    style: style
+  }, props.children);
+}
+/**
+ * Uses axio default size in mm props to transform the bus to fit
+ * inside parent component
+ *
+ * @export
+ * @param {*} props
+ * @returns
+ */
+
+
+function AxioBusScale(props) {
+  var _useState9 = (0, _react.useState)(false),
+      _useState10 = _slicedToArray(_useState9, 2),
+      rendered = _useState10[0],
+      setRendered = _useState10[1];
+
+  var _useParentSize = useParentSize(),
+      _useParentSize2 = _slicedToArray(_useParentSize, 2),
+      ref = _useParentSize2[0],
+      parentSize = _useParentSize2[1];
+
+  var _useState11 = (0, _react.useState)(null),
+      _useState12 = _slicedToArray(_useState11, 2),
+      childSize = _useState12[0],
+      setChildSize = _useState12[1];
+
+  var style = {};
+  (0, _react.useEffect)(function () {
+    setRendered(true);
+    var elements = null;
+
+    if (props.children[0].type.toString() === "Symbol(react.suspense)") {
+      elements = props.children.map(function (child) {
+        return child.props.fallback;
+      });
+    } else {
+      elements = props.children;
+    }
+
+    setChildSize(getBusSize(elements));
+  }, []);
+  var t = null;
+
+  if (parentSize && childSize) {
+    t = calcTransform(childSize, parentSize);
+  }
+
+  if (t && t < 1) {
+    style.transform = "scale(".concat(t, ")"); //style.transformOrigin = 'left';
+  }
+
+  return /*#__PURE__*/_react["default"].createElement("div", {
+    ref: ref,
+    className: props.className,
+    style: style
+  }, rendered === true && parentSize ? props.children : false);
+}
+
+function calcTransform(childSize, parentSize) {
+  var ty = parentSize.height / childSize.height;
+  var tx = parentSize.width / childSize.width;
+  return ty < tx ? ty : tx;
+}
+
+function getAxioSize(component) {
+  var oH = component.props.mmHeight || 122;
+  var oW = component.props.mmWidth; // if (!component.props.mmHeight){throw Error('Component doesnt have mmHeight value in default props')}
+  // if (!component.props.mmWidth){throw Error('Component doesnt have mmWidth default prop')}
+
+  var h = oH * mmToPx;
+  var w = oW * mmToPx;
+  return {
+    width: w,
+    height: h
+  };
+} //current expects single row bus
+
+
+function getBusSize(componentArr) {
+  var totalWidth = 0;
+  var totalHeight = 0;
+  componentArr.forEach(function (component) {
+    var cSize = getAxioSize(component);
+    totalWidth += cSize.width;
+    totalHeight = cSize.height;
+  });
+  return {
+    width: totalWidth,
+    height: totalHeight
+  };
+}
+
+//# sourceMappingURL=Scale.jsx.map

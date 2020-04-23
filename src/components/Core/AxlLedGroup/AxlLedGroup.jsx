@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import styles from './AxlLedGroup.module.scss';
-import AxlLed from '../AxlLed/AxlLed.jsx';
+import AxlLed from '@core/AxlLed/AxlLed.jsx';
 
 export default class AxlLedGroup extends React.PureComponent {
     constructor(props){

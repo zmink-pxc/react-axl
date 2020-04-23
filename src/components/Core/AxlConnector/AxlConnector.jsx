@@ -2,9 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import styles from './AxlConnector.module.scss';
-import AxlLedGroup from '../AxlLedGroup/AxlLedGroup.jsx';
-import AxlTerminalGroup from '../AxlTerminalGroup/AxlTerminalGroup.jsx';
-import AxlLatch from '../AxlLatch/AxlLatch.jsx';
+import AxlLedGroup from '@core/AxlLedGroup/AxlLedGroup.jsx';
+import AxlTerminalGroup from '@core/AxlTerminalGroup/AxlTerminalGroup.jsx';
+import AxlLatch from '@core/AxlLatch/AxlLatch.jsx';
 
 
 export default class AxlConnector extends React.PureComponent {

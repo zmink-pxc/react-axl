@@ -1,1 +1,200 @@
-!function(e,t){if("object"==typeof exports&&"object"==typeof module)module.exports=t(require("react"));else if("function"==typeof define&&define.amd)define(["react"],t);else{var r="object"==typeof exports?t(require("react")):t(e.react);for(var l in r)("object"==typeof exports?exports:e)[l]=r[l]}}(window,(function(e){return function(e){var t={};function r(l){if(t[l])return t[l].exports;var n=t[l]={i:l,l:!1,exports:{}};return e[l].call(n.exports,n,n.exports,r),n.l=!0,n.exports}return r.m=e,r.c=t,r.d=function(e,t,l){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:l})},r.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var l=Object.create(null);if(r.r(l),Object.defineProperty(l,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var n in e)r.d(l,n,function(t){return e[t]}.bind(null,n));return l},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="",r(r.s=0)}([function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(e){return i.default.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 481.3333 920"},i.default.createElement("defs",null),i.default.createElement("rect",{ry:"0",height:"920",width:"481.3333",fill:"#bdd9f2"}),i.default.createElement("text",{y:"87.8546",x:"141.3676",style:{lineHeight:"1.25"},fontWeight:"400",fontSize:"40",fontFamily:"sans-serif",letterSpacing:"0",wordSpacing:"0",strokeWidth:".378"},i.default.createElement("tspan",{y:"87.8546",x:"141.3676"},"SD-CARD")),i.default.createElement("text",{y:"161.4505",x:"170.6648",style:{lineHeight:"1.25"},fontWeight:"400",fontSize:"40",fontFamily:"sans-serif",letterSpacing:"0",wordSpacing:"0"},i.default.createElement("tspan",{y:"161.4505",x:"170.6648"},"R")),i.default.createElement("ellipse",{ry:"26.3321",rx:"25.2089",cy:"145.0136",cx:"234.8671"}),i.default.createElement("path",{d:"M298.7629 111.8177h30.6999v437.7862h-30.6999z"}),i.default.createElement("path",{d:"M287.9056 126.2941h30.6999v405.3391h-30.6999z"}),i.default.createElement("rect",{ry:"8.4862",y:"361.9099",x:"214.5252",height:"134.0315",width:"41.1829"}),i.default.createElement("text",{y:"338.6977",x:"209.6582",style:{lineHeight:"1.25"},fontWeight:"400",fontSize:"40",fontFamily:"sans-serif",letterSpacing:"0",wordSpacing:"0"},i.default.createElement("tspan",{y:"338.6977",x:"209.6582"},"X4")),i.default.createElement("path",{d:"M125.4836 361.236l-27.444 49.3287h55.0646z",stroke:"#000"}),i.default.createElement("rect",{ry:".106",y:"413.3885",x:"111.0777",height:"24.8849",width:"30.2679"}),i.default.createElement("rect",{ry:".0958",y:"443.4799",x:"110.6806",height:"22.5023",width:"31.0621"}),i.default.createElement("rect",{ry:".0958",y:"477.8511",x:"110.6806",height:"22.5023",width:"31.0621"}),i.default.createElement("rect",{ry:".0729",y:"508.2954",x:"110.5483",height:"17.1194",width:"31.3268"}),i.default.createElement("rect",{ry:".103",y:"688.7995",x:"362.5083",height:"45.8871",width:"44.8282",fill:"#006786"}),i.default.createElement("rect",{ry:".0451",y:"839.5211",x:"415.2785",height:"20.1197",width:"17.2959",fill:"#006786"}),i.default.createElement("rect",{ry:".0713",y:"798.0461",x:"272.3225",height:"31.768",width:"31.415",fill:"#006786"}),i.default.createElement("rect",{ry:".0713",y:"596.6722",x:"338.6823",height:"31.768",width:"31.415",fill:"#2f72aa"}),i.default.createElement("rect",{ry:".0451",y:"670.4446",x:"294.913",height:"20.1197",width:"19.0608",fill:"#2f72aa"}),i.default.createElement("rect",{ry:".0388",y:"723.3913",x:"59.8298",height:"17.2959",width:"19.0608",fill:"#006786"}),i.default.createElement("rect",{ry:".0388",y:"843.5803",x:"130.6018",height:"17.2959",width:"19.0608",fill:"#006786"}),i.default.createElement("rect",{ry:".0595",y:"837.722",x:"232.5749",height:"26.5309",width:"28.5453",fill:"#4c982f"}),i.default.createElement("rect",{ry:".0595",y:"747.5312",x:"123.7982",height:"31.9479",width:"31.9479",fill:"#b7d1f9"}),i.default.createElement("rect",{ry:".0614",y:"873.8253",x:"49.4194",height:"32.9463",width:"35.4422",fill:"#b7d1f9"}),i.default.createElement("rect",{ry:".0535",y:"854.8562",x:"278.7954",height:"28.7032",width:"25.7081",fill:"#b7d1f9"}),i.default.createElement("rect",{ry:".033",y:"834.2648",x:"362.2843",height:"17.7211",width:"17.9707",fill:"#b7d1f9"}),i.default.createElement("rect",{ry:".033",y:"673.2773",x:"136.5274",height:"17.7211",width:"17.9707",fill:"#b7d1f9"}))};var l,n=r(1),i=(l=n)&&l.__esModule?l:{default:l}},function(t,r){t.exports=e}])}));
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = TopCard;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function TopCard(props) {
+  return /*#__PURE__*/_react["default"].createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 481.3333 920"
+  }, /*#__PURE__*/_react["default"].createElement("defs", null), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: "0",
+    height: "920",
+    width: "481.3333",
+    fill: "#bdd9f2"
+  }), /*#__PURE__*/_react["default"].createElement("text", {
+    y: "87.8546",
+    x: "141.3676",
+    style: {
+      lineHeight: "1.25"
+    },
+    fontWeight: "400",
+    fontSize: "40",
+    fontFamily: "sans-serif",
+    letterSpacing: "0",
+    wordSpacing: "0",
+    strokeWidth: ".378"
+  }, /*#__PURE__*/_react["default"].createElement("tspan", {
+    y: "87.8546",
+    x: "141.3676"
+  }, "SD-CARD")), /*#__PURE__*/_react["default"].createElement("text", {
+    y: "161.4505",
+    x: "170.6648",
+    style: {
+      lineHeight: "1.25"
+    },
+    fontWeight: "400",
+    fontSize: "40",
+    fontFamily: "sans-serif",
+    letterSpacing: "0",
+    wordSpacing: "0"
+  }, /*#__PURE__*/_react["default"].createElement("tspan", {
+    y: "161.4505",
+    x: "170.6648"
+  }, "R")), /*#__PURE__*/_react["default"].createElement("ellipse", {
+    ry: "26.3321",
+    rx: "25.2089",
+    cy: "145.0136",
+    cx: "234.8671"
+  }), /*#__PURE__*/_react["default"].createElement("path", {
+    d: "M298.7629 111.8177h30.6999v437.7862h-30.6999z"
+  }), /*#__PURE__*/_react["default"].createElement("path", {
+    d: "M287.9056 126.2941h30.6999v405.3391h-30.6999z"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: "8.4862",
+    y: "361.9099",
+    x: "214.5252",
+    height: "134.0315",
+    width: "41.1829"
+  }), /*#__PURE__*/_react["default"].createElement("text", {
+    y: "338.6977",
+    x: "209.6582",
+    style: {
+      lineHeight: "1.25"
+    },
+    fontWeight: "400",
+    fontSize: "40",
+    fontFamily: "sans-serif",
+    letterSpacing: "0",
+    wordSpacing: "0"
+  }, /*#__PURE__*/_react["default"].createElement("tspan", {
+    y: "338.6977",
+    x: "209.6582"
+  }, "X4")), /*#__PURE__*/_react["default"].createElement("path", {
+    d: "M125.4836 361.236l-27.444 49.3287h55.0646z",
+    stroke: "#000"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".106",
+    y: "413.3885",
+    x: "111.0777",
+    height: "24.8849",
+    width: "30.2679"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".0958",
+    y: "443.4799",
+    x: "110.6806",
+    height: "22.5023",
+    width: "31.0621"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".0958",
+    y: "477.8511",
+    x: "110.6806",
+    height: "22.5023",
+    width: "31.0621"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".0729",
+    y: "508.2954",
+    x: "110.5483",
+    height: "17.1194",
+    width: "31.3268"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".103",
+    y: "688.7995",
+    x: "362.5083",
+    height: "45.8871",
+    width: "44.8282",
+    fill: "#006786"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".0451",
+    y: "839.5211",
+    x: "415.2785",
+    height: "20.1197",
+    width: "17.2959",
+    fill: "#006786"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".0713",
+    y: "798.0461",
+    x: "272.3225",
+    height: "31.768",
+    width: "31.415",
+    fill: "#006786"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".0713",
+    y: "596.6722",
+    x: "338.6823",
+    height: "31.768",
+    width: "31.415",
+    fill: "#2f72aa"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".0451",
+    y: "670.4446",
+    x: "294.913",
+    height: "20.1197",
+    width: "19.0608",
+    fill: "#2f72aa"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".0388",
+    y: "723.3913",
+    x: "59.8298",
+    height: "17.2959",
+    width: "19.0608",
+    fill: "#006786"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".0388",
+    y: "843.5803",
+    x: "130.6018",
+    height: "17.2959",
+    width: "19.0608",
+    fill: "#006786"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".0595",
+    y: "837.722",
+    x: "232.5749",
+    height: "26.5309",
+    width: "28.5453",
+    fill: "#4c982f"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".0595",
+    y: "747.5312",
+    x: "123.7982",
+    height: "31.9479",
+    width: "31.9479",
+    fill: "#b7d1f9"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".0614",
+    y: "873.8253",
+    x: "49.4194",
+    height: "32.9463",
+    width: "35.4422",
+    fill: "#b7d1f9"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".0535",
+    y: "854.8562",
+    x: "278.7954",
+    height: "28.7032",
+    width: "25.7081",
+    fill: "#b7d1f9"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".033",
+    y: "834.2648",
+    x: "362.2843",
+    height: "17.7211",
+    width: "17.9707",
+    fill: "#b7d1f9"
+  }), /*#__PURE__*/_react["default"].createElement("rect", {
+    ry: ".033",
+    y: "673.2773",
+    x: "136.5274",
+    height: "17.7211",
+    width: "17.9707",
+    fill: "#b7d1f9"
+  }));
+}
+
+//# sourceMappingURL=TopCard.jsx.map

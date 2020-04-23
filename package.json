@@ -18,7 +18,8 @@
     "react-scripts": "^3.4.1",
     "react-svg-loader": "^3.0.3",
     "svg-inline-loader": "^0.8.2",
-    "unit-to-px": "^1.0.5"
+    "unit-to-px": "^1.0.5",
+    "use-viewport-sizes": "^0.2.7"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

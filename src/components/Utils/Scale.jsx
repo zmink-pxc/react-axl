@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRef, useEffect, useState } from 'react';
 import toPx from 'unit-to-px';
+import useViewportSizes from 'use-viewport-sizes'
 
 const mmToPx = toPx('mm');
 
@@ -84,21 +85,26 @@ export function ScaleRendered(props){
 export function AxioBusScale(props){
     const [rendered, setRendered] = useState(false);
     const [ref,parentSize] = useParentSize();
-    const [childSize,setChildSize] = useState(null);
+    const [vpWidth, vpHeight] = useViewportSizes(500);
+    //const [childSize,setChildSize] = useState(null);
+    var childSize = null;
     var style = {};
 
     useEffect(()=>{
         setRendered(true);
-        var elements = null
-        if (props.children[0].type.toString() === "Symbol(react.suspense)"){
-            elements = props.children.map((child)=>{
-                return child.props.fallback
-            })
-        }else{
-            elements = props.children;
-        }
-        setChildSize(getBusSize(elements));
     },[])
+
+    var elements = null
+    if (props.children[0].type.toString() === "Symbol(react.suspense)"){
+        elements = props.children.map((child)=>{
+            return child.props.fallback
+        })
+    }else{
+        elements = props.children;
+    }
+    childSize = getBusSize(elements)
+
+
 
     var t = null;
     

@@ -40,7 +40,7 @@ export default class AxlModule extends React.PureComponent {
     }
 
     render(){
-        const {numCols,fullWidthLogo,width,raisedMidsection,hasTopRow,labels,partName,partNumber,colorCard,children,...rest} = this.props;
+        const {moduleName,numCols,fullWidthLogo,width,raisedMidsection,hasTopRow,labels,partName,partNumber,colorCard,children,...rest} = this.props;
 
         this.connSectionWidth = 0;
         let middleWidth = (numCols * 5)+"mm";

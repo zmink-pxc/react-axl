@@ -151,5 +151,6 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   .add('Basic',()=><AxioBus busConfiguration={['2404267','2701916','2688310','2702525']}/>)
   .add('Scaling',()=><div style={{width: "400px",height: "500px",backgroundColor: 'orange',position: 'absolute',left:'50px',top: '100px'}}><AxioBus busConfiguration={['2404267']}/></div>)
   .add('Scaling2',()=><div style={{width: "400px",height: "500px",backgroundColor: 'orange',position: 'absolute',left:'50px',top: '100px'}}><AxioBus busConfiguration={['2404267','2701916','2688310','2702525']}/></div>)
+  .add('Scaling with Padding',()=><div style={{width: "400px",height: "500px",boxSizing: 'border-box',padding:'40px 40px',backgroundColor: 'orange',position: 'absolute',left:'50px',top: '100px'}}><AxioBus busConfiguration={['2404267','2701916','2688310','2702525']}/></div>)
 
   

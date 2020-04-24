@@ -9,8 +9,10 @@ export default class AxlDI81DO81XC1H extends React.PureComponent {
     }
 
     render(){
+        const {partName,partNumber,mmWidth,mmHeight,terminals,leds,...rest} = this.props;
+
         return (
-            <AxlModule  {...this.props} partName={this.props.partName} width={this.props.mmWidth} terminals={this.props.terminals} leds={this.props.leds} raisedMidsection={false} hasTopRow={false} partNumber={this.props.partNumber} labels={['a','0','1','2','3']} colorCard={{isComboDigital:true}}>
+            <AxlModule  {...rest} partName={this.props.partName} width={this.props.mmWidth} terminals={this.props.terminals} leds={this.props.leds} raisedMidsection={false} hasTopRow={false} partNumber={this.props.partNumber} labels={['a','0','1','2','3']} colorCard={{isComboDigital:true}}>
                 <AxlConnector type="POWER" isBlack={true} numRows={4} numCols={1}/>
                 <AxlConnector type="IO" isBlack={false} numRows={4} numCols={2}/>
                 <AxlConnector type="IO" isBlack={false} numRows={4} numCols={2}/>

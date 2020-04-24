@@ -16,8 +16,9 @@ export default class Axc2152 extends React.PureComponent {
     }
 
     render(){
+        const {partNumber, partName,mmWidth,mmHeight,...rest} = this.props;
 
-        return (<div className={styles.base} {...this.props}>
+        return (<div className={styles.base} {...rest}>
              <Vents width={39} upper={true}/>
             <div className={styles.top}>{/*
             <div className={styles.verticalTextContainer}>

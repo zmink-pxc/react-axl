@@ -86,8 +86,8 @@ AxlModule.propTypes = {
  hasTopRow:         PropTypes.bool.isRequired,          //do the connectors appear at the top of the module
  width:             PropTypes.number.isRequired,        //width in mm of the card
  colorCard:         PropTypes.object.isRequired,        //properties to pass to colorID card
- partNumber:        PropTypes.number.isRequired,        //part number of the module
- partName:           PropTypes.string.isRequired,        //name of the product as displayed on the physical unit
+ partNumber:        PropTypes.string.isRequired,        //part number of the module
+ partName:          PropTypes.string.isRequired,        //name of the product as displayed on the physical unit
  fullWidthLogo:     PropTypes.bool,                     //should show full width phoenix contact logo
  moduleName:        PropTypes.string,                   //name of the module e.g. AI8,DO8, etc
 }

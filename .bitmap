@@ -289,7 +289,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/axiobus@1.0.13": {
+    "zmink.axioline/axiobus@1.0.14": {
         "files": [
             {
                 "relativePath": "src/components/AxioBus/AxioBus.jsx",
@@ -829,7 +829,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/scale@1.0.4": {
+    "zmink.axioline/scale@1.0.5": {
         "files": [
             {
                 "relativePath": "src/components/Utils/Scale.jsx",

@@ -14,6 +14,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _unitToPx = _interopRequireDefault(require("unit-to-px"));
 
+var _useViewportSizes3 = _interopRequireDefault(require("use-viewport-sizes"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -74,22 +76,18 @@ function useRenderedSizes(props) {
 
 
 function useParentSize(props) {
-  var ref = (0, _react.useRef)();
+  var ref = (0, _react.useRef)(); //const [parentSize,setParentSize] = useState(null);
 
-  var _useState5 = (0, _react.useState)(null),
-      _useState6 = _slicedToArray(_useState5, 2),
-      parentSize = _useState6[0],
-      setParentSize = _useState6[1];
+  var parentSize = null;
 
-  (0, _react.useEffect)(function () {
-    if (ref.current) {
-      var parentRect = ref.current.parentElement.getBoundingClientRect();
-      setParentSize({
-        width: parentRect.width,
-        height: parentRect.height
-      });
-    }
-  }, [ref]);
+  if (ref.current) {
+    var parentRect = ref.current.parentElement.getBoundingClientRect();
+    parentSize = {
+      width: parentRect.width,
+      height: parentRect.height
+    };
+  }
+
   return [ref, parentSize];
 }
 
@@ -100,10 +98,10 @@ function ScaleRendered(props) {
       parentSize = _useRenderedSizes2[1],
       childSize = _useRenderedSizes2[2];
 
-  var _useState7 = (0, _react.useState)(false),
-      _useState8 = _slicedToArray(_useState7, 2),
-      rendered = _useState8[0],
-      setRendered = _useState8[1];
+  var _useState5 = (0, _react.useState)(false),
+      _useState6 = _slicedToArray(_useState5, 2),
+      rendered = _useState6[0],
+      setRendered = _useState6[1];
 
   (0, _react.useEffect)(function () {
     setRendered(true);
@@ -141,36 +139,37 @@ function ScaleRendered(props) {
 
 
 function AxioBusScale(props) {
-  var _useState9 = (0, _react.useState)(false),
-      _useState10 = _slicedToArray(_useState9, 2),
-      rendered = _useState10[0],
-      setRendered = _useState10[1];
+  var _useState7 = (0, _react.useState)(false),
+      _useState8 = _slicedToArray(_useState7, 2),
+      rendered = _useState8[0],
+      setRendered = _useState8[1];
 
   var _useParentSize = useParentSize(),
       _useParentSize2 = _slicedToArray(_useParentSize, 2),
       ref = _useParentSize2[0],
       parentSize = _useParentSize2[1];
 
-  var _useState11 = (0, _react.useState)(null),
-      _useState12 = _slicedToArray(_useState11, 2),
-      childSize = _useState12[0],
-      setChildSize = _useState12[1];
+  var _useViewportSizes = (0, _useViewportSizes3["default"])(250),
+      _useViewportSizes2 = _slicedToArray(_useViewportSizes, 2),
+      vpWidth = _useViewportSizes2[0],
+      vpHeight = _useViewportSizes2[1];
 
+  var childSize = null;
   var style = {};
   (0, _react.useEffect)(function () {
     setRendered(true);
-    var elements = null;
-
-    if (props.children[0].type.toString() === "Symbol(react.suspense)") {
-      elements = props.children.map(function (child) {
-        return child.props.fallback;
-      });
-    } else {
-      elements = props.children;
-    }
-
-    setChildSize(getBusSize(elements));
   }, []);
+  var elements = null;
+
+  if (props.children[0].type.toString() === "Symbol(react.suspense)") {
+    elements = props.children.map(function (child) {
+      return child.props.fallback;
+    });
+  } else {
+    elements = props.children;
+  }
+
+  childSize = getBusSize(elements);
   var t = null;
 
   if (parentSize && childSize) {

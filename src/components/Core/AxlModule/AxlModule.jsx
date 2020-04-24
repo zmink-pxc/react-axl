@@ -40,19 +40,21 @@ export default class AxlModule extends React.PureComponent {
     }
 
     render(){
+        const {numCols,fullWidthLogo,width,raisedMidSection,hasTopRow,labels,partName,partNumber,colorCard,children,...rest} = this.props;
+
         this.connSectionWidth = 0;
-        let middleWidth = (this.props.numCols * 5)+"mm";
-        let Logo = (this.props.fullWidthLogo === true) ? PhoenixBrand:PhoenixP;
-        let children = React.Children.map(this.props.children, (child,index) => {
+        let middleWidth = (numCols * 5)+"mm";
+        let Logo = (fullWidthLogo === true) ? PhoenixBrand:PhoenixP;
+        let cChildren = React.Children.map(children, (child,index) => {
             return React.cloneElement(child,this.mapPropsToConnector(child,index))
         })
 
-        return (<div className={styles.moduleBase} style={{width: this.props.width+"mm"}} {...this.props}>
+        return (<div className={styles.moduleBase} style={{width: width+"mm"}} {...rest}>
             <div className={styles.moduleTop} style={{width: this.faceWidth()+"mm"}}>
-                {((this.props.raisedMidSection || this.props.hasTopRow)===false) ? 
+                {((raisedMidSection || hasTopRow)===false) ? 
                 (<div className={styles.raisedContainer} style={{width: this.faceWidth()+"mm"}}>
-                    <Vents width={this.props.width} upper={true}/>
-                    <Label width={this.faceWidth()-4+1} labels={this.props.labels}/>
+                    <Vents width={width} upper={true}/>
+                    <Label width={this.faceWidth()-4+1} labels={labels}/>
                     <LabelHolder>
                     </LabelHolder>
                     <div className={styles.brandArea}>
@@ -61,19 +63,19 @@ export default class AxlModule extends React.PureComponent {
                         </div>
                         {/* <img className={styles.logo} src={logo} alt="Phoenix Contact"/> */}
                         <div className={styles.printArea}>
-                            <div className={styles.print}>{this.props.partName}</div>
-                            <div className={styles.print}>{this.props.partNumber}</div>
+                            <div className={styles.print}>{partName}</div>
+                            <div className={styles.print}>{partNumber}</div>
                         </div>
                     </div>
-                    <Vents width={this.props.width} lower={true}/>
+                    <Vents width={width} lower={true}/>
                 </div>):(null)}
             </div>
             <div className={styles.moduleMiddle} style={{width:this.connSectionWidth + 'mm'}}>
-                <AxlColorID {...this.props.colorCard}/>
+                <AxlColorID {...colorCard}/>
                 <Inset />
             </div>
             <div className={styles.moduleBottom}>
-                {children}
+                {cChildren}
             </div>
         </div>)
     }

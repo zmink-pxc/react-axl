@@ -39,8 +39,17 @@ export function useParentSize(props){
     var parentSize = null;
 
     if (ref.current){
-        var parentRect = ref.current.parentElement.getBoundingClientRect();
-        parentSize = {width: parentRect.width, height: parentRect.height};
+        var elementWidth,elementHeight
+        const element = ref.current;
+        var computedStyle = getComputedStyle(element);
+
+        elementHeight = element.clientHeight;  
+        elementWidth = element.clientWidth;   
+
+        elementHeight -= parseFloat(computedStyle.paddingTop) + parseFloat(computedStyle.paddingBottom);
+        elementWidth -= parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight);
+
+        parentSize = {width: elementWidth, height: elementHeight};
     }
 
     return [ref,parentSize]

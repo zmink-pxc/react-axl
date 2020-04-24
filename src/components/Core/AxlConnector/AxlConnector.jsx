@@ -61,7 +61,7 @@ AxlConnector.propTypes = {
 //     leds: [{isWarning: true,label:'00'},{isError: true,label:'10'},{isActive: true,label:'20'},{isWarning: true,label:'30'}]
 // }
 
-const placeholderLed = {isError:true,label:'00'};
+const placeholderLed = {isError:false,label:'00'};
 const placeholderTerminal = {label: '00'};
 
 

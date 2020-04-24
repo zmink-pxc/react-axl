@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRef, useEffect, useState } from 'react';
 import toPx from 'unit-to-px';
+import useViewportSizes from 'use-viewport-sizes'
 
 const mmToPx = toPx('mm');
 
@@ -34,15 +35,13 @@ export function useRenderedSizes(props){
 //get the size in px of the parent component
 export function useParentSize(props){
     const ref = useRef();
-    const [parentSize,setParentSize] = useState(null);
+    //const [parentSize,setParentSize] = useState(null);
+    var parentSize = null;
 
-    useEffect(()=>{
-        if (ref.current){
-            var parentRect = ref.current.parentElement.getBoundingClientRect();
-            setParentSize({width: parentRect.width, height: parentRect.height});
-        }
-             
-    },[ref])
+    if (ref.current){
+        var parentRect = ref.current.parentElement.getBoundingClientRect();
+        parentSize = {width: parentRect.width, height: parentRect.height};
+    }
 
     return [ref,parentSize]
 }
@@ -84,21 +83,25 @@ export function ScaleRendered(props){
 export function AxioBusScale(props){
     const [rendered, setRendered] = useState(false);
     const [ref,parentSize] = useParentSize();
-    const [childSize,setChildSize] = useState(null);
+    const [vpWidth, vpHeight] = useViewportSizes(250);
+    var childSize = null;
     var style = {};
 
     useEffect(()=>{
         setRendered(true);
-        var elements = null
-        if (props.children[0].type.toString() === "Symbol(react.suspense)"){
-            elements = props.children.map((child)=>{
-                return child.props.fallback
-            })
-        }else{
-            elements = props.children;
-        }
-        setChildSize(getBusSize(elements));
     },[])
+
+    var elements = null
+    if (props.children[0].type.toString() === "Symbol(react.suspense)"){
+        elements = props.children.map((child)=>{
+            return child.props.fallback
+        })
+    }else{
+        elements = props.children;
+    }
+    childSize = getBusSize(elements)
+
+
 
     var t = null;
     

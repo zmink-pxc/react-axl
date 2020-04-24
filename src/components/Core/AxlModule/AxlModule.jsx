@@ -40,7 +40,7 @@ export default class AxlModule extends React.PureComponent {
     }
 
     render(){
-        const {numCols,fullWidthLogo,width,raisedMidSection,hasTopRow,labels,partName,partNumber,colorCard,children,...rest} = this.props;
+        const {numCols,fullWidthLogo,width,raisedMidsection,hasTopRow,labels,partName,partNumber,colorCard,children,...rest} = this.props;
 
         this.connSectionWidth = 0;
         let middleWidth = (numCols * 5)+"mm";
@@ -51,7 +51,7 @@ export default class AxlModule extends React.PureComponent {
 
         return (<div className={styles.moduleBase} style={{width: width+"mm"}} {...rest}>
             <div className={styles.moduleTop} style={{width: this.faceWidth()+"mm"}}>
-                {((raisedMidSection || hasTopRow)===false) ? 
+                {((raisedMidsection || hasTopRow)===false) ? 
                 (<div className={styles.raisedContainer} style={{width: this.faceWidth()+"mm"}}>
                     <Vents width={width} upper={true}/>
                     <Label width={this.faceWidth()-4+1} labels={labels}/>

@@ -29,7 +29,7 @@ export default class AxlConnector extends React.PureComponent {
                         var leds = (this.props.hasOwnProperty('leds'))?(this.props.leds.slice(j,j+this.props.numRows)):(initArray(placeholderLed,this.props.numRows))
                         // if (this.props.leds !== (this.props.numRows*this.props.numCols)){leds = }
                         
-                        return (<div className={styles.col}>
+                        return (<div className={styles.col} key={'ter-'+coli}>
                         <AxlLedGroup leds={leds}/>
                         {rows.map((row,rowi)=>{
                             return <AxlTerminalGroup key={'ter-'+rowi+'-'+coli} {...terminals[(coli*this.props.numRows+rowi)]} isBlack={(this.props.isBlack===true)} isEnd={(rowi === (this.props.numRows-1))}/>

@@ -1,0 +1,23 @@
+@import '@styles/_axioline.scss';
+
+.root {
+    width: 14.9mm;
+    height: 62.2mm;
+    background-color: $axioline-grey;
+}
+
+.ledArea{
+    height: 56mm;
+    width: 6mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 1mm;
+}
+
+.ledContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

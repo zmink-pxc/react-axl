@@ -1,0 +1,15 @@
+.root {
+    height: 14.2mm;
+    width: 5.7mm;
+    background-color: #CB7821;
+    padding: 1mm 1mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.indent {
+    background-color: rgb(109, 65, 18);
+    height: 1.5mm;
+    width: 100%;
+}

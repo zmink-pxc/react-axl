@@ -30,6 +30,8 @@ import Axc2152 from '../src/components/Controllers/Axc2152/Axc2152.jsx';
 import AxioBus from '../src/components/AxioBus/AxioBus.jsx';
 import AxioLoader from '../src/components/Utils/AxioLoader/AxioLoader.jsx';
 
+import SeLock from '../src/components/Core/SeLock/SeLock.jsx';
+
 
 import '../src/components/PLCNextBackground/PLCNextBackground.module.scss';
 
@@ -162,3 +164,5 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   .addDecorator(withKnobs)
   .add('Basic',()=><AxioLoader mmWidth={35}/>)
 
+  storiesOf('SeLock', module)
+  .add('Basic', () => <SeLock/>)

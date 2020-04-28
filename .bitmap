@@ -265,7 +265,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/axio-loader@1.0.3": {
+    "zmink.axioline/axio-loader@1.0.4": {
         "files": [
             {
                 "relativePath": "src/components/Utils/AxioLoader/AxioLoader.jsx",
@@ -277,7 +277,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/axio-loadermodule@1.0.2": {
+    "zmink.axioline/axio-loadermodule@1.0.3": {
         "files": [
             {
                 "relativePath": "src/components/Utils/AxioLoader/AxioLoader.module.scss",
@@ -289,7 +289,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/axiobus@1.0.15": {
+    "zmink.axioline/axiobus@1.0.16": {
         "files": [
             {
                 "relativePath": "src/components/AxioBus/AxioBus.jsx",

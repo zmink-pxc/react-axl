@@ -1,42 +1,174 @@
-.base {
-    height: 122.4mm;
-    background: linear-gradient(-90deg, #F0F0F0 0%, #F8F8F8 50%, #F0F0F0 100%);
-    background-size: 400% 400%;
-    animation: pulse 1.2s ease-in-out infinite;
-    @keyframes pulse {
-        0% {
-        background-position: 0% 0%;
-        }
-        100% {
-        background-position: -135% 0%;
-        }
+
+
+.skeletonBox {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  overflow: hidden;
+  background-color: #DDDBDD;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(#fff, 0) 0,
+      rgba(#fff, 0.2) 20%,
+      rgba(#fff, 0.5) 60%,
+      rgba(#fff, 0)
+    );
+    animation: shimmer 2s infinite;
+    content: '';
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
     }
+  }
 }
+// /* Styles applied to the root element. */
+    // .root {
+    //   display: block;
+    //   padding: 5mm 5mm;
+    // }
+    // /* Styles applied to the root element if `variant="text"`. */
+    // .text {
+    //   margin-top: 0;
+    //   margin-bottom: 0;
+    //   height: auto;
+    //   transform-origin: 0 60%;
+    //   transform: scale(1, 0.60);
+    //   //border-radius: theme.shape.borderRadius;
+    // //   &:empty:before: {
+    // //     content: '"\\00a0"',
+    // //   }
+    // }
+    // /* Styles applied to the root element if `variant="rect"`. */
+    // // .rect {
+    // // }
+    // /* Styles applied to the root element if `variant="circle"`. */
+    // .circle {
+    //   border-radius: '50%',
+    // }
+    // /* Styles applied to the root element if `animation="pulse"`. */
+    // .pulse {
+    //   animation: pulse 1.5s ease-in-out 0.5s infinite,
+    // }
 
-.oneh {
-    width: 35mm;
-}
+    // @keyframes pulse {
+    //   0% {
+    //     opacity: 1;
+    //   }
+    //   50% {
+    //     opacity: 0.4;
+    //   }
+    //   100% {
+    //     opacity: 1;
+    //   }
+    // }
 
-.twoh {
-    width: 53.6mm;
-}
+    // /* Styles applied to the root element if `animation="wave"`. */
+    // .wave {
+    //   position: relative;
+    //   overflow: hidden;
+    //   &::after {
+    //     animation: wave 1.6s linear 0.5s infinite;
+    //     background: linear-gradient(90deg, transparent, grey, transparent);
+    //     position: absolute;
+    //     transform: translateX(-100%); // Avoid flash during server-side hydration
+    //     bottom: 0;
+    //     left: 0;
+    //     right: 0;
+    //     top: 0;
+    //     z-index: 1;
+    //   }
+    // }
 
-.onef {
-    width: 53.6mm;
-}
-
-.twof {
-    width: 53.6mm; 
-}
-
-.axc2{
-    width: 45mm;
-}
-
-.axc1{
-    width: 45mm;
-}
-
-.axc3{
-    width: 100mm;
-}
+    // @keyframes wave {
+    //   0% {
+    //     transform: translateX(-100%);
+    //   }
+    //   60% {
+    //     // +0.5s of delay between each loop
+    //     transform: translateX(100%);
+    //   }
+    //   100% {
+    //     transform: translateX(100%);
+    //   }
+    // }
+  
+//   const Skeleton = React.forwardRef(function Skeleton(props, ref) {
+//     const {
+//       animation = 'pulse',
+//       classes,
+//       className,
+//       component: Component = 'span',
+//       height,
+//       variant = 'text',
+//       width,
+//       ...other
+//     } = props;
+  
+//     return (
+//       <Component
+//         ref={ref}
+//         className={clsx(
+//           classes.root,
+//           classes[variant],
+//           {
+//             [classes[animation]]: animation !== false,
+//           },
+//           className,
+//         )}
+//         {...other}
+//         style={{
+//           width,
+//           height,
+//           ...other.style,
+//         }}
+//       />
+//     );
+//   });
+  
+//   Skeleton.propTypes = {
+//     /**
+//      * The animation.
+//      * If `false` the animation effect is disabled.
+//      */
+//     animation: PropTypes.oneOf(['pulse', 'wave', false]),
+//     /**
+//      * Override or extend the styles applied to the component.
+//      * See [CSS API](#css) below for more details.
+//      */
+//     classes: PropTypes.object.isRequired,
+//     /**
+//      * @ignore
+//      */
+//     className: PropTypes.string,
+//     /**
+//      * The component used for the root node.
+//      * Either a string to use a DOM element or a component.
+//      */
+//     component: PropTypes.elementType,
+//     /**
+//      * Height of the skeleton.
+//      * Useful when you don't want to adapt the skeleton to a text element but for instance a card.
+//      */
+//     height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+//     /**
+//      * The type of content that will be rendered.
+//      */
+//     variant: PropTypes.oneOf(['text', 'rect', 'circle']),
+//     /**
+//      * Width of the skeleton.
+//      * Useful when the skeleton is inside an inline element with no width of its own.
+//      */
+//     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+//   };
+  
+//   export default withStyles(styles, { name: 'MuiSkeleton' })(Skeleton);

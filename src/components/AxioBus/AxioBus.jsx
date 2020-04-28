@@ -29,9 +29,10 @@ export default class AxioBus extends React.Component {
     
 
     render(){
-        let bus = this.props.busConfiguration.map((key)=>{
+        let bus = this.props.busConfiguration.map((key,index)=>{
             const Device = Devices[key].component;
-            return (<Suspense key={`s${key}`}fallback={<AxioLoader key={`l${key}`} mmWidth={Devices[key].width}/>}><Device key={`c${key}`}/></Suspense>)
+            const deviceProps = this.props.busProps ? (this.props.busProps.slice()[index]):(null)
+            return (<Suspense key={`s${key}`}fallback={<AxioLoader key={`l${key}`} mmWidth={Devices[key].width}/>}><Device key={`c${key}`} {...deviceProps}/></Suspense>)
         });
 
         const containerClass = classNames([styles.base],{[styles.wrap]:this.props.wrap},{[styles.flexLeft]:this.props.left===true})
@@ -67,6 +68,7 @@ export default class AxioBus extends React.Component {
 
 AxioBus.propTypes = {
     busConfiguration:     PropTypes.arrayOf(PropTypes.string),
+    busProps:             PropTypes.arrayOf(PropTypes.object),
     height:               PropTypes.any,
     width:                PropTypes.any,
     partHeight:           PropTypes.any,

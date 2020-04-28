@@ -32,6 +32,7 @@ import AxioLoader from '../src/components/Utils/AxioLoader/AxioLoader.jsx';
 
 import SeLock from '../src/components/Core/SeLock/SeLock.jsx';
 import SeLed from '../src/components/Core/SeLed/SeLed.jsx';
+import SeTerminal from '../src/components/Core/SeTerminal/SeTerminal.jsx';
 
 
 import '../src/components/PLCNextBackground/PLCNextBackground.module.scss';
@@ -175,3 +176,8 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
     
     return (<SeLed isErrLed={boolean('isErrLed', false)} isError={boolean('isError', false)} isWarning={boolean('isWarning', false)} isActive={boolean('isActive', false)}/>);
   });
+
+  storiesOf('SeTerminal', module)
+  .addDecorator(withKnobs)
+  .add('Basic', () => <SeTerminal isBlack={boolean('isBlack',false)} isLeft={boolean('isLeft',false)}/>)
+

@@ -31,6 +31,7 @@ import AxioBus from '../src/components/AxioBus/AxioBus.jsx';
 import AxioLoader from '../src/components/Utils/AxioLoader/AxioLoader.jsx';
 
 import SeLock from '../src/components/Core/SeLock/SeLock.jsx';
+import SeLed from '../src/components/Core/SeLed/SeLed.jsx';
 
 
 import '../src/components/PLCNextBackground/PLCNextBackground.module.scss';
@@ -166,3 +167,11 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
 
   storiesOf('SeLock', module)
   .add('Basic', () => <SeLock/>)
+
+  storiesOf('SeLed', module)
+  .addDecorator(withKnobs)
+  .add('with text', () => <SeLed/>)
+  .add('as dynamic variables', () => {
+    
+    return (<SeLed isErrLed={boolean('isErrLed', false)} isError={boolean('isError', false)} isWarning={boolean('isWarning', false)} isActive={boolean('isActive', false)}/>);
+  });

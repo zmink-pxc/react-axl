@@ -28,6 +28,7 @@ import AxlAI41I1H from '../src/components/Modules/Analog/Input/AxlAI41I1H/AxlAI4
 import AxlAI8 from '../src/components/Modules/Analog/Input/AxlAI8/AxlAI8.jsx';
 import Axc2152 from '../src/components/Controllers/Axc2152/Axc2152.jsx';
 import AxioBus from '../src/components/AxioBus/AxioBus.jsx';
+import AxioLoader from '../src/components/Utils/AxioLoader/AxioLoader.jsx';
 
 
 import '../src/components/PLCNextBackground/PLCNextBackground.module.scss';
@@ -153,4 +154,6 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   .add('Scaling2',()=><div style={{width: "400px",height: "500px",backgroundColor: 'orange',position: 'absolute',left:'50px',top: '100px'}}><AxioBus busConfiguration={['2404267','2701916','2688310','2702525']}/></div>)
   .add('Scaling with Padding',()=><div style={{width: "400px",height: "500px",boxSizing: 'border-box',padding:'40px 40px',backgroundColor: 'orange',position: 'absolute',left:'50px',top: '100px'}}><AxioBus busConfiguration={['2404267','2701916','2688310','2702525']}/></div>)
 
-  
+  storiesOf('Axioloader',module)
+  .addDecorator(withKnobs)
+  .add('Basic',()=><AxioLoader mmWidth={35}/>)

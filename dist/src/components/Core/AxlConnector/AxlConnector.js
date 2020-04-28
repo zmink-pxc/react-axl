@@ -82,7 +82,8 @@ var AxlConnector = /*#__PURE__*/function (_React$PureComponent) {
         var leds = _this.props.hasOwnProperty('leds') ? _this.props.leds.slice(j, j + _this.props.numRows) : initArray(placeholderLed, _this.props.numRows); // if (this.props.leds !== (this.props.numRows*this.props.numCols)){leds = }
 
         return /*#__PURE__*/_react["default"].createElement("div", {
-          className: _AxlConnectorModule["default"].col
+          className: _AxlConnectorModule["default"].col,
+          key: 'ter-' + coli
         }, /*#__PURE__*/_react["default"].createElement(_AxlLedGroup["default"], {
           leds: leds
         }), rows.map(function (row, rowi) {
@@ -125,7 +126,7 @@ AxlConnector.propTypes = {
 // }
 
 var placeholderLed = {
-  isError: true,
+  isError: false,
   label: '00'
 };
 var placeholderTerminal = {

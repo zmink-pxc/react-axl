@@ -29,6 +29,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -99,35 +103,49 @@ var AxlModule = /*#__PURE__*/function (_React$PureComponent) {
     value: function render() {
       var _this2 = this;
 
-      this.connSectionWidth = 0;
-      var middleWidth = this.props.numCols * 5 + "mm";
-      var Logo = this.props.fullWidthLogo === true ? _PhoenixBrand["default"] : _PhoenixP["default"];
+      var _this$props = this.props,
+          moduleName = _this$props.moduleName,
+          numCols = _this$props.numCols,
+          fullWidthLogo = _this$props.fullWidthLogo,
+          width = _this$props.width,
+          raisedMidsection = _this$props.raisedMidsection,
+          hasTopRow = _this$props.hasTopRow,
+          labels = _this$props.labels,
+          partName = _this$props.partName,
+          partNumber = _this$props.partNumber,
+          colorCard = _this$props.colorCard,
+          children = _this$props.children,
+          rest = _objectWithoutProperties(_this$props, ["moduleName", "numCols", "fullWidthLogo", "width", "raisedMidsection", "hasTopRow", "labels", "partName", "partNumber", "colorCard", "children"]);
 
-      var children = _react["default"].Children.map(this.props.children, function (child, index) {
+      this.connSectionWidth = 0;
+      var middleWidth = numCols * 5 + "mm";
+      var Logo = fullWidthLogo === true ? _PhoenixBrand["default"] : _PhoenixP["default"];
+
+      var cChildren = _react["default"].Children.map(children, function (child, index) {
         return _react["default"].cloneElement(child, _this2.mapPropsToConnector(child, index));
       });
 
       return /*#__PURE__*/_react["default"].createElement("div", _extends({
         className: _AxlModuleModule["default"].moduleBase,
         style: {
-          width: this.props.width + "mm"
+          width: width + "mm"
         }
-      }, this.props), /*#__PURE__*/_react["default"].createElement("div", {
+      }, rest), /*#__PURE__*/_react["default"].createElement("div", {
         className: _AxlModuleModule["default"].moduleTop,
         style: {
           width: this.faceWidth() + "mm"
         }
-      }, (this.props.raisedMidSection || this.props.hasTopRow) === false ? /*#__PURE__*/_react["default"].createElement("div", {
+      }, (raisedMidsection || hasTopRow) === false ? /*#__PURE__*/_react["default"].createElement("div", {
         className: _AxlModuleModule["default"].raisedContainer,
         style: {
           width: this.faceWidth() + "mm"
         }
       }, /*#__PURE__*/_react["default"].createElement(Vents, {
-        width: this.props.width,
+        width: width,
         upper: true
       }), /*#__PURE__*/_react["default"].createElement(Label, {
         width: this.faceWidth() - 4 + 1,
-        labels: this.props.labels
+        labels: labels
       }), /*#__PURE__*/_react["default"].createElement(LabelHolder, null), /*#__PURE__*/_react["default"].createElement("div", {
         className: _AxlModuleModule["default"].brandArea
       }, /*#__PURE__*/_react["default"].createElement("div", {
@@ -136,19 +154,19 @@ var AxlModule = /*#__PURE__*/function (_React$PureComponent) {
         className: _AxlModuleModule["default"].printArea
       }, /*#__PURE__*/_react["default"].createElement("div", {
         className: _AxlModuleModule["default"].print
-      }, this.props.partName), /*#__PURE__*/_react["default"].createElement("div", {
+      }, partName), /*#__PURE__*/_react["default"].createElement("div", {
         className: _AxlModuleModule["default"].print
-      }, this.props.partNumber))), /*#__PURE__*/_react["default"].createElement(Vents, {
-        width: this.props.width,
+      }, partNumber))), /*#__PURE__*/_react["default"].createElement(Vents, {
+        width: width,
         lower: true
       })) : null), /*#__PURE__*/_react["default"].createElement("div", {
         className: _AxlModuleModule["default"].moduleMiddle,
         style: {
           width: this.connSectionWidth + 'mm'
         }
-      }, /*#__PURE__*/_react["default"].createElement(_AxlColorID["default"], this.props.colorCard), /*#__PURE__*/_react["default"].createElement(Inset, null)), /*#__PURE__*/_react["default"].createElement("div", {
+      }, /*#__PURE__*/_react["default"].createElement(_AxlColorID["default"], colorCard), /*#__PURE__*/_react["default"].createElement(Inset, null)), /*#__PURE__*/_react["default"].createElement("div", {
         className: _AxlModuleModule["default"].moduleBottom
-      }, children));
+      }, cChildren));
     }
   }]);
 
@@ -165,7 +183,7 @@ AxlModule.propTypes = {
   //width in mm of the card
   colorCard: _propTypes["default"].object.isRequired,
   //properties to pass to colorID card
-  partNumber: _propTypes["default"].number.isRequired,
+  partNumber: _propTypes["default"].string.isRequired,
   //part number of the module
   partName: _propTypes["default"].string.isRequired,
   //name of the product as displayed on the physical unit

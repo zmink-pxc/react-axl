@@ -33,6 +33,7 @@ import AxioLoader from '../src/components/Utils/AxioLoader/AxioLoader.jsx';
 import SeLock from '../src/components/Core/SeLock/SeLock.jsx';
 import SeLed from '../src/components/Core/SeLed/SeLed.jsx';
 import SeTerminal from '../src/components/Core/SeTerminal/SeTerminal.jsx';
+import SePlunger from '../src/components/Core/SePlunger/SePlunger.jsx';
 
 
 import '../src/components/PLCNextBackground/PLCNextBackground.module.scss';
@@ -181,3 +182,17 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   .addDecorator(withKnobs)
   .add('Basic', () => <SeTerminal isBlack={boolean('isBlack',false)} isLeft={boolean('isLeft',false)}/>)
 
+  storiesOf('SePlunger', module)
+  .addDecorator(withKnobs)
+  .add('with text', () => <SePlunger pushIn={boolean('pushIn', false)} red={boolean('red', false)} green={boolean('green', false)} blue={boolean('blue', false)}/>)
+  .add('as dynamic variables', () => {
+    
+    return (<SePlunger/>);
+  })
+  .add('with some emoji', () => (
+    <Button onClick={action('clicked')}>
+      <span role="img" aria-label="so cool">
+        😀 😎 👍 💯
+      </span>
+    </Button>
+  ));

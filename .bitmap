@@ -289,7 +289,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/axiobus@1.0.16": {
+    "zmink.axioline/axiobus@1.0.17": {
         "files": [
             {
                 "relativePath": "src/components/AxioBus/AxioBus.jsx",

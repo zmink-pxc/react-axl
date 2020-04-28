@@ -33,6 +33,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -83,17 +85,20 @@ var AxioBus = /*#__PURE__*/function (_React$Component) {
   _createClass(AxioBus, [{
     key: "render",
     value: function render() {
-      var bus = this.props.busConfiguration.map(function (key) {
+      var _this2 = this;
+
+      var bus = this.props.busConfiguration.map(function (key, index) {
         var Device = Devices[key].component;
+        var deviceProps = _this2.props.busProps ? _this2.props.busProps.slice()[index] : null;
         return /*#__PURE__*/_react["default"].createElement(_react.Suspense, {
           key: "s".concat(key),
           fallback: /*#__PURE__*/_react["default"].createElement(_AxioLoader["default"], {
             key: "l".concat(key),
             mmWidth: Devices[key].width
           })
-        }, /*#__PURE__*/_react["default"].createElement(Device, {
+        }, /*#__PURE__*/_react["default"].createElement(Device, _extends({
           key: "c".concat(key)
-        }));
+        }, deviceProps)));
       });
       var containerClass = (0, _classnames["default"])([_AxioBusModule["default"].base], _defineProperty({}, _AxioBusModule["default"].wrap, this.props.wrap), _defineProperty({}, _AxioBusModule["default"].flexLeft, this.props.left === true));
       return /*#__PURE__*/_react["default"].createElement(_Scale.AxioBusScale, {
@@ -108,6 +113,7 @@ var AxioBus = /*#__PURE__*/function (_React$Component) {
 exports["default"] = AxioBus;
 AxioBus.propTypes = {
   busConfiguration: _propTypes["default"].arrayOf(_propTypes["default"].string),
+  busProps: _propTypes["default"].arrayOf(_propTypes["default"].object),
   height: _propTypes["default"].any,
   width: _propTypes["default"].any,
   partHeight: _propTypes["default"].any,

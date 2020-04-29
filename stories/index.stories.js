@@ -34,7 +34,8 @@ import SeLock from '../src/components/Core/SeLock/SeLock.jsx';
 import SeLed from '../src/components/Core/SeLed/SeLed.jsx';
 import SeTerminal from '../src/components/Core/SeTerminal/SeTerminal.jsx';
 import SePlunger from '../src/components/Core/SePlunger/SePlunger.jsx';
-
+import SeTerminalGroup from '../src/components/Core/SeTerminalGroup/SeTerminalGroup.jsx';
+import SeConnector from '../src/components/Core/SeConnector/SeConnector.jsx';
 
 import '../src/components/PLCNextBackground/PLCNextBackground.module.scss';
 
@@ -196,3 +197,11 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
       </span>
     </Button>
   ));
+
+  storiesOf('SeTerminalGroup', module)
+  .addDecorator(withKnobs)
+  .add('Basic', () => <SeTerminalGroup left={boolean('left',false)}/>)
+
+  storiesOf('SeConnector',module)
+  .addDecorator(withKnobs)
+  .add('Basic',()=><SeConnector />)

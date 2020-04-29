@@ -12,6 +12,7 @@ export default function SeModule(props){
 SeModule.propTypes = {
     partNumber: PropTypes.string.isRequired,
     partName:   PropTypes.string.isRequired,
+    terminals:  PropTypes.object
 }
 
 SeModule.defaultProps = {

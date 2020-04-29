@@ -3,7 +3,7 @@ import SeModule from '@core/SeModule/SeModule.jsx';
 import SeConnector from '@core/SeConnector/SeConnector.jsx';
 
 export default function SeSCA(props){
-    return <SeModule partName={props.partName}></SeModule>
+    return <SeModule partName={props.partName} ledLabels={props.ledLabels}></SeModule>
 }
 
 SeSCA.defaultProps = {

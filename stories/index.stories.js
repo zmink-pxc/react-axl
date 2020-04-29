@@ -37,6 +37,7 @@ import SePlunger from '../src/components/Core/SePlunger/SePlunger.jsx';
 import SeTerminalGroup from '../src/components/Core/SeTerminalGroup/SeTerminalGroup.jsx';
 import SeConnector from '../src/components/Core/SeConnector/SeConnector.jsx';
 import SeModule from '../src/components/Core/SeModule/SeModule.jsx';
+import SeCarrier from '../src/components/Core/SeCarrier/SeCarrier.jsx';
 
 import SeAI4I420 from '../src/components/Modules/SmartElements/Analog/Input/SeAI4I420/SeAI4I420.jsx';
 import SeSCA from '../src/components/Modules/SmartElements/SeSCA/SeSCA.jsx';
@@ -221,4 +222,10 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   storiesOf('SeAI4I420',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><SeAI4I420 />)
+
+  SeCarrier
+  storiesOf('SeCarrier',module)
+  .addDecorator(withKnobs)
+  .add('Basic',()=><SeCarrier numModules={4}><SeAI4I420 /><SeSCA /><SeAI4I420 /><SeSCA /></SeCarrier>)
+
   

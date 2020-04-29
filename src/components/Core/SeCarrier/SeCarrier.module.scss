@@ -1,0 +1,25 @@
+@import '@styles/_axioline.scss';
+
+.root {
+    height: 125mm;
+    background-color: $axioline-grey;    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.moduleArea {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.leftArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 10mm;
+    height: 100%;
+}

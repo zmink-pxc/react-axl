@@ -3,7 +3,8 @@ import SeModule from '@core/SeModule/SeModule.jsx';
 import SeConnector from '@core/SeConnector/SeConnector.jsx';
 
 export default function SeAI4I420(props){
-    return <SeModule partName={props.partName}><SeConnector/></SeModule>
+    const {partName,partNumber,ledLabels,...other} = props;
+    return <SeModule partName={partName} partNumber={partNumber} ledLabels={ledLabels} {...other}><SeConnector/></SeModule>
 }
 
 SeAI4I420.defaultProps = {

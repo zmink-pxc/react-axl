@@ -23,7 +23,7 @@ export default function SeCarrier(props){
             <div style={{height:'5mm',width:'5mm'}}>
                 <PhoenixP/>
             </div>
-            <div style={{height:'14mm',width:'5mm'}}/>
+            <div className={styles.partText}><div className={styles.textFormat}><span>{`AXL  F  BP  SE${props.numModules}`}</span><br/><span>{props.partNumber}</span></div></div>
             <div style={{height:'20mm',width:'9mm'}}></div>
             <CarrierLedArea numModules={props.numModules}/>
             <SeCarrierTerminalGroup/>

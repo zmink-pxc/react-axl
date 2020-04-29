@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './SeModule.module.scss';
 import SeLed from '@core/SeLed/SeLed.jsx';
 import SeLock from '@core/SeLock/SeLock.jsx';
 
 export default function SeModule(props){
     return (<div className={styles.root}>
-        <LedArea ledLabels={props.ledLabels} ledProps={props.leds}/>
+        <LedArea ledLabels={props.ledLabels} ledProps={props.leds}/><div className={styles.conArea}>{props.children}</div>
     </div>)
 }
 
@@ -20,9 +21,10 @@ SeModule.defaultProps = {
 }
 
 function LedArea(props){
-    <div className={styles.ledArea}>{
+    return (<div className={styles.ledArea}>{
         props.ledLabels.map((label,index)=>{
             return (index === 9) ? (<SeLock/>):(<div className={styles.ledContainer}><SeLed/><div>{label}</div></div>)
         })
-    }</div>
+    }</div>)
+    
 }

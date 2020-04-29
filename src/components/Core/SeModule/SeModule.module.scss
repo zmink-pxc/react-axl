@@ -1,19 +1,29 @@
 @import '@styles/_axioline.scss';
 
 .root {
+    font-size: 2mm;
     width: 14.9mm;
     height: 62.2mm;
     background-color: $axioline-grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .ledArea{
     height: 56mm;
-    width: 6mm;
+    width: 5mm;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding-right: 1mm;
 }
 
 .ledContainer{

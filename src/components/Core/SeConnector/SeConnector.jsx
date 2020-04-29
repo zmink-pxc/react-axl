@@ -4,6 +4,7 @@ import styles from './SeConnector.module.scss';
 
 export default function SeConnector(props){
     return (<div className={styles.root}>
+        <div className={styles.shadow}></div>
         <SeTerminalGroup key='tg-1' left={true} />
         <SeTerminalGroup key='tg-2' />
         <SeTerminalGroup key='tg-3' left={true} />

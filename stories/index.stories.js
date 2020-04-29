@@ -39,6 +39,7 @@ import SeConnector from '../src/components/Core/SeConnector/SeConnector.jsx';
 import SeModule from '../src/components/Core/SeModule/SeModule.jsx';
 
 import SeAI4I420 from '../src/components/Modules/SmartElements/Analog/Input/SeAI4I420/SeAI4I420.jsx';
+import SeSCA from '../src/components/Modules/SmartElements/SeSCA/SeSCA.jsx';
 
 import '../src/components/PLCNextBackground/PLCNextBackground.module.scss';
 
@@ -213,7 +214,10 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   .addDecorator(withKnobs)
   .add('Basic',()=><SeModule partName={text('partName','AI4 I')}><SeConnector/><SeConnector/></SeModule>)
 
-  
+  storiesOf('SeSCA',module)
+  .addDecorator(withKnobs)
+  .add('Basic',()=><SeSCA />)
+
   storiesOf('SeAI4I420',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><SeAI4I420 />)

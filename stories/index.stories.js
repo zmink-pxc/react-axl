@@ -209,5 +209,5 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
 
   storiesOf('SeModule',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><SeModule><SeConnector/><SeConnector/></SeModule>)
+  .add('Basic',()=><SeModule partName={text('partName','AI4 I')}><SeConnector/><SeConnector/></SeModule>)
 

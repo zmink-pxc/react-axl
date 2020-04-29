@@ -6,7 +6,11 @@ import SeLock from '@core/SeLock/SeLock.jsx';
 
 export default function SeModule(props){
     return (<div className={styles.root}>
-        <LedArea ledLabels={props.ledLabels} ledProps={props.leds}/><div className={styles.conArea}>{props.children}</div>
+        <div className={styles.partName}>{props.partName}</div>
+        <div className={styles.mainContent}>
+            <LedArea ledLabels={props.ledLabels} ledProps={props.leds}/><div className={styles.conArea}>{props.children}</div>
+        </div>
+        <div className={styles.partName}>{props.partName}</div>
     </div>)
 }
 
@@ -23,7 +27,8 @@ SeModule.defaultProps = {
 function LedArea(props){
     return (<div className={styles.ledArea}>{
         props.ledLabels.map((label,index)=>{
-            return (index === 9) ? (<SeLock/>):(<div className={styles.ledContainer}><SeLed/><div>{label}</div></div>)
+            const bigLed = (index === 0) || (index === 17);
+            return (index === 9) ? (<SeLock/>):(<div className={styles.ledContainer}><SeLed isErrLed={bigLed}/><div>{label}</div></div>)
         })
     }</div>)
     

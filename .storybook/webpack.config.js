@@ -23,7 +23,8 @@ module.exports = async ({ config, mode }) => {
       "@modules":     path.resolve(__dirname,"../src/components/Modules"),
       "@utils":       path.resolve(__dirname,"../src/components/Utils"),
       "@":            path.resolve(__dirname,"../src/components"),
-      "@styles":      path.resolve(__dirname,"../src/styles")
+      "@styles":      path.resolve(__dirname,"../src/styles"),
+      "@se":          path.resolve(__dirname,"../src/components/Modules/SmartElements")
     }
   }
 

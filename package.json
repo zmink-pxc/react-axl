@@ -52,7 +52,8 @@
         "@modules": "src/components/Modules",
         "@utils": "src/components/Utils",
         "@": "src/components",
-        "@styles": "src/styles"
+        "@styles": "src/styles",
+        "@se":"src/components/Modules/SmartElements"
       }
     },
     "overrides": {

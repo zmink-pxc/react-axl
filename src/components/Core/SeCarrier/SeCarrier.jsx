@@ -20,7 +20,9 @@ export default function SeCarrier(props){
     const modAreaWidth = props.numModules/2 * 15;
     const carrierWidth = modAreaWidth + 10;
     return (<div className={styles.root} style={{width: carrierWidth + 'mm'}}>
+        
         <div className={styles.leftArea}>
+            <div className={styles.shadow}></div>
             <div style={{height:'5mm',width:'5mm'}}>
                 <PhoenixP/>
             </div>

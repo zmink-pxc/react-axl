@@ -10,6 +10,12 @@
     align-items: center;
 }
 
+.inset{
+    background-color: black;
+    height: 2mm;
+    width: 4mm;
+}
+
 .partText {
     position: relative;
     width: 5mm;
@@ -30,6 +36,16 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.termGroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 8mm;
+    height: 20mm;
+    outline: 0.1mm solid black;
 }
 
 .leftArea {

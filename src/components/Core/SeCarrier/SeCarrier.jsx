@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './SeCarrier.module.scss';
 import PhoenixP from '@core/PhoenixP/PhoenixP.jsx';
 import SeCarrierLed from '@core/SeCarrierLed/SeCarrierLed.jsx';
+import SeCarrierTerminal from '@core/SeCarrierTerminal/SeCarrierTerminal.jsx';
 
 export default function SeCarrier(props){
     var topRow = [];
@@ -26,8 +27,8 @@ export default function SeCarrier(props){
             <div className={styles.partText}><div className={styles.textFormat}><span>{`AXL  F  BP  SE${props.numModules}`}</span><br/><span>{props.partNumber}</span></div></div>
             <div style={{height:'20mm',width:'9mm'}}></div>
             <CarrierLedArea numModules={props.numModules}/>
-            <SeCarrierTerminalGroup/>
-            <SeCarrierTerminalGroup/>
+            <SeCarrierTerminalGroup text='Up+'/>
+            <SeCarrierTerminalGroup text='Up-'/>
         </div>
         <div className={styles.moduleArea} style={{width: modAreaWidth + 'mm'}}>
             {modules}
@@ -44,5 +45,15 @@ function CarrierLedArea(props){
 }
 
 function SeCarrierTerminalGroup(props){
-    return <div style={{width:'9mm',height:'20mm'}}></div>
+    return (<div className={styles.termGroup}>
+        <SeCarrierTerminal/>
+        <Inset/>
+        <div>{props.text}</div>
+        <Inset/>
+        <SeCarrierTerminal/>
+    </div>)
+}
+
+function Inset(){
+    return <div className={styles.inset}></div>
 }

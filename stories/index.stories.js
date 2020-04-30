@@ -41,6 +41,7 @@ import SeCarrier from '../src/components/Core/SeCarrier/SeCarrier.jsx';
 import SeCarrierTerminal from '../src/components/Core/SeCarrierTerminal/SeCarrierTerminal.jsx';
 
 import SeAI4I420 from '../src/components/Modules/SmartElements/Analog/Input/SeAI4I420/SeAI4I420.jsx';
+import SePSDI83 from '../src/components/Modules/SmartElements/Digital/Input/SePSDI83/SePSDI83.jsx';
 import SeSCA from '../src/components/Modules/SmartElements/SeSCA/SeSCA.jsx';
 
 import '../src/components/PLCNextBackground/PLCNextBackground.module.scss';
@@ -223,6 +224,11 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   storiesOf('SeAI4I420',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><SeAI4I420 />)
+
+  
+  storiesOf('SePSDI83',module)
+  .addDecorator(withKnobs)
+  .add('Basic',()=><SePSDI83 />)
 
   storiesOf('SeCarrierTerminal',module)
   .addDecorator(withKnobs)

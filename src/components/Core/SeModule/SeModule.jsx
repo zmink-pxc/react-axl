@@ -5,7 +5,7 @@ import SeLed from '@core/SeLed/SeLed.jsx';
 import SeLock from '@core/SeLock/SeLock.jsx';
 
 export default function SeModule(props){
-    const {partName,leds,ledLabels,children,...other} = props;
+    const {partName,partNumber,leds,ledLabels,children,...other} = props;
     return (<div className={styles.root} {...other}>
         <div className={styles.partName}><div style={{marginLeft: '1mm'}}>{partName}</div></div>
         <div className={styles.mainContent}>

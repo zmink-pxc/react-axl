@@ -5,12 +5,13 @@ import SeLed from '@core/SeLed/SeLed.jsx';
 import SeLock from '@core/SeLock/SeLock.jsx';
 
 export default function SeModule(props){
-    return (<div className={styles.root}>
-        <div className={styles.partName}>{props.partName}</div>
+    const {partName,leds,ledLabels,children,...other} = props;
+    return (<div className={styles.root} {...other}>
+        <div className={styles.partName}>{partName}</div>
         <div className={styles.mainContent}>
-            <LedArea ledLabels={props.ledLabels} ledProps={props.leds}/><div className={styles.conArea}>{props.children}</div>
+            <LedArea ledLabels={ledLabels} ledProps={leds}/><div className={styles.conArea}>{children}</div>
         </div>
-        <div className={styles.partName}>{props.partName}</div>
+        <div className={styles.partName}>{partName}</div>
     </div>)
 }
 

@@ -7,11 +7,11 @@ import SeLock from '@core/SeLock/SeLock.jsx';
 export default function SeModule(props){
     const {partName,leds,ledLabels,children,...other} = props;
     return (<div className={styles.root} {...other}>
-        <div className={styles.partName}>{partName}</div>
+        <div className={styles.partName}><div style={{marginLeft: '1mm'}}>{partName}</div></div>
         <div className={styles.mainContent}>
             <LedArea ledLabels={ledLabels} ledProps={leds}/><div className={styles.conArea}>{children}</div>
         </div>
-        <div className={styles.partName}>{partName}</div>
+        <div className={styles.partName}><div style={{marginLeft: '1mm'}}>{partName}</div></div>
     </div>)
 }
 

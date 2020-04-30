@@ -4,7 +4,7 @@ import SeConnector from '@core/SeConnector/SeConnector.jsx';
 
 export default function SeRTD4PT100(props){
     const {partName,partNumber,ledLabels,...other} = props;
-    return <SeModule partName={partName} partNumber={partNumber} ledLabels={ledLabels} {...other}><SeConnector/></SeModule>
+    return <SeModule partName={partName} partNumber={partNumber} ledLabels={ledLabels} {...other}><SeConnector/><SeConnector/></SeModule>
 }
 
 SeRTD4PT100.defaultProps = {

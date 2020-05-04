@@ -1,0 +1,27 @@
+$color-pistachio:   #A0CA00;
+$color-downriver:   #092346;
+$color-neptune:     #7DADB9;
+$color-waterloo:    #83839D;
+$color-white:       #83839D;
+$color-alto:        #D8D8D8;
+
+$div-color-list: $color-pistachio,$color-downriver,$color-neptune,$color-waterloo,$color-white,$color-alto;
+$class-count: 100;
+$width-min: 2;
+$width-max: 40;
+
+$frame-size: 400;
+
+$transparency-background: 0.5;
+
+$color-background-dark: $color-downriver;
+$color-background-light: $color-alto;
+
+:export {backgroundDark: $color-background-dark}
+:export {backgroundLight: $color-background-light}
+:export {classCount: $class-count}
+:export {colorPistachio: $color-pistachio}
+:export {colorDownriver: $color-downriver}
+:export {colorNeptune: $color-neptune}
+:export {colorWaterloo: $color-waterloo}
+:export {colorAlto: $color-alto}

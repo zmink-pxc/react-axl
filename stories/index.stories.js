@@ -20,7 +20,7 @@ import AxlLedSocket from '../src/components/Core/AxlLedSocket/AxlLedSocket.jsx';
 import AxlColorID from '../src/components/Core/AxlColorID/AxlColorID.jsx';
 import AxlConnectorSocket from '../src/components/Core/AxlConnectorSocket/AxlConnectorSocket.jsx';
 import AxlModule from '../src/components/Core/AxlModule/AxlModule.jsx';
-import PLCNextBackground from '../src/components/PLCNextBackground/PLCNextBackground.jsx';
+import PLCnextBackground from '../src/components/PLCnextBackground/PLCnextBackground.jsx';
 import Axl24VPower from '../src/components/Core/Axl24VPower/Axl24VPower.jsx';
 import AxlDI81DO811H from '../src/components/Modules/Digital/Combo/AxlDI81DO811H/AxlDI81DO811H.jsx';
 import AxlDI1611H from '../src/components/Modules/Digital/Input/AxlDI1611H/AxlDI1611H.jsx';
@@ -44,7 +44,7 @@ import SeAI4I420 from '../src/components/Modules/SmartElements/Analog/Input/SeAI
 import SePSDI83 from '../src/components/Modules/SmartElements/Digital/Input/SePSDI83/SePSDI83.jsx';
 import SeSCA from '../src/components/Modules/SmartElements/SeSCA/SeSCA.jsx';
 
-import '../src/components/PLCNextBackground/PLCNextBackground.module.scss';
+import '../src/components/PLCnextBackground/PLCnextBackground.module.scss';
 
 //const stories = storiesOf('Storybook Knobs', module);
 
@@ -152,9 +152,9 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   .add('Basic',()=><AxlAI8/>)
   
 
-  storiesOf('PLCNextBackground',module)
+  storiesOf('PLCnextBackground',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><PLCNextBackground numForegroundElements={100} numBackgroundElements={100}/>)
+  .add('Basic',()=><PLCnextBackground />)
 
   storiesOf('Axl2152',module)
   .addDecorator(withKnobs)

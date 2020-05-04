@@ -6,7 +6,7 @@ $color-white:       #83839D;
 $color-alto:        #D8D8D8;
 
 $div-color-list: $color-pistachio,$color-downriver,$color-neptune,$color-waterloo,$color-white,$color-alto;
-
+$class-count: 100;
 $width-min: 2;
 $width-max: 40;
 
@@ -19,6 +19,12 @@ $color-background-light: $color-alto;
 
 :export {backgroundDark: $color-background-dark}
 :export {backgroundLight: $color-background-light}
+:export {classCount: $class-count}
+:export {colorPistachio: $color-pistachio}
+:export {colorDownriver: $color-downriver}
+:export {colorNeptune: $color-neptune}
+:export {colorWaterloo: $color-waterloo}
+:export {colorAlto: $color-alto}
 
 ///takes a color and applies background transparency
 @function applyBackgroundTransparency($color) {
@@ -49,54 +55,56 @@ $color-background-light: $color-alto;
     overflow: hidden;
 }
 
-@for $i from 1 through 1000 {
-    $size: randomNum($width-min,$width-max) + 0px;
-    $backgroundSize: randomNum($width-min,$width-max) + 0px;
-    $num: randomNum(0,length($div-color-list));
-    $color: nth($div-color-list,randomNum(1,length($div-color-list)));
-    $backgroundColor: applyBackgroundTransparency($color);
-    .foreground-element-#{$i} {
-      position: absolute;
-      top: randomNum(-120,120) * 1vh;
-      left: randomNum(-120,120) * 1vw;
-      height: $size;
-      width:  $size;
-      background-color: $color;
-    }
-    .background-element-#{$i} {
-        position: absolute;
-        top: randomNum(-120,120) * 1vh;
-        left: randomNum(-120,120) * 1vw;
-        filter: blur(5px);
-        height: $backgroundSize;
-        width:  $backgroundSize;
-        background-color: $backgroundColor;
-        box-shadow: 0 0 5px 10px rgba($color,0.2);
-      }
-  }
+// @for $i from 0 through $class-count {
+//     $size: randomNum($width-min,$width-max) + 0px;
+//     $backgroundSize: randomNum($width-min,$width-max) + 0px;
+//     $num: randomNum(0,length($div-color-list));
+//     $color: nth($div-color-list,randomNum(1,length($div-color-list)));
+//     $backgroundColor: applyBackgroundTransparency($color);
+//     .foreground-element-#{$i} {
+//       position: absolute;
+//       top: randomNum(-120,120) * 1vh;
+//       left: randomNum(-120,120) * 1vw;
+//       height: $size;
+//       width:  $size;
+//       background-color: $color;
+//     }
+//     .background-element-#{$i} {
+//         position: absolute;
+//         top: randomNum(-120,120) * 1vh;
+//         left: randomNum(-120,120) * 1vw;
+//         //filter: blur(5px);
+//         height: $backgroundSize;
+//         width:  $backgroundSize;
+//         background-color: $backgroundColor;
+//         //box-shadow: 0 0 5px 10px rgba($color,0.2);
+//       }
+//   }
 
-.foregroundMove{
-    animation: angle-move 120s linear
-}
+// .foregroundMove{
+//     animation: angle-move 120s linear alternate;
+//     animation-iteration-count: infinite;
+// }
 
-.backgroundMove{
-    animation: angle-move-reverse 240s linear
-}
+// .backgroundMove{
+//     animation: angle-move-reverse 240s linear alternate;
+//     animation-iteration-count: infinite;
+// }
 
-@keyframes angle-move {
-    0%{
+// @keyframes angle-move {
+//     0%{
+//         transform: translate(0vw,0vh);
+//     }
+//     100%{
+//         transform: translate(-100vw,-100vh);
+//     }
+// }
 
-    }
-    100%{
-        transform: translate(-100vw,-100vh);
-    }
-}
-
-@keyframes angle-move-reverse {
-    0%{
-
-    }
-    100%{
-        transform: translate(100vw,100vh);
-    }
-}
+// @keyframes angle-move-reverse {
+//     0%{
+//         transform: translate(0vw,0vh);
+//     }
+//     100%{
+//         transform: translate(100vw,100vh);
+//     }
+// }

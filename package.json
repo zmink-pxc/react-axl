@@ -15,6 +15,7 @@
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react-motion": "^0.5.2",
+    "react-particles-js": "^3.2.1",
     "react-scripts": "^3.4.1",
     "react-svg-loader": "^3.0.3",
     "svg-inline-loader": "^0.8.2",
@@ -53,7 +54,7 @@
         "@utils": "src/components/Utils",
         "@": "src/components",
         "@styles": "src/styles",
-        "@se":"src/components/Modules/SmartElements"
+        "@se": "src/components/Modules/SmartElements"
       }
     },
     "overrides": {

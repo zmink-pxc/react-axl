@@ -10,10 +10,9 @@ export default class PLCnextBackground extends React.PureComponent {
     }
 
     render(){
+        const {...rest} = this.props;
         config.particles.color.value = [styles.colorPistachio,styles.colorNeptune,styles.colorDownriver,styles.colorWaterloo,styles.colorAlto]
-        return <div>
-            <Particles params={config}/>
-        </div>
+        return <Particles {...rest} params={config}/>
     }
 }
 

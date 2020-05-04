@@ -1,4 +1,4 @@
-import React from './node_modules/react';
+import React from 'react';
 import styles from "./PLCnextBackground.module.scss";
 import classNames from 'classnames';
 import Particles from 'react-particles-js';

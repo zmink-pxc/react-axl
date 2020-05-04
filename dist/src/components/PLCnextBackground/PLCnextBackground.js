@@ -13,8 +13,6 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _reactParticlesJs = _interopRequireDefault(require("react-particles-js"));
 
-var _particles = _interopRequireDefault(require("./particles.json"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -39,6 +37,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+//import particles from './particles.json';
 var PLCnextBackground = /*#__PURE__*/function (_React$PureComponent) {
   _inherits(PLCnextBackground, _React$PureComponent);
 
@@ -53,9 +52,9 @@ var PLCnextBackground = /*#__PURE__*/function (_React$PureComponent) {
   _createClass(PLCnextBackground, [{
     key: "render",
     value: function render() {
-      _particles["default"].particles.color.value = [_PLCnextBackgroundModule["default"].colorPistachio, _PLCnextBackgroundModule["default"].colorNeptune, _PLCnextBackgroundModule["default"].colorDownriver, _PLCnextBackgroundModule["default"].colorWaterloo, _PLCnextBackgroundModule["default"].colorAlto];
+      config.particles.color.value = [_PLCnextBackgroundModule["default"].colorPistachio, _PLCnextBackgroundModule["default"].colorNeptune, _PLCnextBackgroundModule["default"].colorDownriver, _PLCnextBackgroundModule["default"].colorWaterloo, _PLCnextBackgroundModule["default"].colorAlto];
       return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement(_reactParticlesJs["default"], {
-        params: _particles["default"]
+        params: config
       }));
     }
   }]);
@@ -64,5 +63,115 @@ var PLCnextBackground = /*#__PURE__*/function (_React$PureComponent) {
 }(_react["default"].PureComponent);
 
 exports["default"] = PLCnextBackground;
+var config = {
+  "particles": {
+    "number": {
+      "value": 50,
+      "density": {
+        "enable": false,
+        "value_area": 1815.039575754227
+      }
+    },
+    "color": {
+      "value": "#1522f2"
+    },
+    "shape": {
+      "type": "edge",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 28,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 1,
+      "direction": "top",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+};
 
 //# sourceMappingURL=PLCnextBackground.jsx.map

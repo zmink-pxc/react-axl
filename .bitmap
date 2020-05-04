@@ -769,30 +769,6 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/etc/particles@1.0.0": {
-        "files": [
-            {
-                "relativePath": "src/components/PLCnextBackground/particles.json",
-                "test": false,
-                "name": "particles.json"
-            }
-        ],
-        "mainFile": "src/components/PLCnextBackground/particles.json",
-        "origin": "AUTHORED",
-        "exported": true
-    },
-    "zmink.axioline/etc/pl-cnext-backgroundmodule@1.0.0": {
-        "files": [
-            {
-                "relativePath": "src/components/PLCnextBackground/PLCnextBackground.module.scss",
-                "test": false,
-                "name": "PLCnextBackground.module.scss"
-            }
-        ],
-        "mainFile": "src/components/PLCnextBackground/PLCnextBackground.module.scss",
-        "origin": "AUTHORED",
-        "exported": true
-    },
     "zmink.axioline/load-controllers@1.0.10": {
         "files": [
             {
@@ -838,6 +814,30 @@
             }
         ],
         "mainFile": "src/components/Core/PhoenixP/PhoenixP.jsx",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "zmink.axioline/plcnext-background-module@1.0.0": {
+        "files": [
+            {
+                "relativePath": "src/components/PLCnextBackground/PLCnextBackground.module.scss",
+                "test": false,
+                "name": "PLCnextBackground.module.scss"
+            }
+        ],
+        "mainFile": "src/components/PLCnextBackground/PLCnextBackground.module.scss",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "zmink.axioline/plcnext-background@1.0.0": {
+        "files": [
+            {
+                "relativePath": "src/components/PLCnextBackground/PLCnextBackground.jsx",
+                "test": false,
+                "name": "PLCnextBackground.jsx"
+            }
+        ],
+        "mainFile": "src/components/PLCnextBackground/PLCnextBackground.jsx",
         "origin": "AUTHORED",
         "exported": true
     },

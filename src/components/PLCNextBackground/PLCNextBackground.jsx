@@ -1,10 +1,10 @@
-import React from 'react';
+import React from './node_modules/react';
 import styles from "./PLCNextBackground.module.scss";
-import classNames from 'classnames';
-import Particles from 'react-particles-js';
+import classNames from './node_modules/classnames';
+import Particles from './node_modules/react-particles-js';
 import particles from './particles.json';
 
-export default class PLCNextBackground extends React.PureComponent {
+export default class PLCnextBackground extends React.PureComponent {
     constructor(props){
         super(props)
     }

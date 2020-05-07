@@ -9,6 +9,8 @@ import Modules from '@modules/load-modules.js';
 import Controllers from '@controllers/load-controllers.js';
 import SeDevices from '@se/load-semodules.js';
 
+const Carrier = React.lazy(() => import(/* webpackChunkName: "SeCarrier" */ '@core/SeCarrier/SeCarrier.jsx')) 
+
 const Devices = Object.assign({},Controllers,Modules);
 
 /**
@@ -22,22 +24,24 @@ export default class AxioBus extends React.Component {
 
         //this.deviceDictionary = deviceDictionary;
 
-        this.defaultStyles = this.props.busConfiguration.map((key)=>{
-            return {y:1000}
-        })
+        // this.defaultStyles = this.props.busConfiguration.map((key)=>{
+        //     return {y:1000}
+        // })
     }
-
-    
 
     render(){
         var bus = [];
         var seBlock = [];
         var processingSeBlock = false;
         this.props.busConfiguration.forEach((pn,index)=>{
-            if (false){
-            //if (isSe(pn) === true) {
+            if (isSe(pn) === true) {
                 processingSeBlock = true;
                 seBlock.push(pn);
+                if (index === this.props.busConfiguration.length - 1){
+                    bus.push(GenerateSeBp(seBlock));
+                    seBlock = [];
+                    processingSeBlock = false;
+                }
             }else{
                 //collected all SE devices, now generate and push onto stack
                 if (processingSeBlock === true){
@@ -47,7 +51,7 @@ export default class AxioBus extends React.Component {
                 }
                 const Device = Devices[pn].component;
                 const deviceProps = this.props.busProps ? (this.props.busProps.slice()[index]):(null)
-                bus.push(<Suspense key={`s${pn}`}fallback={<AxioLoader key={`l${pn}`} mmWidth={Devices[pn].width}/>}><Device key={`c${pn}`} {...deviceProps}/></Suspense>)
+                bus.push(<Suspense key={`s${pn}`} fallback={<AxioLoader key={`l${pn}`} mmWidth={Devices[pn].width}/>}><Device key={`c${pn}`} {...deviceProps}/></Suspense>)
             }
         })
 
@@ -88,10 +92,15 @@ function isSe(partNumber){
 /**
  * @summary Generates the se block for the corresponding set of se elements.  Array of length n part numbers
  * must be chopped up into logical back plane numbers
- * @param {*} sePartNumbers 
+ * @param {string[]} sePartNumbers 
  */
 function GenerateSeBp(sePartNumbers){
-
+    const children = sePartNumbers.map((pn,index)=>{
+        return SeDevices[pn].component;
+    })
+    const width = sePartNumbers.length / 2 * 15;
+    const k = sePartNumbers.toString();
+    return <Suspense key={`se${k}`} fallback={<AxioLoader key={`lse${k}`} mmWidth={width}/>}><Carrier numModules={sePartNumbers.length}>{children}</Carrier></Suspense>
 }
 
 

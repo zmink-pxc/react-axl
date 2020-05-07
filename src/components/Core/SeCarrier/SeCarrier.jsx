@@ -1,19 +1,23 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import PropTypes from 'prop-types';
 import styles from './SeCarrier.module.scss';
 import PhoenixP from '@core/PhoenixP/PhoenixP.jsx';
 import SeCarrierLed from '@core/SeCarrierLed/SeCarrierLed.jsx';
 import SeCarrierTerminal from '@core/SeCarrierTerminal/SeCarrierTerminal.jsx';
 
+/**
+ * 
+ * @param {number} numModules - number of modules to render  
+ */
 export default function SeCarrier(props){
     var topRow = [];
     var bottomRow = [];
 
-    props.children.forEach((child,index)=>{
+    props.children.forEach((Child,index)=>{
         if (index%2 === 0 && index !== 0){
-            bottomRow.push(child);
+            bottomRow.push(<Suspense key={index} fallback={<div key={'d'+index}></div>}><Child/></Suspense>);
         }else{
-            topRow.push(child);
+            topRow.push(<Suspense key={index} fallback={<div key={'d'+index}></div>}><Child/></Suspense>);
         }
     });
     const modules = topRow.concat(bottomRow);

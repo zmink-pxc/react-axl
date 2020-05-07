@@ -20,6 +20,7 @@ const SeModules = {
     "1088130": {component: React.lazy(() => import(/* webpackChunkName: "SeINC1SYM" */ '@se/SpecialFunction/SeINC1SYM/SeINC1SYM.jsx'))},
     "1088132": {component: React.lazy(() => import(/* webpackChunkName: "SeIOL4" */ '@se/SpecialFunction/SeIOL4/SeIOL4.jsx'))},
     "1088128": {component: React.lazy(() => import(/* webpackChunkName: "SeRS485" */ '@se/SpecialFunction/SeRS485/SeRS485.jsx'))},
+    "1088134": {component: React.lazy(() => import(/* webpackChunkName: "SeSCA" */ '@se/SeSCA/SeSCA.jsx'))}
 }
 
 export default SeModules

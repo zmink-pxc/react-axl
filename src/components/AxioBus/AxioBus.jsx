@@ -100,7 +100,7 @@ function GenerateSeBp(sePartNumbers){
     })
     const width = sePartNumbers.length / 2 * 15;
     const k = sePartNumbers.toString();
-    return <Suspense key={`se${k}`} fallback={<AxioLoader key={`lse${k}`} mmWidth={width}/>}><Carrier numModules={sePartNumbers.length}>{children}</Carrier></Suspense>
+    return <Suspense key={`se${k}`} fallback={<AxioLoader key={`lse${k}`} mmWidth={width}/>}><Carrier shrink={true} numModules={sePartNumbers.length}>{children}</Carrier></Suspense>
 }
 
 

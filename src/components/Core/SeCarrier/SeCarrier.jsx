@@ -8,6 +8,7 @@ import SeCarrierTerminal from '@core/SeCarrierTerminal/SeCarrierTerminal.jsx';
 export default function SeCarrier(props){
     var topRow = [];
     var bottomRow = [];
+
     props.children.forEach((child,index)=>{
         if (index%2 === 0 && index !== 0){
             bottomRow.push(child);
@@ -18,10 +19,10 @@ export default function SeCarrier(props){
     const modules = topRow.concat(bottomRow);
     
     const modAreaWidth = props.numModules/2 * 15;
-    const carrierWidth = modAreaWidth + 10;
+    const carrierWidth = props.shrink ? modAreaWidth:(modAreaWidth + 10);
     return (<div className={styles.root} style={{width: carrierWidth + 'mm'}}>
         
-        <div className={styles.leftArea}>
+        {!props.shrink ? (<div className={styles.leftArea}>
             <div className={styles.shadow}></div>
             <div style={{height:'5mm',width:'5mm'}}>
                 <PhoenixP/>
@@ -31,7 +32,7 @@ export default function SeCarrier(props){
             <CarrierLedArea numModules={props.numModules}/>
             <SeCarrierTerminalGroup text='Up+'/>
             <SeCarrierTerminalGroup text='Up-'/>
-        </div>
+        </div>):(null)}
         <div className={styles.moduleArea} style={{width: modAreaWidth + 'mm'}}>
             {modules}
         </div>

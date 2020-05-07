@@ -829,7 +829,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/plcnext-background@1.0.0": {
+    "zmink.axioline/plcnext-background@1.0.1": {
         "files": [
             {
                 "relativePath": "src/components/PLCnextBackground/PLCnextBackground.jsx",

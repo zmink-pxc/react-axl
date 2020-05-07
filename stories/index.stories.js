@@ -170,6 +170,8 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   .add('Scaling2',()=><div style={{width: "400px",height: "500px",backgroundColor: 'orange',position: 'absolute',left:'50px',top: '100px'}}><AxioBus busConfiguration={['2404267','2701916','2688310','2702525']}/></div>)
   .add('Scaling with Padding',()=><div style={{width: "400px",height: "500px",boxSizing: 'border-box',padding:'40px 40px',backgroundColor: 'orange',position: 'absolute',left:'50px',top: '100px'}}><AxioBus busConfiguration={['2404267','2701916','2688310','2702525']}/></div>)
   .add('Bus props',()=><div style={{width: "400px",height: "500px",boxSizing: 'border-box',padding:'40px 40px',backgroundColor: 'orange',position: 'absolute',left:'50px',top: '100px'}}><AxioBus busConfiguration={['2404267','2701916','2688310','2702525']} busProps={[{style:{backgroundColor:"red"}}]}/></div>)
+  //.add('Basic with Smart Elements',()=><div style={{width: "400px",height: "500px",boxSizing: 'border-box',padding:'40px 40px',backgroundColor: 'orange',position: 'absolute',left:'50px',top: '100px'}}><AxioBus busConfiguration={['2404267','2701916','2688310','2702525','1088127','1088129','1088062','1088123']} busProps={[{style:{backgroundColor:"red"}}]}/></div>)
+
 
   storiesOf('Axioloader',module)
   .addDecorator(withKnobs)
@@ -238,5 +240,6 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   storiesOf('SeCarrier',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><SeCarrier numModules={4}><SeAI4I420 /><SeSCA /><SeAI4I420 /><SeSCA /></SeCarrier>)
+  .add('Shrunk',()=><SeCarrier numModules={4} shrink={true}><SeAI4I420 /><SeSCA /><SeAI4I420 /><SeSCA /></SeCarrier>)
 
   

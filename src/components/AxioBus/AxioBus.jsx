@@ -7,6 +7,7 @@ import { AxioBusScale } from '@utils/Scale.jsx';
 import AxioLoader from '@utils/AxioLoader/AxioLoader.jsx';
 import Modules from '@modules/load-modules.js';
 import Controllers from '@controllers/load-controllers.js';
+import SeDevices from '@se/load-semodules.js';
 
 const Devices = Object.assign({},Controllers,Modules);
 
@@ -29,11 +30,26 @@ export default class AxioBus extends React.Component {
     
 
     render(){
-        let bus = this.props.busConfiguration.map((key,index)=>{
-            const Device = Devices[key].component;
-            const deviceProps = this.props.busProps ? (this.props.busProps.slice()[index]):(null)
-            return (<Suspense key={`s${key}`}fallback={<AxioLoader key={`l${key}`} mmWidth={Devices[key].width}/>}><Device key={`c${key}`} {...deviceProps}/></Suspense>)
-        });
+        var bus = [];
+        var seBlock = [];
+        var processingSeBlock = false;
+        this.props.busConfiguration.forEach((pn,index)=>{
+            if (false){
+            //if (isSe(pn) === true) {
+                processingSeBlock = true;
+                seBlock.push(pn);
+            }else{
+                //collected all SE devices, now generate and push onto stack
+                if (processingSeBlock === true){
+                    bus.push(GenerateSeBp(seBlock));
+                    seBlock = [];
+                    processingSeBlock = false;
+                }
+                const Device = Devices[pn].component;
+                const deviceProps = this.props.busProps ? (this.props.busProps.slice()[index]):(null)
+                bus.push(<Suspense key={`s${pn}`}fallback={<AxioLoader key={`l${pn}`} mmWidth={Devices[pn].width}/>}><Device key={`c${pn}`} {...deviceProps}/></Suspense>)
+            }
+        })
 
         const containerClass = classNames([styles.base],{[styles.wrap]:this.props.wrap},{[styles.flexLeft]:this.props.left===true})
 
@@ -63,6 +79,19 @@ export default class AxioBus extends React.Component {
                 </AxioBusScale>           
         )
     }
+}
+
+function isSe(partNumber){
+    return SeDevices.hasOwnProperty(partNumber);
+}
+
+/**
+ * @summary Generates the se block for the corresponding set of se elements.  Array of length n part numbers
+ * must be chopped up into logical back plane numbers
+ * @param {*} sePartNumbers 
+ */
+function GenerateSeBp(sePartNumbers){
+
 }
 
 

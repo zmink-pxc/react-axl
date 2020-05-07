@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import styles from './SePSDI83.module.scss';
+import styles from './SePSDO42.module.scss';
 import SeModule from '@core/SeModule/SeModule.jsx';
 import SeConnector from '@core/SeConnector/SeConnector.jsx';
 

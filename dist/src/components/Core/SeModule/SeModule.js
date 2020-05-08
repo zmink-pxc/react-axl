@@ -69,7 +69,10 @@ function LedArea(props) {
     className: _SeModuleModule["default"].ledArea
   }, props.ledLabels.map(function (label, index) {
     var bigLed = index === 0 || index === 17;
-    return index === 9 ? /*#__PURE__*/_react["default"].createElement(_SeLock["default"], null) : /*#__PURE__*/_react["default"].createElement("div", {
+    return index === 9 ? /*#__PURE__*/_react["default"].createElement(_SeLock["default"], {
+      key: "l".concat(index)
+    }) : /*#__PURE__*/_react["default"].createElement("div", {
+      key: "lea".concat(index),
       className: _SeModuleModule["default"].ledContainer
     }, /*#__PURE__*/_react["default"].createElement(_SeLed["default"], {
       isErrLed: bigLed

@@ -289,7 +289,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/axiobus@1.0.19": {
+    "zmink.axioline/axiobus@1.0.20": {
         "files": [
             {
                 "relativePath": "src/components/AxioBus/AxioBus.jsx",
@@ -865,7 +865,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/load-semodules@0.0.1": {
+    "zmink.axioline/smart-elements/load-semodules@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Modules/SmartElements/load-semodules.js",
@@ -877,7 +877,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-ai4-i-420@0.0.1": {
+    "zmink.axioline/smart-elements/se-ai4-i-420@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Modules/SmartElements/Analog/Input/SeAI4I420/SeAI4I420.jsx",
@@ -889,7 +889,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-ai4-u-010@0.0.1": {
+    "zmink.axioline/smart-elements/se-ai4-u-010@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Modules/SmartElements/Analog/Input/SeAI4U010/SeAI4U010.jsx",
@@ -901,7 +901,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-ao4-i-420@0.0.1": {
+    "zmink.axioline/smart-elements/se-ao4-i-420@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Modules/SmartElements/Analog/Output/SeAO4I420/SeAO4I420.jsx",
@@ -913,7 +913,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-ao4-u-010@0.0.1": {
+    "zmink.axioline/smart-elements/se-ao4-u-010@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Modules/SmartElements/Analog/Output/SeAO4U010/SeAO4U010.jsx",
@@ -997,7 +997,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-cnt1@0.0.1": {
+    "zmink.axioline/smart-elements/se-cnt1@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Modules/SmartElements/SpecialFunction/SeCNT1/SeCNT1.jsx",
@@ -1033,7 +1033,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-di16-1@0.0.1": {
+    "zmink.axioline/smart-elements/se-di16-1@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Modules/SmartElements/Digital/Input/SeDI161/SeDI161.jsx",
@@ -1045,7 +1045,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-do16-1@0.0.1": {
+    "zmink.axioline/smart-elements/se-do16-1@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Modules/SmartElements/Digital/Output/SeDO161/SeDO161.jsx",
@@ -1057,7 +1057,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-inc1-sym@0.0.1": {
+    "zmink.axioline/smart-elements/se-inc1-sym@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Modules/SmartElements/SpecialFunction/SeINC1SYM/SeINC1SYM.jsx",
@@ -1069,7 +1069,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-iol4@0.0.1": {
+    "zmink.axioline/smart-elements/se-iol4@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Modules/SmartElements/SpecialFunction/SeIOL4/SeIOL4.jsx",
@@ -1141,7 +1141,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-module@0.0.1": {
+    "zmink.axioline/smart-elements/se-module@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Core/SeModule/SeModule.jsx",
@@ -1189,7 +1189,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-psdi8-3@0.0.1": {
+    "zmink.axioline/smart-elements/se-psdi8-3@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Modules/SmartElements/Digital/Input/SePSDI83/SePSDI83.jsx",
@@ -1213,7 +1213,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-psdo4-2@0.0.1": {
+    "zmink.axioline/smart-elements/se-psdo4-2@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Modules/SmartElements/Digital/Output/SePSDO42/SePSDO42.jsx",
@@ -1225,7 +1225,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-rs485@0.0.1": {
+    "zmink.axioline/smart-elements/se-rs485@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Modules/SmartElements/SpecialFunction/SeRS485/SeRS485.jsx",
@@ -1237,7 +1237,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-rtd4-pt100@0.0.1": {
+    "zmink.axioline/smart-elements/se-rtd4-pt100@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Modules/SmartElements/Analog/Input/SeRTD4PT100/SeRTD4PT100.jsx",
@@ -1249,7 +1249,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-sca@0.0.1": {
+    "zmink.axioline/smart-elements/se-sca@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Modules/SmartElements/SeSCA/SeSCA.jsx",

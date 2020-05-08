@@ -1,0 +1,71 @@
+@import '@styles/_axioline.scss';
+
+.root {
+    font-size: 2mm;
+    height: 125mm;
+    background-color: $axioline-grey;    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.inset{
+    background-color: black;
+    height: 2mm;
+    width: 4mm;
+}
+
+.partText {
+    position: relative;
+    width: 5mm;
+    height: 24mm;
+}
+
+.textFormat{
+    position: absolute;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+    bottom: 0px;
+    left: 0px;
+    height: 5mm;
+    width: 24mm;
+}
+
+.moduleArea {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.termGroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 8mm;
+    height: 20mm;
+    outline: 0.1mm solid black;
+}
+
+.leftArea {
+    position: relative;
+    padding-top: 4mm;
+    padding-bottom: 7mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 10mm;
+    height: 114mm;
+}
+
+.shadow{
+    z-index: 2;
+    position: absolute;
+    width:  100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    box-shadow: inset -1mm 0mm 2mm 0px rgba(0, 0, 0, 0.75);
+}

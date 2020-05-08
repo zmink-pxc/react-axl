@@ -23,11 +23,9 @@ var _loadModules = _interopRequireDefault(require("@modules/load-modules.js"));
 
 var _loadControllers = _interopRequireDefault(require("@controllers/load-controllers.js"));
 
+var _loadSemodules = _interopRequireDefault(require("@se/load-semodules.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -55,6 +53,16 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var Carrier = _react["default"].lazy(function () {
+  return Promise.resolve().then(function () {
+    return _interopRequireWildcard(require('@core/SeCarrier/SeCarrier.jsx'));
+  });
+});
+
 var Devices = Object.assign({}, _loadControllers["default"], _loadModules["default"]);
 /**
  * Renders axiobus components configured via part numbers
@@ -68,37 +76,52 @@ var AxioBus = /*#__PURE__*/function (_React$Component) {
   var _super = _createSuper(AxioBus);
 
   function AxioBus(props) {
-    var _this;
-
     _classCallCheck(this, AxioBus);
 
-    _this = _super.call(this, props); //this.deviceDictionary = deviceDictionary;
-
-    _this.defaultStyles = _this.props.busConfiguration.map(function (key) {
-      return {
-        y: 1000
-      };
-    });
-    return _this;
+    return _super.call(this, props); //this.deviceDictionary = deviceDictionary;
+    // this.defaultStyles = this.props.busConfiguration.map((key)=>{
+    //     return {y:1000}
+    // })
   }
 
   _createClass(AxioBus, [{
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this = this;
 
-      var bus = this.props.busConfiguration.map(function (key, index) {
-        var Device = Devices[key].component;
-        var deviceProps = _this2.props.busProps ? _this2.props.busProps.slice()[index] : null;
-        return /*#__PURE__*/_react["default"].createElement(_react.Suspense, {
-          key: "s".concat(key),
-          fallback: /*#__PURE__*/_react["default"].createElement(_AxioLoader["default"], {
-            key: "l".concat(key),
-            mmWidth: Devices[key].width
-          })
-        }, /*#__PURE__*/_react["default"].createElement(Device, _extends({
-          key: "c".concat(key)
-        }, deviceProps)));
+      var bus = [];
+      var seBlock = [];
+      var processingSeBlock = false;
+      this.props.busConfiguration.forEach(function (pn, index) {
+        if (isSe(pn) === true) {
+          processingSeBlock = true;
+          seBlock.push(pn);
+
+          if (index === _this.props.busConfiguration.length - 1) {
+            bus.push(GenerateSeBp(seBlock));
+            seBlock = [];
+            processingSeBlock = false;
+          }
+        } else {
+          //collected all SE devices, now generate and push onto stack
+          if (processingSeBlock === true) {
+            bus.push(GenerateSeBp(seBlock));
+            seBlock = [];
+            processingSeBlock = false;
+          }
+
+          var Device = Devices[pn].component;
+          var deviceProps = _this.props.busProps ? _this.props.busProps.slice()[index] : null;
+          bus.push( /*#__PURE__*/_react["default"].createElement(_react.Suspense, {
+            key: "s".concat(pn),
+            fallback: /*#__PURE__*/_react["default"].createElement(_AxioLoader["default"], {
+              key: "l".concat(pn),
+              mmWidth: Devices[pn].width
+            })
+          }, /*#__PURE__*/_react["default"].createElement(Device, _extends({
+            key: "c".concat(pn)
+          }, deviceProps))));
+        }
       });
       var containerClass = (0, _classnames["default"])([_AxioBusModule["default"].base], _defineProperty({}, _AxioBusModule["default"].wrap, this.props.wrap), _defineProperty({}, _AxioBusModule["default"].flexLeft, this.props.left === true));
       return /*#__PURE__*/_react["default"].createElement(_Scale.AxioBusScale, {
@@ -111,6 +134,35 @@ var AxioBus = /*#__PURE__*/function (_React$Component) {
 }(_react["default"].Component);
 
 exports["default"] = AxioBus;
+
+function isSe(partNumber) {
+  return _loadSemodules["default"].hasOwnProperty(partNumber);
+}
+/**
+ * @summary Generates the se block for the corresponding set of se elements.  Array of length n part numbers
+ * must be chopped up into logical back plane numbers
+ * @param {string[]} sePartNumbers 
+ */
+
+
+function GenerateSeBp(sePartNumbers) {
+  var children = sePartNumbers.map(function (pn, index) {
+    return _loadSemodules["default"][pn].component;
+  });
+  var width = sePartNumbers.length / 2 * 15;
+  var k = sePartNumbers.toString();
+  return /*#__PURE__*/_react["default"].createElement(_react.Suspense, {
+    key: "se".concat(k),
+    fallback: /*#__PURE__*/_react["default"].createElement(_AxioLoader["default"], {
+      key: "lse".concat(k),
+      mmWidth: width
+    })
+  }, /*#__PURE__*/_react["default"].createElement(Carrier, {
+    shrink: true,
+    numModules: sePartNumbers.length
+  }, children));
+}
+
 AxioBus.propTypes = {
   busConfiguration: _propTypes["default"].arrayOf(_propTypes["default"].string),
   busProps: _propTypes["default"].arrayOf(_propTypes["default"].object),

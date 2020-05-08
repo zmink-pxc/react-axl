@@ -1,0 +1,17 @@
+.root {
+    height: 14.2mm;
+    width: 6mm;
+    background-color: #CB7821;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.indent {
+    background-color: rgb(109, 65, 18);
+    height: 1.5mm;
+    width: 4mm;
+    margin-top: 1mm;
+    margin-bottom: 1mm;
+}

@@ -33,7 +33,7 @@ function SeCarrier(props) {
   var topRow = [];
   var bottomRow = [];
   props.children.forEach(function (Child, index) {
-    if (index % 2 === 0 && index !== 0) {
+    if ((index + 1) % 2 === 0) {
       bottomRow.push( /*#__PURE__*/_react["default"].createElement(_react.Suspense, {
         key: index,
         fallback: /*#__PURE__*/_react["default"].createElement("div", {

@@ -289,7 +289,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/axiobus@1.0.18": {
+    "zmink.axioline/axiobus@1.0.19": {
         "files": [
             {
                 "relativePath": "src/components/AxioBus/AxioBus.jsx",
@@ -985,7 +985,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-carrier@0.0.1": {
+    "zmink.axioline/smart-elements/se-carrier@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Core/SeCarrier/SeCarrier.jsx",

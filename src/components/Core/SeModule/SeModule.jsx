@@ -29,7 +29,7 @@ function LedArea(props){
     return (<div className={styles.ledArea}>{
         props.ledLabels.map((label,index)=>{
             const bigLed = (index === 0) || (index === 17);
-            return (index === 9) ? (<SeLock/>):(<div className={styles.ledContainer}><SeLed isErrLed={bigLed}/><div>{label}</div></div>)
+            return (index === 9) ? (<SeLock key={`l${index}`}/>):(<div key={`lea${index}`} className={styles.ledContainer}><SeLed isErrLed={bigLed}/><div>{label}</div></div>)
         })
     }</div>)
     

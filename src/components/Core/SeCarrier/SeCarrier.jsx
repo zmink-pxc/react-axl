@@ -14,7 +14,7 @@ export default function SeCarrier(props){
     var bottomRow = [];
 
     props.children.forEach((Child,index)=>{
-        if (index%2 === 0 && index !== 0){
+        if ((index+1)%2 === 0){
             bottomRow.push(<Suspense key={index} fallback={<div key={'d'+index}></div>}><Child/></Suspense>);
         }else{
             topRow.push(<Suspense key={index} fallback={<div key={'d'+index}></div>}><Child/></Suspense>);

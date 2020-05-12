@@ -32,21 +32,26 @@ export default class AxioBus extends React.Component {
     render(){
         var bus = [];
         var seBlock = [];
+        var seBlockProps = [];
         var processingSeBlock = false;
         this.props.busConfiguration.forEach((pn,index)=>{
             if (isSe(pn) === true) {
                 processingSeBlock = true;
+                seBlockProps.push(this.props.busProps ? (this.props.busProps.slice()[index]):(null))
                 seBlock.push(pn);
                 if (index === this.props.busConfiguration.length - 1){
-                    bus.push(GenerateSeBp(seBlock));
+                    bus.push(GenerateSeBp(seBlock,seBlockProps));
                     seBlock = [];
+                    seBlockProps = [];
                     processingSeBlock = false;
                 }
             }else{
                 //collected all SE devices, now generate and push onto stack
                 if (processingSeBlock === true){
-                    bus.push(GenerateSeBp(seBlock));
+                    seBlockProps.push(this.props.busProps ? (this.props.busProps.slice()[index]):(null))
+                    bus.push(GenerateSeBp(seBlock,seBlockProps));
                     seBlock = [];
+                    seBlockProps = [];
                     processingSeBlock = false;
                 }
                 const Device = Devices[pn].component;
@@ -94,9 +99,11 @@ function isSe(partNumber){
  * must be chopped up into logical back plane numbers
  * @param {string[]} sePartNumbers 
  */
-function GenerateSeBp(sePartNumbers){
+function GenerateSeBp(sePartNumbers,props){
     const children = sePartNumbers.map((pn,index)=>{
-        return SeDevices[pn].component;
+        const C = SeDevices[pn].component;
+        const deviceProps = props ? (props.slice()[index]):(null)
+        return <C {...deviceProps}/>;
     })
     const width = sePartNumbers.length / 2 * 15;
     const k = sePartNumbers.toString();

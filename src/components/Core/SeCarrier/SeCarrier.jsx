@@ -13,11 +13,11 @@ export default function SeCarrier(props){
     var topRow = [];
     var bottomRow = [];
 
-    props.children.forEach((Child,index)=>{
+    props.children.forEach((child,index)=>{
         if ((index+1)%2 === 0){
-            bottomRow.push(<Suspense key={index} fallback={<div key={'d'+index}></div>}><Child/></Suspense>);
+            bottomRow.push(<Suspense key={index} fallback={<div key={'d'+index}></div>}>{child}</Suspense>);
         }else{
-            topRow.push(<Suspense key={index} fallback={<div key={'d'+index}></div>}><Child/></Suspense>);
+            topRow.push(<Suspense key={index} fallback={<div key={'d'+index}></div>}>{child}</Suspense>);
         }
     });
     const modules = topRow.concat(bottomRow);

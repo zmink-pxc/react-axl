@@ -91,22 +91,27 @@ var AxioBus = /*#__PURE__*/function (_React$Component) {
 
       var bus = [];
       var seBlock = [];
+      var seBlockProps = [];
       var processingSeBlock = false;
       this.props.busConfiguration.forEach(function (pn, index) {
         if (isSe(pn) === true) {
           processingSeBlock = true;
+          seBlockProps.push(_this.props.busProps ? _this.props.busProps.slice()[index] : null);
           seBlock.push(pn);
 
           if (index === _this.props.busConfiguration.length - 1) {
-            bus.push(GenerateSeBp(seBlock));
+            bus.push(GenerateSeBp(seBlock, seBlockProps));
             seBlock = [];
+            seBlockProps = [];
             processingSeBlock = false;
           }
         } else {
           //collected all SE devices, now generate and push onto stack
           if (processingSeBlock === true) {
-            bus.push(GenerateSeBp(seBlock));
+            seBlockProps.push(_this.props.busProps ? _this.props.busProps.slice()[index] : null);
+            bus.push(GenerateSeBp(seBlock, seBlockProps));
             seBlock = [];
+            seBlockProps = [];
             processingSeBlock = false;
           }
 
@@ -145,9 +150,11 @@ function isSe(partNumber) {
  */
 
 
-function GenerateSeBp(sePartNumbers) {
+function GenerateSeBp(sePartNumbers, props) {
   var children = sePartNumbers.map(function (pn, index) {
-    return _loadSemodules["default"][pn].component;
+    var C = _loadSemodules["default"][pn].component;
+    var deviceProps = props ? props.slice()[index] : null;
+    return /*#__PURE__*/_react["default"].createElement(C, deviceProps);
   });
   var width = sePartNumbers.length / 2 * 15;
   var k = sePartNumbers.toString();

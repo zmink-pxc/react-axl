@@ -4,7 +4,10 @@
   "description": "React components for rendering Phoenix Contact axioline products",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "test": "react-scripts test",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -22,21 +25,56 @@
     "use-viewport-sizes": "^0.2.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-knobs": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18",
+    "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.2",
     "eslint-plugin-react-hooks": "^3.0.0",
+    "identity-obj-proxy": "^3.0.0",
     "node-sass": "^4.13.1",
+    "react-test-renderer": "^16.13.1",
     "sass-loader": "^7.3.1",
     "style-loader": "^1.1.4"
   },
   "peerDependencies": {
     "react": "16.x"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|scss)$": "identity-obj-proxy",
+      "@assets(.*)$": "<rootDir>/src/assets/$1",
+      "@components(.*)$":"<rootDir>/src/components/$1",
+      "@controllers(.*)$":"<rootDir>/src/components/Controllers/$1",
+      "@core(.*)$":"<rootDir>/src/components/Core/$1",
+      "@modules(.*)$":"<rootDir>/src/components/Modules/$1",
+      "@utils(.*)$":"<rootDir>/src/components/Utils/$1",
+      "@/(.*)$":"<rootDir>/src/components/$1",
+      "@styles(.*)$":"<rootDir>/src/styles/$1",
+      "@se(.*)$":"<rootDir>/src/components/Modules/SmartElements/$1"
+    }
   },
   "bit": {
     "env": {

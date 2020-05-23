@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="base"
+  style={Object {}}
+/>
+`;
+
+exports[`renders correctly 2`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "orange",
+      "height": "500px",
+      "left": "50px",
+      "position": "absolute",
+      "top": "100px",
+      "width": "400px",
+    }
+  }
+>
+  <div
+    className="base"
+    style={Object {}}
+  />
+</div>
+`;
+
+exports[`renders correctly 3`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "orange",
+      "boxSizing": "border-box",
+      "height": "312px",
+      "left": "50px",
+      "padding": "40px 40px",
+      "position": "absolute",
+      "top": "100px",
+      "width": "1500px",
+    }
+  }
+>
+  <div
+    className="base"
+    style={Object {}}
+  />
+</div>
+`;

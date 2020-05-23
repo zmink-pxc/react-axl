@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.defaultTerminals = defaultTerminals;
 exports.defaultLeds = defaultLeds;
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -23,7 +23,7 @@ var _PhoenixP = _interopRequireDefault(require("@core/PhoenixP/PhoenixP.jsx"));
 
 var _PhoenixBrand = _interopRequireDefault(require("@core/PhoenixBrand/PhoenixBrand.jsx"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -43,7 +43,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
@@ -119,77 +119,77 @@ var AxlModule = /*#__PURE__*/function (_React$PureComponent) {
 
       this.connSectionWidth = 0;
       var middleWidth = numCols * 5 + "mm";
-      var Logo = fullWidthLogo === true ? _PhoenixBrand["default"] : _PhoenixP["default"];
+      var Logo = fullWidthLogo === true ? _PhoenixBrand.default : _PhoenixP.default;
 
-      var cChildren = _react["default"].Children.map(children, function (child, index) {
-        return _react["default"].cloneElement(child, _this2.mapPropsToConnector(child, index));
+      var cChildren = _react.default.Children.map(children, function (child, index) {
+        return _react.default.cloneElement(child, _this2.mapPropsToConnector(child, index));
       });
 
-      return /*#__PURE__*/_react["default"].createElement("div", _extends({
-        className: _AxlModuleModule["default"].moduleBase,
+      return /*#__PURE__*/_react.default.createElement("div", _extends({
+        className: _AxlModuleModule.default.moduleBase,
         style: {
           width: width + "mm"
         }
-      }, rest), /*#__PURE__*/_react["default"].createElement("div", {
-        className: _AxlModuleModule["default"].moduleTop,
+      }, rest), /*#__PURE__*/_react.default.createElement("div", {
+        className: _AxlModuleModule.default.moduleTop,
         style: {
           width: this.faceWidth() + "mm"
         }
-      }, (raisedMidsection || hasTopRow) === false ? /*#__PURE__*/_react["default"].createElement("div", {
-        className: _AxlModuleModule["default"].raisedContainer,
+      }, (raisedMidsection || hasTopRow) === false ? /*#__PURE__*/_react.default.createElement("div", {
+        className: _AxlModuleModule.default.raisedContainer,
         style: {
           width: this.faceWidth() + "mm"
         }
-      }, /*#__PURE__*/_react["default"].createElement(Vents, {
+      }, /*#__PURE__*/_react.default.createElement(Vents, {
         width: width,
         upper: true
-      }), /*#__PURE__*/_react["default"].createElement(Label, {
+      }), /*#__PURE__*/_react.default.createElement(Label, {
         width: this.faceWidth() - 4 + 1,
         labels: labels
-      }), /*#__PURE__*/_react["default"].createElement(LabelHolder, null), /*#__PURE__*/_react["default"].createElement("div", {
-        className: _AxlModuleModule["default"].brandArea
-      }, /*#__PURE__*/_react["default"].createElement("div", {
-        className: _AxlModuleModule["default"].logo
-      }, /*#__PURE__*/_react["default"].createElement(Logo, null)), /*#__PURE__*/_react["default"].createElement("div", {
-        className: _AxlModuleModule["default"].printArea
-      }, /*#__PURE__*/_react["default"].createElement("div", {
-        className: _AxlModuleModule["default"].print
-      }, partName), /*#__PURE__*/_react["default"].createElement("div", {
-        className: _AxlModuleModule["default"].print
-      }, partNumber))), /*#__PURE__*/_react["default"].createElement(Vents, {
+      }), /*#__PURE__*/_react.default.createElement(LabelHolder, null), /*#__PURE__*/_react.default.createElement("div", {
+        className: _AxlModuleModule.default.brandArea
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: _AxlModuleModule.default.logo
+      }, /*#__PURE__*/_react.default.createElement(Logo, null)), /*#__PURE__*/_react.default.createElement("div", {
+        className: _AxlModuleModule.default.printArea
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: _AxlModuleModule.default.print
+      }, partName), /*#__PURE__*/_react.default.createElement("div", {
+        className: _AxlModuleModule.default.print
+      }, partNumber))), /*#__PURE__*/_react.default.createElement(Vents, {
         width: width,
         lower: true
-      })) : null), /*#__PURE__*/_react["default"].createElement("div", {
-        className: _AxlModuleModule["default"].moduleMiddle,
+      })) : null), /*#__PURE__*/_react.default.createElement("div", {
+        className: _AxlModuleModule.default.moduleMiddle,
         style: {
           width: this.connSectionWidth + 'mm'
         }
-      }, /*#__PURE__*/_react["default"].createElement(_AxlColorID["default"], colorCard), /*#__PURE__*/_react["default"].createElement(Inset, null)), /*#__PURE__*/_react["default"].createElement("div", {
-        className: _AxlModuleModule["default"].moduleBottom
+      }, /*#__PURE__*/_react.default.createElement(_AxlColorID.default, colorCard), /*#__PURE__*/_react.default.createElement(Inset, null)), /*#__PURE__*/_react.default.createElement("div", {
+        className: _AxlModuleModule.default.moduleBottom
       }, cChildren));
     }
   }]);
 
   return AxlModule;
-}(_react["default"].PureComponent);
+}(_react.default.PureComponent);
 
-exports["default"] = AxlModule;
+exports.default = AxlModule;
 AxlModule.propTypes = {
-  raisedMidsection: _propTypes["default"].bool.isRequired,
+  raisedMidsection: _propTypes.default.bool.isRequired,
   //does the card have a raised midsection
-  hasTopRow: _propTypes["default"].bool.isRequired,
+  hasTopRow: _propTypes.default.bool.isRequired,
   //do the connectors appear at the top of the module
-  width: _propTypes["default"].number.isRequired,
+  width: _propTypes.default.number.isRequired,
   //width in mm of the card
-  colorCard: _propTypes["default"].object.isRequired,
+  colorCard: _propTypes.default.object.isRequired,
   //properties to pass to colorID card
-  partNumber: _propTypes["default"].string.isRequired,
+  partNumber: _propTypes.default.string.isRequired,
   //part number of the module
-  partName: _propTypes["default"].string.isRequired,
+  partName: _propTypes.default.string.isRequired,
   //name of the product as displayed on the physical unit
-  fullWidthLogo: _propTypes["default"].bool,
+  fullWidthLogo: _propTypes.default.bool,
   //should show full width phoenix contact logo
-  moduleName: _propTypes["default"].string //name of the module e.g. AI8,DO8, etc
+  moduleName: _propTypes.default.string //name of the module e.g. AI8,DO8, etc
 
 };
 AxlModule.defaultProps = {
@@ -200,17 +200,17 @@ function Vents(props) {
   var vents = [];
   var numvents = Math.floor(props.width / 6);
   var ventContainerWidth = props.width - 1 + "mm";
-  var ventClass = (0, _classnames["default"])(_defineProperty({}, _AxlModuleModule["default"].ventLower, props.lower === true), _defineProperty({}, _AxlModuleModule["default"].ventUpper, props.upper === true));
+  var ventClass = (0, _classnames.default)(_defineProperty({}, _AxlModuleModule.default.ventLower, props.lower === true), _defineProperty({}, _AxlModuleModule.default.ventUpper, props.upper === true));
 
   for (var i = 0; i < numvents; i++) {
-    vents.push( /*#__PURE__*/_react["default"].createElement("div", {
+    vents.push( /*#__PURE__*/_react.default.createElement("div", {
       key: 'v' + i,
       className: ventClass
     }));
   }
 
-  return /*#__PURE__*/_react["default"].createElement("div", {
-    className: _AxlModuleModule["default"].ventContainer,
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: _AxlModuleModule.default.ventContainer,
     style: {
       width: ventContainerWidth
     }
@@ -223,7 +223,7 @@ function Label(props) {
   var lineWidth = props.width - 3 + "mm";
   var singleWidth = 10 * props.labels.length > props.width;
   var numVerticalLines = props.labels.length - 1;
-  var labelVerticalClass = (0, _classnames["default"])([_AxlModuleModule["default"].labelVerticalLine], _defineProperty({}, _AxlModuleModule["default"].singleWidthMargin, singleWidth), _defineProperty({}, _AxlModuleModule["default"].doubleWidthMargin, !singleWidth));
+  var labelVerticalClass = (0, _classnames.default)([_AxlModuleModule.default.labelVerticalLine], _defineProperty({}, _AxlModuleModule.default.singleWidthMargin, singleWidth), _defineProperty({}, _AxlModuleModule.default.doubleWidthMargin, !singleWidth));
   var Columns = props.labels.map(function (label, index) {
     if (index < props.labels.length) {
       var borderStyle, flex;
@@ -239,25 +239,25 @@ function Label(props) {
         flex = '1';
       }
 
-      return /*#__PURE__*/_react["default"].createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: labelVerticalClass,
         key: 'lbl' + index,
         style: {
           borderLeft: borderStyle,
           flexGrow: flex
         }
-      }, /*#__PURE__*/_react["default"].createElement("span", {
-        className: _AxlModuleModule["default"].labelText
+      }, /*#__PURE__*/_react.default.createElement("span", {
+        className: _AxlModuleModule.default.labelText
       }, label));
     }
   });
-  return /*#__PURE__*/_react["default"].createElement("div", {
-    className: _AxlModuleModule["default"].labelBase,
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: _AxlModuleModule.default.labelBase,
     style: {
       width: labelWidth
     }
-  }, /*#__PURE__*/_react["default"].createElement("div", {
-    className: _AxlModuleModule["default"].labelHorizontalLine,
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: _AxlModuleModule.default.labelHorizontalLine,
     style: {
       width: lineWidth
     }
@@ -266,14 +266,14 @@ function Label(props) {
 
 function Inset(props) {
   //const insetWidth = props.width + "mm";
-  return /*#__PURE__*/_react["default"].createElement("div", {
-    className: _AxlModuleModule["default"].inset
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: _AxlModuleModule.default.inset
   });
 }
 
 function LabelHolder(props) {
-  return /*#__PURE__*/_react["default"].createElement("div", {
-    className: _AxlModuleModule["default"].labelHolder
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: _AxlModuleModule.default.labelHolder
   }, props.children);
 }
 

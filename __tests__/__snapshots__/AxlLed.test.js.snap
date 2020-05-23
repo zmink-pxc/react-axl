@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="led_base"
+/>
+`;
+
+exports[`renders correctly 2`] = `
+<div
+  className="led_base error"
+/>
+`;
+
+exports[`renders correctly 3`] = `
+<div
+  className="led_base active"
+/>
+`;
+
+exports[`renders correctly 4`] = `
+<div
+  className="led_base warning"
+/>
+`;

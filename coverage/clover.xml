@@ -1,8 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1590252359292" clover="3.2.0">
-  <project timestamp="1590252359293" name="All files">
-    <metrics statements="132" coveredstatements="129" conditionals="33" coveredconditionals="27" methods="49" coveredmethods="48" elements="214" coveredelements="204" complexity="0" loc="132" ncloc="132" packages="18" files="18" classes="18"/>
-    <package name="AxlColorID">
+<coverage generated="1590253230653" clover="3.2.0">
+  <project timestamp="1590253230653" name="All files">
+    <metrics statements="291" coveredstatements="199" conditionals="79" coveredconditionals="46" methods="110" coveredmethods="61" elements="480" coveredelements="306" complexity="0" loc="291" ncloc="291" packages="24" files="24" classes="24"/>
+    <package name="AxioBus">
+      <metrics statements="38" coveredstatements="33" conditionals="14" coveredconditionals="8" methods="7" coveredmethods="6"/>
+      <file name="AxioBus.jsx" path="/Users/zacharymink/react-axl/src/components/AxioBus/AxioBus.jsx">
+        <metrics statements="38" coveredstatements="33" conditionals="14" coveredconditionals="8" methods="7" coveredmethods="6"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="36" count="3" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="38" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="40" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="41" count="4" type="stmt"/>
+        <line num="42" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="50" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="51" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="57" count="7" type="stmt"/>
+        <line num="58" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="59" count="7" type="stmt"/>
+        <line num="63" count="3" type="stmt"/>
+        <line num="65" count="3" type="stmt"/>
+        <line num="94" count="11" type="stmt"/>
+        <line num="103" count="1" type="stmt"/>
+        <line num="104" count="4" type="stmt"/>
+        <line num="105" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="106" count="4" type="stmt"/>
+        <line num="108" count="1" type="stmt"/>
+        <line num="109" count="1" type="stmt"/>
+        <line num="110" count="1" type="stmt"/>
+        <line num="114" count="1" type="stmt"/>
+        <line num="124" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Controllers">
+      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="load-controllers.js" path="/Users/zacharymink/react-axl/src/components/Controllers/load-controllers.js">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="Core.AxlColorID">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="AxlColorID.jsx" path="/Users/zacharymink/react-axl/src/components/Core/AxlColorID/AxlColorID.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -11,7 +63,7 @@
         <line num="13" count="4" type="stmt"/>
       </file>
     </package>
-    <package name="AxlConnector">
+    <package name="Core.AxlConnector">
       <metrics statements="18" coveredstatements="18" conditionals="6" coveredconditionals="4" methods="7" coveredmethods="7"/>
       <file name="AxlConnector.jsx" path="/Users/zacharymink/react-axl/src/components/Core/AxlConnector/AxlConnector.jsx">
         <metrics statements="18" coveredstatements="18" conditionals="6" coveredconditionals="4" methods="7" coveredmethods="7"/>
@@ -35,7 +87,7 @@
         <line num="76" count="9" type="cond" truecount="2" falsecount="0"/>
       </file>
     </package>
-    <package name="AxlLatch">
+    <package name="Core.AxlLatch">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="AxlLatch.jsx" path="/Users/zacharymink/react-axl/src/components/Core/AxlLatch/AxlLatch.jsx">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -47,7 +99,7 @@
         <line num="15" count="9" type="stmt"/>
       </file>
     </package>
-    <package name="AxlLed">
+    <package name="Core.AxlLed">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="AxlLed.jsx" path="/Users/zacharymink/react-axl/src/components/Core/AxlLed/AxlLed.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -56,7 +108,7 @@
         <line num="12" count="64" type="stmt"/>
       </file>
     </package>
-    <package name="AxlLedGroup">
+    <package name="Core.AxlLedGroup">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="AxlLedGroup.jsx" path="/Users/zacharymink/react-axl/src/components/Core/AxlLedGroup/AxlLedGroup.jsx">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
@@ -67,7 +119,7 @@
         <line num="34" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="AxlModule">
+    <package name="Core.AxlModule">
       <metrics statements="57" coveredstatements="55" conditionals="17" coveredconditionals="14" methods="13" coveredmethods="12"/>
       <file name="AxlModule.jsx" path="/Users/zacharymink/react-axl/src/components/Core/AxlModule/AxlModule.jsx">
         <metrics statements="57" coveredstatements="55" conditionals="17" coveredconditionals="14" methods="13" coveredmethods="12"/>
@@ -130,7 +182,7 @@
         <line num="175" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="AxlPlunger">
+    <package name="Core.AxlPlunger">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="AxlPlunger.jsx" path="/Users/zacharymink/react-axl/src/components/Core/AxlPlunger/AxlPlunger.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -139,7 +191,7 @@
         <line num="12" count="60" type="stmt"/>
       </file>
     </package>
-    <package name="AxlTerminal">
+    <package name="Core.AxlTerminal">
       <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="AxlTerminal.jsx" path="/Users/zacharymink/react-axl/src/components/Core/AxlTerminal/AxlTerminal.jsx">
         <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
@@ -153,7 +205,7 @@
         <line num="43" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="AxlTerminalGroup">
+    <package name="Core.AxlTerminalGroup">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="AxlTerminalGroup.jsx" path="/Users/zacharymink/react-axl/src/components/Core/AxlTerminalGroup/AxlTerminalGroup.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -161,85 +213,228 @@
         <line num="14" count="60" type="stmt"/>
       </file>
     </package>
-    <package name="PhoenixBrand">
+    <package name="Core.PhoenixBrand">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="PhoenixBrand.jsx" path="/Users/zacharymink/react-axl/src/components/Core/PhoenixBrand/PhoenixBrand.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="PhoenixP">
+    <package name="Core.PhoenixP">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="PhoenixP.jsx" path="/Users/zacharymink/react-axl/src/components/Core/PhoenixP/PhoenixP.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="3" type="stmt"/>
       </file>
     </package>
-    <package name="SeConnector">
+    <package name="Core.SeConnector">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="SeConnector.jsx" path="/Users/zacharymink/react-axl/src/components/Core/SeConnector/SeConnector.jsx">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="6" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="SeLed">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <file name="SeLed.jsx" path="/Users/zacharymink/react-axl/src/components/Core/SeLed/SeLed.jsx">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="7" count="34" type="stmt"/>
-        <line num="11" count="34" type="stmt"/>
-        <line num="12" count="34" type="stmt"/>
-      </file>
-    </package>
-    <package name="SeLock">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="SeLock.jsx" path="/Users/zacharymink/react-axl/src/components/Core/SeLock/SeLock.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="SeModule">
+    <package name="Core.SeLed">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="SeLed.jsx" path="/Users/zacharymink/react-axl/src/components/Core/SeLed/SeLed.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="7" count="51" type="stmt"/>
+        <line num="11" count="51" type="stmt"/>
+        <line num="12" count="51" type="stmt"/>
+      </file>
+    </package>
+    <package name="Core.SeLock">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="SeLock.jsx" path="/Users/zacharymink/react-axl/src/components/Core/SeLock/SeLock.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="Core.SeModule">
       <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
       <file name="SeModule.jsx" path="/Users/zacharymink/react-axl/src/components/Core/SeModule/SeModule.jsx">
         <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
-        <line num="29" count="2" type="stmt"/>
-        <line num="31" count="36" type="cond" truecount="2" falsecount="0"/>
-        <line num="32" count="36" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="31" count="54" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="54" type="cond" truecount="2" falsecount="0"/>
       </file>
     </package>
-    <package name="SePlunger">
+    <package name="Core.SePlunger">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="SePlunger.jsx" path="/Users/zacharymink/react-axl/src/components/Core/SePlunger/SePlunger.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="7" count="8" type="stmt"/>
-        <line num="11" count="8" type="stmt"/>
-        <line num="12" count="8" type="stmt"/>
+        <line num="7" count="16" type="stmt"/>
+        <line num="11" count="16" type="stmt"/>
+        <line num="12" count="16" type="stmt"/>
       </file>
     </package>
-    <package name="SeTerminal">
+    <package name="Core.SeTerminal">
       <metrics statements="8" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
       <file name="SeTerminal.jsx" path="/Users/zacharymink/react-axl/src/components/Core/SeTerminal/SeTerminal.jsx">
         <metrics statements="8" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="8" count="8" type="stmt"/>
-        <line num="12" count="8" type="stmt"/>
-        <line num="13" count="8" type="stmt"/>
-        <line num="14" count="8" type="stmt"/>
-        <line num="15" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="8" count="16" type="stmt"/>
+        <line num="12" count="16" type="stmt"/>
+        <line num="13" count="16" type="stmt"/>
+        <line num="14" count="16" type="stmt"/>
+        <line num="15" count="16" type="cond" truecount="1" falsecount="1"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="29" count="8" type="stmt"/>
+        <line num="29" count="16" type="stmt"/>
         <line num="43" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="SeTerminalGroup">
+    <package name="Core.SeTerminalGroup">
       <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="SeTerminalGroup.jsx" path="/Users/zacharymink/react-axl/src/components/Core/SeTerminalGroup/SeTerminalGroup.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="9" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="16" type="cond" truecount="2" falsecount="0"/>
         <line num="16" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Modules">
+      <metrics statements="26" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="25" coveredmethods="0"/>
+      <file name="load-modules.js" path="/Users/zacharymink/react-axl/src/components/Modules/load-modules.js">
+        <metrics statements="26" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="25" coveredmethods="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="Modules.SmartElements">
+      <metrics statements="15" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="0"/>
+      <file name="load-semodules.js" path="/Users/zacharymink/react-axl/src/components/Modules/SmartElements/load-semodules.js">
+        <metrics statements="15" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="Utils">
+      <metrics statements="75" coveredstatements="33" conditionals="32" coveredconditionals="11" methods="13" coveredmethods="7"/>
+      <file name="Scale.jsx" path="/Users/zacharymink/react-axl/src/components/Utils/Scale.jsx">
+        <metrics statements="75" coveredstatements="33" conditionals="32" coveredconditionals="11" methods="13" coveredmethods="7"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="37" count="5" type="stmt"/>
+        <line num="39" count="5" type="stmt"/>
+        <line num="41" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="55" count="5" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="69" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="73" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="77" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="93" count="5" type="stmt"/>
+        <line num="94" count="5" type="stmt"/>
+        <line num="95" count="5" type="stmt"/>
+        <line num="96" count="5" type="stmt"/>
+        <line num="97" count="5" type="stmt"/>
+        <line num="99" count="5" type="stmt"/>
+        <line num="100" count="2" type="stmt"/>
+        <line num="103" count="5" type="stmt"/>
+        <line num="104" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="105" count="5" type="stmt"/>
+        <line num="106" count="13" type="stmt"/>
+        <line num="109" count="0" type="stmt"/>
+        <line num="111" count="5" type="stmt"/>
+        <line num="115" count="5" type="stmt"/>
+        <line num="118" count="5" type="cond" truecount="2" falsecount="2"/>
+        <line num="119" count="0" type="stmt"/>
+        <line num="122" count="5" type="cond" truecount="2" falsecount="2"/>
+        <line num="123" count="0" type="stmt"/>
+        <line num="127" count="5" type="cond" truecount="3" falsecount="1"/>
+        <line num="131" count="0" type="stmt"/>
+        <line num="132" count="0" type="stmt"/>
+        <line num="134" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="138" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="139" count="13" type="stmt"/>
+        <line num="142" count="13" type="stmt"/>
+        <line num="143" count="13" type="stmt"/>
+        <line num="145" count="13" type="stmt"/>
+        <line num="150" count="5" type="stmt"/>
+        <line num="151" count="5" type="stmt"/>
+        <line num="152" count="5" type="stmt"/>
+        <line num="153" count="13" type="stmt"/>
+        <line num="154" count="13" type="stmt"/>
+        <line num="155" count="13" type="stmt"/>
+        <line num="157" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="Utils.AxioLoader">
+      <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="AxioLoader.jsx" path="/Users/zacharymink/react-axl/src/components/Utils/AxioLoader/AxioLoader.jsx">
+        <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
       </file>
     </package>
   </project>

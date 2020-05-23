@@ -1,0 +1,154 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for Modules/SmartElements/load-semodules.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">Modules/SmartElements</a> load-semodules.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">6.67% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>1/15</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/14</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">6.67% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>1/15</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * This map contains smart elements components which have part numbers that can be provided
+ * via axioline.  Devices such as the SCA and the Carrier components will not provide part numbers and
+ * must be generated via logic
+ */
+import React from 'react';
+&nbsp;
+&nbsp;
+const SeModules = {
+    "1088062": {component: React.lazy(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >import(/* webpackChunkName: "SeAI4I420" */ '@se/Analog/Input/SeAI4I420/SeAI4I420.jsx'))</span>},
+    "1088104": {component: React.lazy(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >import(/* webpackChunkName: "SeAI4U010" */ '@se/Analog/Input/SeAI4U010/SeAI4U010.jsx'))</span>},
+    "1088106": {component: React.lazy(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >import(/* webpackChunkName: "SeRTD4PT100" */ '@se/Analog/Input/SeRTD4PT100/SeRTD4PT100.jsx'))</span>},
+    "1088123": {component: React.lazy(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >import(/* webpackChunkName: "SeAO4I420" */ '@se/Analog/Output/SeAO4I420/SeAO4I420.jsx'))</span>},
+    "1088126": {component: React.lazy(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >import(/* webpackChunkName: "SeAO4U010" */ '@se/Analog/Output/SeAO4U010/SeAO4U010.jsx'))</span>},
+    "1088127": {component: React.lazy(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >import(/* webpackChunkName: "SeDI161" */ '@se/Digital/Input/SeDI161/SeDI161.jsx'))</span>},
+    "1079241": {component: React.lazy(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >import(/* webpackChunkName: "SePSDI83" */ '@se/Digital/Input/SePSDI83/SePSDI83.jsx'))</span>},
+    "1088129": {component: React.lazy(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >import(/* webpackChunkName: "SeDO161" */ '@se/Digital/Output/SeDO161/SeDO161.jsx'))</span>},
+    "1079231": {component: React.lazy(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >import(/* webpackChunkName: "SePSDO42" */ '@se/Digital/Output/SePSDO42/SePSDO42.jsx'))</span>},
+    "1088131": {component: React.lazy(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >import(/* webpackChunkName: "SeCNT1" */ '@se/SpecialFunction/SeCNT1/SeCNT1.jsx'))</span>},
+    "1088130": {component: React.lazy(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >import(/* webpackChunkName: "SeINC1SYM" */ '@se/SpecialFunction/SeINC1SYM/SeINC1SYM.jsx'))</span>},
+    "1088132": {component: React.lazy(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >import(/* webpackChunkName: "SeIOL4" */ '@se/SpecialFunction/SeIOL4/SeIOL4.jsx'))</span>},
+    "1088128": {component: React.lazy(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >import(/* webpackChunkName: "SeRS485" */ '@se/SpecialFunction/SeRS485/SeRS485.jsx'))</span>},
+    "1088134": {component: React.lazy(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >import(/* webpackChunkName: "SeSCA" */ '@se/SeSCA/SeSCA.jsx'))</span>}
+}
+&nbsp;
+export default SeModules</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Sat May 23 2020 10:00:30 GMT-0700 (Pacific Daylight Time)
+            </div>
+        </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    

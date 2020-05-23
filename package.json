@@ -66,6 +66,7 @@
     "moduleNameMapper": {
       "\\.(css|less|scss)$": "identity-obj-proxy",
       "@assets(.*)$": "<rootDir>/src/assets/$1",
+      "@components(.*)$":"<rootDir>/src/components/$1",
       "@controllers(.*)$":"<rootDir>/src/components/Controllers/$1",
       "@core(.*)$":"<rootDir>/src/components/Core/$1",
       "@modules(.*)$":"<rootDir>/src/components/Modules/$1",

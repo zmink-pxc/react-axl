@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1590252039068" clover="3.2.0">
-  <project timestamp="1590252039068" name="All files">
-    <metrics statements="107" coveredstatements="105" conditionals="25" coveredconditionals="20" methods="37" coveredmethods="36" elements="169" coveredelements="161" complexity="0" loc="107" ncloc="107" packages="11" files="11" classes="11"/>
+<coverage generated="1590252359292" clover="3.2.0">
+  <project timestamp="1590252359293" name="All files">
+    <metrics statements="132" coveredstatements="129" conditionals="33" coveredconditionals="27" methods="49" coveredmethods="48" elements="214" coveredelements="204" complexity="0" loc="132" ncloc="132" packages="18" files="18" classes="18"/>
     <package name="AxlColorID">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="AxlColorID.jsx" path="/Users/zacharymink/react-axl/src/components/Core/AxlColorID/AxlColorID.jsx">
@@ -173,6 +173,73 @@
       <file name="PhoenixP.jsx" path="/Users/zacharymink/react-axl/src/components/Core/PhoenixP/PhoenixP.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="SeConnector">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="SeConnector.jsx" path="/Users/zacharymink/react-axl/src/components/Core/SeConnector/SeConnector.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="SeLed">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="SeLed.jsx" path="/Users/zacharymink/react-axl/src/components/Core/SeLed/SeLed.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="7" count="34" type="stmt"/>
+        <line num="11" count="34" type="stmt"/>
+        <line num="12" count="34" type="stmt"/>
+      </file>
+    </package>
+    <package name="SeLock">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="SeLock.jsx" path="/Users/zacharymink/react-axl/src/components/Core/SeLock/SeLock.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="SeModule">
+      <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <file name="SeModule.jsx" path="/Users/zacharymink/react-axl/src/components/Core/SeModule/SeModule.jsx">
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="31" count="36" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="36" type="cond" truecount="2" falsecount="0"/>
+      </file>
+    </package>
+    <package name="SePlunger">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="SePlunger.jsx" path="/Users/zacharymink/react-axl/src/components/Core/SePlunger/SePlunger.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="SeTerminal">
+      <metrics statements="8" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="SeTerminal.jsx" path="/Users/zacharymink/react-axl/src/components/Core/SeTerminal/SeTerminal.jsx">
+        <metrics statements="8" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="15" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="29" count="8" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="SeTerminalGroup">
+      <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="SeTerminalGroup.jsx" path="/Users/zacharymink/react-axl/src/components/Core/SeTerminalGroup/SeTerminalGroup.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="9" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="1" type="stmt"/>
       </file>
     </package>
   </project>

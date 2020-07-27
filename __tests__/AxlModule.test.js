@@ -1,6 +1,6 @@
 import React from 'react';
 import AxlConnector from '../src/components/Core/AxlConnector/AxlConnector.jsx';
-import AxlModule,{defaultTerminals,defaultLeds} from '@core/AxlModule/AxlModule.jsx';
+import AxlModule,{defaultTerminals,defaultLeds} from '@bit/zmink.axioline.axl-module';
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {

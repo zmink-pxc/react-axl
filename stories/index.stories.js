@@ -98,7 +98,7 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
 
   storiesOf('AxlConnector',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AxlConnector pushInLatch={boolean('pushInLatch',false)}/>);
+  .add('Basic',()=><AxlConnector type="IO" isBlack={false} numRows={4} numCols={2}/>);
 
   storiesOf('Axl24VPower',module)
   .addDecorator(withKnobs)

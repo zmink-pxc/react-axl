@@ -1,14 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
-//import styles from './AxlModule.module.scss';
 import styles from '@bit/zmink.axioline.axl-modulemodule';
 import PropTypes from 'prop-types';
-//import AxlColorID from '@core/AxlColorID/AxlColorID.jsx';
 import AxlColorID from '@bit/zmink.axioline.axl-color-id';
-//import { switchCase } from '@babel/types';
-//import PhoenixP from '@core/PhoenixP/PhoenixP.jsx';
 import PhoenixP from '@bit/zmink.axioline.phoenix-p';
-//import PhoenixBrand from '@core/PhoenixBrand/PhoenixBrand.jsx';
 import PhoenixBrand from '@bit/zmink.axioline.phoenix-brand';
 
 export default class AxlModule extends React.PureComponent {

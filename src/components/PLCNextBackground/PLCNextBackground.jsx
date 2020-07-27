@@ -1,6 +1,5 @@
 import React from 'react';
-import styles from "./PLCnextBackground.module.scss";
-import classNames from 'classnames';
+import styles from '@bit/zmink.axioline.plcnext-background-module';
 import Particles from 'react-particles-js';
 //import particles from './particles.json';
 

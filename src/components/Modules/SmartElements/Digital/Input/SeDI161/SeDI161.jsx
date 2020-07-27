@@ -1,6 +1,6 @@
 
 import React from 'react';
-import SeModule from '@core/SeModule/SeModule.jsx';
+import SeModule from '@bit/zmink.axioline.smart-elements.se-module';
 import SeConnector from '@core/SeConnector/SeConnector.jsx';
 
 export default function SeDI161(props){

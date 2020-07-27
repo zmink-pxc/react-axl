@@ -2,8 +2,8 @@
 
 import React from 'react';
 import styles from './SePSDO42.module.scss';
-import SeModule from '@core/SeModule/SeModule.jsx';
-import SeConnector from '@core/SeConnector/SeConnector.jsx';
+import SeModule from '@bit/zmink.axioline.smart-elements.se-module';
+import SeConnector from '@bit/zmink.axioline.smart-elements.se-connector';
 
 export default function SePSDO42(props){
     const {partName,partNumber,ledLabels,...other} = props;

@@ -112,9 +112,9 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   .addDecorator(withKnobs)
   .add('Basic',()=><AxlLatch pushedIn={boolean('pushIn',false)}/>);
 
-  storiesOf('AxlLEDSocket',module)
+  storiesOf('AxlLedSocket',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AxlLEDSocket numRows={number('numRows',2)} numCols={number('numCols',2)}/>)
+  .add('Basic',()=><AxlLedSocket numRows={number('numRows',2)} numCols={number('numCols',2)}/>)
 
   storiesOf('AxlColorID',module)
   .addDecorator(withKnobs)

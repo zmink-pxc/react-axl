@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './AxlPlunger.module.scss'
+import styles from '@bit/zmink.axioline.axl-plungermodule';
 
 export default class AxlPlunger extends React.PureComponent {
     constructor(props){

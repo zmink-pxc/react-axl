@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './SePlunger.module.scss'
+import styles from '@bit/zmink.axioline.smart-elements.se-plunger-module';
 
 export default class SePlunger extends React.PureComponent {
     constructor(props){

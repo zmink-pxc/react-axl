@@ -1,10 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import styles from './AxlConnector.module.scss';
-import AxlLedGroup from '@core/AxlLedGroup/AxlLedGroup.jsx';
-import AxlTerminalGroup from '@core/AxlTerminalGroup/AxlTerminalGroup.jsx';
-import AxlLatch from '@core/AxlLatch/AxlLatch.jsx';
+import styles from '@bit/zmink.axioline.axl-connectormodule';
+import AxlLedGroup from '@bit/zmink.axioline.axl-led-group';
+import AxlTerminalGroup from '@bit/zmink.axioline.axl-terminal-group';
+import AxlLatch from '@bit/zmink.axioline.axl-latch';
 
 
 export default class AxlConnector extends React.PureComponent {

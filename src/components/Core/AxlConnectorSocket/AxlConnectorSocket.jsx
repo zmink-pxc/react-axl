@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './AxlConnectorSocket.module.scss'
-import AxlLedSocket from '@core/AxlLedSocket/AxlLedSocket.jsx';
-import AxlPlug from '@core/AxlPlug/AxlPlug.jsx';
+import styles from '@bit/zmink.axioline.axl-connector-socketmodule';
+import AxlLedSocket from '@bit/zmink.axioline.axl-led-socket';
+import AxlPlug from '@bit/zmink.axioline.axl-plug';
 
 export default class AxlConnectorSocket extends React.PureComponent {
     constructor(props){

@@ -1,6 +1,6 @@
 import React from 'react';
-import SeModule from '@core/SeModule/SeModule.jsx';
-import SeConnector from '@core/SeConnector/SeConnector.jsx';
+import SeModule from '@bit/zmink.axioline.smart-elements.se-module';
+import SeConnector from '@bit/zmink.axioline.smart-elements.se-connector';
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {

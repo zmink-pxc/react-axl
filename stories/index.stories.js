@@ -3,11 +3,12 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
-import { withKnobs, text, boolean, number,object } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean, number, object } from '@storybook/addon-knobs';
 
 import { Button, Welcome } from '@storybook/react/demo';
 
-import AxlLed from '../src/components/Core/AxlLed/AxlLed.jsx';
+//import AxlLed from '../src/components/Core/AxlLed/AxlLed.jsx';
+import AxlLed from '@bit/zmink.axioline.axl-led';
 import AxlLedHorizontal from '../src/components/Core/AxlLedHorizontal/AxlLedHorizontal.jsx';
 import AxlPlunger from '../src/components/Core/AxlPlunger/AxlPlunger.jsx';
 import AxlTerminal from '../src/components/Core/AxlTerminal/AxlTerminal.jsx';
@@ -53,7 +54,7 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
 
   storiesOf('AxlLed', module)
   .addDecorator(withKnobs)
-  .add('with text', () => <AxlLED/>)
+  .add('with text', () => <AxlLed/>)
   .add('as dynamic variables', () => {
     
     return (<AxlLed isError={boolean('isError', false)} isWarning={boolean('isWarning', false)} isActive={boolean('isActive', false)}/>);
@@ -97,7 +98,7 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
 
   storiesOf('AxlConnector',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AxlConnector pushInLatch={boolean('pushInLatch',false)}/>);
+  .add('Basic',()=><AxlConnector type="IO" isBlack={false} numRows={4} numCols={2}/>);
 
   storiesOf('Axl24VPower',module)
   .addDecorator(withKnobs)
@@ -111,9 +112,9 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   .addDecorator(withKnobs)
   .add('Basic',()=><AxlLatch pushedIn={boolean('pushIn',false)}/>);
 
-  storiesOf('AxlLEDSocket',module)
+  storiesOf('AxlLedSocket',module)
   .addDecorator(withKnobs)
-  .add('Basic',()=><AxlLEDSocket numRows={number('numRows',2)} numCols={number('numCols',2)}/>)
+  .add('Basic',()=><AxlLedSocket numRows={number('numRows',2)} numCols={number('numCols',2)}/>)
 
   storiesOf('AxlColorID',module)
   .addDecorator(withKnobs)

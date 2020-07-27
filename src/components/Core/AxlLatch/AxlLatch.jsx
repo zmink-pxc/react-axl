@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './AxlLatch.module.scss'
-
+import styles from '@bit/zmink.axioline.axl-latchmodule';
 export default class AxlLatch extends React.PureComponent {
     constructor(props){
         super(props)

@@ -1,4 +1,4 @@
-import AxlConnector from '@core/AxlConnector/AxlConnector.jsx';
+import AxlConnector from '@bit/zmink.axioline.axl-connector';
 import React from 'react';
 
 export default function AxlConnector4x2(props){

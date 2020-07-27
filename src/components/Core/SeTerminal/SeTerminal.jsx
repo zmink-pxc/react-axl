@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import styles from './SeTerminal.module.scss'
+import styles from '@bit/zmink.axioline.smart-elements.se-terminal-module';
 
 export default class SeTerminal extends React.PureComponent {
     constructor(props){

@@ -1,12 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './Axc2152.module.scss';
-import PropTypes from 'prop-types';
-import Connector from '@core/AxlConnector/AxlConnector.jsx';
-import AxlLedHorizontal from '@core/AxlLedHorizontal/AxlLedHorizontal.jsx';
-import PhoenixP from '@core/PhoenixP/PhoenixP.jsx';
-import TopCard from '@core/TopCard/TopCard.jsx';
-import BottomCard from '@core/BottomCard/BottomCard.jsx';
+import styles from '@bit/zmink.axioline.axc2152module';
+import Connector from '@bit/zmink.axioline.axl-connector';
+import AxlLedHorizontal from '@bit/zmink.axioline.axl-led-horizontal';
+import PhoenixP from '@bit/zmink.axioline.phoenix-p';
+import TopCard from '@bit/zmink.axioline.top-card.top-card';
+import BottomCard from '@bit/zmink.axioline.bottom-card.bottom-card';
 
 
 export default class Axc2152 extends React.PureComponent {

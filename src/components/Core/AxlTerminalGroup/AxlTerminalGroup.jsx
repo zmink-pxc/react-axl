@@ -1,8 +1,7 @@
 import React from 'react';
-import classNames from 'classnames';
-import styles from './AxlTerminalGroup.module.scss'
-import AxlPlunger from '@core/AxlPlunger/AxlPlunger.jsx';
-import AxlTerminal from '@core/AxlTerminal/AxlTerminal.jsx';
+import styles from '@bit/zmink.axioline.axl-terminal-groupmodule';
+import AxlPlunger from '@bit/zmink.axioline.axl-plunger';
+import AxlTerminal from '@bit/zmink.axioline.axl-terminal';
 
 export default class AxlTerminalGroup extends React.PureComponent {
     constructor(props){

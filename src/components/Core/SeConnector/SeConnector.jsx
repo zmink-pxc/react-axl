@@ -1,6 +1,6 @@
 import React from 'react';
-import SeTerminalGroup from '@core/SeTerminalGroup/SeTerminalGroup.jsx';
-import styles from './SeConnector.module.scss';
+import SeTerminalGroup from '@bit/zmink.axioline.smart-elements.se-terminal-group';
+import styles from '@bit/zmink.axioline.smart-elements.se-connector-module';
 
 export default function SeConnector(props){
     return (<div className={styles.root}>

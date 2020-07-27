@@ -1,9 +1,9 @@
 import React, {Suspense} from 'react';
 import PropTypes from 'prop-types';
-import styles from './SeCarrier.module.scss';
-import PhoenixP from '@core/PhoenixP/PhoenixP.jsx';
-import SeCarrierLed from '@core/SeCarrierLed/SeCarrierLed.jsx';
-import SeCarrierTerminal from '@core/SeCarrierTerminal/SeCarrierTerminal.jsx';
+import styles from '@bit/zmink.axioline.smart-elements.se-carrier-module';
+import PhoenixP from '@bit/zmink.axioline.phoenix-p';
+import SeCarrierLed from '@bit/zmink.axioline.smart-elements.se-carrier-led';
+import SeCarrierTerminal from '@bit/zmink.axioline.smart-elements.se-carrier-terminal';
 
 /**
  * 

@@ -1,7 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
-import styles from './AxlPlug.module.scss'
-
+import styles from '@bit/zmink.axioline.axl-plugmodule';
 export default class AxlPlug extends React.PureComponent {
     constructor(props){
         super(props)

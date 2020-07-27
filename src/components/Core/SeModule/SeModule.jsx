@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './SeModule.module.scss';
-import SeLed from '@core/SeLed/SeLed.jsx';
-import SeLock from '@core/SeLock/SeLock.jsx';
+import styles from '@bit/zmink.axioline.smart-elements.se-module-module';
+import SeLed from '@bit/zmink.axioline.smart-elements.se-led';
+import SeLock from '@bit/zmink.axioline.smart-elements.se-lock';
 
 export default function SeModule(props){
     const {partName,partNumber,leds,ledLabels,children,...other} = props;

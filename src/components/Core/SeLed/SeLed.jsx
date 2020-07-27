@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './SeLed.module.scss'
+import styles from '@bit/zmink.axioline.smart-elements.se-led-module';
 
 export default class SeLed extends React.PureComponent {
     constructor(props){

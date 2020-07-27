@@ -1,5 +1,5 @@
 import React from 'react';
-import SeTerminalGroup from '@core/SeTerminalGroup/SeTerminalGroup.jsx';
+import SeTerminalGroup from '@bit/zmink.axioline.smart-elements.se-terminal-group';
 import styles from './SeConnector.module.scss';
 
 export default function SeConnector(props){

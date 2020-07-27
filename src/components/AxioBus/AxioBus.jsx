@@ -1,15 +1,15 @@
 import React, {Suspense} from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import styles from './AxioBus.module.scss';
-import {StaggeredMotion,spring} from 'react-motion';
-import { AxioBusScale } from '@utils/Scale.jsx';
-import AxioLoader from '@utils/AxioLoader/AxioLoader.jsx';
-import Modules from '@modules/load-modules.js';
-import Controllers from '@controllers/load-controllers.js';
-import SeDevices from '@se/load-semodules.js';
+import styles from '@bit/zmink.axioline.axio-busmodule';
+import { AxioBusScale } from '@bit/zmink.axioline.scale';
+import AxioLoader from '@bit/zmink.axioline.axio-loader';
+import Modules from '@bit/zmink.axioline.load-modules';
+import Controllers from '@bit/zmink.axioline.load-controllers';
+import SeDevices from '@bit/zmink.axioline.smart-elements.load-semodules';
 
-const Carrier = React.lazy(() => import(/* webpackChunkName: "SeCarrier" */ '@core/SeCarrier/SeCarrier.jsx')) 
+const Carrier = React.lazy(() => import(/* webpackChunkName: "SeCarrier" */ '@bit/zmink.axioline.smart-elements.se-carrier')); 
+
 
 const Devices = Object.assign({},Controllers,Modules);
 

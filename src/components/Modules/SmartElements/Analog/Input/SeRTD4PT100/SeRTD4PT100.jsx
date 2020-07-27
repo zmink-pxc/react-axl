@@ -1,5 +1,5 @@
 import React from 'react';
-import SeModule from '@core/SeModule/SeModule.jsx';
+import SeModule from '@bit/zmink.axioline.smart-elements.se-module';
 import SeConnector from '@bit/zmink.axioline.smart-elements.se-connector';
 
 export default function SeRTD4PT100(props){

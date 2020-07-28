@@ -3,19 +3,19 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _AxlConnectorSocketModule = _interopRequireDefault(require("./AxlConnectorSocket.module.scss"));
+var _zminkAxioline = _interopRequireDefault(require("@bit/zmink.axioline.axl-connector-socketmodule"));
 
-var _AxlLedSocket = _interopRequireDefault(require("@core/AxlLedSocket/AxlLedSocket.jsx"));
+var _zminkAxioline2 = _interopRequireDefault(require("@bit/zmink.axioline.axl-led-socket"));
 
-var _AxlPlug = _interopRequireDefault(require("@core/AxlPlug/AxlPlug.jsx"));
+var _zminkAxioline3 = _interopRequireDefault(require("@bit/zmink.axioline.axl-plug"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -31,7 +31,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
@@ -57,19 +57,19 @@ var AxlConnectorSocket = /*#__PURE__*/function (_React$PureComponent) {
     value: function render() {
       var rows = Array.apply(null, Array(this.props.numRows));
       var cols = Array.apply(null, Array(this.props.numCols));
-      var rootStyle = (0, _classnames["default"])([_AxlConnectorSocketModule["default"].rootContainer], _defineProperty({}, _AxlConnectorSocketModule["default"].singleCol, this.props.numCols === 1), _defineProperty({}, _AxlConnectorSocketModule["default"].twoCol, this.props.numCols === 2)); //const connectorStyle = classNames(styles.connector,{[styles.blackConnector]: this.props.isBlack})
+      var rootStyle = (0, _classnames.default)([_zminkAxioline.default.rootContainer], _defineProperty({}, _zminkAxioline.default.singleCol, this.props.numCols === 1), _defineProperty({}, _zminkAxioline.default.twoCol, this.props.numCols === 2)); //const connectorStyle = classNames(styles.connector,{[styles.blackConnector]: this.props.isBlack})
 
-      return /*#__PURE__*/_react["default"].createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: rootStyle
-      }, /*#__PURE__*/_react["default"].createElement(_AxlLedSocket["default"], {
+      }, /*#__PURE__*/_react.default.createElement(_zminkAxioline2.default, {
         numRows: this.props.numRows,
         numCols: this.props.numCols
       }), rows.map(function (row, index) {
-        return /*#__PURE__*/_react["default"].createElement("div", {
+        return /*#__PURE__*/_react.default.createElement("div", {
           key: 'pg-' + index,
-          className: _AxlConnectorSocketModule["default"].plugGroup
+          className: _zminkAxioline.default.plugGroup
         }, cols.map(function (col, index) {
-          return /*#__PURE__*/_react["default"].createElement(_AxlPlug["default"], {
+          return /*#__PURE__*/_react.default.createElement(_zminkAxioline3.default, {
             key: 'p-' + index
           });
         }));
@@ -78,8 +78,8 @@ var AxlConnectorSocket = /*#__PURE__*/function (_React$PureComponent) {
   }]);
 
   return AxlConnectorSocket;
-}(_react["default"].PureComponent);
+}(_react.default.PureComponent);
 
-exports["default"] = AxlConnectorSocket;
+exports.default = AxlConnectorSocket;
 
 //# sourceMappingURL=AxlConnectorSocket.jsx.map

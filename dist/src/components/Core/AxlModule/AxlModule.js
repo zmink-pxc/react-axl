@@ -11,17 +11,15 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _AxlModuleModule = _interopRequireDefault(require("./AxlModule.module.scss"));
+var _zminkAxioline = _interopRequireDefault(require("@bit/zmink.axioline.axl-modulemodule"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _AxlColorID = _interopRequireDefault(require("@core/AxlColorID/AxlColorID.jsx"));
+var _zminkAxioline2 = _interopRequireDefault(require("@bit/zmink.axioline.axl-color-id"));
 
-var _types = require("@babel/types");
+var _zminkAxioline3 = _interopRequireDefault(require("@bit/zmink.axioline.phoenix-p"));
 
-var _PhoenixP = _interopRequireDefault(require("@core/PhoenixP/PhoenixP.jsx"));
-
-var _PhoenixBrand = _interopRequireDefault(require("@core/PhoenixBrand/PhoenixBrand.jsx"));
+var _zminkAxioline4 = _interopRequireDefault(require("@bit/zmink.axioline.phoenix-brand"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -119,24 +117,24 @@ var AxlModule = /*#__PURE__*/function (_React$PureComponent) {
 
       this.connSectionWidth = 0;
       var middleWidth = numCols * 5 + "mm";
-      var Logo = fullWidthLogo === true ? _PhoenixBrand.default : _PhoenixP.default;
+      var Logo = fullWidthLogo === true ? _zminkAxioline4.default : _zminkAxioline3.default;
 
       var cChildren = _react.default.Children.map(children, function (child, index) {
         return _react.default.cloneElement(child, _this2.mapPropsToConnector(child, index));
       });
 
       return /*#__PURE__*/_react.default.createElement("div", _extends({
-        className: _AxlModuleModule.default.moduleBase,
+        className: _zminkAxioline.default.moduleBase,
         style: {
           width: width + "mm"
         }
       }, rest), /*#__PURE__*/_react.default.createElement("div", {
-        className: _AxlModuleModule.default.moduleTop,
+        className: _zminkAxioline.default.moduleTop,
         style: {
           width: this.faceWidth() + "mm"
         }
       }, (raisedMidsection || hasTopRow) === false ? /*#__PURE__*/_react.default.createElement("div", {
-        className: _AxlModuleModule.default.raisedContainer,
+        className: _zminkAxioline.default.raisedContainer,
         style: {
           width: this.faceWidth() + "mm"
         }
@@ -147,25 +145,25 @@ var AxlModule = /*#__PURE__*/function (_React$PureComponent) {
         width: this.faceWidth() - 4 + 1,
         labels: labels
       }), /*#__PURE__*/_react.default.createElement(LabelHolder, null), /*#__PURE__*/_react.default.createElement("div", {
-        className: _AxlModuleModule.default.brandArea
+        className: _zminkAxioline.default.brandArea
       }, /*#__PURE__*/_react.default.createElement("div", {
-        className: _AxlModuleModule.default.logo
+        className: _zminkAxioline.default.logo
       }, /*#__PURE__*/_react.default.createElement(Logo, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: _AxlModuleModule.default.printArea
+        className: _zminkAxioline.default.printArea
       }, /*#__PURE__*/_react.default.createElement("div", {
-        className: _AxlModuleModule.default.print
+        className: _zminkAxioline.default.print
       }, partName), /*#__PURE__*/_react.default.createElement("div", {
-        className: _AxlModuleModule.default.print
+        className: _zminkAxioline.default.print
       }, partNumber))), /*#__PURE__*/_react.default.createElement(Vents, {
         width: width,
         lower: true
       })) : null), /*#__PURE__*/_react.default.createElement("div", {
-        className: _AxlModuleModule.default.moduleMiddle,
+        className: _zminkAxioline.default.moduleMiddle,
         style: {
           width: this.connSectionWidth + 'mm'
         }
-      }, /*#__PURE__*/_react.default.createElement(_AxlColorID.default, colorCard), /*#__PURE__*/_react.default.createElement(Inset, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: _AxlModuleModule.default.moduleBottom
+      }, /*#__PURE__*/_react.default.createElement(_zminkAxioline2.default, colorCard), /*#__PURE__*/_react.default.createElement(Inset, null)), /*#__PURE__*/_react.default.createElement("div", {
+        className: _zminkAxioline.default.moduleBottom
       }, cChildren));
     }
   }]);
@@ -200,7 +198,7 @@ function Vents(props) {
   var vents = [];
   var numvents = Math.floor(props.width / 6);
   var ventContainerWidth = props.width - 1 + "mm";
-  var ventClass = (0, _classnames.default)(_defineProperty({}, _AxlModuleModule.default.ventLower, props.lower === true), _defineProperty({}, _AxlModuleModule.default.ventUpper, props.upper === true));
+  var ventClass = (0, _classnames.default)(_defineProperty({}, _zminkAxioline.default.ventLower, props.lower === true), _defineProperty({}, _zminkAxioline.default.ventUpper, props.upper === true));
 
   for (var i = 0; i < numvents; i++) {
     vents.push( /*#__PURE__*/_react.default.createElement("div", {
@@ -210,7 +208,7 @@ function Vents(props) {
   }
 
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: _AxlModuleModule.default.ventContainer,
+    className: _zminkAxioline.default.ventContainer,
     style: {
       width: ventContainerWidth
     }
@@ -223,7 +221,7 @@ function Label(props) {
   var lineWidth = props.width - 3 + "mm";
   var singleWidth = 10 * props.labels.length > props.width;
   var numVerticalLines = props.labels.length - 1;
-  var labelVerticalClass = (0, _classnames.default)([_AxlModuleModule.default.labelVerticalLine], _defineProperty({}, _AxlModuleModule.default.singleWidthMargin, singleWidth), _defineProperty({}, _AxlModuleModule.default.doubleWidthMargin, !singleWidth));
+  var labelVerticalClass = (0, _classnames.default)([_zminkAxioline.default.labelVerticalLine], _defineProperty({}, _zminkAxioline.default.singleWidthMargin, singleWidth), _defineProperty({}, _zminkAxioline.default.doubleWidthMargin, !singleWidth));
   var Columns = props.labels.map(function (label, index) {
     if (index < props.labels.length) {
       var borderStyle, flex;
@@ -247,17 +245,17 @@ function Label(props) {
           flexGrow: flex
         }
       }, /*#__PURE__*/_react.default.createElement("span", {
-        className: _AxlModuleModule.default.labelText
+        className: _zminkAxioline.default.labelText
       }, label));
     }
   });
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: _AxlModuleModule.default.labelBase,
+    className: _zminkAxioline.default.labelBase,
     style: {
       width: labelWidth
     }
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: _AxlModuleModule.default.labelHorizontalLine,
+    className: _zminkAxioline.default.labelHorizontalLine,
     style: {
       width: lineWidth
     }
@@ -267,13 +265,13 @@ function Label(props) {
 function Inset(props) {
   //const insetWidth = props.width + "mm";
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: _AxlModuleModule.default.inset
+    className: _zminkAxioline.default.inset
   });
 }
 
 function LabelHolder(props) {
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: _AxlModuleModule.default.labelHolder
+    className: _zminkAxioline.default.labelHolder
   }, props.children);
 }
 

@@ -3,15 +3,15 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _AxlLatchModule = _interopRequireDefault(require("./AxlLatch.module.scss"));
+var _zminkAxioline = _interopRequireDefault(require("@bit/zmink.axioline.axl-latchmodule"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -27,7 +27,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
@@ -51,25 +51,25 @@ var AxlLatch = /*#__PURE__*/function (_React$PureComponent) {
   _createClass(AxlLatch, [{
     key: "render",
     value: function render() {
-      var topClass = (0, _classnames["default"])([_AxlLatchModule["default"].top], [_AxlLatchModule["default"].orange], _defineProperty({}, _AxlLatchModule["default"].topPushedIn, this.props.pushedIn));
-      var midClass = (0, _classnames["default"])([_AxlLatchModule["default"].mid], [_AxlLatchModule["default"].orange]);
-      var bottomClass = (0, _classnames["default"])([_AxlLatchModule["default"].bottom], [_AxlLatchModule["default"].orange]);
-      var mountClass = (0, _classnames["default"])([_AxlLatchModule["default"].mount], _defineProperty({}, _AxlLatchModule["default"].mountPushedIn, this.props.pushedIn));
-      return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("div", {
+      var topClass = (0, _classnames.default)([_zminkAxioline.default.top], [_zminkAxioline.default.orange], _defineProperty({}, _zminkAxioline.default.topPushedIn, this.props.pushedIn));
+      var midClass = (0, _classnames.default)([_zminkAxioline.default.mid], [_zminkAxioline.default.orange]);
+      var bottomClass = (0, _classnames.default)([_zminkAxioline.default.bottom], [_zminkAxioline.default.orange]);
+      var mountClass = (0, _classnames.default)([_zminkAxioline.default.mount], _defineProperty({}, _zminkAxioline.default.mountPushedIn, this.props.pushedIn));
+      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
         className: topClass
-      }, /*#__PURE__*/_react["default"].createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: mountClass
-      })), /*#__PURE__*/_react["default"].createElement("div", {
+      })), /*#__PURE__*/_react.default.createElement("div", {
         className: midClass
-      }), /*#__PURE__*/_react["default"].createElement("div", {
+      }), /*#__PURE__*/_react.default.createElement("div", {
         className: bottomClass
       }));
     }
   }]);
 
   return AxlLatch;
-}(_react["default"].PureComponent);
+}(_react.default.PureComponent);
 
-exports["default"] = AxlLatch;
+exports.default = AxlLatch;
 
 //# sourceMappingURL=AxlLatch.jsx.map

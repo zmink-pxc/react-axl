@@ -3,19 +3,19 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _AxlModule = _interopRequireWildcard(require("@core/AxlModule/AxlModule.jsx"));
+var _zminkAxioline = _interopRequireWildcard(require("@bit/zmink.axioline.axl-module"));
 
-var _AxlConnector = _interopRequireDefault(require("@core/AxlConnector/AxlConnector.jsx"));
+var _zminkAxioline2 = _interopRequireDefault(require("@bit/zmink.axioline.axl-connector"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -35,7 +35,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
@@ -68,7 +68,7 @@ var AxlRTD8S1F = /*#__PURE__*/function (_React$PureComponent) {
           leds = _this$props.leds,
           rest = _objectWithoutProperties(_this$props, ["partName", "partNumber", "mmWidth", "mmHeight", "terminals", "leds"]);
 
-      return /*#__PURE__*/_react["default"].createElement(_AxlModule["default"], _extends({}, rest, {
+      return /*#__PURE__*/_react.default.createElement(_zminkAxioline.default, _extends({}, rest, {
         partName: this.props.partName,
         width: this.props.mmWidth,
         terminals: this.props.terminals,
@@ -80,27 +80,27 @@ var AxlRTD8S1F = /*#__PURE__*/function (_React$PureComponent) {
         colorCard: {
           isAnalogIn: true
         }
-      }), /*#__PURE__*/_react["default"].createElement(_AxlConnector["default"], {
+      }), /*#__PURE__*/_react.default.createElement(_zminkAxioline2.default, {
         type: "POWER",
         isBlack: true,
         numRows: 4,
         numCols: 1
-      }), /*#__PURE__*/_react["default"].createElement(_AxlConnector["default"], {
+      }), /*#__PURE__*/_react.default.createElement(_zminkAxioline2.default, {
         type: "IO",
         isBlack: false,
         numRows: 4,
         numCols: 2
-      }), /*#__PURE__*/_react["default"].createElement(_AxlConnector["default"], {
+      }), /*#__PURE__*/_react.default.createElement(_zminkAxioline2.default, {
         type: "IO",
         isBlack: false,
         numRows: 4,
         numCols: 2
-      }), /*#__PURE__*/_react["default"].createElement(_AxlConnector["default"], {
+      }), /*#__PURE__*/_react.default.createElement(_zminkAxioline2.default, {
         type: "IO",
         isBlack: false,
         numRows: 4,
         numCols: 2
-      }), /*#__PURE__*/_react["default"].createElement(_AxlConnector["default"], {
+      }), /*#__PURE__*/_react.default.createElement(_zminkAxioline2.default, {
         type: "IO",
         isBlack: false,
         numRows: 4,
@@ -110,17 +110,17 @@ var AxlRTD8S1F = /*#__PURE__*/function (_React$PureComponent) {
   }]);
 
   return AxlRTD8S1F;
-}(_react["default"].PureComponent);
+}(_react.default.PureComponent);
 
-exports["default"] = AxlRTD8S1F;
+exports.default = AxlRTD8S1F;
 AxlRTD8S1F.defaultProps = {
   partName: "RTD8 S",
   partNumber: "2702120",
   mmWidth: 53.6,
   //width of component in mm which can be converted to px size
   mmHeight: 122,
-  terminals: (0, _AxlModule.defaultTerminals)(12),
-  leds: (0, _AxlModule.defaultLeds)(12)
+  terminals: (0, _zminkAxioline.defaultTerminals)(12),
+  leds: (0, _zminkAxioline.defaultLeds)(12)
 };
 
 //# sourceMappingURL=AxlRTD8S1F.jsx.map

@@ -3,15 +3,15 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _AxlPlungerModule = _interopRequireDefault(require("./AxlPlunger.module.scss"));
+var _zminkAxioline = _interopRequireDefault(require("@bit/zmink.axioline.axl-plungermodule"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -27,7 +27,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
@@ -51,18 +51,18 @@ var AxlPlunger = /*#__PURE__*/function (_React$PureComponent) {
   _createClass(AxlPlunger, [{
     key: "render",
     value: function render() {
-      var plungerClass = (0, _classnames["default"])(_AxlPlungerModule["default"].plunger_base, _defineProperty({}, _AxlPlungerModule["default"].red, this.props.red), _defineProperty({}, _AxlPlungerModule["default"].green, this.props.green), _defineProperty({}, _AxlPlungerModule["default"].blue, this.props.blue), _defineProperty({}, _AxlPlungerModule["default"].pushed_in, this.props.pushIn));
-      return /*#__PURE__*/_react["default"].createElement("div", {
+      var plungerClass = (0, _classnames.default)(_zminkAxioline.default.plunger_base, _defineProperty({}, _zminkAxioline.default.red, this.props.red), _defineProperty({}, _zminkAxioline.default.green, this.props.green), _defineProperty({}, _zminkAxioline.default.blue, this.props.blue), _defineProperty({}, _zminkAxioline.default.pushed_in, this.props.pushIn));
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: plungerClass
-      }, /*#__PURE__*/_react["default"].createElement("div", {
-        className: _AxlPlungerModule["default"].middle
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: _zminkAxioline.default.middle
       }));
     }
   }]);
 
   return AxlPlunger;
-}(_react["default"].PureComponent);
+}(_react.default.PureComponent);
 
-exports["default"] = AxlPlunger;
+exports.default = AxlPlunger;
 
 //# sourceMappingURL=AxlPlunger.jsx.map

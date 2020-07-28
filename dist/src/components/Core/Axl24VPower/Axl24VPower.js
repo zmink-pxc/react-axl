@@ -3,13 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = Axl24VPower;
+exports.default = Axl24VPower;
 
-var _AxlConnector = _interopRequireDefault(require("@core/AxlConnector/AxlConnector.jsx"));
+var _zminkAxioline = _interopRequireDefault(require("@bit/zmink.axioline.axl-connector"));
 
 var _react = _interopRequireDefault(require("react"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -40,7 +40,7 @@ function Axl24VPower(props) {
     l.label = ledLabels[index];
     return l;
   });
-  return /*#__PURE__*/_react["default"].createElement(_AxlConnector["default"], {
+  return /*#__PURE__*/_react.default.createElement(_zminkAxioline.default, {
     terminals: terminals,
     leds: leds,
     numRows: 4,

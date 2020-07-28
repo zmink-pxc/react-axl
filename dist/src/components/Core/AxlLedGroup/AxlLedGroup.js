@@ -3,17 +3,15 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
+var _zminkAxioline = _interopRequireDefault(require("@bit/zmink.axioline.axl-led-groupmodule"));
 
-var _AxlLedGroupModule = _interopRequireDefault(require("./AxlLedGroup.module.scss"));
+var _zminkAxioline2 = _interopRequireDefault(require("@bit/zmink.axioline.axl-led"));
 
-var _AxlLed = _interopRequireDefault(require("@core/AxlLed/AxlLed.jsx"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -37,7 +35,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
@@ -61,31 +59,31 @@ var AxlLedGroup = /*#__PURE__*/function (_React$PureComponent) {
   _createClass(AxlLedGroup, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement("div", {
-        className: _AxlLedGroupModule["default"].rootContainer
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: _zminkAxioline.default.rootContainer
       }, this.props.leds.map(function (led, index) {
         var _led = _objectSpread({}, led),
             label = _led.label,
             rest = _objectWithoutProperties(_led, ["label"]);
 
-        return /*#__PURE__*/_react["default"].createElement("div", {
-          className: _AxlLedGroupModule["default"].row,
+        return /*#__PURE__*/_react.default.createElement("div", {
+          className: _zminkAxioline.default.row,
           key: 'lr' + index
-        }, /*#__PURE__*/_react["default"].createElement("div", {
-          className: _AxlLedGroupModule["default"].ledContainer
-        }, /*#__PURE__*/_react["default"].createElement(_AxlLed["default"], rest)), /*#__PURE__*/_react["default"].createElement("div", {
-          className: _AxlLedGroupModule["default"].labelContainer
-        }, /*#__PURE__*/_react["default"].createElement("div", {
-          className: _AxlLedGroupModule["default"].label
+        }, /*#__PURE__*/_react.default.createElement("div", {
+          className: _zminkAxioline.default.ledContainer
+        }, /*#__PURE__*/_react.default.createElement(_zminkAxioline2.default, rest)), /*#__PURE__*/_react.default.createElement("div", {
+          className: _zminkAxioline.default.labelContainer
+        }, /*#__PURE__*/_react.default.createElement("div", {
+          className: _zminkAxioline.default.label
         }, label)));
       }));
     }
   }]);
 
   return AxlLedGroup;
-}(_react["default"].PureComponent);
+}(_react.default.PureComponent);
 
-exports["default"] = AxlLedGroup;
+exports.default = AxlLedGroup;
 AxlLedGroup.defaultProps = {
   leds: [{
     isWarning: true,

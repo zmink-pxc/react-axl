@@ -3,15 +3,15 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _SeLedModule = _interopRequireDefault(require("./SeLed.module.scss"));
+var _zminkAxiolineSmartElements = _interopRequireDefault(require("@bit/zmink.axioline.smart-elements.se-led-module"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -27,7 +27,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
@@ -51,19 +51,19 @@ var SeLed = /*#__PURE__*/function (_React$PureComponent) {
   _createClass(SeLed, [{
     key: "render",
     value: function render() {
-      var ledClass = (0, _classnames["default"])(_SeLedModule["default"].led_base, _defineProperty({}, _SeLedModule["default"].error, this.props.isError), _defineProperty({}, _SeLedModule["default"].warning, this.props.isWarning), _defineProperty({}, _SeLedModule["default"].active, this.props.isActive), _defineProperty({}, _SeLedModule["default"].errLed, this.props.isErrLed));
-      return /*#__PURE__*/_react["default"].createElement("div", {
+      var ledClass = (0, _classnames.default)(_zminkAxiolineSmartElements.default.led_base, _defineProperty({}, _zminkAxiolineSmartElements.default.error, this.props.isError), _defineProperty({}, _zminkAxiolineSmartElements.default.warning, this.props.isWarning), _defineProperty({}, _zminkAxiolineSmartElements.default.active, this.props.isActive), _defineProperty({}, _zminkAxiolineSmartElements.default.errLed, this.props.isErrLed));
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: ledClass
       });
     }
   }]);
 
   return SeLed;
-}(_react["default"].PureComponent); //isError
+}(_react.default.PureComponent); //isError
 //isWarning
 //isActive
 
 
-exports["default"] = SeLed;
+exports.default = SeLed;
 
 //# sourceMappingURL=SeLed.jsx.map

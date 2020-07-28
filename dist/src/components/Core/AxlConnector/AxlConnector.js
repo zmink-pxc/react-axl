@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -11,15 +11,15 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _AxlConnectorModule = _interopRequireDefault(require("./AxlConnector.module.scss"));
+var _zminkAxioline = _interopRequireDefault(require("@bit/zmink.axioline.axl-connectormodule"));
 
-var _AxlLedGroup = _interopRequireDefault(require("@core/AxlLedGroup/AxlLedGroup.jsx"));
+var _zminkAxioline2 = _interopRequireDefault(require("@bit/zmink.axioline.axl-led-group"));
 
-var _AxlTerminalGroup = _interopRequireDefault(require("@core/AxlTerminalGroup/AxlTerminalGroup.jsx"));
+var _zminkAxioline3 = _interopRequireDefault(require("@bit/zmink.axioline.axl-terminal-group"));
 
-var _AxlLatch = _interopRequireDefault(require("@core/AxlLatch/AxlLatch.jsx"));
+var _zminkAxioline4 = _interopRequireDefault(require("@bit/zmink.axioline.axl-latch"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -37,7 +37,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
@@ -65,57 +65,57 @@ var AxlConnector = /*#__PURE__*/function (_React$PureComponent) {
 
       var cols = Array.apply(null, Array(this.props.numCols));
       var rows = Array.apply(null, Array(this.props.numRows));
-      var connectorStyle = (0, _classnames["default"])(_AxlConnectorModule["default"].connector);
-      var connectorMiddleStyle = (0, _classnames["default"])(_AxlConnectorModule["default"]['connector-middle'], _defineProperty({}, _AxlConnectorModule["default"].blackConnector, this.props.isBlack));
+      var connectorStyle = (0, _classnames.default)(_zminkAxioline.default.connector);
+      var connectorMiddleStyle = (0, _classnames.default)(_zminkAxioline.default['connector-middle'], _defineProperty({}, _zminkAxioline.default.blackConnector, this.props.isBlack));
       var terminals = this.props.hasOwnProperty('terminals') ? this.props.terminals : initArray(placeholderTerminal, this.props.numRows * this.props.numCols);
-      return /*#__PURE__*/_react["default"].createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: connectorStyle,
         style: {
           width: this.props.numCols * 5 + 'mm'
         }
-      }, /*#__PURE__*/_react["default"].createElement(Foot, {
+      }, /*#__PURE__*/_react.default.createElement(Foot, {
         isBlack: this.props.isBlack
-      }), /*#__PURE__*/_react["default"].createElement("div", {
+      }), /*#__PURE__*/_react.default.createElement("div", {
         className: connectorMiddleStyle
       }, cols.map(function (col, coli) {
         var j = _this.props.numRows * coli;
         var leds = _this.props.hasOwnProperty('leds') ? _this.props.leds.slice(j, j + _this.props.numRows) : initArray(placeholderLed, _this.props.numRows); // if (this.props.leds !== (this.props.numRows*this.props.numCols)){leds = }
 
-        return /*#__PURE__*/_react["default"].createElement("div", {
-          className: _AxlConnectorModule["default"].col,
+        return /*#__PURE__*/_react.default.createElement("div", {
+          className: _zminkAxioline.default.col,
           key: 'ter-' + coli
-        }, /*#__PURE__*/_react["default"].createElement(_AxlLedGroup["default"], {
+        }, /*#__PURE__*/_react.default.createElement(_zminkAxioline2.default, {
           leds: leds
         }), rows.map(function (row, rowi) {
-          return /*#__PURE__*/_react["default"].createElement(_AxlTerminalGroup["default"], _extends({
+          return /*#__PURE__*/_react.default.createElement(_zminkAxioline3.default, _extends({
             key: 'ter-' + rowi + '-' + coli
           }, terminals[coli * _this.props.numRows + rowi], {
             isBlack: _this.props.isBlack === true,
             isEnd: rowi === _this.props.numRows - 1
           }));
         }));
-      })), /*#__PURE__*/_react["default"].createElement(_AxlLatch["default"], {
+      })), /*#__PURE__*/_react.default.createElement(_zminkAxioline4.default, {
         pushedIn: this.props.pushInLatch
       }));
     }
   }]);
 
   return AxlConnector;
-}(_react["default"].PureComponent);
+}(_react.default.PureComponent);
 
-exports["default"] = AxlConnector;
+exports.default = AxlConnector;
 AxlConnector.propTypes = {
-  pushInLatch: _propTypes["default"].bool,
+  pushInLatch: _propTypes.default.bool,
   //push the latch in
-  isBlack: _propTypes["default"].bool,
+  isBlack: _propTypes.default.bool,
   //is the connector black
-  numRows: _propTypes["default"].number.isRequired,
+  numRows: _propTypes.default.number.isRequired,
   //number of rows on the connector
-  numCols: _propTypes["default"].number.isRequired,
+  numCols: _propTypes.default.number.isRequired,
   //number of columns on the connector
-  terminals: _propTypes["default"].array,
+  terminals: _propTypes.default.array,
   //hooks into terminal props if necessary
-  leds: _propTypes["default"].array //hooks into led props for animating and labeling purposes
+  leds: _propTypes.default.array //hooks into led props for animating and labeling purposes
 
 }; // AxlConnector.defaultProps = {
 //     isBlack: true,
@@ -141,13 +141,13 @@ function initArray(initElement, length) {
 }
 
 function Foot(props) {
-  return /*#__PURE__*/_react["default"].createElement("div", {
-    className: _AxlConnectorModule["default"].connectorFoot,
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: _zminkAxioline.default.connectorFoot,
     style: {
-      backgroundColor: props.isBlack === true ? 'black' : _AxlConnectorModule["default"].axiolineGrey
+      backgroundColor: props.isBlack === true ? 'black' : _zminkAxioline.default.axiolineGrey
     }
-  }, /*#__PURE__*/_react["default"].createElement("div", {
-    className: _AxlConnectorModule["default"].footTop
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: _zminkAxioline.default.footTop
   }));
 }
 

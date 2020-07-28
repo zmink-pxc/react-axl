@@ -3,18 +3,18 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = SeSCA;
+exports.default = SeSCA;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _SeModule = _interopRequireDefault(require("@core/SeModule/SeModule.jsx"));
+var _zminkAxiolineSmartElements = _interopRequireDefault(require("@bit/zmink.axioline.smart-elements.se-module"));
 
-var _SeConnector = _interopRequireDefault(require("@core/SeConnector/SeConnector.jsx"));
+var _zminkAxiolineSmartElements2 = _interopRequireDefault(require("@bit/zmink.axioline.smart-elements.se-connector"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function SeSCA(props) {
-  return /*#__PURE__*/_react["default"].createElement(_SeModule["default"], {
+  return /*#__PURE__*/_react.default.createElement(_zminkAxiolineSmartElements.default, {
     partName: props.partName,
     ledLabels: props.ledLabels
   });

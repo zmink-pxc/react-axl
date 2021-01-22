@@ -175,6 +175,7 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   .add('Scaling with Smart Elements',()=><div style={{width: "1500px",height: "312px",boxSizing: 'border-box',padding:'40px 40px',backgroundColor: 'orange',position: 'absolute',left:'50px',top: '100px'}}><AxioBus busConfiguration={['2404267','2701916','1088127','1088129','1088062','1088123']}/></div>)
   .add('SCA Rendering 1',()=><div style={{width: "1500px",height: "312px",boxSizing: 'border-box',padding:'40px 40px',backgroundColor: 'orange',position: 'absolute',left:'50px',top: '100px'}}><AxioBus busConfiguration={['2404267','2701916','1088127','1088123','1088062']}/></div>)
   .add('SCA Rendering 2',()=><div style={{width: "1500px",height: "312px",boxSizing: 'border-box',padding:'40px 40px',backgroundColor: 'orange',position: 'absolute',left:'50px',top: '100px'}}><AxioBus busConfiguration={['2404267','2701916','1088127','1088123']}/></div>)
+  .add('SCA Rendering 3',()=><div style={{width: "1500px",height: "312px",boxSizing: 'border-box',padding:'40px 40px',backgroundColor: 'orange',position: 'absolute',left:'50px',top: '100px'}}><AxioBus busConfiguration={['2404267','2701916','1088127','1088123','1088127','1088123','1088123']}/></div>)
 
 
   storiesOf('Axioloader',module)

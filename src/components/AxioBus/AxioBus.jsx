@@ -100,14 +100,20 @@ function isSe(partNumber){
  * @param {string[]} sePartNumbers 
  */
 function GenerateSeBp(sePartNumbers,props){
-    const children = sePartNumbers.map((pn,index)=>{
+    //collect number of SCA elements
+    var seParts = sePartNumbers.slice();
+    const scaNum = 4*Math.ceil(sePartNumbers.length/4)-sePartNumbers.length;
+    var arr = Array(scaNum).fill("1088134");
+    seParts = seParts.concat(arr);
+
+    const children = seParts.map((pn,index)=>{
         const C = SeDevices[pn].component;
         const deviceProps = props ? (props.slice()[index]):(null)
         return <C {...deviceProps}/>;
-    })
-    const width = sePartNumbers.length / 2 * 15;
-    const k = sePartNumbers.toString();
-    return <Suspense key={`se${k}`} fallback={<AxioLoader key={`lse${k}`} mmWidth={width}/>}><Carrier shrink={true} numModules={sePartNumbers.length}>{children}</Carrier></Suspense>
+    });
+    const width = seParts.length / 2 * 15;
+    const k = seParts.toString();
+    return <Suspense key={`se${k}`} fallback={<AxioLoader key={`lse${k}`} mmWidth={width}/>}><Carrier shrink={true} numModules={seParts.length}>{children}</Carrier></Suspense>
 }
 
 

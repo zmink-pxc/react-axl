@@ -289,12 +289,12 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/axiobus@1.0.25": {
+    "zmink.axioline/axiobus@1.0.27": {
         "files": [
             {
+                "name": "AxioBus.jsx",
                 "relativePath": "src/components/AxioBus/AxioBus.jsx",
-                "test": false,
-                "name": "AxioBus.jsx"
+                "test": false
             }
         ],
         "mainFile": "src/components/AxioBus/AxioBus.jsx",
@@ -865,60 +865,60 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/load-semodules@0.0.5": {
+    "zmink.axioline/smart-elements/load-semodules@0.0.6": {
         "files": [
             {
+                "name": "load-semodules.js",
                 "relativePath": "src/components/Modules/SmartElements/load-semodules.js",
-                "test": false,
-                "name": "load-semodules.js"
+                "test": false
             }
         ],
         "mainFile": "src/components/Modules/SmartElements/load-semodules.js",
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-ai4-i-420@0.0.5": {
+    "zmink.axioline/smart-elements/se-ai4-i-420@0.0.6": {
         "files": [
             {
+                "name": "SeAI4I420.jsx",
                 "relativePath": "src/components/Modules/SmartElements/Analog/Input/SeAI4I420/SeAI4I420.jsx",
-                "test": false,
-                "name": "SeAI4I420.jsx"
+                "test": false
             }
         ],
         "mainFile": "src/components/Modules/SmartElements/Analog/Input/SeAI4I420/SeAI4I420.jsx",
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-ai4-u-010@0.0.5": {
+    "zmink.axioline/smart-elements/se-ai4-u-010@0.0.6": {
         "files": [
             {
+                "name": "SeAI4U010.jsx",
                 "relativePath": "src/components/Modules/SmartElements/Analog/Input/SeAI4U010/SeAI4U010.jsx",
-                "test": false,
-                "name": "SeAI4U010.jsx"
+                "test": false
             }
         ],
         "mainFile": "src/components/Modules/SmartElements/Analog/Input/SeAI4U010/SeAI4U010.jsx",
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-ao4-i-420@0.0.5": {
+    "zmink.axioline/smart-elements/se-ao4-i-420@0.0.6": {
         "files": [
             {
+                "name": "SeAO4I420.jsx",
                 "relativePath": "src/components/Modules/SmartElements/Analog/Output/SeAO4I420/SeAO4I420.jsx",
-                "test": false,
-                "name": "SeAO4I420.jsx"
+                "test": false
             }
         ],
         "mainFile": "src/components/Modules/SmartElements/Analog/Output/SeAO4I420/SeAO4I420.jsx",
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-ao4-u-010@0.0.5": {
+    "zmink.axioline/smart-elements/se-ao4-u-010@0.0.6": {
         "files": [
             {
+                "name": "SeAO4U010.jsx",
                 "relativePath": "src/components/Modules/SmartElements/Analog/Output/SeAO4U010/SeAO4U010.jsx",
-                "test": false,
-                "name": "SeAO4U010.jsx"
+                "test": false
             }
         ],
         "mainFile": "src/components/Modules/SmartElements/Analog/Output/SeAO4U010/SeAO4U010.jsx",
@@ -997,12 +997,12 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-cnt1@0.0.5": {
+    "zmink.axioline/smart-elements/se-cnt1@0.0.6": {
         "files": [
             {
+                "name": "SeCNT1.jsx",
                 "relativePath": "src/components/Modules/SmartElements/SpecialFunction/SeCNT1/SeCNT1.jsx",
-                "test": false,
-                "name": "SeCNT1.jsx"
+                "test": false
             }
         ],
         "mainFile": "src/components/Modules/SmartElements/SpecialFunction/SeCNT1/SeCNT1.jsx",
@@ -1033,48 +1033,48 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-di16-1@0.0.5": {
+    "zmink.axioline/smart-elements/se-di16-1@0.0.6": {
         "files": [
             {
+                "name": "SeDI161.jsx",
                 "relativePath": "src/components/Modules/SmartElements/Digital/Input/SeDI161/SeDI161.jsx",
-                "test": false,
-                "name": "SeDI161.jsx"
+                "test": false
             }
         ],
         "mainFile": "src/components/Modules/SmartElements/Digital/Input/SeDI161/SeDI161.jsx",
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-do16-1@0.0.5": {
+    "zmink.axioline/smart-elements/se-do16-1@0.0.6": {
         "files": [
             {
+                "name": "SeDO161.jsx",
                 "relativePath": "src/components/Modules/SmartElements/Digital/Output/SeDO161/SeDO161.jsx",
-                "test": false,
-                "name": "SeDO161.jsx"
+                "test": false
             }
         ],
         "mainFile": "src/components/Modules/SmartElements/Digital/Output/SeDO161/SeDO161.jsx",
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-inc1-sym@0.0.5": {
+    "zmink.axioline/smart-elements/se-inc1-sym@0.0.6": {
         "files": [
             {
+                "name": "SeINC1SYM.jsx",
                 "relativePath": "src/components/Modules/SmartElements/SpecialFunction/SeINC1SYM/SeINC1SYM.jsx",
-                "test": false,
-                "name": "SeINC1SYM.jsx"
+                "test": false
             }
         ],
         "mainFile": "src/components/Modules/SmartElements/SpecialFunction/SeINC1SYM/SeINC1SYM.jsx",
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-iol4@0.0.5": {
+    "zmink.axioline/smart-elements/se-iol4@0.0.6": {
         "files": [
             {
+                "name": "SeIOL4.jsx",
                 "relativePath": "src/components/Modules/SmartElements/SpecialFunction/SeIOL4/SeIOL4.jsx",
-                "test": false,
-                "name": "SeIOL4.jsx"
+                "test": false
             }
         ],
         "mainFile": "src/components/Modules/SmartElements/SpecialFunction/SeIOL4/SeIOL4.jsx",
@@ -1129,24 +1129,24 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-module-module@0.0.2": {
+    "zmink.axioline/smart-elements/se-module-module@0.0.3": {
         "files": [
             {
+                "name": "SeModule.module.scss",
                 "relativePath": "src/components/Core/SeModule/SeModule.module.scss",
-                "test": false,
-                "name": "SeModule.module.scss"
+                "test": false
             }
         ],
         "mainFile": "src/components/Core/SeModule/SeModule.module.scss",
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-module@0.0.5": {
+    "zmink.axioline/smart-elements/se-module@0.0.6": {
         "files": [
             {
+                "name": "SeModule.jsx",
                 "relativePath": "src/components/Core/SeModule/SeModule.jsx",
-                "test": false,
-                "name": "SeModule.jsx"
+                "test": false
             }
         ],
         "mainFile": "src/components/Core/SeModule/SeModule.jsx",
@@ -1189,12 +1189,12 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-psdi8-3@0.0.5": {
+    "zmink.axioline/smart-elements/se-psdi8-3@0.0.6": {
         "files": [
             {
+                "name": "SePSDI83.jsx",
                 "relativePath": "src/components/Modules/SmartElements/Digital/Input/SePSDI83/SePSDI83.jsx",
-                "test": false,
-                "name": "SePSDI83.jsx"
+                "test": false
             }
         ],
         "mainFile": "src/components/Modules/SmartElements/Digital/Input/SePSDI83/SePSDI83.jsx",
@@ -1213,48 +1213,48 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-psdo4-2@0.0.5": {
+    "zmink.axioline/smart-elements/se-psdo4-2@0.0.6": {
         "files": [
             {
+                "name": "SePSDO42.jsx",
                 "relativePath": "src/components/Modules/SmartElements/Digital/Output/SePSDO42/SePSDO42.jsx",
-                "test": false,
-                "name": "SePSDO42.jsx"
+                "test": false
             }
         ],
         "mainFile": "src/components/Modules/SmartElements/Digital/Output/SePSDO42/SePSDO42.jsx",
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-rs485@0.0.5": {
+    "zmink.axioline/smart-elements/se-rs485@0.0.6": {
         "files": [
             {
+                "name": "SeRS485.jsx",
                 "relativePath": "src/components/Modules/SmartElements/SpecialFunction/SeRS485/SeRS485.jsx",
-                "test": false,
-                "name": "SeRS485.jsx"
+                "test": false
             }
         ],
         "mainFile": "src/components/Modules/SmartElements/SpecialFunction/SeRS485/SeRS485.jsx",
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-rtd4-pt100@0.0.5": {
+    "zmink.axioline/smart-elements/se-rtd4-pt100@0.0.6": {
         "files": [
             {
+                "name": "SeRTD4PT100.jsx",
                 "relativePath": "src/components/Modules/SmartElements/Analog/Input/SeRTD4PT100/SeRTD4PT100.jsx",
-                "test": false,
-                "name": "SeRTD4PT100.jsx"
+                "test": false
             }
         ],
         "mainFile": "src/components/Modules/SmartElements/Analog/Input/SeRTD4PT100/SeRTD4PT100.jsx",
         "origin": "AUTHORED",
         "exported": true
     },
-    "zmink.axioline/smart-elements/se-sca@0.0.5": {
+    "zmink.axioline/smart-elements/se-sca@0.0.6": {
         "files": [
             {
+                "name": "SeSCA.jsx",
                 "relativePath": "src/components/Modules/SmartElements/SeSCA/SeSCA.jsx",
-                "test": false,
-                "name": "SeSCA.jsx"
+                "test": false
             }
         ],
         "mainFile": "src/components/Modules/SmartElements/SeSCA/SeSCA.jsx",

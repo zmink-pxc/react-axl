@@ -149,13 +149,18 @@ function isSe(partNumber) {
 
 
 function GenerateSeBp(sePartNumbers, props) {
-  var children = sePartNumbers.map(function (pn, index) {
+  //collect number of SCA elements
+  var seParts = sePartNumbers.slice();
+  var scaNum = 4 * Math.ceil(sePartNumbers.length / 4) - sePartNumbers.length;
+  var arr = Array(scaNum).fill("1088134");
+  seParts = seParts.concat(arr);
+  var children = seParts.map(function (pn, index) {
     var C = _zminkAxiolineSmartElements.default[pn].component;
     var deviceProps = props ? props.slice()[index] : null;
     return /*#__PURE__*/_react.default.createElement(C, deviceProps);
   });
-  var width = sePartNumbers.length / 2 * 15;
-  var k = sePartNumbers.toString();
+  var width = seParts.length / 2 * 15;
+  var k = seParts.toString();
   return /*#__PURE__*/_react.default.createElement(_react.Suspense, {
     key: "se".concat(k),
     fallback: /*#__PURE__*/_react.default.createElement(_zminkAxioline3.default, {
@@ -164,7 +169,7 @@ function GenerateSeBp(sePartNumbers, props) {
     })
   }, /*#__PURE__*/_react.default.createElement(Carrier, {
     shrink: true,
-    numModules: sePartNumbers.length
+    numModules: seParts.length
   }, children));
 }
 

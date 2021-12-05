@@ -113,16 +113,26 @@ var AxioBus = /*#__PURE__*/function (_React$Component) {
             processingSeBlock = false;
           }
 
-          var Device = Devices[pn].component;
+          var Device = null;
+          var width;
+
+          if (Devices.hasOwnProperty(pn)) {
+            Device = Devices[pn].component;
+            width = Devices[pn].width;
+          } else {
+            width = 35;
+            Device = StaticLoader;
+          }
+
           var deviceProps = _this.props.busProps ? _this.props.busProps.slice()[index] : null;
           bus.push( /*#__PURE__*/_react.default.createElement(_react.Suspense, {
             key: "s".concat(pn),
             fallback: /*#__PURE__*/_react.default.createElement(_zminkAxioline3.default, {
-              key: "l".concat(pn),
-              mmWidth: Devices[pn].width
+              key: "l".concat(pn, "-").concat(index),
+              mmWidth: width
             })
           }, /*#__PURE__*/_react.default.createElement(Device, _extends({
-            key: "c".concat(pn)
+            key: "c".concat(pn, "-").concat(index)
           }, deviceProps))));
         }
       });
@@ -137,6 +147,13 @@ var AxioBus = /*#__PURE__*/function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = AxioBus;
+
+function StaticLoader(props) {
+  return /*#__PURE__*/_react.default.createElement(_zminkAxioline3.default, {
+    mmWidth: 35,
+    disableAnimate: true
+  });
+}
 
 function isSe(partNumber) {
   return _zminkAxiolineSmartElements.default.hasOwnProperty(partNumber);

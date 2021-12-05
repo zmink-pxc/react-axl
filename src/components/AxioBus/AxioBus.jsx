@@ -62,7 +62,7 @@ export default class AxioBus extends React.Component {
                 }
                 else{
                     width = 35;
-                    Device = AxioLoader;
+                    Device = StaticLoader;
                 }
                 const deviceProps = this.props.busProps ? (this.props.busProps.slice()[index]):(null)
                 bus.push(<Suspense key={`s${pn}`} fallback={<AxioLoader key={`l${pn}-${index}`} mmWidth={width}/>}><Device key={`c${pn}-${index}`} {...deviceProps}/></Suspense>)
@@ -97,6 +97,10 @@ export default class AxioBus extends React.Component {
                 </AxioBusScale>           
         )
     }
+}
+
+function StaticLoader(props){
+    return <AxioLoader mmWidth={35} disableAnimate={true} />
 }
 
 function isSe(partNumber){

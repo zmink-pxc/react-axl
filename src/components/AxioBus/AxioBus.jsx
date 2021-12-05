@@ -54,9 +54,18 @@ export default class AxioBus extends React.Component {
                     seBlockProps = [];
                     processingSeBlock = false;
                 }
-                const Device = Devices[pn].component;
+                var Device = null;
+                var width;
+                if (Devices.hasOwnProperty(pn)){
+                    Device = Devices[pn].component;
+                    width = Devices[pn].width;
+                }
+                else{
+                    width = 35;
+                    Device = AxioLoader;
+                }
                 const deviceProps = this.props.busProps ? (this.props.busProps.slice()[index]):(null)
-                bus.push(<Suspense key={`s${pn}`} fallback={<AxioLoader key={`l${pn}`} mmWidth={Devices[pn].width}/>}><Device key={`c${pn}`} {...deviceProps}/></Suspense>)
+                bus.push(<Suspense key={`s${pn}`} fallback={<AxioLoader key={`l${pn}-${index}`} mmWidth={width}/>}><Device key={`c${pn}-${index}`} {...deviceProps}/></Suspense>)
             }
         })
 

@@ -3,7 +3,7 @@ import SeModule from '@bit/zmink.axioline.smart-elements.se-module';
 import SeConnector from '@bit/zmink.axioline.smart-elements.se-connector';
 
 export default function SeSCA(props){
-    return <SeModule partName={props.partName} ledLabels={props.ledLabels}></SeModule>
+    return <SeModule partNumber={props.partName} partName={props.partName} ledLabels={props.ledLabels}></SeModule>
 }
 
 SeSCA.defaultProps = {

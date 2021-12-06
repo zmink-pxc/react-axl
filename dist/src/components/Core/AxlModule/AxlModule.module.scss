@@ -24,6 +24,10 @@
     width: 100%;
 }
 
+.brandAreaVertical {
+
+}
+
 .ventContainer {
     display: flex;
     flex-direction: row;
@@ -116,6 +120,10 @@
     align-content: space-around;
 }
 
+.printAreaVertical {
+    
+}
+
 .print{
     font-size: 2mm;
 }
@@ -140,4 +148,8 @@
 .logo{
     height: 6mm;
     width: 6mm;
+}
+
+.logoVertical {
+
 }

@@ -131,12 +131,10 @@ var AxlModule = /*#__PURE__*/function (_React$PureComponent) {
       var bChildren = []; //bottom row children
       //iterate over children and map to the appropriate children container array
 
-      var foldPoint = (children.length - 1) / 2 + 1;
+      var foldPoint = (this.numConnectors - 1) / 2 + 1;
 
       _react.default.Children.map(children, function (child, index) {
-        console.log("child index: ".concat(index));
-        console.log("fold point: ".concat(foldPoint)); //if top row (2f/2h) exists, and element is not the power connector (element 0)
-
+        //if top row (2f/2h) exists, and element is not the power connector (element 0)
         if (hasTopRow && index >= foldPoint) {
           var newProps = _objectSpread({}, _this2.mapPropsToConnector(child, index), {
             style: {
@@ -226,7 +224,25 @@ AxlModule.propTypes = {
 };
 AxlModule.defaultProps = {
   labels: ['a', '0', '1', '2', '3', '4', '5', '6', '7']
-}; //takes a width of the component in mm and calculates the number of vents should be rendered
+};
+
+function VerticalPartLabel(_ref) {
+  var partName = _ref.partName,
+      partNumber = _ref.partNumber;
+  var Logo = _zminkAxioline4.default;
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: _zminkAxioline.default.brandAreaVertical
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: _zminkAxioline.default.logoVertical
+  }, /*#__PURE__*/_react.default.createElement(Logo, null)), /*#__PURE__*/_react.default.createElement("div", {
+    className: _zminkAxioline.default.printAreaVertical
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: _zminkAxioline.default.print
+  }, partName), /*#__PURE__*/_react.default.createElement("div", {
+    className: _zminkAxioline.default.print
+  }, partNumber)));
+} //takes a width of the component in mm and calculates the number of vents should be rendered
+
 
 function Vents(props) {
   var vents = [];

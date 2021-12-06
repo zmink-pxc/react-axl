@@ -15,6 +15,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function SeSCA(props) {
   return /*#__PURE__*/_react.default.createElement(_zminkAxiolineSmartElements.default, {
+    partNumber: props.partName,
     partName: props.partName,
     ledLabels: props.ledLabels
   });

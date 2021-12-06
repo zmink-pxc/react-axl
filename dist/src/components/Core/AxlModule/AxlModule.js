@@ -139,12 +139,17 @@ var AxlModule = /*#__PURE__*/function (_React$PureComponent) {
           var newProps = _objectSpread({}, _this2.mapPropsToConnector(child, index), {
             style: {
               transform: 'rotate(180deg)'
-            }
+            },
+            key: "".concat(moduleName, "-con-").concat(index)
           });
 
           tChildren.push(_react.default.cloneElement(child, newProps));
         } else {
-          bChildren.push(_react.default.cloneElement(child, _this2.mapPropsToConnector(child, index)));
+          var _newProps = _objectSpread({}, _this2.mapPropsToConnector(child, index), {
+            key: "".concat(moduleName, "-con-").concat(index)
+          });
+
+          bChildren.push(_react.default.cloneElement(child, _newProps));
         }
       });
 
@@ -152,7 +157,7 @@ var AxlModule = /*#__PURE__*/function (_React$PureComponent) {
         width: this.faceWidth() + "mm",
         border: 'none',
         marginRight: '6mm',
-        justifyContent: 'right'
+        justifyContent: 'flex-end'
       } : {
         width: this.faceWidth() + "mm"
       };

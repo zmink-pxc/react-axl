@@ -721,6 +721,18 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "zmink.axioline/digital/input/axl-di32-1-2h@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/Modules/Digital/Input/AxlDI3212H/AxlDI3212H.jsx",
+                "test": false,
+                "name": "AxlDI3212H.jsx"
+            }
+        ],
+        "mainFile": "src/components/Modules/Digital/Input/AxlDI3212H/AxlDI3212H.jsx",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "zmink.axioline/digital/input/axl-di321-1f@1.0.10": {
         "files": [
             {

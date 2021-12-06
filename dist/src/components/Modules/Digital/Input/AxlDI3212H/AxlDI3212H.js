@@ -45,18 +45,18 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var AxlDI3211F = /*#__PURE__*/function (_React$PureComponent) {
-  _inherits(AxlDI3211F, _React$PureComponent);
+var AxlDI3212H = /*#__PURE__*/function (_React$PureComponent) {
+  _inherits(AxlDI3212H, _React$PureComponent);
 
-  var _super = _createSuper(AxlDI3211F);
+  var _super = _createSuper(AxlDI3212H);
 
-  function AxlDI3211F(props) {
-    _classCallCheck(this, AxlDI3211F);
+  function AxlDI3212H(props) {
+    _classCallCheck(this, AxlDI3212H);
 
     return _super.call(this, props);
   }
 
-  _createClass(AxlDI3211F, [{
+  _createClass(AxlDI3212H, [{
     key: "render",
     value: function render() {
       var _this$props = this.props,
@@ -74,11 +74,11 @@ var AxlDI3211F = /*#__PURE__*/function (_React$PureComponent) {
         terminals: this.props.terminals,
         leds: this.props.leds,
         raisedMidsection: false,
-        hasTopRow: false,
+        hasTopRow: true,
         partNumber: this.props.partNumber,
-        labels: ['a', '0', '1', '2', '3', '4', '5', '6', '7'],
+        labels: ['a', '0', '1', '2', '3'],
         colorCard: {
-          isAnalogIn: true
+          isComboDigital: true
         }
       }), /*#__PURE__*/_react.default.createElement(_zminkAxioline2.default, {
         type: "POWER",
@@ -109,18 +109,18 @@ var AxlDI3211F = /*#__PURE__*/function (_React$PureComponent) {
     }
   }]);
 
-  return AxlDI3211F;
+  return AxlDI3212H;
 }(_react.default.PureComponent);
 
-exports.default = AxlDI3211F;
-AxlDI3211F.defaultProps = {
-  partName: "DI32/1",
-  partNumber: "2688035",
-  mmWidth: 53.6,
+exports.default = AxlDI3212H;
+AxlDI3212H.defaultProps = {
+  partName: "DI32",
+  partNumber: "2702052",
+  mmWidth: 35,
   //width of component in mm which can be converted to px size
   mmHeight: 122,
   terminals: (0, _zminkAxioline.defaultTerminals)(12),
   leds: (0, _zminkAxioline.defaultLeds)(12)
 };
 
-//# sourceMappingURL=AxlDI3211F.jsx.map
+//# sourceMappingURL=AxlDI3212H.jsx.map

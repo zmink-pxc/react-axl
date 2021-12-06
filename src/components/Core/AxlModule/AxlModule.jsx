@@ -58,11 +58,16 @@ export default class AxlModule extends React.PureComponent {
                     ...this.mapPropsToConnector(child, index),
                     style: {
                         transform: 'rotate(180deg)'
-                    }
+                    },
+                    key: `${moduleName}-con-${index}`
                 }
                 tChildren.push(React.cloneElement(child, newProps));
             } else {
-                bChildren.push(React.cloneElement(child, this.mapPropsToConnector(child, index)));
+                const newProps = {
+                    ...this.mapPropsToConnector(child,index),
+                    key: `${moduleName}-con-${index}`
+                }
+                bChildren.push(React.cloneElement(child, newProps));
             }
         })
 
@@ -70,7 +75,7 @@ export default class AxlModule extends React.PureComponent {
             width: this.faceWidth() + "mm",
             border: 'none',
             marginRight: '6mm',
-            justifyContent: 'right'
+            justifyContent: 'flex-end'
         } : {
             width: this.faceWidth() + "mm"
         };

@@ -209,7 +209,7 @@ var Modules = {
       });
     })
   },
-  "2702052": {
+  "2688035": {
     width: 53.6,
     component: _react.default.lazy(function () {
       return Promise.resolve().then(function () {
@@ -230,6 +230,14 @@ var Modules = {
     component: _react.default.lazy(function () {
       return Promise.resolve().then(function () {
         return _interopRequireWildcard(require('@bit/zmink.axioline.digital.output.axl-do82-2a-1h'));
+      });
+    })
+  },
+  "2702052": {
+    width: 35,
+    component: _react.default.lazy(function () {
+      return Promise.resolve().then(function () {
+        return _interopRequireWildcard(require('@bit/zmink.axioline.digital.input.axl-di32-1-2h'));
       });
     })
   }

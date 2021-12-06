@@ -174,7 +174,9 @@ function GenerateSeBp(sePartNumbers, props) {
   var children = seParts.map(function (pn, index) {
     var C = _zminkAxiolineSmartElements.default[pn].component;
     var deviceProps = props ? props.slice()[index] : null;
-    return /*#__PURE__*/_react.default.createElement(C, deviceProps);
+    return /*#__PURE__*/_react.default.createElement(C, _extends({
+      key: "se-".concat(pn, "-index")
+    }, deviceProps));
   });
   var width = seParts.length / 2 * 15;
   var k = seParts.toString();

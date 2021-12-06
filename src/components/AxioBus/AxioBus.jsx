@@ -122,7 +122,7 @@ function GenerateSeBp(sePartNumbers,props){
     const children = seParts.map((pn,index)=>{
         const C = SeDevices[pn].component;
         const deviceProps = props ? (props.slice()[index]):(null)
-        return <C {...deviceProps}/>;
+        return <C key={`se-${pn}-index`} {...deviceProps}/>;
     });
     const width = seParts.length / 2 * 15;
     const k = seParts.toString();

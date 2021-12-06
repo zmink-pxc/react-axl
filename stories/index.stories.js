@@ -28,6 +28,7 @@ import AxlDI1611H from '../src/components/Modules/Digital/Input/AxlDI1611H/AxlDI
 import AxlAI41I1H from '../src/components/Modules/Analog/Input/AxlAI41I1H/AxlAI41I1H.jsx';
 import AxlAI8 from '../src/components/Modules/Analog/Input/AxlAI8/AxlAI8.jsx';
 import AxlDI83DO832H from '@bit/zmink.axioline.digital.combo.axl-di83-do83-2h';
+import AxlDI3212H from '@bit/zmink.axioline.digital.input.axl-di32-1-2h';
 import Axc2152 from '../src/components/Controllers/Axc2152/Axc2152.jsx';
 import AxioBus from '../src/components/AxioBus/AxioBus.jsx';
 import AxioLoader from '../src/components/Utils/AxioLoader/AxioLoader.jsx';
@@ -141,6 +142,10 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   storiesOf('AxlDI81DO811H',module)
   .addDecorator(withKnobs)
   .add('Basic',()=><AxlDI81DO811H/>)
+
+  storiesOf('AxlDI3212H',module)
+  .addDecorator(withKnobs)
+  .add('Basic',()=><AxlDI3212H/>)
 
   storiesOf('AxlDI1611H',module)
   .addDecorator(withKnobs)

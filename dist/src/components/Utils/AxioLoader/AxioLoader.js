@@ -27,7 +27,7 @@ function AxioLoader(props) {
       backgroundColor: '#8e9291',
       height: '122mm',
       width: mm,
-      padding: props.disableAnimate ? 'none' : '5mm 5mm'
+      padding: props.disableAnimate ? '1mm 1mm' : '5mm 5mm'
     }
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: skeletonClass,

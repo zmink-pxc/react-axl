@@ -169,6 +169,14 @@ var Modules = {
       });
     })
   },
+  "2702071": {
+    width: 35,
+    component: _react.default.lazy(function () {
+      return Promise.resolve().then(function () {
+        return _interopRequireWildcard(require('@bit/zmink.axioline.digital.combo.axl-di83-do83-2h'));
+      });
+    })
+  },
   "2702017": {
     width: 35,
     component: _react.default.lazy(function () {

@@ -173,7 +173,7 @@
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2702071&library=usen&pcck=P-21-11-01-01&tab=1&selectedCategory=ALL)
 
 * AXL F DI16/1 DO8/2-2A 2H - 2702291
-  * [x] Implemented
+  * [ ] Implemented
   * [Webpage](https://www.phoenixcontact.com/online/portal/us/?uri=pxc-oc-itemdetail:pid=2702291&library=usen&pcck=P-21-11-01-01&tab=1&selectedCategory=ALL)
 
 * AXL F DI8/1 DO8/1 XC 1H - 2702017

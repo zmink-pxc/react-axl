@@ -27,6 +27,7 @@ import AxlDI81DO811H from '../src/components/Modules/Digital/Combo/AxlDI81DO811H
 import AxlDI1611H from '../src/components/Modules/Digital/Input/AxlDI1611H/AxlDI1611H.jsx';
 import AxlAI41I1H from '../src/components/Modules/Analog/Input/AxlAI41I1H/AxlAI41I1H.jsx';
 import AxlAI8 from '../src/components/Modules/Analog/Input/AxlAI8/AxlAI8.jsx';
+import AxlDI83DO832H from '@bit/zmink.axioline.digital.combo.axl-di83-do83-2h';
 import Axc2152 from '../src/components/Controllers/Axc2152/Axc2152.jsx';
 import AxioBus from '../src/components/AxioBus/AxioBus.jsx';
 import AxioLoader from '../src/components/Utils/AxioLoader/AxioLoader.jsx';
@@ -44,6 +45,7 @@ import SeCarrierTerminal from '../src/components/Core/SeCarrierTerminal/SeCarrie
 import SeAI4I420 from '../src/components/Modules/SmartElements/Analog/Input/SeAI4I420/SeAI4I420.jsx';
 import SePSDI83 from '../src/components/Modules/SmartElements/Digital/Input/SePSDI83/SePSDI83.jsx';
 import SeSCA from '../src/components/Modules/SmartElements/SeSCA/SeSCA.jsx';
+
 
 import '../src/components/PLCnextBackground/PLCnextBackground.module.scss';
 
@@ -152,6 +154,9 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
   .addDecorator(withKnobs)
   .add('Basic',()=><AxlAI8/>)
   
+  storiesOf('AxlDI83DO832H',module)
+  .addDecorator(withKnobs)
+  .add('Basic',()=><AxlDI83DO832H/>)
 
   storiesOf('PLCnextBackground',module)
   .addDecorator(withKnobs)

@@ -27,6 +27,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -118,21 +122,47 @@ var AxlModule = /*#__PURE__*/function (_React$PureComponent) {
       this.connSectionWidth = 0;
       var middleWidth = numCols * 5 + "mm";
       var Logo = fullWidthLogo === true ? _zminkAxioline4.default : _zminkAxioline3.default;
+      var tChildren = []; //top row children
 
-      var cChildren = _react.default.Children.map(children, function (child, index) {
-        return _react.default.cloneElement(child, _this2.mapPropsToConnector(child, index));
+      var bChildren = []; //bottom row children
+      //iterate over children and map to the appropriate children container array
+
+      var foldPoint = (children.length - 1) / 2 + 1;
+
+      _react.default.Children.map(children, function (child, index) {
+        console.log("child index: ".concat(index));
+        console.log("fold point: ".concat(foldPoint)); //if top row (2f/2h) exists, and element is not the power connector (element 0)
+
+        if (hasTopRow && index >= foldPoint) {
+          var newProps = _objectSpread({}, _this2.mapPropsToConnector(child, index), {
+            style: {
+              transform: 'rotate(180deg)'
+            }
+          });
+
+          tChildren.push(_react.default.cloneElement(child, newProps));
+        } else {
+          bChildren.push(_react.default.cloneElement(child, _this2.mapPropsToConnector(child, index)));
+        }
       });
 
+      var moduleTopStyle = this.props.hasTopRow ? {
+        width: this.faceWidth() + "mm",
+        border: 'none',
+        marginRight: '6mm',
+        justifyContent: 'right'
+      } : {
+        width: this.faceWidth() + "mm"
+      };
       return /*#__PURE__*/_react.default.createElement("div", _extends({
         className: _zminkAxioline.default.moduleBase,
         style: {
-          width: width + "mm"
+          width: width + "mm",
+          justifyContent: this.props.hasTopRow ? "center" : "flex-start"
         }
       }, rest), /*#__PURE__*/_react.default.createElement("div", {
         className: _zminkAxioline.default.moduleTop,
-        style: {
-          width: this.faceWidth() + "mm"
-        }
+        style: moduleTopStyle
       }, (raisedMidsection || hasTopRow) === false ? /*#__PURE__*/_react.default.createElement("div", {
         className: _zminkAxioline.default.raisedContainer,
         style: {
@@ -157,14 +187,14 @@ var AxlModule = /*#__PURE__*/function (_React$PureComponent) {
       }, partNumber))), /*#__PURE__*/_react.default.createElement(Vents, {
         width: width,
         lower: true
-      })) : null), /*#__PURE__*/_react.default.createElement("div", {
+      })) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, tChildren)), /*#__PURE__*/_react.default.createElement("div", {
         className: _zminkAxioline.default.moduleMiddle,
         style: {
           width: this.connSectionWidth + 'mm'
         }
       }, /*#__PURE__*/_react.default.createElement(_zminkAxioline2.default, colorCard), /*#__PURE__*/_react.default.createElement(Inset, null)), /*#__PURE__*/_react.default.createElement("div", {
         className: _zminkAxioline.default.moduleBottom
-      }, cChildren));
+      }, bChildren));
     }
   }]);
 

@@ -28,6 +28,7 @@ const Modules = {
     "2688598": {width: 35,  component: React.lazy(() => import(/* webpackChunkName: "AxlUTH41H" */ '@bit/zmink.axioline.analog.input.axl-uth4-1h'))},
     "2688417": {width: 53.6,component: React.lazy(() => import(/* webpackChunkName: "AxlUTH81F" */ '@bit/zmink.axioline.analog.input.axl-uth8-1f'))},
     "2688527": {width: 35,  component: React.lazy(() => import(/* webpackChunkName: "AxlAO41H" */ '@bit/zmink.axioline.analog.output.axl-ao4-1h'))},
+    "2702071": {width: 35,  component: React.lazy(() => import(/* webpackChunkName: "AxlDI3DO32H" */ '@bit/zmink.axioline.digital.combo.axl-di83-do83-2h'))},
     "2702017": {width: 35,  component: React.lazy(() => import(/* webpackChunkName: "AxlDI81DO81XC1H" */ '@bit/zmink.axioline.digital.output.axl-di81-do81-xc-1h'))},
     "2701916": {width: 35,  component: React.lazy(() => import(/* webpackChunkName: "AxlDI81DO811H" */ '@bit/zmink.axioline.digital.output.axl-di81-do81-1h'))},
     "2701722": {width: 35,  component: React.lazy(() => import(/* webpackChunkName: "AxlDI161HS1H" */ '@bit/zmink.axioline.digital.input.axl-di16-1hs-1h'))},

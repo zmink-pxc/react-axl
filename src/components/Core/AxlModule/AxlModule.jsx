@@ -44,12 +44,39 @@ export default class AxlModule extends React.PureComponent {
         this.connSectionWidth = 0;
         let middleWidth = (numCols * 5)+"mm";
         let Logo = (fullWidthLogo === true) ? PhoenixBrand:PhoenixP;
-        let cChildren = React.Children.map(children, (child,index) => {
-            return React.cloneElement(child,this.mapPropsToConnector(child,index))
+        let tChildren = []; //top row children
+        let bChildren = []; //bottom row children
+        //iterate over children and map to the appropriate children container array
+        const foldPoint = ((children.length - 1) / 2) + 1;
+        React.Children.map(children, (child,index) => {
+            console.log(`child index: ${index}`);
+            
+            console.log(`fold point: ${foldPoint}`)
+            //if top row (2f/2h) exists, and element is not the power connector (element 0)
+            if (hasTopRow && (index >= foldPoint)){
+                const newProps = {
+                    ...this.mapPropsToConnector(child,index),
+                    style: {
+                        transform: 'rotate(180deg)'
+                    }
+                }
+                tChildren.push(React.cloneElement(child,newProps));
+            }else{
+                bChildren.push(React.cloneElement(child,this.mapPropsToConnector(child,index)));
+            }
         })
 
-        return (<div className={styles.moduleBase} style={{width: width+"mm"}} {...rest}>
-            <div className={styles.moduleTop} style={{width: this.faceWidth()+"mm"}}>
+        const moduleTopStyle = this.props.hasTopRow ? {
+            width: this.faceWidth()+"mm",
+            border: 'none',
+            marginRight: '6mm',
+            justifyContent: 'right'
+        }:{
+            width: this.faceWidth()+"mm"
+        };
+
+        return (<div className={styles.moduleBase} style={{width: width+"mm",justifyContent: this.props.hasTopRow ? "center":"flex-start"}} {...rest}>
+            <div className={styles.moduleTop} style={moduleTopStyle}>
                 {((raisedMidsection || hasTopRow)===false) ? 
                 (<div className={styles.raisedContainer} style={{width: this.faceWidth()+"mm"}}>
                     <Vents width={width} upper={true}/>
@@ -67,14 +94,14 @@ export default class AxlModule extends React.PureComponent {
                         </div>
                     </div>
                     <Vents width={width} lower={true}/>
-                </div>):(null)}
+                </div>):(<>{tChildren}</>)}
             </div>
             <div className={styles.moduleMiddle} style={{width:this.connSectionWidth + 'mm'}}>
                 <AxlColorID {...colorCard}/>
                 <Inset />
             </div>
             <div className={styles.moduleBottom}>
-                {cChildren}
+                {bChildren}
             </div>
         </div>)
     }

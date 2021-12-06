@@ -685,6 +685,18 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "zmink.axioline/digital/combo/axl-di83-do83-2h@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/Modules/Digital/Combo/AxlDI83DO832H/AxlDI83DO832H.jsx",
+                "test": false,
+                "name": "AxlDI83DO832H.jsx"
+            }
+        ],
+        "mainFile": "src/components/Modules/Digital/Combo/AxlDI83DO832H/AxlDI83DO832H.jsx",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "zmink.axioline/digital/input/axl-di16-1hs-1h@1.0.9": {
         "files": [
             {

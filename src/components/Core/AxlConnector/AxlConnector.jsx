@@ -20,7 +20,7 @@ export default class AxlConnector extends React.PureComponent {
         const connectorMiddleStyle = classNames(styles['connector-middle'],{[styles.blackConnector]: this.props.isBlack})
         var terminals = (this.props.hasOwnProperty('terminals'))?(this.props.terminals):(initArray(placeholderTerminal,this.props.numRows*this.props.numCols))
         return (
-            <div className={connectorStyle} style={{width:(this.props.numCols * 5)+'mm'}}>
+            <div className={connectorStyle} style={{width:(this.props.numCols * 5)+'mm',...this.props.style}}>
                 <Foot isBlack={this.props.isBlack}/>
                 <div className={connectorMiddleStyle}>
                 {

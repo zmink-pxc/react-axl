@@ -76,6 +76,10 @@ var AxlModule = /*#__PURE__*/function (_React$PureComponent) {
     _defineProperty(_assertThisInitialized(_this), "mapPropsToConnector", function (connector, connectorIndex) {
       _this.connSectionWidth = _this.connSectionWidth + connector.props.numCols * 5;
 
+      if (connectorIndex === _this.numConnectors - 1 && _this.props.hasTopRow) {
+        _this.connSectionWidth = _this.connSectionWidth / 2 + 2.5;
+      }
+
       switch (connector.props.type) {
         case 'POWER':
           break;

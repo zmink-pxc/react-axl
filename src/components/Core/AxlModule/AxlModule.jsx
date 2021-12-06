@@ -20,6 +20,9 @@ export default class AxlModule extends React.PureComponent {
 
     mapPropsToConnector = (connector,connectorIndex) => {
         this.connSectionWidth = this.connSectionWidth + (connector.props.numCols * 5)
+        if ((connectorIndex === this.numConnectors - 1) && (this.props.hasTopRow)){
+            this.connSectionWidth = this.connSectionWidth/2+2.5;
+        }
         switch (connector.props.type) {
             case 'POWER':
                 

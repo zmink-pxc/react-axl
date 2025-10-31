@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@bit/zmink.axioline.smart-elements.se-lock-module';
+import styles from './SeLock.module.scss';
 
 export default function SeLock(){
     return (<div className={styles.root}>

@@ -2,10 +2,17 @@
   "name": "react-axl",
   "version": "0.0.2",
   "description": "React components for rendering Phoenix Contact axioline products",
-  "main": "index.js",
+  "main": "dist/react-axl.umd.js",
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:lib": "NODE_ENV=production webpack --mode production",
     "eject": "react-scripts eject",
     "test": "react-scripts test",
     "storybook": "start-storybook -p 6006",
@@ -17,14 +24,10 @@
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react-motion": "^0.5.2",
-    "react-particles-js": "^3.2.1",
     "unit-to-px": "^1.0.5",
     "use-viewport-sizes": "^0.2.7"
   },
   "devDependencies": {
-    "react-scripts": "^3.4.1",
-    "react-svg-loader": "^3.0.3",
-    "svg-inline-loader": "^0.8.2",
     "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.9.6",
@@ -38,14 +41,25 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.2",
     "eslint-plugin-react-hooks": "^3.0.0",
+    "file-loader": "^6.2.0",
     "identity-obj-proxy": "^3.0.0",
-    "node-sass": "^4.13.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.10.0",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-draggable": "^4.4.3",
+    "react-scripts": "^3.4.1",
+    "react-svg-loader": "^3.0.3",
     "react-test-renderer": "^16.13.1",
+    "sass": "^1.93.2",
     "sass-loader": "^7.3.1",
-    "style-loader": "^1.1.4"
+    "style-loader": "^1.1.4",
+    "svg-inline-loader": "^0.8.2"
   },
   "peerDependencies": {
-    "react": "16.x"
+    "react": "16.x",
+    "react-dom": "16.x"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -74,32 +88,6 @@
       "@/(.*)$": "<rootDir>/src/components/$1",
       "@styles(.*)$": "<rootDir>/src/styles/$1",
       "@se(.*)$": "<rootDir>/src/components/Modules/SmartElements/$1"
-    }
-  },
-  "bit": {
-    "env": {
-      "compiler": "bit.envs/compilers/react@1.0.16"
-    },
-    "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "npm",
-    "resolveModules": {
-      "aliases": {
-        "@assets": "src/assets",
-        "@controllers": "src/components/Controllers",
-        "@core": "src/components/Core",
-        "@modules": "src/components/Modules",
-        "@utils": "src/components/Utils",
-        "@": "src/components",
-        "@styles": "src/styles",
-        "@se": "src/components/Modules/SmartElements"
-      }
-    },
-    "overrides": {
-      "assets/*": {
-        "env": {
-          "compiler": "-"
-        }
-      }
     }
   }
 }

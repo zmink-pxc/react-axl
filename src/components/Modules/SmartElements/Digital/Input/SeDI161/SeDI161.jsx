@@ -1,7 +1,7 @@
 
 import React from 'react';
-import SeModule from '@bit/zmink.axioline.smart-elements.se-module';
-import SeConnector from '@bit/zmink.axioline.smart-elements.se-connector';
+import SeModule from '../../../../../Core/SeModule/SeModule';
+import SeConnector from '../../../../../Core/SeConnector/SeConnector';
 
 export default function SeDI161(props){
     const {partName,partNumber,ledLabels,...other} = props;

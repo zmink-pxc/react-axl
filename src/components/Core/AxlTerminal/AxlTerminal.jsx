@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import styles from '@bit/zmink.axioline.axl-terminalmodule';
+import styles from './AxlTerminal.module.scss';
 
 export default class AxlTerminal extends React.PureComponent {
     constructor(props){

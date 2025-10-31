@@ -1,10 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import styles from '@bit/zmink.axioline.axl-connectormodule';
-import AxlLedGroup from '@bit/zmink.axioline.axl-led-group';
-import AxlTerminalGroup from '@bit/zmink.axioline.axl-terminal-group';
-import AxlLatch from '@bit/zmink.axioline.axl-latch';
+import styles from './AxlConnector.module.scss';
+import AxlLedGroup from '../AxlLedGroup/AxlLedGroup';
+import AxlTerminalGroup from '../AxlTerminalGroup/AxlTerminalGroup';
+import AxlLatch from '../AxlLatch/AxlLatch';
 
 
 export default class AxlConnector extends React.PureComponent {
@@ -30,9 +30,9 @@ export default class AxlConnector extends React.PureComponent {
                         // if (this.props.leds !== (this.props.numRows*this.props.numCols)){leds = }
                         
                         return (<div className={styles.col} key={'ter-'+coli}>
-                        <AxlLedGroup leds={leds}/>
+                        <AxlLedGroup leds={leds} rotateLabels={this.props.rotateLabels}/>
                         {rows.map((row,rowi)=>{
-                            return <AxlTerminalGroup key={'ter-'+rowi+'-'+coli} {...terminals[(coli*this.props.numRows+rowi)]} isBlack={(this.props.isBlack===true)} isEnd={(rowi === (this.props.numRows-1))}/>
+                            return <AxlTerminalGroup key={'ter-'+rowi+'-'+coli} {...terminals[(coli*this.props.numRows+rowi)]} isBlack={(this.props.isBlack===true)} isEnd={(rowi === (this.props.numRows-1))} rotateLabel={this.props.rotateLabels}/>
                         })}
                         </div>)
                     })

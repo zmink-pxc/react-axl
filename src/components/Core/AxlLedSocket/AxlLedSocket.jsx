@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from '@bit/zmink.axioline.axl-led-socketmodule';
+import styles from './AxlLedSocket.module.scss';
 
 export default class AxlLedSocket extends React.PureComponent {
     constructor(props){

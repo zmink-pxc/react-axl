@@ -8,7 +8,7 @@ import { withKnobs, text, boolean, number, object } from '@storybook/addon-knobs
 import { Button, Welcome } from '@storybook/react/demo';
 
 //import AxlLed from '../src/components/Core/AxlLed/AxlLed.jsx';
-import AxlLed from '@bit/zmink.axioline.axl-led';
+import AxlLed from '../src/components/Core/AxlLed/AxlLed.jsx';
 import AxlLedHorizontal from '../src/components/Core/AxlLedHorizontal/AxlLedHorizontal.jsx';
 import AxlPlunger from '../src/components/Core/AxlPlunger/AxlPlunger.jsx';
 import AxlTerminal from '../src/components/Core/AxlTerminal/AxlTerminal.jsx';
@@ -27,8 +27,8 @@ import AxlDI81DO811H from '../src/components/Modules/Digital/Combo/AxlDI81DO811H
 import AxlDI1611H from '../src/components/Modules/Digital/Input/AxlDI1611H/AxlDI1611H.jsx';
 import AxlAI41I1H from '../src/components/Modules/Analog/Input/AxlAI41I1H/AxlAI41I1H.jsx';
 import AxlAI8 from '../src/components/Modules/Analog/Input/AxlAI8/AxlAI8.jsx';
-import AxlDI83DO832H from '@bit/zmink.axioline.digital.combo.axl-di83-do83-2h';
-import AxlDI3212H from '@bit/zmink.axioline.digital.input.axl-di32-1-2h';
+import AxlDI83DO832H from '../src/components/Modules/Digital/Combo/AxlDI83DO832H/AxlDI83DO832H.jsx';
+import AxlDI3212H from '../src/components/Modules/Digital/Input/AxlDI3212H/AxlDI3212H.jsx';
 import Axc2152 from '../src/components/Controllers/Axc2152/Axc2152.jsx';
 import AxioBus from '../src/components/AxioBus/AxioBus.jsx';
 import AxioLoader from '../src/components/Utils/AxioLoader/AxioLoader.jsx';

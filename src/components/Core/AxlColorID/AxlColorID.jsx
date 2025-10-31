@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from '@bit/zmink.axioline.axl-color-i-dmodule';
+import styles from './AxlColorID.module.scss';
 
 export default class AxlColorID extends React.PureComponent {
     constructor(props){

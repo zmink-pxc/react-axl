@@ -1,8 +1,8 @@
 import React from 'react';
-import SeTerminal from '@bit/zmink.axioline.smart-elements.se-terminal';
-import SePlunger from '@bit/zmink.axioline.smart-elements.se-plunger';
+import SeTerminal from '../SeTerminal/SeTerminal';
+import SePlunger from '../SePlunger/SePlunger';
 import PropTypes from 'prop-types';
-import styles from '@bit/zmink.axioline.smart-elements.se-terminal-group-module';
+import styles from './SeTerminalGroup.module.scss';
 
 export default function SeTerminalGroup(props){
 

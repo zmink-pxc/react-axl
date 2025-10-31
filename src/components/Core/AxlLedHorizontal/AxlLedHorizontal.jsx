@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from '@bit/zmink.axioline.axl-led-horizontalmodule';
+import styles from './AxlLedHorizontal.module.scss';
 
 export default class AxlLedHorizontal extends React.PureComponent {
     constructor(props){

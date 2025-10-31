@@ -1,4 +1,4 @@
-import AxlConnector from '@bit/zmink.axioline.axl-connector';
+import AxlConnector from '../AxlConnector/AxlConnector';
 import React from 'react';
 
 export default function Axl24VPower(props){

@@ -1,6 +1,6 @@
 import React from 'react';
-import AxlModule,{defaultTerminals,defaultLeds} from '@bit/zmink.axioline.axl-module';
-import AxlConnector from '@bit/zmink.axioline.axl-connector';
+import AxlModule,{defaultTerminals,defaultLeds} from '../../../../Core/AxlModule/AxlModule';
+import AxlConnector from '../../../../Core/AxlConnector/AxlConnector';
 
 export default class AxlAI8 extends React.PureComponent {
     constructor(props){

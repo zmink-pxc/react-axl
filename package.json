@@ -2,10 +2,17 @@
   "name": "react-axl",
   "version": "0.0.2",
   "description": "React components for rendering Phoenix Contact axioline products",
-  "main": "index.js",
+  "main": "dist/react-axl.umd.js",
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:lib": "NODE_ENV=production webpack --mode production",
     "eject": "react-scripts eject",
     "test": "react-scripts test",
     "storybook": "start-storybook -p 6006",
@@ -34,7 +41,11 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.2",
     "eslint-plugin-react-hooks": "^3.0.0",
+    "file-loader": "^6.2.0",
     "identity-obj-proxy": "^3.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.10.0",
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "react-draggable": "^4.4.3",
@@ -47,7 +58,8 @@
     "svg-inline-loader": "^0.8.2"
   },
   "peerDependencies": {
-    "react": "16.x"
+    "react": "16.x",
+    "react-dom": "16.x"
   },
   "eslintConfig": {
     "extends": "react-app"

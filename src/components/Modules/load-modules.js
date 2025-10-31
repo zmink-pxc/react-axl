@@ -36,7 +36,8 @@ const Modules = {
     "2688035": {width: 53.6,component: React.lazy(() => import(/* webpackChunkName: "AxlDI3211F" */ './Digital/Input/AxlDI3211F/AxlDI3211F.jsx'))},
     "2700684": {width: 53.6,component: React.lazy(() => import(/* webpackChunkName: "AxlDI821102201F" */ './Digital/Input/AxlDI821102201F/AxlDI821102201F.jsx'))},
     "2688381": {width: 35,  component: React.lazy(() => import(/* webpackChunkName: "AxlDO822A1H" */ './Digital/Output/AxlDO822A1H/AxlDO822A1H.jsx'))},
-    "2702052": {width: 35, component: React.lazy(()=> import(/* webpackChunkName: "AxlDI3212H"*/ './Digital/Input/AxlDI3212H/AxlDI3212H.jsx'))}
+    "2702052": {width: 35, component: React.lazy(()=> import(/* webpackChunkName: "AxlDI3212H"*/ './Digital/Input/AxlDI3212H/AxlDI3212H.jsx'))},
+    "1027843": {width: 35, component: React.lazy(() => import(/* webpackChunkName: "AxlIOL82H" */ './SpecialFunction/AxlIOL82H/AxlIOL82H.jsx'))}
  
 }
 

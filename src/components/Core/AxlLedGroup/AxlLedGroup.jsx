@@ -18,7 +18,7 @@ export default class AxlLedGroup extends React.PureComponent {
                             <AxlLed {...rest}/> 
                          </div>
                         <div className={styles.labelContainer}>
-                            <div className={styles.label}>
+                            <div className={styles.label} style={this.props.rotateLabels ? { transform: 'rotate(180deg)' } : {}}>
                                 {label}
                             </div>
                         </div>

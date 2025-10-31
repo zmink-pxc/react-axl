@@ -16,7 +16,7 @@ export default class AxlTerminalGroup extends React.PureComponent {
                      <div className={styles.pinHole}></div>
                  </div>
                  <div className={styles.labelContainer}>
-                    <div className={styles.label}>{this.props.label}</div>
+                    <div className={styles.label} style={this.props.rotateLabel ? { transform: 'rotate(180deg)' } : {}}>{this.props.label}</div>
                  </div>
              </div>
              <div className={styles.plungerContainer}>
